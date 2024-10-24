@@ -209,7 +209,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 350vh;
+    height: 240vh;
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
     z-index: 1; /* Ensure the overlay is above the background image but below the content */
 }

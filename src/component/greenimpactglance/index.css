@@ -122,36 +122,29 @@
 } */
 .scroll-animation-container {
     position: relative;
-    /* overflow: hidden; */
-    height:300px;
-    display: grid;
-    place-items: center;
-}
-
-.zoom-text {
+    height: 60vh; /* Full viewport height for the animation */
+    /* display: grid;
+    place-items: center; */
+  }
+  
+  .zoom-text {
     position: absolute;
-    /* top: 0%; */
     left: 0%;
     right: 0%;
-    /* Center the text */
+    /* top: 0%; */
     transform: translate(-50%, -50%);
-    /* Center the text */
     font-weight: bold;
     z-index: 2;
-    /* Ensure text is above images */
     background-image: url("../../assets/img/elements/blueigtext.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-size: 60px; */
-    /* font-size: clamp(20px, 5vw, 60px);  */
     text-transform: uppercase;
     text-align: center;
     -webkit-font-smoothing: antialiased;
-}
-
+  }
 /* .image-container {
     display: flex;
     justify-content: center;

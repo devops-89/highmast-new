@@ -82,7 +82,9 @@
     font-size: 80px;
     text-align: left;
 }
-/* 
+
+/* duplicate code */
+
 .containerparent {
     position: relative;
     height: 100vh;
@@ -132,4 +134,4 @@
     text-align: left;
 }
 
- */
+

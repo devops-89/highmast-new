@@ -57,7 +57,7 @@ const Services = () => {
   return (
     <div>
       <section
-        style={{ height: "350vh", paddingBottom: "300px" }}
+        style={{ height: "240vh", paddingBottom: "300px" }}
         className="secOne secOne2 "
       >
         <div className="overlay"></div> {/* Add this div for the overlay */}

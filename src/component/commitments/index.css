@@ -34,7 +34,7 @@ body, html {
     flex-direction: column; /* Stack children vertically */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
-    margin-top: -30px; /* Pull the section up to create overlap */
+    /* margin-top: -30px;  */
   }
   
   
@@ -48,6 +48,7 @@ body, html {
     color: #ffff;
     margin-bottom: 20px;
     font-family:poppins;
+    margin-bottom: 40%;
   }
   
   .section2 {
@@ -58,8 +59,11 @@ body, html {
     height: 300px;
     width: 400px;
     color: #ffff;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     font-family:poppins;
+    margin-top: 50%;
+    margin-right: 45%;
+  
 
   }
 
@@ -74,6 +78,7 @@ body, html {
     width: 400px;
     color: #fff;
     font-family:poppins;
+    margin-left: 60%;
   }
   
   .section4 {
@@ -85,6 +90,7 @@ body, html {
     width: 300px;
     color: #fff;
     font-family:poppins;
+    margin-top: 40%;
 
   }
   
@@ -124,13 +130,13 @@ body, html {
   
   /* Adjustments for odd and even sections */
   .section:nth-child(odd) {
-    margin-bottom: -20px; /* Pull odd sections up slightly */
+    /* margin-bottom: -20px; */
     z-index: 2; /* Raise odd sections */
-    margin-left: 60px;
+    /* margin-left: 60px; */
   }
   
   .section:nth-child(even) {
-    margin-top: 20px; /* Additional margin for even sections */
+    /* margin-top: 20px;  */
     z-index: 1; /* Lower even sections */
   }
   

@@ -1,0 +1,470 @@
+// import React, { useEffect, useRef } from "react";
+// import "./index.css";
+
+// const Ourclients = () => {
+//   return (
+//     <div className="fw-col-inner">
+//       <div className="animated-skew-texts --dark-style">
+//         <div className="animated-skew-texts__container">
+//           <div className="animated-skew-texts__row-wrap --row-1">
+//             <div className="animated-skew-texts__row">
+//               <span className="animated-skew-texts__text">BW Epic Kosan</span>
+
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+//                   alt="Ship Repair"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">Hafnia</span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_02.svg"
+//                   alt="Full Port Agency"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">SHIPS</span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+//                   alt="Ship Repair"
+//                 />
+//               </span>
+//               <span
+//                 className="animated-skew-texts__text"
+//                 style={{ color: "#FF0000" }}
+//               >
+//                 OUR CLIENT
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_03.svg"
+//                   alt="Protecting Agency"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">
+//                 ISLAND VIEW SHIPPING SERVICES
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+//                   alt="Ship's Supply"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+//                   alt="Ship's Supply"
+//                 />
+//                 Mitsui O.S.K. Lines
+//               </span>
+//               {/* Duplicate content for seamless scrolling */}
+//               <span className="animated-skew-texts__text">BW Epic Kosan</span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+//                   alt="Ship Repair"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">Hafnia</span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_02.svg"
+//                   alt="Full Port Agency"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">SHIPS</span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_03.svg"
+//                   alt="Protecting Agency"
+//                 />
+//               </span>
+
+//               <span className="animated-skew-texts__text">
+//                 ISLAND VIEW SHIPPING SERVICES
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+//                   alt="Ship's Supply"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">
+//                 Mitsui O.S.K. Lines
+//               </span>
+//             </div>
+//             {/* Add more rows as needed */}
+//           </div>
+//           <div className="animated-skew-texts__row-wrap --row-1">
+//             <div className="animated-skew-texts__row">
+//               <span className="animated-skew-texts__text">Hafnia</span>
+
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+//                   alt="Ship Repair"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">SHIPS</span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_02.svg"
+//                   alt="Full Port Agency"
+//                 />
+//               </span>
+//               <span
+//                 className="animated-skew-texts__text"
+//                 style={{ color: "#FF0000" }}
+//               >
+//                 OUR CLIENT
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+//                   alt="Ship Repair"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">
+//                 ISLAND VIEW SHIPPING SERVICES
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_03.svg"
+//                   alt="Protecting Agency"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">BW Epic Kosan</span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+//                   alt="Ship's Supply"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+//                   alt="Ship's Supply"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">Hafnia</span>
+
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+//                   alt="Ship Repair"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">SHIPS</span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_02.svg"
+//                   alt="Full Port Agency"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">
+//                 ISLAND VIEW SHIPPING SERVICES
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_03.svg"
+//                   alt="Protecting Agency"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">BW Epic Kosan</span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+//                   alt="Ship's Supply"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+//                   alt="Ship's Supply"
+//                 />
+//                 Mitsui O.S.K. Lines
+//               </span>
+//             </div>
+//           </div>
+//           <div className="animated-skew-texts__row-wrap --row-1">
+//             <div className="animated-skew-texts__row">
+//               <span className="animated-skew-texts__text">
+//                 ISLAND VIEW SHIPPING SERVICES
+//               </span>
+
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+//                   alt="Ship Repair"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">
+//                 Mitsui O.S.K. Lines
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_02.svg"
+//                   alt="Full Port Agency"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">SHIPS</span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_03.svg"
+//                   alt="Protecting Agency"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">Hafnia</span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+//                   alt="Ship's Supply"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+//                   alt="Ship's Supply"
+//                 />
+//                 BW Epic Kosa
+//               </span>
+//               <span className="animated-skew-texts__text">
+//                 ISLAND VIEW SHIPPING SERVICES
+//               </span>
+
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+//                   alt="Ship Repair"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">
+//                 Mitsui O.S.K. Lines
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_02.svg"
+//                   alt="Full Port Agency"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">SHIPS</span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_03.svg"
+//                   alt="Protecting Agency"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__text">Hafnia</span>
+//               <span
+//                 className="animated-skew-texts__text"
+//                 style={{ color: "#FF0000" }}
+//               >
+//                 OUR CLIENT
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+//                   alt="Ship Repair"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+//                   alt="Ship's Supply"
+//                 />
+//               </span>
+//               <span className="animated-skew-texts__icon">
+//                 <img
+//                   src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+//                   alt="Ship's Supply"
+//                 />
+//                 BW Epic Kosa
+//               </span>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Ourclients;
+
+import React from "react";
+import Marquee from "react-fast-marquee";
+import "./index.css"; // Assuming you have styles in this file
+
+const OurClients = () => {
+  return (
+    <div className="fw-col-inner">
+      <Marquee
+        style={{
+          transform: "rotate(-7deg)",
+          marginBottom: "20px",
+          overflow: "hidden",
+        }}
+        speed={80}
+        pauseOnHover={true}
+      >
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+            alt="BW Epic Kosan"
+          />
+          <span>BW Epic Kosan</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_02.svg"
+            alt="Hafnia"
+          />
+          <span>Hafnia</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_02.svg"
+            alt="Hafnia"
+          />
+          <span style={{ color: "#E32226" }}>OUR CLIENT</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_03.svg"
+            alt="SHIPS"
+          />
+          <span>SHIPS</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+            alt="ISLAND VIEW SHIPPING SERVICES"
+          />
+          <span>ISLAND VIEW SHIPPING SERVICES</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+            alt="Mitsui O.S.K. Lines"
+          />
+          <span>Mitsui O.S.K. Lines</span>
+        </div>
+      </Marquee>
+      <Marquee
+        style={{
+          transform: "rotate(-7deg)",
+          marginBottom: "20px",
+          overflow: "hidden",
+        }}
+        speed={80}
+        pauseOnHover={true}
+      >
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_02.svg"
+            alt="Hafnia"
+          />
+          <span>Hafnia</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+            alt="Mitsui O.S.K. Lines"
+          />
+          <span>Mitsui O.S.K. Lines</span>
+        </div>
+
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_03.svg"
+            alt="SHIPS"
+          />
+          <span>SHIPS</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+            alt="ISLAND VIEW SHIPPING SERVICES"
+          />
+          <span>ISLAND VIEW SHIPPING SERVICES</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_02.svg"
+            alt="Hafnia"
+          />
+          <span style={{ color: "#E32226" }}>OUR CLIENT</span>
+        </div>
+
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+            alt="BW Epic Kosan"
+          />
+          <span>BW Epic Kosan</span>
+        </div>
+      </Marquee>
+      <Marquee
+        style={{
+          transform: "rotate(-7deg)",
+          marginBottom: "20px",
+          overflow: "hidden",
+        }}
+        speed={80}
+        pauseOnHover={true}
+      >
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_03.svg"
+            alt="SHIPS"
+          />
+          <span>SHIPS</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_02.svg"
+            alt="Hafnia"
+          />
+          <span>Hafnia</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_03.svg"
+            alt="SHIPS"
+          />
+          <span>SHIPS</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+            alt="BW Epic Kosan"
+          />
+          <span>BW Epic Kosan</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_02.svg"
+            alt="Hafnia"
+          />
+          <span style={{ color: "#E32226" }}>OUR CLIENT</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_04.svg"
+            alt="ISLAND VIEW SHIPPING SERVICES"
+          />
+          <span>ISLAND VIEW SHIPPING SERVICES</span>
+        </div>
+        <div className="marquee-item">
+          <img
+            src="//new.starkshipping.net/wp-content/uploads/2021/07/icn_01.svg"
+            alt="Mitsui O.S.K. Lines"
+          />
+          <span>Mitsui O.S.K. Lines</span>
+        </div>
+      </Marquee>
+    </div>
+  );
+};
+
+export default OurClients;

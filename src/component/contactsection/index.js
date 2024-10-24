@@ -35,7 +35,7 @@ const Contactseection = () => {
               Sail into the Future with Us – Contact for Zero-Emission Solutions
             </p>
           </div>
-          <div className="col-sm-4 mt-2">
+          <div className="col-sm-4 contactusparent">
             <div className="buttonparnt">
               <button className="allbutton">Contact Us</button>
             </div>
