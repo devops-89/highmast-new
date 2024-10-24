@@ -1,0 +1,244 @@
+/* .greenimpactbg {
+    background-image: url("../../assets/img/elements/Aboutsectionimg.jpeg");
+    background-attachment: fixed;
+    background-position: left center;
+  
+    background-size: contain;
+
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+ 
+    align-items: flex-start;
+ 
+    background-repeat: no-repeat;
+  
+    padding: 20px;
+
+
+}
+
+.greencolm2 {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.greencolm2 .subtitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.greencolm {
+    background-color: #f4f4f42e;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.greencolm .subtitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.greenbgimg {
+    width: 100%;
+}
+
+.greencolm h4 {
+    margin-top: 30px;
+}
+
+.coundisplay {
+    display: flex;
+
+}
+
+
+
+
+.custom-accordion {
+    background-color: #f9f9f9 !important;
+
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12) !important;
+    border-radius: 8px !important;
+    margin-bottom: 16px !important;
+}
+
+.custom-accordion-heading {
+    font-weight: bold !important;
+    color: #333;
+    font-size: 18px !important;
+}
+
+.custom-accordion-details {
+    background-color: #ffffff;
+
+    padding: 16px;
+    text-align: left;
+}
+.Greenbigtext {
+    color:"#fff"
+} */
+/* .scroll-animation-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+} */
+
+/* .zoom-text {
+    position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #00ff00;
+  font-weight: bold;
+} */
+/* .zoom-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #00ff00;
+    font-weight: bold;
+    z-index: 1;
+  }
+.image-carousel {
+  display: flex;
+  position: relative;
+  top: 200px;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.carousel-item {
+  width: 300px;
+  margin-right: 20px;
+  transition: transform 0.1s ease-out;
+} */
+.scroll-animation-container {
+    position: relative;
+    /* overflow: hidden; */
+    height:300px;
+    display: grid;
+    place-items: center;
+}
+
+.zoom-text {
+    position: absolute;
+    /* top: 0%; */
+    left: 0%;
+    right: 0%;
+    /* Center the text */
+    transform: translate(-50%, -50%);
+    /* Center the text */
+    font-weight: bold;
+    z-index: 2;
+    /* Ensure text is above images */
+    background-image: url("../../assets/img/elements/blueigtext.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* font-size: 60px; */
+    /* font-size: clamp(20px, 5vw, 60px);  */
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* .image-container {
+    display: flex;
+    justify-content: center;
+ 
+    position: relative;
+    height: 500px;
+  
+  }
+  
+  .image-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .image-item img {
+    width: 700px; 
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  .hidden {
+    transform: scale(0.5); 
+    opacity: 0; 
+  }
+  
+  .visible {
+    transform: scale(1); 
+    opacity: 1; 
+  } */
+
+.image-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Center images horizontally */
+    align-items: center;
+    /* Center images vertically */
+}
+
+.image-item {
+    position: absolute;
+    /* Use absolute positioning for overlay */
+    /* top: 50%; */
+    /* Center images vertically */
+    left: 0%;
+    /* Center images horizontally */
+    right: 0%;
+    transform: translate(-50%, -50%);
+    /* Adjust for centering */
+    width: 100%;
+    /* Adjust based on your design */
+    height: auto;
+    /* Maintain aspect ratio */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    /* Smooth transitions */
+    opacity: 0;
+    /* Initially hidden */
+    /* You can set a default scale if needed, e.g., scale(0.5) */
+}
+
+.image-item img {
+    width: 500px;
+    height: 400px;
+}
+
+/* Add a class for when the image is visible */
+.image-item.visible {
+    opacity: 1;
+    /* Fully visible */
+    transform: translate(-50%, -50%) scale(1);
+    /* Normal scale */
+}
+
+/* Add a class for zoom effect */
+.image-item.zoom {
+    /* This will allow you to set a zoom level dynamically */
+    transform: translate(-50%, -50%) scale(var(--scale, 1.05)); /* Default scale set to 1.05 for less zoom */
+    /* Default scale of 1 */
+}
+/* Fade out effect */
+.image-item.fade-out {
+    opacity: 0; /* Fade out */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}

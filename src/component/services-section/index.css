@@ -1,0 +1,220 @@
+:root {
+    --page-margin-top: 130.0px;
+    --page-margin-right-xxxl: 8.0vw;
+    --page-margin-left-xxxl: 8.0vw;
+    --color-five-hex: #535e67;
+    --color-six-hex: #eeeeee;
+}
+
+body {
+    background: rgb(251, 249, 249);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+/* .container {
+    padding: var(--page-margin-top) var(--page-margin-right-xxxl) 0 var(--page-margin-left-xxxl);
+    padding-top: 160px;
+} */
+.bannercontainer {
+    padding: var(--page-margin-top) var(--page-margin-right-xxxl) 0 var(--page-margin-left-xxxl);
+    padding-top: 160px;
+}
+
+
+.row {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1 1 auto;
+    margin-right: 4.2vw;
+    width: calc(33.3% - 4.2vw);
+    position: relative;
+    padding-top: 3.4vh;
+    padding-bottom: 3.3vh;
+}
+
+.number {
+    font-weight: 600;
+    font-size: 3.4vw;
+    line-height: 1.1;
+    margin: 0;
+
+}
+.number .symbol {
+    position: relative !important;
+    display: inline-block !important;
+    background:  red  !important;
+    -webkit-background-clip: text  !important;
+    -webkit-text-fill-color: transparent  !important;
+    background-clip: text  !important;
+    /* text-shadow: rgb(83, 94, 103) 0px 0px 0px; */
+    opacity: 1  !important;
+    visibility: inherit  !important;
+    transform: translate(0px, 0px)  !important;
+}
+
+.number span {
+    position: relative;
+    display: inline-block;
+    background:  white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-shadow: rgb(83, 94, 103) 0px 0px 0px; */
+    opacity: 1;
+    visibility: inherit;
+    transform: translate(0px, 0px);
+}
+
+.row .col .number span {
+    font-weight: 800;
+    font-size: 3.6vw;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.row .col .desc {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #fff;
+    font-family: poppins;
+}
+
+.top-line {
+    width: 0%;
+    height: 1px;
+    background-color: var(--color-five-hex);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bottom-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-five-hex);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.secOne {
+    background-image: url(../../assets//img/banners/homebanerbg.gif);
+
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    /* Keeps the background in place while scrolling */
+    /* height: 270vh; */
+    /* Adjust the height as needed */
+    width: 100%;
+    background-repeat: no-repeat;
+   
+
+}
+
+
+.secOne .section-title {
+    margin-bottom: calc(4.2vw);
+    /* font-family:poppins ; */
+}
+
+.secOne h1 {
+    color: #fff;
+    text-align: left;
+    font-size: 7.15vw;
+    line-height: 1;
+    margin-top: 0.1em;
+    margin-bottom: 0;
+}
+
+.contersection {
+    transform: translate3d(0px, 0px, 0px) scale(3.8, 3.8);
+    transform-origin: 0% 0%;
+    transition: transform 0.2s ease-out;
+}
+
+.text-border {
+    /* color: #4fd64f; */
+    /* Light transparent green color */
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    /* Font size */
+    /* -webkit-text-stroke: 2px #4fd64f; */
+    /* Solid green border */
+}
+
+.rstoftext {
+    font-weight: bold;
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
+/* banner headimgs */
+.greentext {
+    background-image: url("../../assets/img/elements/leaf.jpeg");
+    background-size: cover; /* Ensure the background covers the text */
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+    -webkit-font-smoothing: antialiased;
+    margin-top: 200px;
+}
+.contioceantext {
+    background-image: url("../../assets/img/elements/conti.jpg");
+    background-size: cover; /* Ensure the background covers the text */
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+    -webkit-font-smoothing: antialiased;
+    margin-top: 200px;  
+}
+.highmasttextbg {
+    /* background-image: url("../../assets/img/elements/highmastbgtext2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    font-size: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+   
+   
+    -webkit-font-smoothing: antialiased;
+    margin-top: 200px;  
+}
+.overlay {
+    position: absolute; /* Position the overlay absolutely within the section */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 350vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
+    z-index: 1; /* Ensure the overlay is above the background image but below the content */
+}
+
+.bannercontainer {
+    position: relative; /* Position the container relative to allow stacking */
+    z-index: 2; /* Ensure the content is above the overlay */
+}

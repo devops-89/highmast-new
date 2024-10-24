@@ -1,0 +1,29 @@
+.callheading 
+{
+    font-size: 30px;
+    font-weight: 600;
+    color: #69B7C4;
+    font-family: poppins;
+    text-transform: uppercase;
+    text-align: left;
+}
+.callsubheading {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: left;
+}
+
+
+.allbutton{
+
+    border: 1px solid #69B7C4 !important;
+    /* background-color: #69B7C4; */
+    padding: 15px 20px;
+    color:#69B7C4;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: poppins;
+    background-color: transparent;
+}

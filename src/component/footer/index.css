@@ -1,0 +1,53 @@
+.footer {
+
+    text-align: left;
+
+}
+
+.footer p {
+    color: #fff;
+
+}
+
+.footerlogo {
+    width: 200px;
+
+}
+
+.footer h5 {
+
+ color: #6CBBC8;
+    font-size: 18px;
+
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.footer ul li {
+    line-height: 2.5rem;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    font-family: poppins;
+    font-size: 14px;
+
+}
+
+.footer a:hover {
+
+    color: red;
+
+
+}
+
+
+.social-links a svg {
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 50%;
+}

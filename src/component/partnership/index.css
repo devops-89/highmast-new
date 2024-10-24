@@ -1,0 +1,64 @@
+.animated-skew-texts {
+  position: relative;
+  /* overflow: hidden; */
+}
+.fw-col-inner {
+  padding: 80px 0px;
+}
+.animated-skew-texts__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.animated-skew-texts__row-wrap {
+  display: block;
+  animation: slide 8s infinite linear; 
+  margin-bottom: -5px; /* Reduce space between rows further */
+}
+
+.animated-skew-texts__row {
+  display: flex;
+  align-items: center;
+  margin-right: 50px; /* Adjust spacing as needed */
+  animation: scroll-left 8s linear infinite;
+  white-space: nowrap;
+
+}
+
+.animated-skew-texts__text {
+  font-size: 70px; /* Adjust size as needed */
+  color: #fff; /* Adjust color as needed */
+  transform: skew(-10deg);
+  white-space: nowrap;
+  font-family: poppins; /* Ensure Poppins is loaded */
+  padding: 0; /* Reduced padding to decrease space */
+  text-transform: uppercase;
+}
+
+.animated-skew-texts__icon img {
+  width: 40px; /* Adjust size as needed */
+  height: 60px; /* Reduced height for icons */
+  margin-left: 10px; /* Adjust spacing as needed */
+}
+
+/* Keyframes for animation */
+/* @keyframes slide {
+  0% {
+    transform: translateX(100%) rotateZ(-7deg);
+  }
+  50% {
+    transform: rotateZ(-7deg) ; 
+  }
+  100% {
+    transform: translateX(-100%) rotateZ(-7deg); 
+  }
+} */
+/* Animation to scroll text continuously from left to right */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0) rotateZ(-7deg);
+  }
+  100% {
+    transform: translateX(-50%) rotateZ(-7deg);
+  }
+}

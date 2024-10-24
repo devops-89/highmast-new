@@ -1,0 +1,162 @@
+/* index.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  main {
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for sections */
+    gap: 20px; /* Space between grid items */
+    padding: 1rem; /* Padding for the grid container */
+    max-width: 1200px; /* Optional: set a max width for the grid */
+    margin: 0 auto; /* Center the grid container horizontally */
+    align-items: center; /* Center items vertically within each grid cell */
+    justify-items: center; /* Center items horizontally within each grid cell */
+    position: relative; /* Set relative positioning for child elements */
+  }
+  
+  /* Section styles */
+  .section {
+    height: 300px; /* Fixed height for each section */
+    position: relative; /* For absolute positioning of content */
+    overflow: hidden; /* Prevent overflow */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for fade and movement */
+    border-radius: 8px; /* Optional: rounded corners */
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin-top: -30px; /* Pull the section up to create overlap */
+  }
+  
+  
+  .section1 {
+    background-image: url('../../assets/img/elements/lng.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    color: #ffff;
+    margin-bottom: 20px;
+    font-family:poppins;
+  }
+  
+  .section2 {
+    background-image: url('../../assets/img/elements/serviceimg2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 400px;
+    color: #ffff;
+    margin-bottom: 30px;
+    font-family:poppins;
+
+  }
+
+
+
+  .section3 {
+    background-image: url('../../assets/img/elements/serviceimg3.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 400px;
+    color: #fff;
+    font-family:poppins;
+  }
+  
+  .section4 {
+    background-image: url('../../assets/img/elements/serviceimg4.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    color: #fff;
+    font-family:poppins;
+
+  }
+  
+  .section5 {
+    background-image: url('../../assets/img/elements/serviceimg1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    font-family:poppins;
+  }
+
+  
+  /* When section is in view */
+  .in-view {
+    opacity: 1; /* Fully visible */
+    transform: scale(1.1); /* Slight zoom in */
+  }
+  
+/* Content styles */
+.content {
+    opacity: 1; /* Start as invisible */
+    transform: translateY(20px); /* Slightly lower position */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for fade and movement */
+    z-index: 2;
+    padding:10px;
+    /* position: relative; */
+
+  }
+  
+  /* Fade in effect */
+  .fade-in {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+  }
+  
+  /* Adjustments for odd and even sections */
+  .section:nth-child(odd) {
+    margin-bottom: -20px; /* Pull odd sections up slightly */
+    z-index: 2; /* Raise odd sections */
+    margin-left: 60px;
+  }
+  
+  .section:nth-child(even) {
+    margin-top: 20px; /* Additional margin for even sections */
+    z-index: 1; /* Lower even sections */
+  }
+  
+  /* Centering grid items */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    justify-items: center; /* Center each grid item */
+  }
+  
+  /* Additional styles for overlapping effect */
+  .section {
+    transition: transform 0.5s ease;
+  }
+  
+  .section:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+  }
+  /* Dark filter overlay */
+.section::before {
+    content: ''; /* Empty content for the overlay */
+    position: absolute; /* Position it absolutely within the section */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+    z-index: 1; /* Ensure it sits above the background image but below the content */
+  }
