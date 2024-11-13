@@ -1,62 +1,8 @@
-/* .animated-skew-texts {
-    position: relative;
-    
-  }
-  .fw-col-inner {
-    padding: 80px 0px;
-  }
-  .animated-skew-texts__container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .animated-skew-texts__row-wrap {
-    display: block;
-    animation: slide 8s infinite linear; 
-    margin-bottom: -5px; 
-  }
-  
-  .animated-skew-texts__row {
-    display: flex;
-    align-items: center;
-    margin-right: 50px; 
-    animation: scroll-left 8s linear infinite;
-    white-space: nowrap;
-  
-  }
-  
-  .animated-skew-texts__text {
-    font-size: 70px; 
-    color: #fff;
-    transform: skew(-10deg);
-    white-space: nowrap;
-    font-family: poppins; 
-    padding: 0;
-    text-transform: uppercase;
-  }
-  
-  .animated-skew-texts__icon img {
-    width: 40px; 
-    height: 60px; 
-    margin-left: 10px;
-  }
-  
-
-
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0) rotateZ(-7deg);
-    }
-    100% {
-      transform: translateX(-50%) rotateZ(-7deg);
-    }
-  }
- */
 
  .fw-col-inner {
     padding: 80px 0;
-     /* Background color */
-    color: white; /* Text color */
+   
+    color: white; 
   }
 
   .marquee-item {
@@ -64,12 +10,17 @@
     align-items: center;
   
   }
+  .marquee-item img {
+   width: 40px;
+   height: 40px;
+  
+  }
   
 
   .marquee-item span {
-    font-size: 70px;  /* Adjust text size as needed */
-    font-family: 'poppins'; /* Font family */
-    margin-right: 10px; /* Spacing between items */
+    font-size: 70px;  
+    font-family: 'poppins'; 
+    margin-right: 10px; 
     margin-left: 10px;
   }
 

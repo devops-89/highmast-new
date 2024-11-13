@@ -1,0 +1,149 @@
+import { Box, Typography } from "@mui/material";
+import React, { useEffect, useRef } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Parallax } from "react-parallax";
+import "./index.css";
+
+const ServicesPointers = (props) => {
+  const imageRef = useRef(null);
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+    // Create an Intersection Observer
+    const handleScroll = () => {
+      const image = imageRef.current;
+      if (!image) return;
+
+      const scrollY = window.scrollY; // Get current scroll position
+      if (scrollY > 100) {
+        // Adjust threshold as needed
+        image.classList.add("zoom-effect"); // Add zoom effect on scroll down
+        image.classList.remove("zoom-out-effect"); // Remove zoom-out effect if any
+      } else {
+        image.classList.remove("zoom-effect"); // Remove zoom effect on scroll up
+        image.classList.add("zoom-out-effect");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <div className="container allpadding">
+      <Box sx={{ textAlign: "left" }}>
+        <Typography sx={{ color: "red", fontWeight: "600" }}>
+          {props.heading}
+        </Typography>
+        {/* <Typography
+          sx={{ color: "#fff", fontSize: "70px" }}
+          data-aos="fade-right"
+        >
+          {props.subheading}
+        </Typography> */}
+      </Box>
+      <div className="row align-items-center mt-4">
+        <div className="col-sm-5 text-center ">
+          <div>
+            <div
+              // ref={imageRef} // Attach ref to target the image element
+              className="pointerimg "
+              data-aos="zoom-out-down"
+              style={{
+                backgroundImage: `url(${props.img})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                width: "80%",
+                height: "400px",
+                borderRadius: "5px",
+                margin: "0px auto",
+              }}
+            ></div>
+          </div>
+        </div>
+        <div className="col-sm-7">
+          <div
+            className="row pointerparent"
+            data-aos="fade-down-left"
+            data-aos-duration="500"
+            data-aos-delay="200"
+          >
+            <div className="col-sm-3">
+              <Typography className="pointershead ">{props.name1}</Typography>
+            </div>
+            <div className="col-sm-9">
+              <Typography className="pointername">
+                {props.pointername1}
+              </Typography>
+            </div>
+          </div>
+          <div
+            className="row pointerparent"
+            data-aos="fade-down-left"
+            data-aos-duration="500"
+            data-aos-delay="400"
+          >
+            <div className="col-sm-3">
+              <Typography className="pointershead">{props.name1}</Typography>
+            </div>
+            <div className="col-sm-9">
+              <Typography className="pointername">
+                {props.pointername1}
+              </Typography>
+            </div>
+          </div>
+          <div
+            className="row pointerparent"
+            data-aos="fade-down-left"
+            data-aos-duration="500"
+            data-aos-delay="600"
+          >
+            <div className="col-sm-3">
+              <Typography className="pointershead">{props.name1}</Typography>
+            </div>
+            <div className="col-sm-9">
+              <Typography className="pointername">
+                {props.pointername1}
+              </Typography>
+            </div>
+          </div>
+          <div
+            className="row pointerparent"
+            data-aos="fade-down-left"
+            data-aos-duration="500"
+            data-aos-delay="800"
+          >
+            <div className="col-sm-3">
+              <Typography className="pointershead">{props.name1}</Typography>
+            </div>
+            <div className="col-sm-9">
+              <Typography className="pointername">
+                {props.pointername1}
+              </Typography>
+            </div>
+          </div>
+          <div className="row pointerparent"
+             data-aos="fade-down-left"
+             data-aos-duration="500"
+             data-aos-delay="1000"
+          >
+            <div className="col-sm-3">
+              <Typography className="pointershead">{props.name1}</Typography>
+            </div>
+            <div className="col-sm-9">
+              <Typography className="pointername">
+                {props.pointername1}
+              </Typography>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ServicesPointers;

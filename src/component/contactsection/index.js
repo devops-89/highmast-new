@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Container, Stack } from "react-bootstrap";
-import "./index.css"
+import "./index.css";
+import ModalComponent from "../dialog";
 
 const Contactseection = () => {
   const [fixed, setFixed] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -19,9 +25,9 @@ const Contactseection = () => {
       <Container
         style={{
           border: fixed ? "1px solid #d7d7d7" : "1px solid #121a27",
-        paddingTop:"10px",
-        paddingBottom:"0px",
-        paddingRight:"50px",
+          paddingTop: "10px",
+          paddingBottom: "0px",
+          paddingRight: "50px",
           marginTop: "1rem",
           borderRadius: "0.5rem",
           backgroundColor: fixed ? "rgb(16 59 81 / 15%)" : "transparent",
@@ -37,9 +43,12 @@ const Contactseection = () => {
           </div>
           <div className="col-sm-4 contactusparent">
             <div className="buttonparnt">
-              <button className="allbutton">Contact Us</button>
+              <button className="allbutton" onClick={handleShow}>
+                Contact Us
+              </button>
             </div>
           </div>
+          <ModalComponent show={show} handleClose={handleClose} />
         </div>
       </Container>
     </div>

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./index.css";
-import Servicesscroll from "../service-scroll";
+
 const Services = () => {
   useEffect(() => {
     const handleScroll = () => {
@@ -64,14 +64,6 @@ const Services = () => {
         <div className="container bannercontainer">
           <div className="section-title desktop" data-aos="zoom-in-up">
             <h1>
-              {/* <span className="text-border greentext "> green</span> maritime innovation by Highmast marine and contiocean  */}
-              {/* <p>
-                {" "}
-                <span className="rstoftext">Partnering with</span>
-                <span className="text-border">ContiOcean,</span>{" "}
-                <span className="stoftext"> </span>
-                sustainability with advanced green tech.
-              </p> */}
               <p className="rstoftext">
                 <span className="text-border greentext "> green</span> maritime{" "}
               </p>
@@ -91,7 +83,6 @@ const Services = () => {
                   ContiOcean
                 </span>
               </p>
-              {/* <p className="rstoftext">leverage <span className="text-border greentext "> green</span> technology</p> */}
             </h1>
           </div>
           <div className="contersection">
@@ -102,7 +93,7 @@ const Services = () => {
                   <span>2</span>
                   <span>0</span>
                   <span>0</span>
-                  <span  className="symbol">+</span>
+                  <span className="symbol">+</span>
                 </h3>
                 <p className="desc">Successful Dry Dockings</p>
               </div>
@@ -112,7 +103,7 @@ const Services = () => {
                   <span>1</span>
                   <span>0</span>
                   <span>0</span>
-                  <span  className="symbol" >%</span>
+                  <span className="symbol">%</span>
                 </h3>
                 <p className="desc">Emission-Free Green Energy Solutions</p>
               </div>
@@ -121,7 +112,7 @@ const Services = () => {
                 <h3 className="number">
                   <span>3</span>
                   <span>0</span>
-                  <span  className="symbol" >%</span>
+                  <span className="symbol">%</span>
                 </h3>
                 <p className="desc">Global Ports Served</p>
               </div>
@@ -142,7 +133,7 @@ const Services = () => {
                 <h3 className="number">
                   <span>1</span>
                   <span>0</span>
-                  <span className="symbol" >+</span>
+                  <span className="symbol">+</span>
                 </h3>
                 <p className="desc">Owned vessels</p>
                 <div className="bottom-line"></div>
@@ -160,7 +151,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-      {/* <section></section> */}
     </div>
   );
 };

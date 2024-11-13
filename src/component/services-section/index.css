@@ -19,16 +19,17 @@ body {
 .bannercontainer {
     padding: var(--page-margin-top) var(--page-margin-right-xxxl) 0 var(--page-margin-left-xxxl);
     padding-top: 160px;
+    padding-bottom: 160px;
 }
 
 
-.row {
+.secOne .row {
     display: flex;
     position: relative;
     flex-wrap: wrap;
 }
 
-.col {
+.secOne .col {
     flex: 1 1 auto;
     margin-right: 4.2vw;
     width: calc(33.3% - 4.2vw);
@@ -51,7 +52,7 @@ body {
     -webkit-background-clip: text  !important;
     -webkit-text-fill-color: transparent  !important;
     background-clip: text  !important;
-    /* text-shadow: rgb(83, 94, 103) 0px 0px 0px; */
+    
     opacity: 1  !important;
     visibility: inherit  !important;
     transform: translate(0px, 0px)  !important;
@@ -64,7 +65,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* text-shadow: rgb(83, 94, 103) 0px 0px 0px; */
+  
     opacity: 1;
     visibility: inherit;
     transform: translate(0px, 0px);
@@ -109,9 +110,7 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    /* Keeps the background in place while scrolling */
-    /* height: 270vh; */
-    /* Adjust the height as needed */
+   
     width: 100%;
     background-repeat: no-repeat;
    
@@ -121,7 +120,7 @@ body {
 
 .secOne .section-title {
     margin-bottom: calc(4.2vw);
-    /* font-family:poppins ; */
+   
 }
 
 .secOne h1 {
@@ -140,14 +139,11 @@ body {
 }
 
 .text-border {
-    /* color: #4fd64f; */
-    /* Light transparent green color */
+    
     font-size: 100px;
     text-transform: uppercase;
     font-weight: bold;
-    /* Font size */
-    /* -webkit-text-stroke: 2px #4fd64f; */
-    /* Solid green border */
+    
 }
 
 .rstoftext {
@@ -156,7 +152,7 @@ body {
     text-transform: uppercase;
 }
 
-/* banner headimgs */
+
 .greentext {
     background-image: url("../../assets/img/elements/leaf.jpeg");
     background-size: cover; /* Ensure the background covers the text */
@@ -204,17 +200,17 @@ body {
     margin-top: 200px;  
 }
 .overlay {
-    position: absolute; /* Position the overlay absolutely within the section */
+    position: absolute; 
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     height: 240vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
-    z-index: 1; /* Ensure the overlay is above the background image but below the content */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
 }
 
 .bannercontainer {
-    position: relative; /* Position the container relative to allow stacking */
-    z-index: 2; /* Ensure the content is above the overlay */
-}
+    position: relative; 
+    z-index: 2; 
+    }

@@ -1,0 +1,27 @@
+.anchorimg {
+    height: 400px;
+    width: 100%;
+}
+.certicationscol {
+    padding: 20px;
+margin-bottom: 30px;
+text-align: left;
+}
+.certificationname {
+    font-size: 50px;
+    color: #fff;
+
+
+}
+.certiondetail {
+    color: #fff;
+    text-align: justify;
+}
+.certificationimg {
+    width: 70px;
+    height: 65px;
+}
+.certificationparent {
+    text-align: center;
+    margin-bottom: 10px;
+}

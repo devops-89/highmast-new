@@ -1,0 +1,14 @@
+.cranebanner{
+    background-image: url(../../assets//img/banners/craneservicesbannerimg.jpg);
+
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+ 
+    width: 100%;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+
+
+}

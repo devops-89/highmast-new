@@ -72,7 +72,6 @@
     width: 1px;
 }
 
-/* Keyframes for the line animation */
 @keyframes scrollAnimation {
     0% {
         height: 0;
@@ -117,7 +116,7 @@
 
 /* Zoom background animation */
 .zoom-background {
-    /* background: url('../../assets/img/elements/Higlightedbgvideo.mp4') no-repeat center center/cover; */
+
     animation: zoomAnimation 10s infinite alternate;
 }
 

@@ -1,0 +1,9 @@
+.contactlocbg {
+    background-color:rgb(207 209 211 / 72%) ;
+    align-items: center;
+    display: flex;
+    
+}
+.contactparent .MuiAccordionSummary-content {
+    margin: 0px;
+}

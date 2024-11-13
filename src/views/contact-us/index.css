@@ -1,0 +1,73 @@
+.conatactbanneroverlay {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 110vh;
+
+  z-index: 1;
+
+}
+
+.conatactbanner {
+
+  background-color: #031C32;
+  width: 100%;
+  background-repeat: no-repeat;
+
+
+}
+
+.conatactbanner h1 {
+  color: #fff;
+  text-align: left;
+  font-size: 7.15vw;
+  line-height: 1;
+  margin-top: 0.1em;
+  margin-bottom: 0;
+}
+
+/* threeboxes */
+.boxes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.box-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  background: #5e8c9326;
+  padding: 20px;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-right: 30px;
+  border: 1px solid #6CBBC8;
+
+}
+
+
+.box-title h3 {
+  font-size: 2em;
+  margin: 0;
+  color: #fff;
+}
+
+.box-content {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #fff;
+}
+
+.globebanerimg {
+
+  width: 100%;
+}

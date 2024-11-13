@@ -1,0 +1,16 @@
+.marinebanner {
+    background-image: url(../../assets//img/banners/marineautomationbanner.jpg);
+
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    /* Keeps the background in place while scrolling */
+
+    /* Adjust the height as needed */
+    width: 100%;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+
+
+}

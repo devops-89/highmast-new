@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 import footerlogo from "../../assets/img/logo/highmastlogo.png";
 
@@ -23,12 +23,78 @@ import {
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { Stack } from "react-bootstrap";
+import { useLocation, useNavigate } from "react-router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Bars } from "react-loader-spinner";
 const Footer = () => {
+  const navigate = useNavigate();
+
+  // Newsletter form state
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  // Email validation function
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  // Form submission handler
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setError(""); // Clear previous error message
+
+    // Validate email
+    if (!email) {
+      setError("Email is required.");
+      return;
+    }
+    if (!validateEmail(email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+
+    // If validation passes, submit the form
+    setIsSubmitting(true);
+    setLoading(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "26cc9ba3-3838-4e33-bfbf-5de20864a633",
+          email: email,
+        }),
+      });
+
+      const result = await response.json();
+      setLoading(false);
+      if (result.success) {
+        setEmail("");
+        navigate("/thank-you");
+        toast.success("Subscribed successfully!");
+      } else {
+        setError("An error occurred. Please try again.");
+      }
+    } catch (error) {
+      setLoading(false);
+      setError("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <div className="footer ">
       <div className="container">
         <hr style={{ color: "#fff" }}></hr>
-     
+
         <div className="row allpadding">
           {/* First Column: Logo and Contact Information */}
           <div className="col-sm-3">
@@ -37,8 +103,10 @@ const Footer = () => {
             </div>
             <div className="my-4">
               <Typography variant="p" sx={{ color: "#fff", fontSize: "14px" }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
+                Your trusted partner in sustainable marine solutions, providing
+                innovative engineering and repair services with a commitment to
+                environmental responsibility. Available 24/7 to support your
+                needs.
               </Typography>
             </div>
             <div className="social-links">
@@ -59,19 +127,17 @@ const Footer = () => {
             <h5>Quick Links</h5>
             <ul className="footer-links">
               <li>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="/about-us">About Us</a>
+                <Link to="/about-us">About Us</Link>
+              </li>
+
+              <li>
+                <Link to="/engine-overhauling">Services</Link>
               </li>
               <li>
-                <a href="/supply">Supply</a>
-              </li>
-              <li>
-                <a href="/services">Services</a>
-              </li>
-              <li>
-                <a href="/contact-us">Contact Us</a>
+                <Link to="/contact-us">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -81,19 +147,21 @@ const Footer = () => {
             <h5>Our Services</h5>
             <ul className="footer-services">
               <li>
-                <a href="">Dry Docking Repair</a>
+                <Link to="/engine-overhauling">Engine Overhauling</Link>
               </li>
               <li>
-                <a href="">Engine Overhauling</a>
+                <Link to="/marine-electrical-&-automation">
+                  Marine Electrical & Automation
+                </Link>
               </li>
               <li>
-                <a href="">Marine Electrical & Automation</a>
+                <Link to="/cranes-services">Crane Service</Link>
               </li>
               <li>
-                <a href="">Crane Service and Repair</a>
+                <Link to="/marine-and-offshore">Marine & Offshore </Link>
               </li>
               <li>
-                <a href="">Annual Service</a>
+                <Link to="/hydraulic-power">Hydraulic Power </Link>
               </li>
             </ul>
           </div>
@@ -106,7 +174,8 @@ const Footer = () => {
               <ul>
                 <li style={{ color: "#fff" }}>
                   <LocationOn sx={{ fontSize: "20px" }} />
-                  {""} Street Name, City, Country
+                  {""} 101-Cecil Street Tong Eng Building Unit #09-06 Singapore
+                  069533
                 </li>
                 <li>
                   <a href="mailto:service@highmastmarine.com">
@@ -126,9 +195,10 @@ const Footer = () => {
             <Box sx={{ mt: 3 }}>
               <h5> Subscribe to Newsletter</h5>
 
+             
               <Box
                 component="form"
-                label="Subscribe to Newsletter"
+                onSubmit={handleSubmit}
                 sx={{
                   display: "flex",
                   alignItems: "center",
@@ -141,20 +211,40 @@ const Footer = () => {
                 <TextField
                   variant="outlined"
                   placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   sx={{
                     flex: 1,
                     input: { color: "#fff" },
                     fieldset: { border: "none" },
                   }}
                 />
-                <Button
-                  type="submit"
-                  variant="contained"
-                  sx={{ backgroundColor: "transparent", color: "#fff", p: 1.5 }}
-                >
-                  <SendIcon />
-                </Button>
+
+                {isSubmitting ? (
+                  <Bars
+                    height="30"
+                    width="30"
+                    color="red"
+                    ariaLabel="loading-indicator"
+                  />
+                ) : (
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    sx={{
+                      backgroundColor: "transparent",
+                      color: "#fff",
+                      p: 1.5,
+                    }}
+                  >
+                    <SendIcon />
+                  </Button>
+                )}
               </Box>
+
+              {error && <Typography sx={{color:"red !important"}}>{error}</Typography>}
+
+              <ToastContainer />
             </Box>
           </div>
         </div>

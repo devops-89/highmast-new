@@ -1,0 +1,68 @@
+.expertiseparallax-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  position: relative !important;
+  will-change: transform;
+  transition: background-position 0.3s ease-out;
+}
+.expertiseparallax-container .react-parallax-content {
+  position: static !important;
+}
+
+.expertiseoverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 1;
+}
+
+.expertisecontent {
+  position: relative;
+  z-index: 2;
+
+  color: white;
+  padding: 20px;
+}
+
+
+.expertisecontent h2 {
+  font-size: 3rem;
+  margin: 20px;
+  font-family: poppins;
+  font-weight: 600;
+}
+
+.expertisecontent p {
+  font-size: 1.2rem;
+  margin: 20px;
+  font-family: poppins;
+}
+
+.github-button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.github-button:hover {
+  background-color: #555;
+}
+.subheading {
+  font-weight: 600;
+  font-size: 70px;
+  color: #fff;
+  font-family: poppins;
+  margin-bottom: 80px;
+}

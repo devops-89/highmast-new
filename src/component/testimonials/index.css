@@ -1,0 +1,58 @@
+.testimonialssection {
+    height: 100vh;
+    /* Or another fixed height value */
+    overflow: hidden;
+
+
+
+}
+
+.testimonialswiper {
+    height: 300px;
+    /* Ensure Swiper takes the full height of the container */
+}
+
+.testimonialswiper .swiper-slide {
+    display: grid;
+    place-content: center;
+}
+
+.testimonialimg {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.testimonialscontent {
+    text-align: left;
+}
+
+.testimonialsp {
+    color: #fff;
+
+    font-family: poppins;
+}
+
+.testimonialimg-wrapper {
+    width: 150px;
+    /* Set the size of the circle */
+    height: 150px;
+    /* Set the size of the circle */
+    background-color: #f0f0f0;
+    /* Set the background color */
+    border-radius: 50%;
+    /* Makes the background circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* Add some space around the image */
+}
+/* .testimonialavtarbg {
+    background-image: url(../../assets/img/elements/testimonialavtarbg.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    
+} */

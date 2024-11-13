@@ -1,40 +1,30 @@
-/* index.css */
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  
-  main {
-    padding-top: 60px;
-    text-align: center;
-  }
+
 
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns for sections */
-    gap: 20px; /* Space between grid items */
-    padding: 1rem; /* Padding for the grid container */
-    max-width: 1200px; /* Optional: set a max width for the grid */
-    margin: 0 auto; /* Center the grid container horizontally */
-    align-items: center; /* Center items vertically within each grid cell */
-    justify-items: center; /* Center items horizontally within each grid cell */
-    position: relative; /* Set relative positioning for child elements */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    padding: 1rem 1rem 100px 1rem;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    align-items: center; 
+    justify-items: center;
+    position: relative; 
   }
   
-  /* Section styles */
-  .section {
-    height: 300px; /* Fixed height for each section */
-    position: relative; /* For absolute positioning of content */
-    overflow: hidden; /* Prevent overflow */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for fade and movement */
-    border-radius: 8px; /* Optional: rounded corners */
-    display: flex; /* Use flexbox for centering content */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    /* margin-top: -30px;  */
+ 
+  .allsection {
+    height: 300px; 
+    position: relative;
+    overflow: hidden; 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+    border-radius: 8px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+  
   }
   
   
@@ -44,11 +34,11 @@ body, html {
     background-position: center;
     background-size: cover;
     height: 300px;
-    width: 300px;
+    width: 400px;
     color: #ffff;
     margin-bottom: 20px;
     font-family:poppins;
-    margin-bottom: 40%;
+    margin-bottom: 0%;
   }
   
   .section2 {
@@ -59,9 +49,9 @@ body, html {
     height: 300px;
     width: 400px;
     color: #ffff;
-    /* margin-bottom: 30px; */
+
     font-family:poppins;
-    margin-top: 50%;
+    margin-top: 25%;
     margin-right: 45%;
   
 
@@ -78,7 +68,7 @@ body, html {
     width: 400px;
     color: #fff;
     font-family:poppins;
-    margin-left: 60%;
+  
   }
   
   .section4 {
@@ -87,10 +77,11 @@ body, html {
     background-position: center;
     background-size: cover;
     height: 300px;
-    width: 300px;
+    width: 400px;
     color: #fff;
     font-family:poppins;
-    margin-top: 40%;
+    margin-top: 30%;
+    margin-right: 40%;
 
   }
   
@@ -105,64 +96,64 @@ body, html {
   }
 
   
-  /* When section is in view */
+
   .in-view {
-    opacity: 1; /* Fully visible */
-    transform: scale(1.1); /* Slight zoom in */
+    opacity: 1; 
+    transform: scale(1.1); 
   }
   
-/* Content styles */
+
 .content {
-    opacity: 1; /* Start as invisible */
-    transform: translateY(20px); /* Slightly lower position */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for fade and movement */
+    opacity: 1; 
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
     z-index: 2;
     padding:10px;
-    /* position: relative; */
+   
 
   }
   
-  /* Fade in effect */
+
   .fade-in {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Move to original position */
+    opacity: 1; 
+    transform: translateY(0);
   }
   
-  /* Adjustments for odd and even sections */
-  .section:nth-child(odd) {
-    /* margin-bottom: -20px; */
-    z-index: 2; /* Raise odd sections */
-    /* margin-left: 60px; */
+ 
+  .allsection:nth-child(odd) {
+
+    z-index: 2;
+ 
   }
   
-  .section:nth-child(even) {
-    /* margin-top: 20px;  */
-    z-index: 1; /* Lower even sections */
+  .allsection:nth-child(even) {
+
+    z-index: 1;
   }
   
-  /* Centering grid items */
+
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    justify-items: center; /* Center each grid item */
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
   }
   
-  /* Additional styles for overlapping effect */
-  .section {
+ 
+  .allsection {
     transition: transform 0.5s ease;
   }
   
-  .section:hover {
-    transform: scale(1.05); /* Scale effect on hover */
+  .allsection:hover {
+    transform: scale(1.05); 
   }
-  /* Dark filter overlay */
-.section::before {
-    content: ''; /* Empty content for the overlay */
-    position: absolute; /* Position it absolutely within the section */
+
+.allsection::before {
+    content: '';
+    position: absolute; 
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
-    z-index: 1; /* Ensure it sits above the background image but below the content */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
   }

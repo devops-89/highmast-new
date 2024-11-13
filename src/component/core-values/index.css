@@ -1,0 +1,53 @@
+.corevaluessection .heading {
+  font-size: 80px;
+  color: #fff;
+  font-family: poppins;
+  font-weight: 600;
+}
+
+.corevaluessection .tabs-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+/* 
+.swiper-section {
+  margin-top: 20px;
+} */
+
+.corevaluessection .swiper-slide-content {
+  padding: 20px;
+}
+
+.tabs-section  .Mui-selected {
+color: #6CBBC8 !important;
+}
+
+
+.corevaluessection .swiper-slide-content h1 {
+  color: #fff;
+  font-size: 50px;
+  text-align: left;
+}
+.corevaluessection .swiper-slide-content p {
+  color: #fff;
+  font-size: 20px;
+  text-align: left;
+}
+.corevaluessection {
+  height: 100vh;
+}
+.swiper-slide-content img {
+width: 200px;
+height: 200px;
+}
+.valueparent {
+  border:1px solid #6CBBC8 ;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: rgb(16 59 81 / 15%);
+}
+.valueparent2 {
+  padding: 0px 100px 0px 50px !important;
+  text-align: justify;
+}

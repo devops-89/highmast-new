@@ -1,38 +1,66 @@
-.greenimpactbgabout {
-    background-image: url("../../assets/img/elements/shipwithhuman.png");
-    background-attachment: fixed;
-    background-position: right center;
-    /* Align the image to the left and center vertically */
-    background-size: contain;
-    /* Ensure the full image is visible */
-    min-height: 500px;
-    /* Adjust this value as needed */
-    display: flex;
-    flex-direction: column;
-    /* Align children vertically */
-    justify-content: center;
-    /* Center content vertically in the middle */
-    align-items: flex-start;
-    /* Align items to the left */
-    background-repeat: no-repeat;
-    /* Prevent repeating the background */
-    padding: 20px;
-    /* Add padding as needed */
+.scroll-animation-containerabout {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
 
 }
-/* 
-.text > p {
-    background: linear-gradient(
-      to right,
-      rgb(255, 255, 255) 50%,
-      rgb(37, 37, 37) 50%
-    );
-    background-size: 200% 100%;
-    background-position-x: 100%;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    margin-left: 50px;
-    line-height: 1.2;
-    font-size: 10vw;
-  } */
+.Mast-text {
+  color: #E32226;
+}
+.zoom-textAbout {
+  position: absolute;
+  top: 50%;
+
+  right: 0%;
+  left: 0%;
+
+  transform: translate(-50%, -50%);
+
+  font-weight: bold;
+  z-index: 2;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-clip: text;
+
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+ 
+  -webkit-font-smoothing: antialiased;
+}
+
+.alltextparent p {
+  text-align: left;
+  color: #fff;
+  font-size: 17px;
+  font-family: poppins;
+  margin-bottom: 0px;
+}
+
+.aboutcontent {
+  background-color: rgb(16 59 81 / 15%);
+  padding: 50px 50px;
+  border-radius: 5px;
+  border:1px solid #579caa;
+
+}
+
+
+
+.aboutusimg {
+  height: 100%; 
+  width: 100%;
+
+  background-size: contain; 
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.abouthighmastimg {
+  height: 450px;
+  width:325px;
+  margin-top: auto;
+  border-radius: 5px;
+}
