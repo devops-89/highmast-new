@@ -1,0 +1,41 @@
+
+.majorborderbottom {
+    border-bottom: 1px solid #6CBBC8;
+}
+.majorimgservice {
+    width:300px;
+    height: 400px;
+    border-radius: 5px;
+}
+.majortopbottom {
+
+    border-top: 1px solid #6CBBC8;
+    border-bottom: 1px solid #6CBBC8
+
+}
+.majorbottom {
+    border-bottom: 1px solid #6CBBC8;
+}
+.majorright{
+    border-right: 1px solid #6CBBC8;
+}
+
+.majorheading {
+    font-size: 25px;
+    color: #6CBBC8;
+}
+.majorgpara {
+
+color: #fff;
+
+}
+.majorheight {
+    height: 100%;
+    text-align: left;
+}
+/* .majorscrollable-content {
+    overflow-y: auto;
+} */
+/* .majorscrollable-content::-webkit-scrollbar {
+    display: none; 
+  } */

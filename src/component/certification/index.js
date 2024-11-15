@@ -21,7 +21,7 @@ const Certification = () => {
           sx={{ fontSize: "80px", color: "#fff" }}
           component="p"
         >
-          DElIVERING QUALITY
+          DELIVERING QUALITY
         </Typography>
       </div>
       <div class="row align-items-center allpadding">
@@ -52,10 +52,8 @@ const Certification = () => {
                 <img className="certificationimg" src={certificationimg2}></img>
               </div>
               <Typography sx={{ fontSize: "18px" }} className="certiondetail">
-                ISO 14001 empowers us even more on our commitment to being
-                environmentally responsible and stewards us to conduct practices
-                of sustainable and innovative green energy and reduces our
-                impact on the environment.
+                ISO 14001 enhances our environmental responsibility, guiding
+                sustainable practices and reducing our ecological impact.
               </Typography>
             </div>
           </div>

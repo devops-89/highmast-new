@@ -10,7 +10,8 @@
 }
 
 .footerlogo {
-    width: 200px;
+    width: 160px;
+    cursor: pointer;
 
 }
 
@@ -50,4 +51,7 @@
     color: #fff;
     margin-right: 10px;
     border-radius: 50%;
+}
+.footer-linksparent {
+    padding-left:75px !important ;
 }

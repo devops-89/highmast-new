@@ -10,7 +10,7 @@ import {
 import { motion } from "framer-motion";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const FAQSection = ({ faqData }) => {
+const Contactaddress = ({ contactaddressdata }) => {
   const [scrollY, setScrollY] = useState(0);
 
   // Update scroll position
@@ -50,10 +50,10 @@ const FAQSection = ({ faqData }) => {
           Where We Are
         </Typography>
         <Box>
-          {faqData.length > 0 ? (
-            faqData.map((faq, index) => (
+          {contactaddressdata.length > 0 ? (
+            contactaddressdata.map((address, index) => (
               <motion.div
-                key={faq.id}
+                key={address.id}
                 data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                 data-aos-delay={index % 2 === 0 ? index * 100 : index * 200} 
                 style={{ marginBottom: "16px" }}
@@ -100,16 +100,16 @@ const FAQSection = ({ faqData }) => {
                             marginLeft: "40px",
                           }}
                         >
-                          {faq.icon}
+                          {address.icon}
                         </span>
-                        {faq.countryname}
+                        {address.countryname}
                       </Typography>
                     </div>
                     <div className="col-sm-6 text-left px-3  py-4 contactlocbg">
                       <Typography
                         sx={{ fontFamily: "poppins", textAlign: "left" }}
                       >
-                        {faq.addressright1}
+                        {address.addressright1}
                       </Typography>
                     </div>
                   </AccordionSummary>
@@ -118,20 +118,20 @@ const FAQSection = ({ faqData }) => {
                       <div className="col-sm-6 " style={{ textAlign: "left" }}>
                         <Typography sx={{ fontWeight: "600" }}>
                           {" "}
-                          {faq.addressheading}
+                          {address.addressheading}
                         </Typography>
-                        <Typography>{faq.addressdetails}</Typography>
-                        <Typography>{faq.addresdetailspin}</Typography>
+                        <Typography>{address.addressdetails}</Typography>
+                        <Typography>{address.addresdetailspin}</Typography>
 
                         <div class="mt-5">
                           <Typography sx={{fontWeight:"600"}}>Phone:</Typography>
-                          <Typography>{faq.phoneno}</Typography>
+                          <Typography>{address.phoneno}</Typography>
                           <Typography sx={{fontWeight:"600"}}>Email:</Typography>
-                          <Typography> {faq.email}</Typography>
+                          <Typography> {address.email}</Typography>
                         </div>
                       </div>
                       <div className="col-sm-6">
-                        <img src={faq.img}></img>
+                        <img src={address.img}></img>
                       </div>
                     </div>
                   </AccordionDetails>
@@ -149,4 +149,4 @@ const FAQSection = ({ faqData }) => {
   );
 };
 
-export default FAQSection;
+export default Contactaddress;

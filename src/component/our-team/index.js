@@ -120,7 +120,7 @@ const Ourteam = () => {
               component="p"
               sx={{ color: "red", fontSize: "22px", textAlign: "left" }}
             >
-              Managing Director
+              Managing Director & Co-Founder
             </Typography>
             <Typography
               component="p"

@@ -9,12 +9,10 @@ import EngineOverhauling from "../views/engine-overhauling";
 import MarineElectricalandAutomation from "../views/marine-electrical-&-automation";
 import CranesServices from "../views/cranesservices";
 import MarineandOffshore from "../views/marine&offshore";
-import DryDocking from "../views/hydraulic-power";
 import Hydraulicpower from "../views/hydraulic-power";
 import ScrollToTop from "../component/scrolltop";
-import Services from "../component/services-section";
-import Servicepage from "../views/services";
 import ThankYou from "../views/thank-you";
+import Service from "../views/service";
 
 const Router = () => {
   return (
@@ -25,7 +23,7 @@ const Router = () => {
         <Route index path="/" element={<Home />}></Route>
         <Route index path="/about-us" element={<About />}></Route>
         <Route index path="/contact-us" element={<Contactus />}></Route>
-        <Route index path="/services" element={<Servicepage />}></Route>
+        <Route index path="/services" element={<Service/>}></Route>
         <Route index path="/thank-you" element={<ThankYou/>}></Route>
 
         <Route

@@ -1,0 +1,36 @@
+.conatactbanner {
+
+    background-color: #031C32;
+    width: 100%;
+    background-repeat: no-repeat;
+  
+  
+  }
+  
+  .conatactbanner h1 {
+    color: #fff;
+    text-align: left;
+    font-size: 7.15vw;
+    line-height: 1;
+    margin-top: 0.1em;
+    margin-bottom: 0;
+  }
+  .borderboxes {
+    background: #5e8c9326;
+    padding: 30px;
+    border-radius: 10px;
+    height: 300px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #6CBBC8;
+  }
+  .borderboxes .box-title h3 {
+    font-family: poppins;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .borderboxes svg {
+    color:#6CBBC8 ;
+    margin-bottom: 20px;
+  }

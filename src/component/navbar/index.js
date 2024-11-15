@@ -1,6 +1,6 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import highmastlogo from "../../assets/img/logo/highmastlogo.png";
 import emailcall from "../../assets/img/elements/contact-mail.png";
 import ModalComponent from "../dialog";
@@ -12,26 +12,28 @@ const Navbar = () => {
     navlinks: [
       { name: "Home", url: "/" },
       { name: "About Us", url: "/about-us" },
-      { name: "Services", url: "/services", dropdown: true, disabled: true  }, // Indicating this has a dropdown
+      { name: "Services", url: "/services", dropdown: true, disabled: true }, // Indicating this has a dropdown
       // { name: "Supply", url: "/supply" },
       { name: "Contact", url: "/contact-us" },
     ],
     servicesDropdown: [
       { name: "Engine Overhauling", url: "/engine-overhauling" },
-      { name: "Marine electrical & Automation ", url: "/marine-electrical-&-automation" },
+      {
+        name: "Marine electrical & Automation ",
+        url: "/marine-electrical-&-automation",
+      },
       { name: "Cranes Service ", url: "/cranes-services" },
       { name: "Marine and Offshore ", url: "/marine-and-offshore" },
       { name: "Hydraulic Power", url: "/hydraulic-power" },
     ],
   };
-
+  const location = useLocation();
   const [fixed, setFixed] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -76,9 +78,21 @@ const Navbar = () => {
             justifyContent={"space-between"}
             spacing={3}
           >
-            <img src={highmastlogo} width={150} alt="Highmast Logo" />
+            <Link to="/">
+              <img
+                className="highmastlogo"
+                src={highmastlogo}
+                width={150}
+                alt="Highmast Logo"
+              />
+            </Link>
 
-            <Stack direction={"row"} alignItems={"center"} spacing={3}>
+            <Stack
+              direction={"row"}
+              alignItems={"center"}
+              className="navlinks"
+              spacing={3}
+            >
               {Data.navlinks.map((val, i) => (
                 <Box
                   key={i}
@@ -86,12 +100,17 @@ const Navbar = () => {
                   onMouseLeave={() => val.dropdown && setShowDropdown(false)}
                   style={{ position: "relative" }}
                 >
-                  <Link to={val.url} style={{ textDecoration: "none" }}>
+                  <Link
+                    to={val.url}
+                    style={{ textDecoration: "none" }}
+                    className={
+                      location.pathname === val.url ? "active-link" : ""
+                    }
+                  >
                     <Typography
                       fontFamily="poppins"
                       fontWeight={500}
                       textTransform={"uppercase"}
-                      color="#fff"
                       margin="0px 20px"
                     >
                       {val.name}
@@ -100,7 +119,7 @@ const Navbar = () => {
 
                   {val.dropdown && showDropdown && (
                     <Box
-                          className="serviceslinks"
+                      className="serviceslinks"
                       sx={{
                         position: "absolute",
                         top: "100%",
@@ -110,16 +129,15 @@ const Navbar = () => {
                         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                         padding: "10px",
                         zIndex: 1,
-                        width:"180%",
-                        textAlign:"left",
-                        border:"1px solid #6CBBC8"
+                        width: "180%",
+                        textAlign: "left",
+                        border: "1px solid #6CBBC8",
                       }}
                       onMouseEnter={() => setShowDropdown(true)}
                       onMouseLeave={() => setShowDropdown(false)}
                     >
                       {Data.servicesDropdown.map((service, j) => (
                         <Link
-                  
                           key={j}
                           to={service.url}
                           style={{
@@ -141,6 +159,7 @@ const Navbar = () => {
           </Stack>
 
           <Box
+            className="emailcallbox"
             sx={{
               display: "flex",
               alignItems: "center",

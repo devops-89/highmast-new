@@ -99,14 +99,16 @@ const Footer = () => {
           {/* First Column: Logo and Contact Information */}
           <div className="col-sm-3">
             <div className="footer-logo">
-              <img className="footerlogo" src={footerlogo}></img>
+              <Link to="/">
+                {" "}
+                <img className="footerlogo" src={footerlogo}></img>
+              </Link>
             </div>
             <div className="my-4">
               <Typography variant="p" sx={{ color: "#fff", fontSize: "14px" }}>
-                Your trusted partner in sustainable marine solutions, providing
-                innovative engineering and repair services with a commitment to
-                environmental responsibility. Available 24/7 to support your
-                needs.
+                Your trusted partner in sustainable marine solutions, offering
+                innovative engineering and repair services with a focus on
+                environmental responsibility, available 24/7.
               </Typography>
             </div>
             <div className="social-links">
@@ -123,7 +125,7 @@ const Footer = () => {
           </div>
 
           {/* Second Column: Links */}
-          <div className="col-sm-3">
+          <div className="col-sm-3 footer-linksparent">
             <h5>Quick Links</h5>
             <ul className="footer-links">
               <li>
@@ -174,8 +176,8 @@ const Footer = () => {
               <ul>
                 <li style={{ color: "#fff" }}>
                   <LocationOn sx={{ fontSize: "20px" }} />
-                  {""} 101-Cecil Street Tong Eng Building Unit #09-06 Singapore
-                  069533
+                  {""} Tong Eng Building, 101 Cecil Street, Unit 24-05 Singapore
+                  069553
                 </li>
                 <li>
                   <a href="mailto:service@highmastmarine.com">
@@ -195,7 +197,6 @@ const Footer = () => {
             <Box sx={{ mt: 3 }}>
               <h5> Subscribe to Newsletter</h5>
 
-             
               <Box
                 component="form"
                 onSubmit={handleSubmit}
@@ -242,7 +243,11 @@ const Footer = () => {
                 )}
               </Box>
 
-              {error && <Typography sx={{color:"red !important"}}>{error}</Typography>}
+              {error && (
+                <Typography sx={{ color: "red !important" }}>
+                  {error}
+                </Typography>
+              )}
 
               <ToastContainer />
             </Box>

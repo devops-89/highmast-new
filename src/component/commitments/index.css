@@ -16,6 +16,7 @@
  
   .allsection {
     height: 300px; 
+    width: 450px;
     position: relative;
     overflow: hidden; 
     transition: opacity 0.5s ease, transform 0.5s ease; 
@@ -33,8 +34,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 300px;
-    width: 400px;
+    /* height: 300px;
+    width: 400px; */
     color: #ffff;
     margin-bottom: 20px;
     font-family:poppins;
@@ -46,13 +47,13 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 300px;
-    width: 400px;
+    /* height: 300px;
+    width: 400px; */
     color: #ffff;
 
     font-family:poppins;
     margin-top: 25%;
-    margin-right: 45%;
+    /* margin-right: 45%; */
   
 
   }
@@ -64,8 +65,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 300px;
-    width: 400px;
+    /* height: 300px;
+    width: 400px; */
     color: #fff;
     font-family:poppins;
   
@@ -76,12 +77,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 300px;
-    width: 400px;
+    /* height: 300px;
+    width: 400px; */
     color: #fff;
     font-family:poppins;
     margin-top: 30%;
-    margin-right: 40%;
+    /* margin-right: 40%; */
 
   }
   
@@ -90,8 +91,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 300px;
-    width: 300px;
+    /* height: 300px;
+    width: 300px; */
     font-family:poppins;
   }
 
@@ -108,7 +109,7 @@
     transform: translateY(20px); 
     transition: opacity 0.5s ease, transform 0.5s ease; 
     z-index: 2;
-    padding:10px;
+    padding:18px;
    
 
   }

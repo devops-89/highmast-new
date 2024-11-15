@@ -3,13 +3,13 @@ import "./index.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
-import FAQSection from "../../component/faq";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import googlemapimg from "../../assets/img/elements/googlemapimg.png";
 import globebannerimg from "../../assets/img/elements/globeimg.png";
+import Contactaddress from "../../component/contactaddress";
 
 const Contactus = () => {
-  const faqData = [
+  const contactaddressdata = [
     {
       icon: <LocationOnIcon />,
       countryname: "SINGAPORE",
@@ -19,7 +19,7 @@ const Contactus = () => {
       addressright1: "GROUP HQ SINGAPORE",
       addressright2: "6th Floor, Zig Zag Building 70 Victoria St, London, SW1E",
       addressheading: "Head Office/Corporate Office",
-      addressdetails: "101-Cecil Street Tong Eng Building Unit #09-06 ",
+      addressdetails: "Tong Eng Building, 101 Cecil Street, Unit 24-05",
       addresdetailspin: "Singapore 069533",
       
       email: "service@highmastmarine.com",
@@ -120,7 +120,7 @@ const Contactus = () => {
                     <div className="box-inner">
                       <div className="box-title">
                         <h3>
-                        50<span style={{ color: "#E32226" }}>+</span>
+                        20<span style={{ color: "#E32226" }}>%</span>
                         </h3>
                       </div>
                       <div className="box-content">Ports Served</div>
@@ -138,7 +138,8 @@ const Contactus = () => {
         </div>
         {/* Boxes Section */}
       </section>
-      <FAQSection faqData={faqData} />
+      {/* <FAQSection faqData={faqData} /> */}
+      <Contactaddress  contactaddressdata={contactaddressdata}/>
     </div>
   );
 };

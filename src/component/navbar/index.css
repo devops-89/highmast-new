@@ -1,14 +1,40 @@
-
-.emailcallicon{
+.emailcallicon {
     width: 40px;
     height: 40px;
     color: aliceblue;
 }
+
 .serviceslinks a:hover {
     color: red !important;
 
 }
 
+.navlinks a p:hover {
+    color: #6CBBC8;
+    border-bottom: 2px solid #6CBBC8;
 
+}
 
-   
+.navlinks a {
+    color: #fff;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
+
+    border-bottom: 2px solid transparent ;
+
+}
+.navlinks a p {
+    border-bottom: 2px solid transparent;
+}
+
+.navlinks .active-link {
+    color: #6CBBC8 !important;
+
+    border-bottom: 2px solid #6CBBC8 !important; /* Underline effect for active link */
+
+}
+.emailcallbox {
+    cursor: pointer;
+}
+.highmastlogo {
+    cursor: pointer;
+}

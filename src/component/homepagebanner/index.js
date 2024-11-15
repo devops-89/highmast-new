@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./index.css";
 
-const Services = () => {
+const Homepagebanner = () => {
   useEffect(() => {
     const handleScroll = () => {
       const section = document.querySelector(".contersection");
@@ -76,12 +76,16 @@ const Services = () => {
                   High<span style={{ color: "#E32226" }}>Mast</span> marine
                 </span>{" "}
                 &{" "}
+              </p>
+              <p className="rstoftext " >
                 <span
                   className="text-border contioceantext"
                   data-aos="flip-right"
                 >
-                  ContiOcean
+                  ContiOcean ENVIRONMENT
                 </span>
+           
+                
               </p>
             </h1>
           </div>
@@ -90,9 +94,9 @@ const Services = () => {
               <div className="col">
                 <div className="top-line"></div>
                 <h3 className="number">
-                  <span>2</span>
+                  <span>5</span>
                   <span>0</span>
-                  <span>0</span>
+              
                   <span className="symbol">+</span>
                 </h3>
                 <p className="desc">Successful Dry Dockings</p>
@@ -110,7 +114,7 @@ const Services = () => {
               <div className="col">
                 <div className="top-line"></div>
                 <h3 className="number">
-                  <span>3</span>
+                  <span>2</span>
                   <span>0</span>
                   <span className="symbol">%</span>
                 </h3>
@@ -121,7 +125,7 @@ const Services = () => {
               <div className="col">
                 <div className="top-line"></div>
                 <h3 className="number">
-                  <span>5</span>
+                  <span>2</span>
                   <span>0</span>
                   <span className="symbol">+</span>
                 </h3>
@@ -135,7 +139,7 @@ const Services = () => {
                   <span>0</span>
                   <span className="symbol">+</span>
                 </h3>
-                <p className="desc">Owned vessels</p>
+                <p className="desc">Managed vessels</p>
                 <div className="bottom-line"></div>
               </div>
               <div className="col">
@@ -155,4 +159,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Homepagebanner;
