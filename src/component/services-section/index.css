@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --page-margin-top: 130.0px;
     --page-margin-right-xxxl: 8.0vw;
     --page-margin-left-xxxl: 8.0vw;
@@ -10,7 +10,7 @@ body {
     background: rgb(251, 249, 249);
     font-family: "DM Sans", sans-serif;
     overflow-x: hidden;
-}
+} */
 
 /* .container {
     padding: var(--page-margin-top) var(--page-margin-right-xxxl) 0 var(--page-margin-left-xxxl);
@@ -45,40 +45,41 @@ body {
     margin: 0;
 
 }
+
 .number .symbol {
     position: relative !important;
     display: inline-block !important;
-    background:  red  !important;
-    -webkit-background-clip: text  !important;
-    -webkit-text-fill-color: transparent  !important;
-    background-clip: text  !important;
-    
-    opacity: 1  !important;
-    visibility: inherit  !important;
-    transform: translate(0px, 0px)  !important;
+    background: red !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+
+    opacity: 1 !important;
+    visibility: inherit !important;
+    transform: translate(0px, 0px) !important;
 }
 
 .number span {
     position: relative;
     display: inline-block;
-    background:  white;
+    background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  
+
     opacity: 1;
     visibility: inherit;
     transform: translate(0px, 0px);
 }
 
-.row .col .number span {
+.secOne .row .col .number span {
     font-weight: 800;
     font-size: 3.6vw;
     line-height: 1.1;
     margin: 0;
 }
 
-.row .col .desc {
+.secOne .row .col .desc {
     font-size: 22px;
     font-weight: 500;
     line-height: 1.1;
@@ -110,17 +111,16 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-   
     width: 100%;
     background-repeat: no-repeat;
-   
+
 
 }
 
 
 .secOne .section-title {
     margin-bottom: calc(4.2vw);
-   
+
 }
 
 .secOne h1 {
@@ -139,11 +139,11 @@ body {
 }
 
 .text-border {
-    
+
     font-size: 100px;
     text-transform: uppercase;
     font-weight: bold;
-    
+
 }
 
 .rstoftext {
@@ -155,7 +155,8 @@ body {
 
 .greentext {
     background-image: url("../../assets/img/elements/leaf.jpeg");
-    background-size: cover; /* Ensure the background covers the text */
+    background-size: cover;
+    /* Ensure the background covers the text */
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-clip: text;
@@ -168,9 +169,11 @@ body {
     -webkit-font-smoothing: antialiased;
     margin-top: 200px;
 }
+
 .contioceantext {
     background-image: url("../../assets/img/elements/conti.jpg");
-    background-size: cover; /* Ensure the background covers the text */
+    background-size: cover;
+    /* Ensure the background covers the text */
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-clip: text;
@@ -181,8 +184,9 @@ body {
     text-align: center;
 
     -webkit-font-smoothing: antialiased;
-    margin-top: 200px;  
+    margin-top: 200px;
 }
+
 .highmasttextbg {
     /* background-image: url("../../assets/img/elements/highmastbgtext2.jpg");
     background-size: cover;
@@ -194,23 +198,81 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-   
-   
+
+
     -webkit-font-smoothing: antialiased;
-    margin-top: 200px;  
+    margin-top: 200px;
 }
+
 .overlay {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     height: 240vh;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1; 
+    z-index: 1;
 }
 
 .bannercontainer {
-    position: relative; 
-    z-index: 2; 
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    /* .secOne .row {
+        display: block;
+        position: relative;
+        flex-wrap: wrap;
+    } */
+
+    .contersection {
+        transform: scale(1.02) !important;
+        /* Further reduce scaling */
     }
+
+    .text-border,
+    .rstoftext {
+        font-size: 7vw;
+    }
+
+    .secOne .row .col .desc {
+        font-size: 10px;
+
+    }
+
+    .secOne .row .col .number span {
+        font-size: 5.6vw;
+
+    }
+
+    .number {
+        font-size: 4.5vw;
+    }
+
+    .secOne {
+        background-size: 100% 100%;
+        /* Cover full height and width */
+        background-position: top center;
+        /* Adjust position */
+        background-attachment: scroll;
+        /* Avoid issues on mobile */
+        height: 80vh !important;
+    }
+
+    .overlay {
+        height: 80vh !important;
+
+    }
+
+    .zoom-text {
+        font-size: 80px !important;
+    }
+
+    .scroll-animation-container {
+        height: 20vh;
+    }
+
+
+}

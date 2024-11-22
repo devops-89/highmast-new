@@ -1,4 +1,14 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Stack,
+  Typography,
+  Drawer,
+  IconButton,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown"; // Dropdown arrow icon
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import highmastlogo from "../../assets/img/logo/highmastlogo.png";
@@ -12,34 +22,56 @@ const Navbar = () => {
     navlinks: [
       { name: "Home", url: "/" },
       { name: "About Us", url: "/about-us" },
-      { name: "Services", url: "/services", dropdown: true, disabled: true }, // Indicating this has a dropdown
-      // { name: "Supply", url: "/supply" },
+      { name: "Services", url: "/services", dropdown: true },
       { name: "Contact", url: "/contact-us" },
     ],
     servicesDropdown: [
-      { name: "Engine Overhauling", url: "/engine-overhauling" },
       {
-        name: "Marine electrical & Automation ",
+        name: "Retrofit Led Power Saving Solutions",
+        url: "/retrofit-led-power-saving-solutions",
+      },
+  
+      {
+        name: "Scrubber & Ccs Commisioning",
+        url: "/scrubber-and-ccs-commisioning",
+      },
+      {
+        name: "AMP Solutions & VDF  Retrofit",
+        url: "/amp-solutions-and-vdf-retrofit",
+      },
+      {
+        name: "Project Supervision Shipbuilding & Repairs",
+        url: "project-supervision-shipbuilding-and-ship-repairs",
+      },
+      {
+        name: "Vessel 3D scanning & Production design",
+        url: "vessel-3d-scanning-and-production-design",
+      },
+      {
+        name: "Marine electrical & Automation",
         url: "/marine-electrical-&-automation",
       },
-      { name: "Cranes Service ", url: "/cranes-services" },
-      { name: "Marine and Offshore ", url: "/marine-and-offshore" },
-      { name: "Hydraulic Power", url: "/hydraulic-power" },
     ],
   };
+
   const location = useLocation();
   const [fixed, setFixed] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () => setFixed(window.pageYOffset > 0));
     }
   }, []);
+
+  const toggleDrawer = (open) => () => {
+    setDrawerOpen(open);
+  };
+
+  const toggleMobileDropdown = () => {
+    setMobileDropdownOpen(!mobileDropdownOpen);
+  };
 
   return (
     <Box
@@ -58,7 +90,10 @@ const Navbar = () => {
           direction={"row"}
           alignItems={"center"}
           justifyContent={"space-between"}
-          sx={{ width: "100%", minWidth: "800px" }}
+          sx={{
+            minWidth: { xs: "100%", md: "800px", lg: "800px" },
+            width: "100%",
+          }}
         >
           <Stack
             sx={{
@@ -69,8 +104,8 @@ const Navbar = () => {
               backgroundColor: fixed ? "rgb(16 59 81 / 15%)" : "transparent",
               backdropFilter: fixed && "blur(5px)",
               alignItems: "center",
-              paddingLeft: "20px",
-              paddingRight: "20px",
+              paddingLeft: { xs: "0px", md: "20px", lg: "20px" } ,
+              paddingRight: { xs: "0px", md: "20px", lg: "20px" },
               flexGrow: 1,
             }}
             direction={"row"}
@@ -87,17 +122,133 @@ const Navbar = () => {
               />
             </Link>
 
+            <IconButton
+              edge="end"
+              color="inherit"
+              aria-label="menu"
+              onClick={toggleDrawer(true)}
+              sx={{ display: { xs: "block", md: "none" } }}
+            >
+              <MenuIcon sx={{ color: "#fff" }} />
+            </IconButton>
+
+            <Drawer
+              anchor="right"
+              open={drawerOpen}
+              onClose={toggleDrawer(false)}
+              PaperProps={{
+                sx: { width: "100%", height: "100%" },
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: "white",
+                  position: "relative",
+                  padding: 4,
+                }}
+                role="presentation"
+              >
+                <Link to="/">
+                  <img
+                    className="highmastlogo"
+                    src={highmastlogo}
+                    width={150}
+                    alt="Highmast Logo"
+                  />
+                </Link>
+                <IconButton
+                  onClick={toggleDrawer(false)}
+                  sx={{ position: "absolute", top: 16, right: 16 }}
+                  color="inherit"
+                  aria-label="close"
+                >
+                  <CloseIcon />
+                </IconButton>
+
+                <Stack
+                  direction="column"
+                  alignItems="flex-start"
+                  spacing={2}
+                  sx={{ marginTop: 6 }}
+                >
+                  {Data.navlinks.map((val, i) => (
+                    <Box key={i}>
+                      {/* Navigation Link and Dropdown Icon in Horizontal Line */}
+                      <Box display="flex" alignItems="center">
+                        {/* Link for Navigation */}
+                        <Link
+                          to={val.url}
+                          style={{ textDecoration: "none" }}
+                          className={
+                            location.pathname === val.url ? "active-link" : ""
+                          }
+                          onClick={toggleDrawer(false)} // Close drawer on link click
+                        >
+                          <Typography
+                            fontFamily="poppins"
+                            fontWeight={500}
+                            textTransform={"uppercase"}
+                            fontSize="1.5rem"
+                          >
+                            {val.name}
+                          </Typography>
+                        </Link>
+
+                        {/* Dropdown Icon - Positioned Next to the "Services" Link */}
+                        {val.dropdown && (
+                          <IconButton
+                            onClick={toggleMobileDropdown} // Toggle dropdown on icon click
+                            sx={{ marginLeft: 1 }}
+                          >
+                            <ArrowDropDownIcon />
+                          </IconButton>
+                        )}
+                      </Box>
+
+                      {/* Dropdown Menu - Positioned Below the "Services" Link */}
+                      {val.dropdown && mobileDropdownOpen && (
+                        <Stack spacing={1} sx={{ paddingTop: 1 }}>
+                          {Data.servicesDropdown.map((service, j) => (
+                            <Link
+                              key={j}
+                              to={service.url}
+                              style={{
+                                textDecoration: "none",
+                                color: "#000",
+                                display: "block",
+                                padding: "5px 0",
+                              }}
+                              onClick={toggleDrawer(false)} // Close drawer on link click
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </Stack>
+                      )}
+                    </Box>
+                  ))}
+                </Stack>
+              </Box>
+            </Drawer>
+
             <Stack
               direction={"row"}
               alignItems={"center"}
               className="navlinks"
               spacing={3}
+              sx={{ display: { xs: "none", md: "flex" } }}
             >
               {Data.navlinks.map((val, i) => (
                 <Box
                   key={i}
-                  onMouseEnter={() => val.dropdown && setShowDropdown(true)}
-                  onMouseLeave={() => val.dropdown && setShowDropdown(false)}
+                  onMouseEnter={() =>
+                    val.dropdown && setMobileDropdownOpen(true)
+                  }
+                  onMouseLeave={() =>
+                    val.dropdown && setMobileDropdownOpen(false)
+                  }
                   style={{ position: "relative" }}
                 >
                   <Link
@@ -117,24 +268,24 @@ const Navbar = () => {
                     </Typography>
                   </Link>
 
-                  {val.dropdown && showDropdown && (
+                  {val.dropdown && mobileDropdownOpen && (
                     <Box
                       className="serviceslinks"
                       sx={{
                         position: "absolute",
                         top: "100%",
                         left: 0,
-                        backgroundColor: "rgb(16 59 81 / 40%)",
+                        backgroundColor: "rgb(16 59 81 / 94%)",
                         borderRadius: 2,
+                        border: "1px solid #6cbbc8",
                         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                         padding: "10px",
                         zIndex: 1,
-                        width: "180%",
+                        width: "270px",
                         textAlign: "left",
-                        border: "1px solid #6CBBC8",
                       }}
-                      onMouseEnter={() => setShowDropdown(true)}
-                      onMouseLeave={() => setShowDropdown(false)}
+                      onMouseEnter={() => setMobileDropdownOpen(true)}
+                      onMouseLeave={() => setMobileDropdownOpen(false)}
                     >
                       {Data.servicesDropdown.map((service, j) => (
                         <Link
@@ -155,26 +306,23 @@ const Navbar = () => {
                 </Box>
               ))}
             </Stack>
-            <Stack></Stack>
+            <Stack sx={{display:{xs:"none", md:"block",lg:"block"}}}></Stack>
           </Stack>
 
           <Box
             className="emailcallbox"
             sx={{
-              display: "flex",
+              display: { xs: "none", md: "flex" },
               alignItems: "center",
               border: fixed ? "1px solid #d7d7d7" : "1px solid #121a27",
-              mt: 3,
               borderRadius: 2,
-              backgroundColor: fixed ? "rgb(16 59 81 / 15%)" : "transparent",
-              backdropFilter: fixed && "blur(5px)",
               padding: "10px 15px",
               height: 70,
-              borderRadius: "8px",
               marginLeft: "5px",
               marginTop: "25px",
+              backgroundColor: fixed ? "rgba(16, 59, 81, 0.15)" : "transparent",
+              backdropFilter: fixed && "blur(5px)",
             }}
-            onClick={handleShow}
           >
             <img
               src={emailcall}
@@ -183,7 +331,8 @@ const Navbar = () => {
             />
           </Box>
         </Stack>
-        <ModalComponent show={show} handleClose={handleClose} />
+
+        <ModalComponent show={false} handleClose={() => {}} />
       </Container>
     </Box>
   );

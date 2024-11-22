@@ -2,35 +2,33 @@ import React from "react";
 import "./index.css";
 import ServicesDescription from "../../component/servicesdescription";
 import ServicesPointers from "../../component/servicespointers";
-import pointersimg from "../../assets/img/elements/Craneservice2ndimg.jpg";
-import Additinalservices from "../../component/additionalservices";
-import pendestal from "../../assets/img/elements/crane.png";
-import marinecrane from "../../assets/img/elements/underwater-crane.png";
-import bophandling from "../../assets/img/elements/bophandling.png";
-import gantry from "../../assets/img/elements/gantry-crane.png";
+import pointersimg from "../../assets/img/elements/hydrailicpotrait.jpg";
 import Testimonials from "../../component/testimonials";
 import avtarimg from "../../assets/img/elements/user.png";
 import dwnquote from "../../assets/img/elements/dwnquote.png";
 import upquote from "../../assets/img/elements/upquote.png";
 import ExpertiesComponent from "../../component/expertiestypes";
-import majorrepairservice from "../../assets/img/elements/majorrepair&service.jpg";
-import craneinstalation from "../../assets/img/elements/craneinstallation.jpg";
-import inspectionandtesting from "../../assets/img/elements/inspectionandtesting.jpg";
+import designmodification from "../../assets/img/elements/design&modification.jpg";
+import hydraulicrepair from "../../assets/img/elements/hydraulicrepairs.jpg";
+import hydrauliccomponent from "../../assets/img/elements/hydrauliccomponent.jpg";
 
-const CranesServices = () => {
+const Vessels3d = () => {
   return (
     <div>
       <div className="container-fluid px-0">
         <section
           style={{ height: "100vh" }}
-          className="cranebanner servicesbanner  secOne2 "
+          className="vesselbanner servicesbanner  secOne2 "
         >
           <div className="servicesbanneroverlay"></div>{" "}
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1 data-aos="fade-up-right">
                 <p className="rstoftext">
-                  <span className=""> Crane Service </span>{" "}
+                  <span className="">Vessel 3D scanning </span>{" "}
+                </p>
+                <p className="rstoftext">
+                  <span className="">& Production design </span>{" "}
                 </p>
               </h1>
             </div>
@@ -38,10 +36,7 @@ const CranesServices = () => {
         </section>
       </div>
       <div className="">
-        <ServicesDescription
-          servicesdescription="Specialized crane repair, inspection, installation, and load testing for safe, efficient operations.
-"
-        />
+        <ServicesDescription servicesdescription="3D scanning for retrofit installations allows precise measurements during dry dock or while sailing, ensuring accurate design and installation." />
         <ServicesPointers
           img={pointersimg}
           subheading="Support Services"
@@ -56,28 +51,18 @@ const CranesServices = () => {
           pointername4="Multi-stage pumps, cargo pumps, and tank cleaning machines."
           pointername5="Available at Singapore, Malaysia anchorage, and along the Indian coast."
         />
-        <Additinalservices
-          img1={pendestal}
-          img2={marinecrane}
-          img3={bophandling}
-          img4={gantry}
-          text1="Repair"
-          text2="Recondition"
-          text3="Overhaul"
-          text4="Renew"
-        />
         <ExpertiesComponent
-          mainheading="Complete Crane Care"
-          img1={majorrepairservice}
-          img2={craneinstalation}
-          img3={inspectionandtesting}
-          heading1="Major Repairs & Service"
-          description1="Complete crane repair solutions ensuring top performance and reliability.
+          mainheading="Specialized Hydraulic Components"
+          img1={designmodification}
+          img2={hydraulicrepair}
+          img3={hydrauliccomponent}
+          heading1="Design & Modification"
+          description1="Tailored design and modification solutions using advanced CAD for superior marine engineering."
+          heading2="Hydraulic Repairs & Overhauls"
+          description2=" Professional repair and overhaul services to restore hydraulic systems to peak performance.
 "
-          heading2="Crane Installation & Removal"
-          description2="Specialized crane installation and removal with minimal operational impact."
-          heading3="Inspection & Testing"
-          description3="Comprehensive inspection and testing for safety, backed by certifications."
+          heading3="Hydraulic Components"
+          description3="Comprehensive supply and support for vital hydraulic parts such as pumps, motors, and winches."
         />
 
         <Testimonials
@@ -105,4 +90,4 @@ const CranesServices = () => {
   );
 };
 
-export default CranesServices;
+export default Vessels3d;

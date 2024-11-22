@@ -2,38 +2,38 @@ import React from "react";
 import "./index.css";
 import ServicesDescription from "../../component/servicesdescription";
 import ServicesPointers from "../../component/servicespointers";
-import pointersimg from "../../assets/img/elements/marineautomationpotrait.jpg";
+import pointersimg from "../../assets/img/elements/Craneservice2ndimg.jpg";
 import Additinalservices from "../../component/additionalservices";
-import Renew from "../../assets/img/elements/recycle-sign.png";
-import overhaulimg from "../../assets/img/elements/technician.png";
-import recondition from "../../assets/img/elements/transport.png";
-import repair from "../../assets/img/elements/mechanic.png";
+import pendestal from "../../assets/img/elements/crane.png";
+import marinecrane from "../../assets/img/elements/underwater-crane.png";
+import bophandling from "../../assets/img/elements/bophandling.png";
+import gantry from "../../assets/img/elements/gantry-crane.png";
 import Testimonials from "../../component/testimonials";
 import avtarimg from "../../assets/img/elements/user.png";
 import dwnquote from "../../assets/img/elements/dwnquote.png";
 import upquote from "../../assets/img/elements/upquote.png";
 import ExpertiesComponent from "../../component/expertiestypes";
-import rewindingservices from "../../assets/img/elements/rewindingservices.jpg";
-import testingrepair from "../../assets/img/elements/testing&repair.jpg";
-import troubleshooting from "../../assets/img/elements/troubleshooting&diagonastic.jpg";
+import majorrepairservice from "../../assets/img/elements/majorrepair&service.jpg";
+import craneinstalation from "../../assets/img/elements/craneinstallation.jpg";
+import inspectionandtesting from "../../assets/img/elements/inspectionandtesting.jpg";
 
-const MarineElectricalandAutomation = () => {
+const Scrubber = () => {
   return (
     <div>
       <div className="container-fluid px-0">
         <section
           style={{ height: "100vh" }}
-          className="marinebanner servicesbanner  secOne2 "
+          className="scrubberbanner servicesbanner  secOne2 "
         >
           <div className="servicesbanneroverlay"></div>{" "}
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1 data-aos="fade-up-right">
                 <p className="rstoftext">
-                  <span className=""> Marine Electrical </span>{" "}
+                  <span className="">SCRUBBER AND </span>{" "}
                 </p>
                 <p className="rstoftext">
-                  <span className="">& Automation </span>{" "}
+                  <span className="">CCS COMMISIONING</span>{" "}
                 </p>
               </h1>
             </div>
@@ -42,7 +42,7 @@ const MarineElectricalandAutomation = () => {
       </div>
       <div className="">
         <ServicesDescription
-          servicesdescription="Electrical and mechanical fault rectification for ship machinery ensures smooth operations and safety..
+          servicesdescription="Reducing sulfur and carbon emissions from vessels is key to meeting the 2050 zero-emission target.
 "
         />
         <ServicesPointers
@@ -60,40 +60,42 @@ const MarineElectricalandAutomation = () => {
           pointername5="Available at Singapore, Malaysia anchorage, and along the Indian coast."
         />
         <Additinalservices
-          img1={repair}
-          img2={recondition}
-          img3={overhaulimg}
-          img4={Renew}
+          img1={pendestal}
+          img2={marinecrane}
+          img3={bophandling}
+          img4={gantry}
           text1="Repair"
           text2="Recondition"
           text3="Overhaul"
           text4="Renew"
         />
         <ExpertiesComponent
-          mainheading="Rewinding & Testing"
-          img1={troubleshooting}
-          img2={rewindingservices}
-          img3={testingrepair}
-          heading1="Troubleshooting & Diagnostics"
-          description1="Visuals of engineers inspecting electrical panels and marine control systems."
-          heading2="Rewinding Services"
-          description2="Images of motor coils, detailed rewinding workstations, and insulated components."
-          heading3="Testing & Inspections"
-          description3="Photos showing performance testing setups, safety checks, or electrical equipment under examination."
+          mainheading="Complete Crane Care"
+          img1={majorrepairservice}
+          img2={craneinstalation}
+          img3={inspectionandtesting}
+          heading1="Major Repairs & Service"
+          description1="Complete crane repair solutions ensuring top performance and reliability.
+"
+          heading2="Crane Installation & Removal"
+          description2="Specialized crane installation and removal with minimal operational impact."
+          heading3="Inspection & Testing"
+          description3="Comprehensive inspection and testing for safety, backed by certifications."
         />
+
         <Testimonials
           avtarimg={avtarimg}
           dwnquote={dwnquote}
           upquote={upquote}
-          para="      Great work from a designer in the Dribbble community; your
+          para=" Great work from a designer in the Dribbble community; your
                   best resource to discover and connect with designers
                   worldwide. Testimonials Web DesignTestimonial
                   GraphicTestimonial Ads"
-          para2="      Great work from a designer in the Dribbble community; your
+          para2=" Great work from a designer in the Dribbble community; your
                   best resource to discover and connect with designers
                   worldwide. Testimonials Web DesignTestimonial
                   GraphicTestimonial Ads"
-          para3="      Great work from a designer in the Dribbble community; your
+          para3=" Great work from a designer in the Dribbble community; your
                   best resource to discover and connect with designers
                   worldwide. Testimonials Web DesignTestimonial
                   GraphicTestimonial Ads"
@@ -106,4 +108,4 @@ const MarineElectricalandAutomation = () => {
   );
 };
 
-export default MarineElectricalandAutomation;
+export default Scrubber;

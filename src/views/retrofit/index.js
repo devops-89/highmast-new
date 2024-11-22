@@ -16,23 +16,23 @@ import twofourstroke from "../../assets/img/elements/2-stroke-4stroke.jpg";
 import MEMCengine from "../../assets/img/elements/ME&MCengine.jpg";
 import duelfuel from "../../assets/img/elements/duelfuelengine.jpg";
 
-const EngineOverhauling = () => {
+const Retrofit = () => {
   return (
     <div>
       <div className="container-fluid px-0">
         <section
           style={{ height: "100vh" }}
-          className="enginebanner servicesbanner  secOne2 "
+          className="retrobanner servicesbanner  secOne2 "
         >
           <div className="servicesbanneroverlay"></div>{" "}
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1 data-aos="fade-up-right">
                 <p className="rstoftext">
-                  <span className=""> Engine </span>{" "}
+                  <span className=""> RETROFIT LED POWER </span>{" "}
                 </p>
                 <p className="rstoftext">
-                  <span className="">Overhauling </span>{" "}
+                  <span className=""> SAVING SOLUTIONS </span>{" "}
                 </p>
               </h1>
             </div>
@@ -41,7 +41,7 @@ const EngineOverhauling = () => {
       </div>
       <div className="">
         <ServicesDescription
-          servicesdescription="Professional overhaul of 2-stroke and 4-stroke engines, plus turbocharger and governor servicing.
+          servicesdescription="LED lights are energy-efficient, long-lasting, durable, and cost-effective, reducing greenhouse gas emissions for a sustainable future.
 "
         />
         <ServicesPointers
@@ -114,4 +114,4 @@ const EngineOverhauling = () => {
   );
 };
 
-export default EngineOverhauling;
+export default Retrofit;

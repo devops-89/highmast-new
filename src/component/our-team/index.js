@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import Teamimg1 from "../../assets/img/elements/Teamimg1.jpeg";
-import Teamimg2 from "../../assets/img/elements/Team2.jpeg";
+import Teamimg2 from "../../assets/img/elements/Team2.jpg";
 import "aos/dist/aos.css";
 import { Typography } from "@mui/material";
 

@@ -12,20 +12,23 @@ import designmodification from "../../assets/img/elements/design&modification.jp
 import hydraulicrepair from "../../assets/img/elements/hydraulicrepairs.jpg";
 import hydrauliccomponent from "../../assets/img/elements/hydrauliccomponent.jpg";
 
-const Hydraulicpower = () => {
+const Projectsupervision = () => {
   return (
     <div>
       <div className="container-fluid px-0">
         <section
           style={{ height: "100vh" }}
-          className="hydraulicbanner servicesbanner  secOne2 "
+          className="projectsupervisionbanner servicesbanner  secOne2 "
         >
           <div className="servicesbanneroverlay"></div>{" "}
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1 data-aos="fade-up-right">
                 <p className="rstoftext">
-                  <span className=""> Hydraulic Power </span>{" "}
+                  <span className="">Project Supervision </span>{" "}
+                </p>
+                <p className="rstoftext">
+                  <span className="">Shipbuilding & Ship Repairs</span>{" "}
                 </p>
               </h1>
             </div>
@@ -33,7 +36,7 @@ const Hydraulicpower = () => {
         </section>
       </div>
       <div className="">
-        <ServicesDescription servicesdescription="Expert troubleshooting, repair, and testing of complex hydraulic systems, ensuring optimal performance and reliability." />
+        <ServicesDescription servicesdescription="Our conversion projects and designs are expertly managed from our offices in Norway and China." />
         <ServicesPointers
           img={pointersimg}
           subheading="Support Services"
@@ -87,4 +90,4 @@ const Hydraulicpower = () => {
   );
 };
 
-export default Hydraulicpower;
+export default Projectsupervision;

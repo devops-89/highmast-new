@@ -12,28 +12,32 @@ import pipingwrks from "../../assets/img/elements/pipingwrks.jpg";
 import mechanical from "../../assets/img/elements/mechanicalwrk.jpg";
 import completesolution from "../../assets/img/elements/completesolution.jpg";
 
-const MarineandOffshore = () => {
+const Amp = () => {
   return (
     <div>
       <div className="container-fluid px-0">
         <section
           style={{ height: "100vh" }}
-          className="marineoffshorebanner servicesbanner  secOne2 "
+          className="ampbanner servicesbanner  secOne2 "
         >
           <div className="servicesbanneroverlay"></div>{" "}
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1 data-aos="fade-up-right">
                 <p className="rstoftext">
-                  <span className=""> Marine & Offshore </span>{" "}
+                  <span className="">AMP SOLUTIONS </span>{" "}
                 </p>
+                <p className="rstoftext">
+                  <span className="">AND VDF  RETROFIT</span>{" "}
+                </p>
+          
               </h1>
             </div>
           </div>
         </section>
       </div>
       <div className="">
-        <ServicesDescription servicesdescription="Precise piping and mechanical fabrication, installation, and overhauling services for industrial and marine needs." />
+        <ServicesDescription servicesdescription="Alternate marine power and variable drive frequency are advanced anti-pollution solutions for ships and ports." />
         <ServicesPointers
           img={pointersimg}
           subheading="Support Services"
@@ -85,4 +89,4 @@ const MarineandOffshore = () => {
   );
 };
 
-export default MarineandOffshore;
+export default Amp;

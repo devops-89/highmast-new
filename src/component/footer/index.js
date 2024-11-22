@@ -125,7 +125,7 @@ const Footer = () => {
           </div>
 
           {/* Second Column: Links */}
-          <div className="col-sm-3 footer-linksparent">
+          <div className="col-sm-2 footer-linksparent">
             <h5>Quick Links</h5>
             <ul className="footer-links">
               <li>
@@ -136,7 +136,7 @@ const Footer = () => {
               </li>
 
               <li>
-                <Link to="/engine-overhauling">Services</Link>
+                <Link to="/services">Services</Link>
               </li>
               <li>
                 <Link to="/contact-us">Contact Us</Link>
@@ -145,25 +145,39 @@ const Footer = () => {
           </div>
 
           {/* Third Column: Services */}
-          <div className="col-sm-3">
+          <div className="col-sm-4">
             <h5>Our Services</h5>
             <ul className="footer-services">
               <li>
-                <Link to="/engine-overhauling">Engine Overhauling</Link>
+                <Link to="/retrofit-led-power-saving-solutions">
+                  Retrofit Led Power Saving Solutions
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/scrubber-and-ccs-commisioning">
+                  Scrubber & Ccs Commisioning
+                </Link>
+              </li>
+              <li>
+                <Link to="/amp-solutions-and-vdf-retrofit">
+                  AMP Solutions & VDF Retrofit
+                </Link>
+              </li>
+              <li>
+                <Link to="/project-supervision-shipbuilding-and-ship-repairs">
+                  Project Supervision Shipbuilding & Repairs
+                </Link>
+              </li>
+              <li>
+                <Link to="/vessel-3d-scanning-and-production-design">
+                  Vessel 3D scanning & Production design
+                </Link>
               </li>
               <li>
                 <Link to="/marine-electrical-&-automation">
                   Marine Electrical & Automation
                 </Link>
-              </li>
-              <li>
-                <Link to="/cranes-services">Crane Service</Link>
-              </li>
-              <li>
-                <Link to="/marine-and-offshore">Marine & Offshore </Link>
-              </li>
-              <li>
-                <Link to="/hydraulic-power">Hydraulic Power </Link>
               </li>
             </ul>
           </div>

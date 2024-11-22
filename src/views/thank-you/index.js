@@ -3,7 +3,7 @@ import "./index.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 
 const ThankYou = () => {
   useEffect(() => {
@@ -32,18 +32,22 @@ const ThankYou = () => {
         </section>
       </div>
       <div className="container thank-you-content allpadding">
-        <div className="col-sm-6 mx-auto allpadding thankyouborder px-5" data-aos="fade-right" >
+        <div
+          className="col-sm-6 mx-auto allpadding thankyouborder px-5"
+          data-aos="fade-right"
+        >
           <div className="thank-you-details">
-            <ThumbUpIcon  sx={{color:"red",marginBottom:"20px"}} />
+            <ThumbUpIcon sx={{ color: "red", marginBottom: "20px" }} />
             <p>
-              We appreciate your trust in our service. A confirmation email with
-              the booking details has been sent to your registered email
-              address. If you have any questions, please feel free to contact
-              our support team.
+              Your enquiry has been received, and our team is already working on
+              it. In the meantime, feel free to explore our website more or
+              connect with us on social media for updates and insights.
+        
             </p>
+            <p>Looking forward to serving you!</p>
             <div className="thankyoubtnparent">
               <button className="allbutton">
-              <Link to="/" >Back to Home</Link>  
+                <Link to="/">Back to Home</Link>
               </button>
             </div>
           </div>

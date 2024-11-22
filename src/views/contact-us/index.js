@@ -6,7 +6,7 @@ import AOS from "aos";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import googlemapimg from "../../assets/img/elements/googlemapimg.png";
 import globebannerimg from "../../assets/img/elements/globeimg.png";
-import Contactaddress from "../../component/contactaddress";
+import Contactaddress from "../../component/faq";
 
 const Contactus = () => {
   const contactaddressdata = [

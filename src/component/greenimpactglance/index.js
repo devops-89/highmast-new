@@ -72,7 +72,7 @@ const ScrollAnimation = () => {
           <Typography
             data-aos="fade-down"
             sx={{
-              fontSize: "50px",
+              fontSize: {xs:"30px",md:"50px",lg:"50px"},
               textAlign: "left",
               fontWeight: "600",
               color: "#fff",
@@ -102,7 +102,7 @@ const ScrollAnimation = () => {
               <Typography
                 data-aos="fade-down"
                 sx={{
-                  fontSize: "50px",
+                  fontSize: {xs:"30px", md:"50px",lg:"50px"},
                   textAlign: "right",
                   fontWeight: "600",
                   color: "#fff",

@@ -158,3 +158,37 @@
     background: rgba(0, 0, 0, 0.5);
     z-index: 1; 
   }
+  /* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 15px;
+    padding: 1rem;
+  }
+
+  .allsection {
+    height: 250px; /* Reduce height */
+    width: 100%; /* Use full width */
+    margin: 0; /* Remove extra margins */
+  }
+
+  .content {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Media Query for Extra Small Devices */
+@media (max-width: 480px) {
+  .allsection {
+    height: 200px; /* Further reduce height */
+    font-size: 14px; /* Scale down text size */
+  }
+
+  .content h2 {
+    font-size: 18px; /* Adjust heading size */
+  }
+
+  .content p {
+    font-size: 12px; /* Adjust paragraph size */
+  }
+}
