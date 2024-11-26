@@ -1,23 +1,5 @@
-/* :root {
-    --page-margin-top: 130.0px;
-    --page-margin-right-xxxl: 8.0vw;
-    --page-margin-left-xxxl: 8.0vw;
-    --color-five-hex: #535e67;
-    --color-six-hex: #eeeeee;
-}
 
-body {
-    background: rgb(251, 249, 249);
-    font-family: "DM Sans", sans-serif;
-    overflow-x: hidden;
-} */
-
-/* .container {
-    padding: var(--page-margin-top) var(--page-margin-right-xxxl) 0 var(--page-margin-left-xxxl);
-    padding-top: 160px;
-} */
 .bannercontainer {
-    padding: var(--page-margin-top) var(--page-margin-right-xxxl) 0 var(--page-margin-left-xxxl);
     padding-top: 160px;
     padding-bottom: 160px;
 }
@@ -181,19 +163,13 @@ body {
     font-size: 70px;
     font-weight: bold;
     text-transform: uppercase;
-    text-align: center;
 
     -webkit-font-smoothing: antialiased;
-    margin-top: 200px;
+    /* margin-top: 200px; */
 }
 
 .highmasttextbg {
-    /* background-image: url("../../assets/img/elements/highmastbgtext2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+
     font-size: 70px;
     font-weight: bold;
     text-transform: uppercase;
@@ -228,7 +204,7 @@ body {
     } */
 
     .contersection {
-        transform: scale(1.02) !important;
+        transform: scale(1) !important;
         /* Further reduce scaling */
     }
 
@@ -238,7 +214,7 @@ body {
     }
 
     .secOne .row .col .desc {
-        font-size: 10px;
+        font-size: 12px;
 
     }
 
@@ -273,6 +249,9 @@ body {
     .scroll-animation-container {
         height: 20vh;
     }
-
+    .bannercontainer {
+        padding-top: 135px;
+        padding-bottom: 45px;
+    }
 
 }

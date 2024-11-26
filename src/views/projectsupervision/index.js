@@ -2,15 +2,15 @@ import React from "react";
 import "./index.css";
 import ServicesDescription from "../../component/servicesdescription";
 import ServicesPointers from "../../component/servicespointers";
-import pointersimg from "../../assets/img/elements/hydrailicpotrait.jpg";
+import pointersimg from "../../assets/img/elements/powersupervisionpotrait.jpg";
 import Testimonials from "../../component/testimonials";
 import avtarimg from "../../assets/img/elements/user.png";
 import dwnquote from "../../assets/img/elements/dwnquote.png";
 import upquote from "../../assets/img/elements/upquote.png";
 import ExpertiesComponent from "../../component/expertiestypes";
-import designmodification from "../../assets/img/elements/design&modification.jpg";
-import hydraulicrepair from "../../assets/img/elements/hydraulicrepairs.jpg";
-import hydrauliccomponent from "../../assets/img/elements/hydrauliccomponent.jpg";
+import powersupparalaximg1 from "../../assets/img/elements/powersupparalaximg1.jpg";
+import powersupparalaximg2 from "../../assets/img/elements/powersupparalaximg2.jpg";
+import powersupparalaximg3 from "../../assets/img/elements/powersupparalaximg3.jpg";
 
 const Projectsupervision = () => {
   return (
@@ -28,7 +28,7 @@ const Projectsupervision = () => {
                   <span className="">Project Supervision </span>{" "}
                 </p>
                 <p className="rstoftext">
-                  <span className="">Shipbuilding & Ship Repairs</span>{" "}
+                  <span className="">Shipbuilding & Repairs</span>{" "}
                 </p>
               </h1>
             </div>
@@ -52,17 +52,17 @@ const Projectsupervision = () => {
           pointername5="Available at Singapore, Malaysia anchorage, and along the Indian coast."
         />
         <ExpertiesComponent
-          mainheading="Specialized Hydraulic Components"
-          img1={designmodification}
-          img2={hydraulicrepair}
-          img3={hydrauliccomponent}
-          heading1="Design & Modification"
-          description1="Tailored design and modification solutions using advanced CAD for superior marine engineering."
-          heading2="Hydraulic Repairs & Overhauls"
-          description2=" Professional repair and overhaul services to restore hydraulic systems to peak performance.
+          mainheading="Ship Repair Management"
+          img1={powersupparalaximg1}
+          img2={powersupparalaximg2}
+          img3={powersupparalaximg3}
+          heading1="Global Conversion Projects"
+          description1="Conversion projects and designs from our office in Norway/ China."
+          heading2="Comprehensive Project Management"
+          description2="Planning, Initiation, Execution, Monitoring, and Closing of a Project by Our Engineers.
 "
-          heading3="Hydraulic Components"
-          description3="Comprehensive supply and support for vital hydraulic parts such as pumps, motors, and winches."
+          heading3="On-Time, On-Budget Execution"
+          description3="Completion of all work on time and within budget"
         />
 
         <Testimonials

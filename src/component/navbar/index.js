@@ -57,7 +57,10 @@ const Navbar = () => {
   const location = useLocation();
   const [fixed, setFixed] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [show, setShow] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -216,7 +219,7 @@ const Navbar = () => {
                               to={service.url}
                               style={{
                                 textDecoration: "none",
-                                color: "#000",
+                                color: "#031C32",
                                 display: "block",
                                 padding: "5px 0",
                               }}
@@ -323,6 +326,7 @@ const Navbar = () => {
               backgroundColor: fixed ? "rgba(16, 59, 81, 0.15)" : "transparent",
               backdropFilter: fixed && "blur(5px)",
             }}
+            onClick={handleShow}
           >
             <img
               src={emailcall}
@@ -332,7 +336,7 @@ const Navbar = () => {
           </Box>
         </Stack>
 
-        <ModalComponent show={false} handleClose={() => {}} />
+        <ModalComponent show={show} handleClose={handleClose} />
       </Container>
     </Box>
   );

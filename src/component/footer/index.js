@@ -105,7 +105,9 @@ const Footer = () => {
               </Link>
             </div>
             <div className="my-4">
-              <Typography variant="p" sx={{ color: "#fff", fontSize: "14px" }}>
+              <Typography variant="p" sx={{ color: "#fff", 
+                
+                fontSize: "14px" }}>
                 Your trusted partner in sustainable marine solutions, offering
                 innovative engineering and repair services with a focus on
                 environmental responsibility, available 24/7.
@@ -202,7 +204,7 @@ const Footer = () => {
                 <li>
                   <a href="tel:+1234567890">
                     <LocalPhone sx={{ fontSize: "20px" }} />
-                    {""}+65 90487544, +65 83060857
+                    {""}+65 90487544, +65 91870596
                   </a>
                 </li>
               </ul>
@@ -274,8 +276,10 @@ const Footer = () => {
             padding: "20px 0",
           }}
         >
-          <Grid2 container justifyContent="space-between" alignItems="center">
-            <Grid2 item xs={12} md={4}>
+          <Grid2 container justifyContent="space-between" alignItems="center" >
+            <Grid2 item xs={12} md={4}
+            
+            >
               <Typography
                 variant="body1"
                 align="center"

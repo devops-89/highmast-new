@@ -30,3 +30,19 @@
     font-family: poppins;
     background-color: transparent;
 }
+
+@media (max-width: 768px) {
+  
+    .callheading {
+        font-size: 13px;
+    }
+    .buttonparnt {
+        text-align: center;
+    }
+    .allbutton {
+
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+  }

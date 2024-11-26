@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import ServicesDescription from "../../component/servicesdescription";
 import ServicesPointers from "../../component/servicespointers";
-import pointersimg from "../../assets/img/elements/Craneservice2ndimg.jpg";
+import pointersimg from "../../assets/img/elements/scrubberpotrait.jpg";
 import Additinalservices from "../../component/additionalservices";
 import pendestal from "../../assets/img/elements/crane.png";
 import marinecrane from "../../assets/img/elements/underwater-crane.png";
@@ -13,9 +13,9 @@ import avtarimg from "../../assets/img/elements/user.png";
 import dwnquote from "../../assets/img/elements/dwnquote.png";
 import upquote from "../../assets/img/elements/upquote.png";
 import ExpertiesComponent from "../../component/expertiestypes";
-import majorrepairservice from "../../assets/img/elements/majorrepair&service.jpg";
-import craneinstalation from "../../assets/img/elements/craneinstallation.jpg";
-import inspectionandtesting from "../../assets/img/elements/inspectionandtesting.jpg";
+import scrubberparalaximg1 from "../../assets/img/elements/scrubberparalaximg1.jpg";
+import scrubberparalaximg2 from "../../assets/img/elements/scrubberparalaximg2.jpg";
+import scrubberparalaximg3 from "../../assets/img/elements/scrubberparalaximg3.jpg";
 
 const Scrubber = () => {
   return (
@@ -60,27 +60,28 @@ const Scrubber = () => {
           pointername5="Available at Singapore, Malaysia anchorage, and along the Indian coast."
         />
         <Additinalservices
+        mainheading="EXPERTISE DOMAIN"
           img1={pendestal}
           img2={marinecrane}
           img3={bophandling}
           img4={gantry}
-          text1="Repair"
-          text2="Recondition"
-          text3="Overhaul"
-          text4="Renew"
+          text1="EGCS"
+          text2="CCS"
+          text3="CO2"
+          text4="UREA"
         />
         <ExpertiesComponent
-          mainheading="Complete Crane Care"
-          img1={majorrepairservice}
-          img2={craneinstalation}
-          img3={inspectionandtesting}
-          heading1="Major Repairs & Service"
-          description1="Complete crane repair solutions ensuring top performance and reliability.
+          mainheading="Emission Control Leadership"
+          img1={scrubberparalaximg1}
+          img2={scrubberparalaximg2}
+          img3={scrubberparalaximg3}
+          heading1="Achieving 2050 Zero Emissions"
+          description1=" Controlling the Sulphur and Carbon emissions from the vessels for the future to achieve the 2050 zero emission deadline.
 "
-          heading2="Crane Installation & Removal"
-          description2="Specialized crane installation and removal with minimal operational impact."
-          heading3="Inspection & Testing"
-          description3="Comprehensive inspection and testing for safety, backed by certifications."
+          heading2="Advanced CCS Technology for CO2 Capture"
+          description2="Our CCS technologies have the potential to capture a significant portion of CO2 emissions from ship exhaust gases."
+          heading3="Utilizing Captured CO2 for Industrial Processes"
+          description3="Captured carbon dioxide can be used as a feedstock for various industrial processes, such as enhanced oil recovery (EOR)"
         />
 
         <Testimonials

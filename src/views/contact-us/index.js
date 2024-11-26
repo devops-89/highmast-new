@@ -23,7 +23,7 @@ const Contactus = () => {
       addresdetailspin: "Singapore 069533",
       
       email: "service@highmastmarine.com",
-      phoneno: "+65 90487544 +65 83060857",
+      phoneno: "+65 90487544 +65 91870596",
 
       img: googlemapimg,
     },

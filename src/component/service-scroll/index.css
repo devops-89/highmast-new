@@ -1,95 +1,105 @@
+.containerparent {
+  position: relative;
 
- .containerparent {
-    position: relative;
- 
-    height: auto;
-    overflow: hidden; 
+  height: auto;
+  overflow: hidden;
 }
 
 .img-container {
-    display: flex;
-    justify-content: start;
-    width: 100%;
-    position: relative;
-    
-    height: auto;
-   
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  position: relative;
+
+  height: auto;
+
 }
 
 
 .scroll-img {
-    
-    width: 700px;
-    height: 400px;
-    will-change: transform;
-   
-    margin-left: 200px;
-   
-    border-radius: 5px;
-    
+
+  width: 700px;
+  height: 400px;
+  will-change: transform;
+
+  margin-left: 200px;
+
+  border-radius: 5px;
+
 }
 
 
 .text {
-    position: absolute;
-    top: 100%;
+  position: absolute;
+  top: 100%;
 
-    left: 50%;
-    right: 0%;
-    transform: translate(-50%, 0%);
-    color: white;
-    text-align: left;
-    opacity: 1;
-    height: auto;
-    white-space: normal;
-  
+  left: 50%;
+  right: 0%;
+  transform: translate(-50%, 0%);
+  color: white;
+  text-align: left;
+  opacity: 1;
+  height: auto;
+  white-space: normal;
+
 }
 
-.text > p {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, transparent 20%);
-    background-size: 10% 210%;
-    background-position-y: 100%;
-    color: transparent;
-   padding: 0;
-    -webkit-text-stroke: 1px white;
-    background-clip: text;
-    -webkit-background-clip: text;
-    /* margin-bottom: 60px; */
-    line-height: 1.2;
-    font-size: 80px;
-    position: relative;
-    text-align: left;
-    will-change: background-position;
-    /* height: 100px; */
+.text>p {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, transparent 20%);
+  background-size: 10% 210%;
+  background-position-y: 100%;
+  color: transparent;
+  padding: 0;
+  -webkit-text-stroke: 1px white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* margin-bottom: 60px; */
+  line-height: 1.2;
+  font-size: 80px;
+  position: relative;
+  text-align: left;
+  will-change: background-position;
+  /* height: 100px; */
 }
+
+.image-wrapper img {
+
+  filter: brightness(50%); /* Adjust darkness (0% is black, 100% is original) */
+  transition: filter 0.3s ease; /* Smooth transition on hover */
+}
+
 
 
 /* Media Query for Mobile Screens */
 @media (max-width: 768px) {
-  
-    .img-container {
-        display: flex;
-        overflow: hidden;
-        width: 1500%;
-         /* Matches the number of images */
-      }
-      
-      .scroll-img {
-        width: 100vw;
-        height: 300px;
-      }
-      
-  
-    .text {
-      top: 90%; /* Adjust positioning */
-      left: 50%;
-      transform: translate(-50%, 0%);
-      padding: 8px;
-    }
-  
-    .text > p {
-      font-size: 30px; /* Smaller text size */
-      line-height: 1.2;
-    }
+
+  .img-container {
+    display: flex;
+    overflow: hidden;
+    width: 1500%;
+    /* Matches the number of images */
   }
-  
+
+  .scroll-img {
+    width: 100vw;
+    height: 300px;
+  }
+
+
+  .text {
+    top: 90%;
+    /* Adjust positioning */
+    left: 50%;
+    transform: translate(-50%, 0%);
+    padding: 8px;
+    height: auto;
+    white-space: normal;
+
+  }
+
+  .text>p {
+    font-size: 30px;
+    /* Smaller text size */
+    line-height: 1.2;
+  }
+}

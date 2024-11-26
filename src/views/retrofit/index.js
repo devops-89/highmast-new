@@ -4,7 +4,7 @@ import { color } from "framer-motion";
 import ServicesPointers from "../../component/servicespointers";
 import "aos/dist/aos.css";
 import "./index.css";
-import pointersimg from "../../assets/img/elements/engineoverhaulinpotrait.jpg";
+import pointersimg from "../../assets/img/elements/retrofitpotrait.jpg";
 import Testimonials from "../../component/testimonials";
 import avtarimg from "../../assets/img/elements/user.png";
 import dwnquote from "../../assets/img/elements/dwnquote.png";
@@ -12,9 +12,9 @@ import upquote from "../../assets/img/elements/upquote.png";
 import img24x7 from "../../assets/img/elements/24-hours.png";
 import datawaveimg from "../../assets/img/elements/data-wave.png";
 import ExpertiesComponent from "../../component/expertiestypes";
-import twofourstroke from "../../assets/img/elements/2-stroke-4stroke.jpg";
-import MEMCengine from "../../assets/img/elements/ME&MCengine.jpg";
-import duelfuel from "../../assets/img/elements/duelfuelengine.jpg";
+import retrofitparalaximg1 from "../../assets/img/elements/retrofitparalaximg1.jpg";
+import retrofitparalaximg2 from "../../assets/img/elements/retrofitparalaximg2.jpg";
+import retrofitparalaximg3 from "../../assets/img/elements/retrofitparalaximg3.jpg";
 
 const Retrofit = () => {
   return (
@@ -61,16 +61,16 @@ const Retrofit = () => {
       </div>
 
       <ExpertiesComponent
-        mainheading="Expertise In Engine Type"
-        img1={twofourstroke}
-        img2={MEMCengine}
-        img3={duelfuel}
-        heading1="2-Stroke & 4-Stroke Engines"
-        description1="Reliable power solutions offering versatility for various marine applications."
-        heading2=" ME & MC Type Engines"
-        description2="Advanced engine types known for high performance and efficiency in maritime operations."
-        heading3="Dual Fuel Engines"
-        description3="Eco-friendly propulsion systems enabling reduced emissions and greater fuel flexibility."
+        mainheading="LED Performance Solutions"
+        img1={retrofitparalaximg1}
+        img2={retrofitparalaximg2}
+        img3={retrofitparalaximg3}
+        heading1="Energy Efficiency & Durability"
+        description1=" Our LED lights offer several advantages like  Energy Efficiency, Durability"
+        heading2="Extended Lifespan for Savings"
+        description2="Have a much longer lifespan, often lasting up to 50,000 hours, reducing the need for frequent replacements and maintenance."
+        heading3="Built for Harsh Environments"
+        description3="Are more resistant to shock, vibration, and corrosion, making them ideal for the harsh climate."
       />
       <Testimonials
         avtarimg={avtarimg}

@@ -7,7 +7,6 @@ import "./index.css";
 
 const ExpertiesComponent = (props) => {
   useEffect(() => {
-
     if (typeof window !== "undefined") {
       // Smooth scrolling only in browsers that support it
       document.documentElement.style.scrollBehavior = "smooth";
@@ -28,10 +27,9 @@ const ExpertiesComponent = (props) => {
         className="expertiseparallax-container"
       >
         <div className="expertiseoverlay"></div>
-        <div className="expertisecontent">
+        <div className="expertisecontent container">
           <h2>{props.heading1}</h2>
           <p>{props.description1}</p>
-      
         </div>
       </Parallax>
 
@@ -42,24 +40,24 @@ const ExpertiesComponent = (props) => {
         className="expertiseparallax-container"
       >
         <div className="expertiseoverlay"></div>
-        <div className="expertisecontent">
+        <div className="expertisecontent container">
           <h2>{props.heading2}</h2>
           <p>{props.description2}</p>
         </div>
       </Parallax>
-
-      <Parallax
-        bgImage={props.img3}
-        strength={300}
-        className="expertiseparallax-container"
-      >
-        <div className="expertiseoverlay"></div>
-        <div className="expertisecontent">
-          <h2>{props.heading3}</h2>
-          <p>{props.description3}</p>
-        </div>
-      </Parallax>
-
+      {!props.excludeThirdParallax && (
+        <Parallax
+          bgImage={props.img3}
+          strength={300}
+          className="expertiseparallax-container"
+        >
+          <div className="expertiseoverlay"></div>
+          <div className="expertisecontent container">
+            <h2>{props.heading3}</h2>
+            <p>{props.description3}</p>
+          </div>
+        </Parallax>
+      )}
     </div>
   );
 };

@@ -126,12 +126,14 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./index.css";
-import shipImage1 from "../../assets/img/elements/serviceimg1.jpg";
-import shipImage2 from "../../assets/img/elements/serviceimg2.jpg";
-import shipImage3 from "../../assets/img/elements/serviceimg3.jpg";
-import shipImage4 from "../../assets/img/elements/serviceimg4.jpg";
-import shipImage5 from "../../assets/img/elements/service5.jpg";
-import shipImage6 from "../../assets/img/elements/service5.jpg";
+import shipImage1 from "../../assets/img/elements/retrofitservice.jpg";
+import shipImage2 from "../../assets/img/elements/serviceimg2.jpeg";
+import shipImage3 from "../../assets/img/elements/ampservice.jpg";
+import shipImage4 from "../../assets/img/elements/projectsupervisionservice.jpg";
+// import shipImage5 from "../../assets/img/elements/service5.jpg";
+import vesselsimg from "../../assets/img/elements/serviceimg5.jpg";
+
+import shipImage6 from "../../assets/img/elements/marineautomationservice.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -145,16 +147,18 @@ const Servicesscroll = () => {
     shipImage2,
     shipImage3,
     shipImage4,
-    shipImage5,
+    vesselsimg,
     shipImage6,
   ];
   const textItems = [
     "Retrofit Led Power <br/> Saving Solutions",
-    "Marine Electrical <br/> & Automation",
+
     "Scrubber & Ccs Commisioning ",
     "Alternate Marine Power <br/> AMP Solutions",
     "Project Supervision Shipbuilding & <br/> Repairs",
+
     "Vessel 3D scanning <br/> & Production design",
+    "Marine Electrical <br/> & Automation",
   ];
 
   useEffect(() => {
@@ -201,7 +205,7 @@ const Servicesscroll = () => {
           pin: true, // Lock the scroll
           scrub: 2,
           start: "top top",
-          end: `+=${containerWidth * 15}`, // Extended scroll range
+          end: `+=${containerWidth * 4}`, // Extended scroll range
         },
       });
 
@@ -216,7 +220,7 @@ const Servicesscroll = () => {
           trigger: containerParentRef.current,
           scrub: 10,
           start: "top center",
-          end: `+=${containerWidth * 15}`, // Match the extended scroll range
+          end: `+=${containerWidth * 4}`, // Match the extended scroll range
         },
       });
     });
@@ -238,6 +242,7 @@ const Servicesscroll = () => {
                   alt={`Service ${index + 1}`}
                   className="scroll-img"
                 />
+          
               </div>
             </div>
           </div>

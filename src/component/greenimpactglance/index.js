@@ -1,15 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./index.css";
-import shipImage1 from "../../assets/img/elements/serviceimg1.jpg";
-import shipImage2 from "../../assets/img/elements/serviceimg2.jpg";
-import shipImage3 from "../../assets/img/elements/serviceimg3.jpeg";
-import shipImage4 from "../../assets/img/elements/serviceimg4.jpg";
-import shipImage5 from "../../assets/img/elements/service5.jpg";
+
 import { Typography } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 
-const images = [shipImage1, shipImage2, shipImage3, shipImage4, shipImage5];
 
 const ScrollAnimation = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -23,13 +18,13 @@ const ScrollAnimation = () => {
       const scrollPosition = window.scrollY;
       setScrollY(scrollPosition);
 
-      if (scrollPosition > 600) {
+      if (scrollPosition > 200) {
         setShowHighmastText(true);
       } else {
         setShowHighmastText(false);
       }
 
-      if (scrollPosition > 800) {
+      if (scrollPosition > 400) {
         setShowCommitmentText(true);
       } else {
         setShowCommitmentText(false);
@@ -47,13 +42,6 @@ const ScrollAnimation = () => {
     AOS.refresh();
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   // Define the minimum and maximum values for scaling and font size
   const minScale = 1; // minimum zoom level
@@ -73,7 +61,7 @@ const ScrollAnimation = () => {
             data-aos="fade-down"
             sx={{
               fontSize: {xs:"30px",md:"50px",lg:"50px"},
-              textAlign: "left",
+              textAlign: { xs: "center", md: "left" }, // Center text on mobile
               fontWeight: "600",
               color: "#fff",
               textTransform: "uppercase",
@@ -103,7 +91,7 @@ const ScrollAnimation = () => {
                 data-aos="fade-down"
                 sx={{
                   fontSize: {xs:"30px", md:"50px",lg:"50px"},
-                  textAlign: "right",
+                  textAlign: { xs: "center", md: "right" },
                   fontWeight: "600",
                   color: "#fff",
                   textTransform: "uppercase",

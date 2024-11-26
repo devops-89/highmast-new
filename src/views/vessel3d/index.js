@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import ServicesDescription from "../../component/servicesdescription";
 import ServicesPointers from "../../component/servicespointers";
-import pointersimg from "../../assets/img/elements/hydrailicpotrait.jpg";
+import pointersimg from "../../assets/img/elements/vessels3dpotrait.jpg";
 import Testimonials from "../../component/testimonials";
 import avtarimg from "../../assets/img/elements/user.png";
 import dwnquote from "../../assets/img/elements/dwnquote.png";
@@ -52,17 +52,17 @@ const Vessels3d = () => {
           pointername5="Available at Singapore, Malaysia anchorage, and along the Indian coast."
         />
         <ExpertiesComponent
-          mainheading="Specialized Hydraulic Components"
+          mainheading="3D Scanning & Retrofit"
           img1={designmodification}
           img2={hydraulicrepair}
           img3={hydrauliccomponent}
-          heading1="Design & Modification"
-          description1="Tailored design and modification solutions using advanced CAD for superior marine engineering."
-          heading2="Hydraulic Repairs & Overhauls"
-          description2=" Professional repair and overhaul services to restore hydraulic systems to peak performance.
+          heading1="Advanced 3D Scanning"
+          description1="3D Scanning for our retrofit installations at dry dock and during sailing."
+          heading2="Vortex Elimination Technology"
+          description2="HVAF Vortex elimination fin is a kind of ship propeller hydrodynamic energy-saving device for eliminating propeller hub vortex energy loss .
 "
-          heading3="Hydraulic Components"
-          description3="Comprehensive supply and support for vital hydraulic parts such as pumps, motors, and winches."
+          heading3="Fuel-Saving EEXI Solutions"
+          description3="Our EEXI retrofit solutions with considerable fuel saving for owners and charters"
         />
 
         <Testimonials

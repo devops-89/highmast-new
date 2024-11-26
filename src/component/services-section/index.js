@@ -77,13 +77,13 @@ const Homepagebanner = () => {
                 </span>{" "}
                 &{" "}
               </p>
-              <p className="rstoftext " >
-                <span
-                  className="text-border contioceantext"
+              <p className="rstoftext  contioceantext" >
+                {/* <span
+                  className="text-border "
                   data-aos="flip-right"
-                >
+                > */}
                   ContiOcean ENVIRONMENT
-                </span>
+                {/* </span> */}
            
                 
               </p>

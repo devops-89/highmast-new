@@ -43,7 +43,7 @@ const Additinalservices = (props) => {
 
       <div>
         <Typography  data-aos="fade-down"  sx={{ fontSize: "80px", color: "#fff",marginBottom:"80px" }}>
-          Advanced Solutions
+          {props.mainheading}
         </Typography>
       </div>
       <div className="scroll-animation-containerhighmast " ref={sectionRef}>

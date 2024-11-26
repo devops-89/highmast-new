@@ -17,7 +17,7 @@
 
 .footer h5 {
 
- color: #6CBBC8;
+    color: #6CBBC8;
     font-size: 18px;
 
 }
@@ -52,6 +52,23 @@
     margin-right: 10px;
     border-radius: 50%;
 }
+
 /* .footer-linksparent {
     padding-left:75px !important ;
 } */
+@media (max-width:768px) {
+    .footer ul a {
+        font-size: 14px;
+    }
+
+    .footer-services a {
+        font-size: 14px;
+    }
+
+    .contact-info {
+        font-size: 14px;
+    }
+    .social-links {
+        margin-bottom: 30px;
+    }
+}

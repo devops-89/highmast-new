@@ -13,9 +13,10 @@ import avtarimg from "../../assets/img/elements/user.png";
 import dwnquote from "../../assets/img/elements/dwnquote.png";
 import upquote from "../../assets/img/elements/upquote.png";
 import ExpertiesComponent from "../../component/expertiestypes";
-import rewindingservices from "../../assets/img/elements/rewindingservices.jpg";
+
 import testingrepair from "../../assets/img/elements/testing&repair.jpg";
-import troubleshooting from "../../assets/img/elements/troubleshooting&diagonastic.jpg";
+import marineparalaximg1 from "../../assets/img/elements/marineparalaximg1.jpg";
+import marineparalaximg2 from "../../assets/img/elements/marineparalaximg2.jpg";
 
 const MarineElectricalandAutomation = () => {
   return (
@@ -60,6 +61,7 @@ const MarineElectricalandAutomation = () => {
           pointername5="Available at Singapore, Malaysia anchorage, and along the Indian coast."
         />
         <Additinalservices
+          mainheading="ADVANCE SOLUTIONS"
           img1={repair}
           img2={recondition}
           img3={overhaulimg}
@@ -70,16 +72,14 @@ const MarineElectricalandAutomation = () => {
           text4="Renew"
         />
         <ExpertiesComponent
-          mainheading="Rewinding & Testing"
-          img1={troubleshooting}
-          img2={rewindingservices}
-          img3={testingrepair}
-          heading1="Troubleshooting & Diagnostics"
-          description1="Visuals of engineers inspecting electrical panels and marine control systems."
-          heading2="Rewinding Services"
-          description2="Images of motor coils, detailed rewinding workstations, and insulated components."
-          heading3="Testing & Inspections"
-          description3="Photos showing performance testing setups, safety checks, or electrical equipment under examination."
+          mainheading="Electrical & Mechanical Solutions"
+          img1={marineparalaximg1}
+          img2={marineparalaximg2}
+          heading1="Electrical Fault Rectification"
+          description1="Ships machinery-related electrical/mechanical faults rectification."
+          heading2="Mechanical Fault Investigation"
+          description2="Machinery failure investigation and assist in troubleshooting by our engineers"
+          excludeThirdParallax={true}
         />
         <Testimonials
           avtarimg={avtarimg}

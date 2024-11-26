@@ -61,7 +61,7 @@
 
 
   .section3 {
-    background-image: url('../../assets/img/elements/serviceimg3.jpeg');
+    background-image: url('../../assets/img/elements/lng4.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -182,6 +182,7 @@
   .allsection {
     height: 200px; /* Further reduce height */
     font-size: 14px; /* Scale down text size */
+    margin-bottom: 30px;
   }
 
   .content h2 {

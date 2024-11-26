@@ -2,15 +2,15 @@ import React from "react";
 import "./index.css";
 import ServicesDescription from "../../component/servicesdescription";
 import ServicesPointers from "../../component/servicespointers";
-import pointersimg from "../../assets/img/elements/marineoffshorepotrait.jpg";
+import pointersimg from "../../assets/img/elements/ampotrait.jpg";
 import Testimonials from "../../component/testimonials";
 import avtarimg from "../../assets/img/elements/user.png";
 import dwnquote from "../../assets/img/elements/dwnquote.png";
 import upquote from "../../assets/img/elements/upquote.png";
 import ExpertiesComponent from "../../component/expertiestypes";
-import pipingwrks from "../../assets/img/elements/pipingwrks.jpg";
-import mechanical from "../../assets/img/elements/mechanicalwrk.jpg";
-import completesolution from "../../assets/img/elements/completesolution.jpg";
+import ampparalaximg1 from "../../assets/img/elements/ampparalaximg1.jpg";
+import ampparalaximg2 from "../../assets/img/elements/ampparalaximg2.jpg";
+import ampparalaximg3 from "../../assets/img/elements/ampparalaximg3.jpg";
 
 const Amp = () => {
   return (
@@ -53,19 +53,19 @@ const Amp = () => {
           pointername5="Available at Singapore, Malaysia anchorage, and along the Indian coast."
         />
         <ExpertiesComponent
-          mainheading="Offshore & Marine Maintenance"
-          img1={pipingwrks}
-          img2={mechanical}
-          img3={completesolution}
-          heading1="Piping Works"
-          description1="Flow meter installation, copper-nickel & SS pipe fabrication, low-temperature pipe work, and manifold spool fabrication."
-          heading2="Mechanical Works"
-          description2="Mooring and windlass brake testing, roller overhauling, valve seat ring renewal."
-          heading3="Complete Solutions"
-          description3=" HighMast’s end-to-end piping and mechanical services ensure safe and efficient operations."
+          mainheading="Clean Port Powering"
+          img1={ampparalaximg1}
+          img2={ampparalaximg2}
+          img3={ampparalaximg3}
+          heading1="Harnessing Shore Power"
+          description1="Alternate marine power and Variable Drive Frequency  "
+          heading2="Connecting to the Port Grid"
+          description2="When a ship is docked at a port, it connects to the shore power grid instead of running its onboard diesel generators or Cold Ironing"
+          heading3="Reducing Emissions at Dock"
+          description3="Reduces emissions of pollutants and greenhouse gases, contributing to cleaner air quality around ports or Cold Ironing"
         />
         <Testimonials
-          avtarimg={avtarimg}
+          avtarimg={avtarimg} 
           dwnquote={dwnquote}
           upquote={upquote}
           para="      Great work from a designer in the Dribbble community; your

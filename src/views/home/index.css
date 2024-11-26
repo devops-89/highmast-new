@@ -137,3 +137,10 @@
         /* Slightly zoomed-in */
     }
 }
+
+@media (max-width:768px) {
+    .allpadding {
+        padding: 30px 0px;
+    }
+}
+
