@@ -25,6 +25,7 @@
     font-size: 3.4vw;
     line-height: 1.1;
     margin: 0;
+    text-align: center;
 
 }
 
@@ -67,6 +68,7 @@
     line-height: 1.1;
     color: #fff;
     font-family: poppins;
+    text-align: center;
 }
 
 .top-line {
