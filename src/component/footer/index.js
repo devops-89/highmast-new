@@ -105,9 +105,14 @@ const Footer = () => {
               </Link>
             </div>
             <div className="my-4">
-              <Typography variant="p" sx={{ color: "#fff", 
-                
-                fontSize: "14px" }}>
+              <Typography
+                component="a"
+                sx={{
+                  color: "#fff",
+
+                  fontSize: "14px",
+                }}
+              >
                 Your trusted partner in sustainable marine solutions, offering
                 innovative engineering and repair services with a focus on
                 environmental responsibility, available 24/7.
@@ -191,20 +196,22 @@ const Footer = () => {
             <div className="contact-info">
               <ul>
                 <li style={{ color: "#fff" }}>
-                  <LocationOn sx={{ fontSize: "20px" }} />
-                  {""} Tong Eng Building, 101 Cecil Street, Unit 24-05 Singapore
+                  <LocationOn sx={{ fontSize: "20px", marginRight: "5px" }} />{" "}
+                  Tong Eng Building, 101 Cecil Street, Unit 24-05 Singapore
                   069553
                 </li>
                 <li>
                   <a href="mailto:service@highmastmarine.com">
-                    <MailOutline sx={{ fontSize: "20px" }} />{" "}
+                    <MailOutline
+                      sx={{ fontSize: "20px", marginRight: "5px" }}
+                    />{" "}
                     service@highmastmarine.com
                   </a>
                 </li>
                 <li>
                   <a href="tel:+1234567890">
-                    <LocalPhone sx={{ fontSize: "20px" }} />
-                    {""}+65 90487544, +65 91870596
+                    <LocalPhone sx={{ fontSize: "20px", marginRight: "5px" }} />{" "}
+                    +65 90487544, +65 91870596
                   </a>
                 </li>
               </ul>
@@ -276,10 +283,8 @@ const Footer = () => {
             padding: "20px 0",
           }}
         >
-          <Grid2 container justifyContent="space-between" alignItems="center" >
-            <Grid2 item xs={12} md={4}
-            
-            >
+          <Grid2 container justifyContent="space-between" alignItems="center">
+            <Grid2 item xs={12} md={4}>
               <Typography
                 variant="body1"
                 align="center"
@@ -297,7 +302,7 @@ const Footer = () => {
                 sx={{ mt: { xs: 2, md: 0 } }}
               >
                 <Link
-                  href="/terms-and-conditions"
+                  to="/terms-and-conditions"
                   color="inherit"
                   underline="hover"
                   sx={{ typography: "body1", fontSize: "15px" }}
@@ -305,7 +310,7 @@ const Footer = () => {
                   Terms and Conditions
                 </Link>
                 <Link
-                  href="/privacy-policy"
+                  to="/privacy-policy"
                   color="inherit"
                   underline="hover"
                   sx={{ typography: "body1", fontSize: "15px" }}

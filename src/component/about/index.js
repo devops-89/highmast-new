@@ -114,7 +114,7 @@ const Aboutsection = () => {
                 </Typography>
                 <br></br>
                 <Typography component="p">
-                  With over 200 successful dry dockings and a 100% commitment to
+                  With over 50 successful dry dockings and a 100% commitment to
                   emission-free energy, HighMast combines expertise with
                   eco-friendly innovation. Certified to ISO 9001, ISO 14001, and
                   ISO 45001 standards, we deliver unparalleled quality and

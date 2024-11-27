@@ -5,53 +5,12 @@ import Teamimg2 from "../../assets/img/elements/Team2.jpg";
 import "aos/dist/aos.css";
 import { Typography } from "@mui/material";
 
-// const Ourteam = () => {
-//   return (
-//     <div className=" container allpadding pb-0">
-//       <div data-aos="fade-right">
-//         <h2 className="Ourteamheading ">
-//           OUR TEAM
-//         </h2>
-//       </div>
-//       <article className="scroll-container col-sm-10 mx-auto mt-5 ">
-//         <FigureSection
-//           imgSrc={Teamimg1}
-//           title="SOURAV HORE"
-//           description="Managing Director"
-//         />
-//         <FigureSection
-//           imgSrc={Teamimg2}
-//           title="ARBIND SINGH "
-//           description="Director & Founder"
-//         />
-//       </article>
-//     </div>
-//   );
-// };
-
-// const FigureSection = ({ imgSrc, title, description }) => {
-//   return (
-//     <>
-//       <figure className="scroll-figure" data-aos="fade-right" >
-//         <img src={imgSrc} alt="Scrolling Content" />
-//       </figure>
-//       <section className="scroll-section" data-aos="fade-right">
-//         <div>
-//           <h2>{title}</h2>
-//           <p>{description}</p>
-//         </div>
-//       </section>
-//     </>
-//   );
-// };
-
-// export default Ourteam;
 
 const Ourteam = () => {
   return (
     <div className="container allpadding">
       <div data-aos="fade-right">
-        <h2 className="Ourteamheading ">OUR TEAM</h2>
+        <h2 className="Ourteamheading headingcenter ">OUR TEAM</h2>
       </div>
       <div className="container allpadding pb-0">
         <div className="row align-items-center pb-5 mb-5   ourrteamsection ">
@@ -83,7 +42,6 @@ const Ourteam = () => {
               sx={{
                 color: "#fff",
                 textAlign: "justify",
-                fontSize: "20px",
                 marginTop: "20px ",
               }}
             >
@@ -127,7 +85,6 @@ const Ourteam = () => {
               sx={{
                 color: "#fff",
                 textAlign: "justify",
-                fontSize: "20px",
                 marginTop: "20px ",
               }}
             >

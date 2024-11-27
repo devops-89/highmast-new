@@ -17,6 +17,8 @@ import Scrubber from "../views/scrubber";
 import Amp from "../views/alternatemarine";
 import Projectsupervision from "../views/projectsupervision";
 import Vessels3d from "../views/vessel3d";
+import Privacypolicy from "../views/privacy-policy";
+import TermsAndCondition from "../views/terms&condition";
 
 const Router = () => {
   return (
@@ -48,19 +50,25 @@ const Router = () => {
         ></Route>
         <Route
           index
-          path="project-supervision-shipbuilding-and-ship-repairs"
+          path="/project-supervision-shipbuilding-and-ship-repairs"
           element={<Projectsupervision />}
         ></Route>
         <Route
           index
-          path="vessel-3d-scanning-and-production-design"
+          path="/vessel-3d-scanning-and-production-design"
           element={<Vessels3d />}
+        ></Route>
+            <Route
+          index
+          path="/marine-electrical-&-automation"
+          element={<MarineElectricalandAutomation/>}
         ></Route>
         <Route
           index
-          path="/marine-electrical-&-automation"
-          element={<MarineElectricalandAutomation />}
+          path="/terms-and-conditions"
+          element={<TermsAndCondition/>}
         ></Route>
+        <Route index path="/privacy-policy" element={<Privacypolicy />}></Route>
       </Routes>
       <Footer />
     </div>

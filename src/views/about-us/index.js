@@ -5,6 +5,7 @@ import "./index.css";
 import CoreValues from "../../component/core-values";
 import Ourteam from "../../component/our-team";
 import Certification from "../../component/certification";
+import Contactseection from "../../component/contactsection";
 
 const About = () => {
  
@@ -39,6 +40,7 @@ const About = () => {
       <Ourteam />
       <CoreValues />
       <Certification />
+      <Contactseection/>
     </div>
   );
 };

@@ -11,6 +11,7 @@ import ExpertiesComponent from "../../component/expertiestypes";
 import powersupparalaximg1 from "../../assets/img/elements/powersupparalaximg1.jpg";
 import powersupparalaximg2 from "../../assets/img/elements/powersupparalaximg2.jpg";
 import powersupparalaximg3 from "../../assets/img/elements/powersupparalaximg3.jpg";
+import Contactseection from "../../component/contactsection";
 
 const Projectsupervision = () => {
   return (
@@ -40,16 +41,16 @@ const Projectsupervision = () => {
         <ServicesPointers
           img={pointersimg}
           subheading="Support Services"
-          name1="Engine Types: "
-          name2="Supported Brands:"
-          name3="Specialized Engineers:"
-          name4="Additional Services: "
-          name5="Geographic Reach: "
-          pointername1=" Expertise in overhauling 2-stroke and 4-stroke engines, including ME & MC types and dual-fuel engines."
-          pointername2="MAN B&W, Wartsila, Mitsubishi, Hyundai, Doosan, STX, MTU, Yanmar, Cummins, Daihatsu, Caterpillar."
-          pointername3="Service engineers for Turbo Chargers and Governors."
-          pointername4="Multi-stage pumps, cargo pumps, and tank cleaning machines."
-          pointername5="Available at Singapore, Malaysia anchorage, and along the Indian coast."
+          name1="EU ETS 2024:"
+          name2="Emission Scope:"
+          name3="GHG Inclusion:"
+          name4="Compliance Cost:"
+          name5="Administrative Complexity:"
+          pointername1="First year of EU ETS assessment with EUAs due for surrender in 2025."
+          pointername2="40% of emissions in scope in 2024, increasing to 100% over time."
+          pointername3="Methane (CH4) and Nitrous Oxide (N2O) emissions to be included in 2026."
+          pointername4="Based on the EU emissions allowance (EUA) spot price of €/tCO2."
+          pointername5="EU ETS introduces additional tasks for managing and surrendering allowances."
         />
         <ExpertiesComponent
           mainheading="Ship Repair Management"
@@ -69,23 +70,15 @@ const Projectsupervision = () => {
           avtarimg={avtarimg}
           dwnquote={dwnquote}
           upquote={upquote}
-          para=" Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          para2=" Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          para3=" Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          name1="Rohit"
-          name2="Simren"
-          name3="Nidhi"
+          para=" HighMast Marine’s knowledge of hydraulic systems is second to none. Their team overhauled our system efficiently, ensuring everything worked perfectly. They even helped with complex troubleshooting and offered solid, practical advice. Truly a top-notch service provider!"
+          para2="From CO2 capture to managing emissions, HighMast Marine helped us navigate new regulations with ease. Their guidance was clear, and their expertise in CCS and emission management was invaluable. With their support, we’ve made our operations greener and more compliant than ever before."
+          para3="Our experience with HighMast Marine during our EEXI retrofit project was incredible! From the initial consultation to project completion, their team’s technical guidance was spot on. They handled everything with professionalism, making sure we adhered to regulations while optimizing our operations for fuel savings."
+          name1="K. Reddy"
+          name2="Manish Parekh"
+          name3="S. Gaur"
         />
       </div>
+      <Contactseection />
     </div>
   );
 };

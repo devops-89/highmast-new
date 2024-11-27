@@ -31,7 +31,7 @@ color: #6CBBC8 !important;
 }
 .corevaluessection .swiper-slide-content p {
   color: #fff;
-  font-size: 20px;
+  
   text-align: left;
 }
 .corevaluessection {
@@ -53,4 +53,8 @@ height: 200px;
 }
 .tabs-section .tab {
   color: #ffffff85;
+}
+
+.valueparent {
+  text-align: center;
 }

@@ -17,6 +17,7 @@ import ExpertiesComponent from "../../component/expertiestypes";
 import testingrepair from "../../assets/img/elements/testing&repair.jpg";
 import marineparalaximg1 from "../../assets/img/elements/marineparalaximg1.jpg";
 import marineparalaximg2 from "../../assets/img/elements/marineparalaximg2.jpg";
+import Contactseection from "../../component/contactsection";
 
 const MarineElectricalandAutomation = () => {
   return (
@@ -85,23 +86,15 @@ const MarineElectricalandAutomation = () => {
           avtarimg={avtarimg}
           dwnquote={dwnquote}
           upquote={upquote}
-          para="      Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          para2="      Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          para3="      Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          name1="Rohit"
-          name2="Simren"
-          name3="Nidhi"
+          para=" HighMast Marine’s knowledge of hydraulic systems is second to none. Their team overhauled our system efficiently, ensuring everything worked perfectly. They even helped with complex troubleshooting and offered solid, practical advice. Truly a top-notch service provider!"
+          para2="From CO2 capture to managing emissions, HighMast Marine helped us navigate new regulations with ease. Their guidance was clear, and their expertise in CCS and emission management was invaluable. With their support, we’ve made our operations greener and more compliant than ever before."
+          para3="Our experience with HighMast Marine during our EEXI retrofit project was incredible! From the initial consultation to project completion, their team’s technical guidance was spot on. They handled everything with professionalism, making sure we adhered to regulations while optimizing our operations for fuel savings."
+          name1="K. Reddy"
+          name2="Manish Parekh"
+          name3="S. Gaur"
         />
       </div>
+      <Contactseection />
     </div>
   );
 };

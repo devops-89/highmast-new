@@ -31,7 +31,7 @@ const Testimonials = (props) => {
   return (
     <div className="container testimonialssection allpadding">
       <div data-aos="fade-right">
-        <h2 className="subheading ">Trusted by Many...</h2>
+        <h2 className="subheading  headingcenter">Trusted by Many...</h2>
       </div>
       <div className="col-sm-10 mx-auto">
       <Swiper
@@ -57,7 +57,7 @@ const Testimonials = (props) => {
             </div>
             <div className="col-sm-8">
               <div className="testimonialscontent">
-                <Typography sx={{ fontSize: "22px" }} className="testimonialsp">
+                <Typography  className="testimonialsp">
                   <img src={props.dwnquote}></img>
                   {props.para} <img src={props.upquote}></img>
                 </Typography>
@@ -84,7 +84,7 @@ const Testimonials = (props) => {
             </div>
             <div className="col-sm-7">
               <div className="testimonialscontent">
-                <Typography sx={{ fontSize: "22px" }} className="testimonialsp">
+                <Typography  className="testimonialsp">
                   <img src={props.dwnquote}></img>
                   {props.para2} <img src={props.upquote}></img>
                 </Typography>
@@ -110,7 +110,7 @@ const Testimonials = (props) => {
             </div>
             <div className="col-sm-7">
               <div className="testimonialscontent">
-                <Typography sx={{ fontSize: "22px" }} className="testimonialsp">
+                <Typography  className="testimonialsp">
                   <img src={props.dwnquote}></img>
                   {props.para3} <img src={props.upquote}></img>
                 </Typography>

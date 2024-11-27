@@ -124,6 +124,9 @@
 
     text-align: right;
 }
+.headingcenter {
+    text-align: center;
+}
 
 
 /* Keyframes for zoom animation */

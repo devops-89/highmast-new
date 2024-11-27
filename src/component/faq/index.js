@@ -44,7 +44,7 @@ const Contactaddress = ({ contactaddressdata }) => {
             fontFamily: "roboto",
             fontSize: "70px",
             color: "#fff",
-            fontFamily:"poppins"
+            fontFamily: "poppins",
           }}
         >
           Where We Are
@@ -55,7 +55,7 @@ const Contactaddress = ({ contactaddressdata }) => {
               <motion.div
                 key={address.id}
                 data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-                data-aos-delay={index % 2 === 0 ? index * 100 : index * 200} 
+                data-aos-delay={index % 2 === 0 ? index * 100 : index * 200}
                 style={{ marginBottom: "16px" }}
               >
                 <Accordion
@@ -75,7 +75,7 @@ const Contactaddress = ({ contactaddressdata }) => {
                     sx={{
                       borderRadius: "10px",
                       padding: 0,
-                      background: `linear-gradient(50deg, white, hsl(0, 0%, 90%))`, 
+                      background: `linear-gradient(50deg, white, hsl(0, 0%, 90%))`,
                       backgroundSize: "300% 100%",
                       backgroundPosition: getBackgroundPosition(),
                       transition: "background-position 0.2s ease",
@@ -124,14 +124,27 @@ const Contactaddress = ({ contactaddressdata }) => {
                         <Typography>{address.addresdetailspin}</Typography>
 
                         <div class="mt-5">
-                          <Typography sx={{fontWeight:"600"}}>Phone:</Typography>
+                          <Typography sx={{ fontWeight: "600" }}>
+                            Phone:
+                          </Typography>
                           <Typography>{address.phoneno}</Typography>
-                          <Typography sx={{fontWeight:"600"}}>Email:</Typography>
+                          <Typography sx={{ fontWeight: "600" }}>
+                            Email:
+                          </Typography>
                           <Typography> {address.email}</Typography>
                         </div>
                       </div>
                       <div className="col-sm-6">
-                        <img src={address.img}></img>
+                 
+                        <iframe
+                          src={address.mapUrl}
+                          width="100%"
+                          height="300"
+                          style={{ border: 0 }}
+                          allowFullScreen=""
+                          loading="lazy"
+                          title={address.countryname}
+                        ></iframe>
                       </div>
                     </div>
                   </AccordionDetails>

@@ -42,7 +42,7 @@ const Additinalservices = (props) => {
 
 
       <div>
-        <Typography  data-aos="fade-down"  sx={{ fontSize: "80px", color: "#fff",marginBottom:"80px" }}>
+        <Typography  data-aos="fade-down" className="headingcenter" sx={{ fontSize: "80px", color: "#fff",marginBottom:"80px" }}>
           {props.mainheading}
         </Typography>
       </div>

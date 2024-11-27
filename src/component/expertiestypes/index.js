@@ -18,7 +18,7 @@ const ExpertiesComponent = (props) => {
   return (
     <div className="container-fluid px-0 ">
       <div data-aos="fade-down">
-        <h2 className="subheading ">{props.mainheading}</h2>
+        <h2 className="subheading headingcenter ">{props.mainheading}</h2>
       </div>
       {/* First Parallax Section */}
       <Parallax

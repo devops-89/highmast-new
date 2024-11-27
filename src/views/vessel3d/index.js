@@ -8,9 +8,10 @@ import avtarimg from "../../assets/img/elements/user.png";
 import dwnquote from "../../assets/img/elements/dwnquote.png";
 import upquote from "../../assets/img/elements/upquote.png";
 import ExpertiesComponent from "../../component/expertiestypes";
-import designmodification from "../../assets/img/elements/design&modification.jpg";
-import hydraulicrepair from "../../assets/img/elements/hydraulicrepairs.jpg";
-import hydrauliccomponent from "../../assets/img/elements/hydrauliccomponent.jpg";
+import vesselsparalaximg1 from "../../assets/img/elements/vesselsparalaximg1.jpg";
+import vesselsparalaximg2 from "../../assets/img/elements/vesselsparalaximg2.jpg";
+import vesselsparalaximg3 from "../../assets/img/elements/vesselsparalaximg3.jpg";
+import Contactseection from "../../component/contactsection";
 
 const Vessels3d = () => {
   return (
@@ -40,22 +41,22 @@ const Vessels3d = () => {
         <ServicesPointers
           img={pointersimg}
           subheading="Support Services"
-          name1="Engine Types: "
-          name2="Supported Brands:"
-          name3="Specialized Engineers:"
-          name4="Additional Services: "
-          name5="Geographic Reach: "
-          pointername1=" Expertise in overhauling 2-stroke and 4-stroke engines, including ME & MC types and dual-fuel engines."
-          pointername2="MAN B&W, Wartsila, Mitsubishi, Hyundai, Doosan, STX, MTU, Yanmar, Cummins, Daihatsu, Caterpillar."
-          pointername3="Service engineers for Turbo Chargers and Governors."
-          pointername4="Multi-stage pumps, cargo pumps, and tank cleaning machines."
-          pointername5="Available at Singapore, Malaysia anchorage, and along the Indian coast."
+          name1="EEXI Value Calculation: "
+          name2="EEXI Comparison:"
+          name3="Generate Technical File:"
+          name4="MM Submission:"
+          name5="Seamless Process:"
+          pointername1="Use our digital tool to calculate the EEXI value for your vessel."
+          pointername2="Compare the required and attained EEXI values to ensure compliance."
+          pointername3="Automatically generate the EEXI technical file for documentation."
+          pointername4="Submit the generated technical file and OMM for approval."
+          pointername5="Simplify your EEXI compliance process with our efficient, digital solution."
         />
         <ExpertiesComponent
           mainheading="3D Scanning & Retrofit"
-          img1={designmodification}
-          img2={hydraulicrepair}
-          img3={hydrauliccomponent}
+          img1={vesselsparalaximg1}
+          img2={vesselsparalaximg2}
+          img3={vesselsparalaximg3}
           heading1="Advanced 3D Scanning"
           description1="3D Scanning for our retrofit installations at dry dock and during sailing."
           heading2="Vortex Elimination Technology"
@@ -69,23 +70,15 @@ const Vessels3d = () => {
           avtarimg={avtarimg}
           dwnquote={dwnquote}
           upquote={upquote}
-          para=" Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          para2=" Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          para3=" Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          name1="Rohit"
-          name2="Simren"
-          name3="Nidhi"
+          para=" Our experience with HighMast Marine during our EEXI retrofit project was incredible! From the initial consultation to project completion, their team’s technical guidance was spot on. They handled everything with professionalism, making sure we adhered to regulations while optimizing our operations for fuel savings."
+          para2=" When it comes to ship repairs, HighMast Marine is hands down the best! Their prompt and professional service saved us so much downtime. Their engineers are knowledgeable and extremely efficient. Every repair was handled with precision, making it an absolute pleasure working with them."
+          para3="The LED power-saving retrofit by HighMast Marine transformed our energy consumption. Their team didn’t just install LED lights—they explained the benefits and ensured we saw a dramatic reduction in our operational costs. Excellent service, excellent results!"
+          name1="S. Gaur"
+          name2="Mohammad Ali"
+          name3="R. Kumar"
         />
       </div>
+      <Contactseection />
     </div>
   );
 };

@@ -11,6 +11,7 @@ import ExpertiesComponent from "../../component/expertiestypes";
 import ampparalaximg1 from "../../assets/img/elements/ampparalaximg1.jpg";
 import ampparalaximg2 from "../../assets/img/elements/ampparalaximg2.jpg";
 import ampparalaximg3 from "../../assets/img/elements/ampparalaximg3.jpg";
+import Contactseection from "../../component/contactsection";
 
 const Amp = () => {
   return (
@@ -41,16 +42,16 @@ const Amp = () => {
         <ServicesPointers
           img={pointersimg}
           subheading="Support Services"
-          name1="Engine Types: "
-          name2="Supported Brands:"
-          name3="Specialized Engineers:"
-          name4="Additional Services: "
-          name5="Geographic Reach: "
-          pointername1=" Expertise in overhauling 2-stroke and 4-stroke engines, including ME & MC types and dual-fuel engines."
-          pointername2="MAN B&W, Wartsila, Mitsubishi, Hyundai, Doosan, STX, MTU, Yanmar, Cummins, Daihatsu, Caterpillar."
-          pointername3="Service engineers for Turbo Chargers and Governors."
-          pointername4="Multi-stage pumps, cargo pumps, and tank cleaning machines."
-          pointername5="Available at Singapore, Malaysia anchorage, and along the Indian coast."
+          name1="Carbon Sequestration: "
+          name2="CCS Process: "
+          name3="Enhanced Oil Recovery (EOR):"
+          name4="Carbon Utilization:"
+          name5="Onboard CO2 Utilization:"
+          pointername1="Expertise in storing CO2 in geological formations like oil reservoirs and aquifers."
+          pointername2="Securely trapping CO2 underground to prevent atmospheric release."
+          pointername3="Boosting oil production through CO2 injection in reservoirs."
+          pointername4="Converting CO2 into valuable products such as chemicals, fuels, and plastics."
+          pointername5="Using captured CO2 for onboard processes or enhanced oil recovery when applicable."
         />
         <ExpertiesComponent
           mainheading="Clean Port Powering"
@@ -68,23 +69,15 @@ const Amp = () => {
           avtarimg={avtarimg} 
           dwnquote={dwnquote}
           upquote={upquote}
-          para="      Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          para2="      Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          para3="      Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          name1="Rohit"
-          name2="Simren"
-          name3="Nidhi"
+          para="HighMast Marine’s expertise in engine overhauling was beyond impressive! The team’s professionalism, attention to detail, and timely delivery of services made our operations smoother than ever. Their guidance throughout the process, along with proactive troubleshooting, ensured the machinery was optimized perfectly. Truly a game-changer!"
+          para2="We were struggling with our ship's electrical systems, but HighMast Marine’s team jumped in with unmatched knowledge. They diagnosed issues quickly, provided clear solutions, and were always available for support. Their timely, thorough repairs and efficiency made a world of difference!"
+          para3="HighMast Marine’s work on our scrubber and CCS commissioning was flawless. Their team guided us through the entire process with unmatched expertise and clarity. They didn’t just fix the issue, they provided a comprehensive solution with ongoing support. We couldn’t have asked for better."
+          name1="R. Deshmukh"
+          name2="Vinod S. "
+          name3="Anil G."
         />
       </div>
+      <Contactseection/>
     </div>
   );
 };

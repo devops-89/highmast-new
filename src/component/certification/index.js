@@ -17,6 +17,7 @@ const Certification = () => {
     <div className="container allpadding pb-0">
       <div>
         <Typography
+        className="headingcenter"
           data-aos="fade-up"
           sx={{ fontSize: "80px", color: "#fff" }}
           component="p"
@@ -35,7 +36,7 @@ const Certification = () => {
               <div className="certificationparent">
                 <img className="certificationimg" src={certificationimg1}></img>
               </div>
-              <Typography sx={{ fontSize: "18px" }} className="certiondetail">
+              <Typography className="certiondetail">
                 ISO 9001 instils quality awareness in all of our marina service
                 modules that then can drive operational efficiency and client
                 satisfaction.
@@ -51,7 +52,7 @@ const Certification = () => {
               <div className="certificationparent">
                 <img className="certificationimg" src={certificationimg2}></img>
               </div>
-              <Typography sx={{ fontSize: "18px" }} className="certiondetail">
+              <Typography  className="certiondetail">
                 ISO 14001 enhances our environmental responsibility, guiding
                 sustainable practices and reducing our ecological impact.
               </Typography>
@@ -75,7 +76,7 @@ const Certification = () => {
               <div className="certificationparent">
                 <img className="certificationimg" src={certificationimg3}></img>
               </div>
-              <Typography sx={{ fontSize: "18px" }} className="certiondetail">
+              <Typography  className="certiondetail">
                 Emphasis on the safety and health of our crew and clients in
                 terms of safe working conditions across all our operations.
               </Typography>
@@ -90,7 +91,7 @@ const Certification = () => {
               <div className="certificationparent">
                 <img className="certificationimg" src={certificationimg4}></img>
               </div>
-              <Typography sx={{ fontSize: "18px" }} className="certiondetail">
+              <Typography  className="certiondetail">
                 bizSAFE certification depicts our proactive approach to safety
                 at the workplace and regulatory compliance.
               </Typography>

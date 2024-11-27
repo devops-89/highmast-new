@@ -7,6 +7,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import googlemapimg from "../../assets/img/elements/googlemapimg.png";
 import globebannerimg from "../../assets/img/elements/globeimg.png";
 import Contactaddress from "../../component/faq";
+import Contactseection from "../../component/contactsection";
 
 const Contactus = () => {
   const contactaddressdata = [
@@ -26,6 +27,7 @@ const Contactus = () => {
       phoneno: "+65 90487544 +65 91870596",
 
       img: googlemapimg,
+      mapUrl: "https://www.google.com/maps?q=Tong+Eng+Building,+101+Cecil+Street,+Unit+24-05,+Singapore+069533&output=embed",
     },
     {
       icon: <LocationOnIcon />,
@@ -42,7 +44,9 @@ const Contactus = () => {
       phoneno: "+971 529069489",
 
       img: googlemapimg,
-      img: googlemapimg,
+      mapUrl: "https://www.google.com/maps?q=Office+44,+1st+Floor,+Emirates+Tower,+Hamdan+Bin+Md+Street,+Al+Danah,+Abu+Dhabi+UAE&output=embed",
+
+      
     },
   ];
 
@@ -140,6 +144,7 @@ const Contactus = () => {
       </section>
       {/* <FAQSection faqData={faqData} /> */}
       <Contactaddress  contactaddressdata={contactaddressdata}/>
+      <Contactseection/>
     </div>
   );
 };

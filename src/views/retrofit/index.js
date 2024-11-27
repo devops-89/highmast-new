@@ -1,6 +1,5 @@
 import React from "react";
 import ServicesDescription from "../../component/servicesdescription";
-import { color } from "framer-motion";
 import ServicesPointers from "../../component/servicespointers";
 import "aos/dist/aos.css";
 import "./index.css";
@@ -15,6 +14,7 @@ import ExpertiesComponent from "../../component/expertiestypes";
 import retrofitparalaximg1 from "../../assets/img/elements/retrofitparalaximg1.jpg";
 import retrofitparalaximg2 from "../../assets/img/elements/retrofitparalaximg2.jpg";
 import retrofitparalaximg3 from "../../assets/img/elements/retrofitparalaximg3.jpg";
+import Contactseection from "../../component/contactsection";
 
 const Retrofit = () => {
   return (
@@ -47,16 +47,16 @@ const Retrofit = () => {
         <ServicesPointers
           img={pointersimg}
           subheading="Support Services"
-          name1="Engine Types: "
-          name2="Supported Brands:"
-          name3="Specialized Engineers:"
-          name4="Additional Services: "
-          name5="Geographic Reach: "
-          pointername1=" Expertise in overhauling 2-stroke and 4-stroke engines, including ME & MC types and dual-fuel engines."
-          pointername2="MAN B&W, Wartsila, Mitsubishi, Hyundai, Doosan, STX, MTU, Yanmar, Cummins, Daihatsu, Caterpillar."
-          pointername3="Service engineers for Turbo Chargers and Governors."
-          pointername4="Multi-stage pumps, cargo pumps, and tank cleaning machines."
-          pointername5="Available at Singapore, Malaysia anchorage, and along the Indian coast."
+          name1="Energy Efficiency:"
+          name2="Long Lifespan:"
+          name3="Durability:"
+          name4="Safety:"
+          name5="Cost Savings:"
+          pointername1="LED lights use significantly less power than incandescent or halogen lights, conserving fuel and reducing operational costs."
+          pointername2="LEDs can last up to 50,000 hours, minimising frequent replacements and maintenance needs."
+          pointername3="LEDs resist shock, vibration, and corrosion, ideal for harsh marine environments."
+          pointername4="Emit minimal heat, lowering fire risk and making them safer to handle."
+          pointername5="The durability and long lifespan of LEDs can reduce maintenance costs by up to 80%."
         />
       </div>
 
@@ -76,21 +76,12 @@ const Retrofit = () => {
         avtarimg={avtarimg}
         dwnquote={dwnquote}
         upquote={upquote}
-        para="      Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-        para2="      Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-        para3="      Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-        name1="Rohit"
-        name2="Simren"
-        name3="Nidhi"
+        para="HighMast Marine’s expertise in engine overhauling was beyond impressive! The team’s professionalism, attention to detail, and timely delivery of services made our operations smoother than ever. Their guidance throughout the process, along with proactive troubleshooting, ensured the machinery was optimized perfectly. Truly a game-changer!"
+        para2="We were struggling with our ship's electrical systems, but HighMast Marine’s team jumped in with unmatched knowledge. They diagnosed issues quickly, provided clear solutions, and were always available for support. Their timely, thorough repairs and efficiency made a world of difference!"
+        para3="HighMast Marine’s work on our scrubber and CCS commissioning was flawless. Their team guided us through the entire process with unmatched expertise and clarity. They didn’t just fix the issue, they provided a comprehensive solution with ongoing support. We couldn’t have asked for better."
+        name1="R. Deshmukh"
+        name2="Vinod S. "
+        name3="Anil G."
       />
 
       {/* <div className="row ">
@@ -110,6 +101,7 @@ const Retrofit = () => {
           </div>
         </div>
       </div> */}
+      <Contactseection />
     </div>
   );
 };

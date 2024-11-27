@@ -16,6 +16,7 @@ import ExpertiesComponent from "../../component/expertiestypes";
 import scrubberparalaximg1 from "../../assets/img/elements/scrubberparalaximg1.jpg";
 import scrubberparalaximg2 from "../../assets/img/elements/scrubberparalaximg2.jpg";
 import scrubberparalaximg3 from "../../assets/img/elements/scrubberparalaximg3.jpg";
+import Contactseection from "../../component/contactsection";
 
 const Scrubber = () => {
   return (
@@ -48,19 +49,19 @@ const Scrubber = () => {
         <ServicesPointers
           img={pointersimg}
           subheading="Support Services"
-          name1="Engine Types: "
-          name2="Supported Brands:"
-          name3="Specialized Engineers:"
-          name4="Additional Services: "
-          name5="Geographic Reach: "
-          pointername1=" Expertise in overhauling 2-stroke and 4-stroke engines, including ME & MC types and dual-fuel engines."
-          pointername2="MAN B&W, Wartsila, Mitsubishi, Hyundai, Doosan, STX, MTU, Yanmar, Cummins, Daihatsu, Caterpillar."
-          pointername3="Service engineers for Turbo Chargers and Governors."
-          pointername4="Multi-stage pumps, cargo pumps, and tank cleaning machines."
-          pointername5="Available at Singapore, Malaysia anchorage, and along the Indian coast."
+          name1="Carbon Sequestration:"
+          name2="CCS Process:"
+          name3="Enhanced Oil Recovery (EOR):"
+          name4="Carbon Utilization:"
+          name5="Onboard CO2 Utilization:"
+          pointername1="Expertise in storing CO2 underground in geological formations like oil reservoirs or saline aquifers."
+          pointername2="Securely trapping CO2 underground to prevent atmospheric release through carbon capture and storage."
+          pointername3="Utilizing CO2 injection to boost oil production in reservoirs."
+          pointername4="Converting captured CO2 into valuable products like chemicals, fuels, and plastics."
+          pointername5="Leveraging captured CO2 for onboard processes or enhancing oil recovery, if applicable."
         />
         <Additinalservices
-        mainheading="EXPERTISE DOMAIN"
+          mainheading="EXPERTISE DOMAIN"
           img1={pendestal}
           img2={marinecrane}
           img3={bophandling}
@@ -88,23 +89,15 @@ const Scrubber = () => {
           avtarimg={avtarimg}
           dwnquote={dwnquote}
           upquote={upquote}
-          para=" Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          para2=" Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          para3=" Great work from a designer in the Dribbble community; your
-                  best resource to discover and connect with designers
-                  worldwide. Testimonials Web DesignTestimonial
-                  GraphicTestimonial Ads"
-          name1="Rohit"
-          name2="Simren"
-          name3="Nidhi"
+          para=" Our experience with HighMast Marine during our EEXI retrofit project was incredible! From the initial consultation to project completion, their team’s technical guidance was spot on. They handled everything with professionalism, making sure we adhered to regulations while optimizing our operations for fuel savings."
+          para2=" When it comes to ship repairs, HighMast Marine is hands down the best! Their prompt and professional service saved us so much downtime. Their engineers are knowledgeable and extremely efficient. Every repair was handled with precision, making it an absolute pleasure working with them."
+          para3="The LED power-saving retrofit by HighMast Marine transformed our energy consumption. Their team didn’t just install LED lights—they explained the benefits and ensured we saw a dramatic reduction in our operational costs. Excellent service, excellent results!"
+          name1="S. Gaur"
+          name2="Mohammad Ali"
+          name3="R. Kumar"
         />
       </div>
+      <Contactseection />
     </div>
   );
 };

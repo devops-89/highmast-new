@@ -88,11 +88,11 @@ const ServicesPointers = (props) => {
             data-aos-delay="400"
           >
             <div className="col-sm-3">
-              <Typography className="pointershead">{props.name1}</Typography>
+              <Typography className="pointershead">{props.name2}</Typography>
             </div>
             <div className="col-sm-9">
               <Typography className="pointername">
-                {props.pointername1}
+                {props.pointername2}
               </Typography>
             </div>
           </div>
@@ -103,11 +103,11 @@ const ServicesPointers = (props) => {
             data-aos-delay="600"
           >
             <div className="col-sm-3">
-              <Typography className="pointershead">{props.name1}</Typography>
+              <Typography className="pointershead">{props.name3}</Typography>
             </div>
             <div className="col-sm-9">
               <Typography className="pointername">
-                {props.pointername1}
+                {props.pointername3}
               </Typography>
             </div>
           </div>
@@ -118,11 +118,11 @@ const ServicesPointers = (props) => {
             data-aos-delay="800"
           >
             <div className="col-sm-3">
-              <Typography className="pointershead">{props.name1}</Typography>
+              <Typography className="pointershead">{props.name4}</Typography>
             </div>
             <div className="col-sm-9">
               <Typography className="pointername">
-                {props.pointername1}
+                {props.pointername4}
               </Typography>
             </div>
           </div>
@@ -132,11 +132,11 @@ const ServicesPointers = (props) => {
              data-aos-delay="1000"
           >
             <div className="col-sm-3">
-              <Typography className="pointershead">{props.name1}</Typography>
+              <Typography className="pointershead">{props.name5}</Typography>
             </div>
             <div className="col-sm-9">
               <Typography className="pointername">
-                {props.pointername1}
+                {props.pointername5}
               </Typography>
             </div>
           </div>

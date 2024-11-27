@@ -34,7 +34,7 @@
 .alltextparent p {
   text-align: left;
   color: #fff;
-  font-size: 17px;
+  /* font-size: 17px; */
   font-family: poppins;
   margin-bottom: 0px;
 }

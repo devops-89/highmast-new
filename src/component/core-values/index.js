@@ -47,9 +47,7 @@ function CoreValues() {
   return (
     <Box className="container corevaluessection">
       <Box data-aos="fade-up-left">
-        <Typography variant="h1" className="heading">
-          CORE VALUES
-        </Typography>
+        <Typography className="heading headingcenter">CORE VALUES</Typography>
       </Box>
       <Box className="tabs-section my-5">
         <Tabs
@@ -84,15 +82,20 @@ function CoreValues() {
               <div className="row">
                 <div className="col-sm-4 valueparent" data-aos="zoom-out-right">
                   <Box>
-                    <img src={mission} alt="Mission" style={{ borderRadius: "8px" }} />
+                    <img
+                      src={mission}
+                      alt="Mission"
+                      style={{ borderRadius: "8px", margin: "auto" }}
+                    />
                   </Box>
                 </div>
                 <div className="col-sm-8 valueparent2" data-aos="fade-left">
                   <Box>
                     <Typography variant="h1">Mission</Typography>
-                    <Typography variant="body1">
-                      To become the leading company in our industry by innovating and building
-                      long-lasting relationships with our customers.
+                    <Typography>
+                      To become the leading company in our industry by
+                      innovating and building long-lasting relationships with
+                      our customers.
                     </Typography>
                   </Box>
                 </div>
@@ -104,15 +107,19 @@ function CoreValues() {
               <div className="row">
                 <div className="col-sm-4 valueparent">
                   <Box>
-                    <img src={vision} alt="Vision" style={{ borderRadius: "8px" }} />
+                    <img
+                      src={vision}
+                      alt="Vision"
+                      style={{ borderRadius: "8px" }}
+                    />
                   </Box>
                 </div>
                 <div className="col-sm-8 valueparent2">
                   <Box>
                     <Typography variant="h1">Vision</Typography>
-                    <Typography variant="body1">
-                      To provide exceptional products/services while contributing to the well-being
-                      of our customers.
+                    <Typography>
+                      To provide exceptional products/services while
+                      contributing to the well-being of our customers.
                     </Typography>
                   </Box>
                 </div>
@@ -124,14 +131,19 @@ function CoreValues() {
               <div className="row">
                 <div className="col-sm-4 valueparent">
                   <Box>
-                    <img src={Responsibility} alt="Responsibility" style={{ borderRadius: "8px" }} />
+                    <img
+                      src={Responsibility}
+                      alt="Responsibility"
+                      style={{ borderRadius: "8px" }}
+                    />
                   </Box>
                 </div>
                 <div className="col-sm-8 valueparent2">
                   <Box>
                     <Typography variant="h1">Responsibility</Typography>
-                    <Typography variant="body1">
-                      A strong commitment to social and environmental responsibility.
+                    <Typography>
+                      A strong commitment to social and environmental
+                      responsibility.
                     </Typography>
                   </Box>
                 </div>
