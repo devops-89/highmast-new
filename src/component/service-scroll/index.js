@@ -160,6 +160,19 @@ const Servicesscroll = () => {
     "Vessel 3D scanning <br/> & Production design",
     "Marine Electrical <br/> & Automation",
   ];
+  // Define the corresponding URLs for redirection
+  const redirectUrls = [
+    "/retrofit-led-power-saving-solutions",
+    "/scrubber-and-ccs-commisioning",
+    "/amp-solutions-and-vdf-retrofit",
+    "/project-supervision-shipbuilding-and-ship-repairs",
+    "/vessel-3d-scanning-and-production-design",
+    "/marine-electrical-&-automation",
+  ];
+
+  const handleRedirect = (url) => {
+    window.location.href = url; // Redirect to the specified URL
+  };
 
   useEffect(() => {
     const mm = gsap.matchMedia();
@@ -242,7 +255,6 @@ const Servicesscroll = () => {
                   alt={`Service ${index + 1}`}
                   className="scroll-img"
                 />
-          
               </div>
             </div>
           </div>
@@ -251,7 +263,13 @@ const Servicesscroll = () => {
 
       <div className="text container " ref={textRef}>
         {textItems.map((text, index) => (
-          <p key={index} dangerouslySetInnerHTML={{ __html: text }} />
+          <p
+            key={index}
+            dangerouslySetInnerHTML={{ __html: text }}
+            onClick={() => handleRedirect(redirectUrls[index])} // Add click handler
+            style={{ cursor: "pointer" }} // Change cursor to pointer to indicate clickable
+          />
+          // <p key={index} dangerouslySetInnerHTML={{ __html: text }} />
         ))}
       </div>
     </div>
