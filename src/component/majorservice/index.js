@@ -18,7 +18,7 @@ const Majorservice = () => {
       <div className="container allpadding">
         <div className="row align-items-center">
           <div className="col-sm-4 text-left ">
-            <div className="">
+            <div className="majorsimgerviceparent">
               {/* Static image or content */}
               <img
                 data-aos="zoom-in-down"
@@ -35,7 +35,7 @@ const Majorservice = () => {
                 {/* Your scrollable content */}
                 <div className="row">
                   <div className="col-sm-6 py-5 majortopbottom">
-                    <div className="majorright majorheight px-5">
+                    <div className="majorright majorheight ">
                       <div className="certificationparent" data-aos="fade-down">
                         <img
                           className="certificationimg"
@@ -50,7 +50,7 @@ const Majorservice = () => {
                     </div>
                   </div>
                   <div className="col-sm-6 py-5 majortopbottom">
-                    <div className="px-5 majorheight">
+                    <div className=" majorheight">
                       <div className="certificationparent" data-aos="fade-down">
                         <img
                           className="certificationimg"
@@ -67,7 +67,7 @@ const Majorservice = () => {
                 </div>
                 <div className="row">
                   <div className="col-sm-6 py-5 majorbottom">
-                    <div className="majorright majorheight px-5">
+                    <div className="majorright majorheight ">
                       <div className="certificationparent" data-aos="fade-down">
                         <img
                           className="certificationimg"
@@ -82,7 +82,7 @@ const Majorservice = () => {
                     </div>
                   </div>
                   <div className="col-sm-6 py-5 majorbottom">
-                    <div className="px-5 majorheight">
+                    <div className=" majorheight">
                       <div className="certificationparent" data-aos="fade-down">
                         <img
                           className="certificationimg"

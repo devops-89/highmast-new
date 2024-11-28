@@ -1,4 +1,4 @@
-.conatactbanner {
+.servicebanner {
 
     background-color: #031C32;
     width: 100%;
@@ -7,7 +7,7 @@
   
   }
   
-  .conatactbanner h1 {
+  .servicebanner h1 {
     color: #fff;
     text-align: left;
     font-size: 7.15vw;
@@ -33,4 +33,9 @@
   .borderboxes svg {
     color:#6CBBC8 ;
     margin-bottom: 20px;
+  }
+  @media (max-width:768px) {
+    .borderboxes {
+      height: 100%;
+    }
   }

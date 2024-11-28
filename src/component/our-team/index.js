@@ -5,7 +5,6 @@ import Teamimg2 from "../../assets/img/elements/Team2.jpg";
 import "aos/dist/aos.css";
 import { Typography } from "@mui/material";
 
-
 const Ourteam = () => {
   return (
     <div className="container allpadding">
@@ -13,7 +12,7 @@ const Ourteam = () => {
         <h2 className="Ourteamheading headingcenter ">OUR TEAM</h2>
       </div>
       <div className="container allpadding pb-0">
-        <div className="row align-items-center pb-5 mb-5   ourrteamsection ">
+        <div className="row align-items-center pb-5   ourrteamsection ourteamsectionist ">
           <div
             className="col-sm-5"
             data-aos="fade-right"
@@ -22,9 +21,14 @@ const Ourteam = () => {
           >
             <Typography
               sx={{
-                fontSize: "50px",
+                fontSize: {
+                  xs: "25px", // Small font size for mobile devices (extra-small breakpoint)
+                  sm: "25px", // Slightly larger for tablets and small screens
+                  md: "50px",
+                  // Default size for medium and larger screens
+                },
+                textAlign: { xs: "center", lg: "left" },
                 color: "#fff",
-                textAlign: "left",
                 textTransform: "uppercase",
               }}
               component="p"
@@ -33,7 +37,15 @@ const Ourteam = () => {
             </Typography>
             <Typography
               component="p"
-              sx={{ color: "red", fontSize: "22px", textAlign: "left" }}
+              sx={{
+                color: "red",
+                fontSize: {
+                  xs: "20px", // Small font size for mobile devices (extra-small breakpoint)
+                  sm: "20px", // Slightly larger for tablets and small screens
+                  md: "22px",
+                },
+                textAlign: { xs: "center", lg: "left" },
+              }}
             >
               Director & Founder
             </Typography>
@@ -56,7 +68,7 @@ const Ourteam = () => {
             </div>
           </div>
         </div>
-        <div className="row align-items-center ourrteamsection">
+        <div className="row align-items-center ourrteamsection ourteamsection2nd">
           <div className="col-sm-7 text-left teamimgparnt2">
             <div className="image-overlay">
               <img data-aos="zoom-in-up" src={Teamimg1}></img>
@@ -69,20 +81,38 @@ const Ourteam = () => {
             data-aos-easing="ease-in-sine"
           >
             <Typography
-              sx={{ fontSize: "50px", color: "#fff", textAlign: "left" }}
+              sx={{
+                fontSize: {
+                  xs: "25px", // Small font size for mobile devices (extra-small breakpoint)
+                  sm: "25px", // Slightly larger for tablets and small screens
+                  md: "50px",
+                  // Default size for medium and larger screens
+                },
+                textAlign: { xs: "center", lg: "left" },
+                color: "#fff",
+              }}
               component="p"
             >
               SOURAV HORE
             </Typography>
             <Typography
               component="p"
-              sx={{ color: "red", fontSize: "22px", textAlign: "left" }}
+              sx={{
+                color: "red",
+                fontSize: {
+                  xs: "20px", // Small font size for mobile devices (extra-small breakpoint)
+                  sm: "20px", // Slightly larger for tablets and small screens
+                  md: "22px",
+                },
+                textAlign: { xs: "center", lg: "left" },
+              }}
             >
               Managing Director & Co-Founder
             </Typography>
             <Typography
               component="p"
               sx={{
+               
                 color: "#fff",
                 textAlign: "justify",
                 marginTop: "20px ",

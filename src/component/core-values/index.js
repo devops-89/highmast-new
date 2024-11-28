@@ -47,7 +47,7 @@ function CoreValues() {
   return (
     <Box className="container corevaluessection">
       <Box data-aos="fade-up-left">
-        <Typography className="heading headingcenter">CORE VALUES</Typography>
+        <h2 className="heading headingcenter">CORE VALUES</h2>
       </Box>
       <Box className="tabs-section my-5">
         <Tabs
@@ -78,7 +78,7 @@ function CoreValues() {
           className="mySwiper"
         >
           <SwiperSlide>
-            <Box className="swiper-slide-content py-5">
+            <Box className="swiper-slide-content ">
               <div className="row">
                 <div className="col-sm-4 valueparent" data-aos="zoom-out-right">
                   <Box>

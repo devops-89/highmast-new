@@ -33,16 +33,16 @@ const Contactaddress = ({ contactaddressdata }) => {
   };
 
   return (
-    <div className="container  allpadding">
-      <Box sx={{ width: "100%", padding: 4 }}>
+    <div className="container  contactmobilebaner allpadding">
+      <Box sx={{ width: "100%", padding: 0 }}>
         <Typography
-          variant="h4"
+          variant="h2"
           align="left"
           gutterBottom
           sx={{
             marginBottom: 4,
             fontFamily: "roboto",
-            fontSize: "70px",
+            fontSize: { xs: "40px", md: "70px", lg: "70px" },
             color: "#fff",
             fontFamily: "poppins",
           }}
@@ -81,36 +81,42 @@ const Contactaddress = ({ contactaddressdata }) => {
                       transition: "background-position 0.2s ease",
                     }}
                   >
-                    <div className="col-sm-6 py-4">
-                      <Typography
-                        variant="body1"
-                        sx={{
-                          fontSize: "20px",
-                          fontWeight: "600",
-                          display: "flex",
-                          alignItems: "center",
-                          fontFamily: "poppins",
-                        }}
-                      >
-                        <span
-                          style={{
-                            marginRight: "40px",
-                            fontSize: "40px",
+                    <div className="row w-100 d-flex align-items-center mx-auto">
+                      <div className="col-6 py-4">
+                        <Typography
+                          variant="body1"
+                          sx={{
+                            fontSize:{xs:"15px",md:"20px", lg:"20px"} ,
                             fontWeight: "600",
-                            marginLeft: "40px",
+                            display: "flex",
+                            alignItems: "center",
+                            fontFamily: "poppins",
                           }}
                         >
-                          {address.icon}
-                        </span>
-                        {address.countryname}
-                      </Typography>
-                    </div>
-                    <div className="col-sm-6 text-left px-3  py-4 contactlocbg">
-                      <Typography
-                        sx={{ fontFamily: "poppins", textAlign: "left" }}
-                      >
-                        {address.addressright1}
-                      </Typography>
+                          <span
+                          className="contactlocationicon"
+                            // style={{
+                            //   marginRight: "40px",
+                            //   fontSize: "40px",
+                            //   fontWeight: "600",
+                            //   marginLeft: "40px",
+                            // }}
+                          >
+                            {address.icon}
+                          </span>
+                          {address.countryname}
+                        </Typography>
+                      </div>
+                      <div className="col-6 text-left px-3  py-4 contactlocbg">
+                        <Typography
+                          sx={{ fontFamily: "poppins", textAlign: "left", 
+
+                            fontSize:{xs:"15px",md:"20px", lg:"20px"} ,
+                          }}
+                        >
+                          {address.addressright1}
+                        </Typography>
+                      </div>
                     </div>
                   </AccordionSummary>
                   <AccordionDetails sx={{ padding: 4 }}>
@@ -123,7 +129,7 @@ const Contactaddress = ({ contactaddressdata }) => {
                         <Typography>{address.addressdetails}</Typography>
                         <Typography>{address.addresdetailspin}</Typography>
 
-                        <div class="mt-5">
+                        <div class="mt-3">
                           <Typography sx={{ fontWeight: "600" }}>
                             Phone:
                           </Typography>
@@ -135,7 +141,6 @@ const Contactaddress = ({ contactaddressdata }) => {
                         </div>
                       </div>
                       <div className="col-sm-6">
-                 
                         <iframe
                           src={address.mapUrl}
                           width="100%"

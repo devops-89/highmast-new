@@ -11,7 +11,7 @@ const About = () => {
  
   return (
     <div>
-      <section style={{ height: "100vh" }} className="aboutbanner secOne2 ">
+      <section className="aboutbanner secOne2 ">
         <div className="aboutbanneroverlay"></div>{" "}
         <div className="container bannercontainer">
           <div className="section-title desktop">

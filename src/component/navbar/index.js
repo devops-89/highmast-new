@@ -30,7 +30,7 @@ const Navbar = () => {
         name: "Retrofit Led Power Saving Solutions",
         url: "/retrofit-led-power-saving-solutions",
       },
-  
+
       {
         name: "Scrubber & Ccs Commisioning",
         url: "/scrubber-and-ccs-commisioning",
@@ -107,7 +107,7 @@ const Navbar = () => {
               backgroundColor: fixed ? "rgb(16 59 81 / 15%)" : "transparent",
               backdropFilter: fixed && "blur(5px)",
               alignItems: "center",
-              paddingLeft: { xs: "0px", md: "20px", lg: "20px" } ,
+              paddingLeft: { xs: "0px", md: "20px", lg: "20px" },
               paddingRight: { xs: "0px", md: "20px", lg: "20px" },
               flexGrow: 1,
             }}
@@ -134,7 +134,7 @@ const Navbar = () => {
             >
               <MenuIcon sx={{ color: "#fff" }} />
             </IconButton>
-
+            {/* mobile view */}
             <Drawer
               anchor="right"
               open={drawerOpen}
@@ -147,7 +147,7 @@ const Navbar = () => {
                 sx={{
                   width: "100%",
                   height: "100%",
-                  backgroundColor: "white",
+                  backgroundColor: "#031C32",
                   position: "relative",
                   padding: 4,
                 }}
@@ -155,6 +155,7 @@ const Navbar = () => {
               >
                 <Link to="/">
                   <img
+                      onClick={toggleDrawer(false)}
                     className="highmastlogo"
                     src={highmastlogo}
                     width={150}
@@ -163,11 +164,13 @@ const Navbar = () => {
                 </Link>
                 <IconButton
                   onClick={toggleDrawer(false)}
-                  sx={{ position: "absolute", top: 16, right: 16 }}
+                  sx={{ position: "absolute", right: 16 }}
                   color="inherit"
                   aria-label="close"
                 >
-                  <CloseIcon />
+                  <CloseIcon sx={{
+                    color:"#fff"
+                  }} />
                 </IconButton>
 
                 <Stack
@@ -177,9 +180,9 @@ const Navbar = () => {
                   sx={{ marginTop: 6 }}
                 >
                   {Data.navlinks.map((val, i) => (
-                    <Box key={i}>
+                    <Box key={i} sx={{width:"100%"}}>
                       {/* Navigation Link and Dropdown Icon in Horizontal Line */}
-                      <Box display="flex" alignItems="center">
+                      <Box display="flex" alignItems="center" justifyContent="space-between">
                         {/* Link for Navigation */}
                         <Link
                           to={val.url}
@@ -193,7 +196,9 @@ const Navbar = () => {
                             fontFamily="poppins"
                             fontWeight={500}
                             textTransform={"uppercase"}
-                            fontSize="1.5rem"
+                            fontSize="14px"
+                            color="#fff"
+                            
                           >
                             {val.name}
                           </Typography>
@@ -205,7 +210,7 @@ const Navbar = () => {
                             onClick={toggleMobileDropdown} // Toggle dropdown on icon click
                             sx={{ marginLeft: 1 }}
                           >
-                            <ArrowDropDownIcon />
+                            <ArrowDropDownIcon sx={{color:"#fff"}}/>
                           </IconButton>
                         )}
                       </Box>
@@ -219,7 +224,7 @@ const Navbar = () => {
                               to={service.url}
                               style={{
                                 textDecoration: "none",
-                                color: "#031C32",
+                                color: "#fff",
                                 display: "block",
                                 padding: "5px 0",
                               }}
@@ -235,6 +240,7 @@ const Navbar = () => {
                 </Stack>
               </Box>
             </Drawer>
+            {/* end mobile view */}
 
             <Stack
               direction={"row"}
@@ -309,7 +315,9 @@ const Navbar = () => {
                 </Box>
               ))}
             </Stack>
-            <Stack sx={{display:{xs:"none", md:"block",lg:"block"}}}></Stack>
+            <Stack
+              sx={{ display: { xs: "none", md: "block", lg: "block" } }}
+            ></Stack>
           </Stack>
 
           <Box

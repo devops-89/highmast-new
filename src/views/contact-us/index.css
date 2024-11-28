@@ -39,6 +39,7 @@
 .box-row {
   display: flex;
   justify-content: space-between;
+  /* width:100%; */
 }
 
 .box {
@@ -70,4 +71,46 @@
 .globebanerimg {
 
   width: 100%;
+}
+.conatactbanner {
+  height: 110vh;
+}
+
+@media (max-width:768px) {
+  .box {
+    padding: 15px;
+    width: 100px;
+    margin-right: 0px;
+  }
+
+  .box-row {
+
+    width: 100%;
+  }
+
+  .box-title h3 {
+    font-size: 2em;
+  }
+
+  .globebanerimg {
+    width: 70%;
+  }
+  .contactimgparent {
+    text-align: center;
+  }
+  .conatactbanner {
+    height: auto;
+  }
+  .conatactbanner {
+    height: auto;
+  }
+  .conatactbanneroverlay {
+    height: fit-content;
+  }
+  /* .contactimgparent {
+    margin-top: 35px;
+  } */
+  .contactmobilebaner {
+    padding-bottom: 0px;
+  }
 }

@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-
+    height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
     display: grid;
@@ -27,7 +27,7 @@
 
 .aboutbanneroverlay {
     position: absolute;
-   
+
     top: 0;
     left: 0;
     right: 0;
@@ -36,5 +36,18 @@
     background-color: rgba(0, 0, 0, 0.5);
     /* Adjust the color and opacity as needed */
     z-index: 1;
-   
+
+}
+
+@media (max-width:768px) {
+    .aboutbanner {
+        display: block;
+        background-attachment: scroll;
+        height: 40vh !important;
+    }
+
+    .aboutbanneroverlay {
+        height: 40vh;
+
+    }
 }

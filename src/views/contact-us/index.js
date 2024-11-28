@@ -56,12 +56,12 @@ const Contactus = () => {
   return (
     <div>
       <section
-        style={{ height: "110vh" }}
-        className="conatactbanner secOne2   "
+     
+        className="conatactbanner   secOne2   "
       >
         <div className="conatactbanneroverlay"></div>{" "}
         {/* Add this div for the overlay */}
-        <div className="container bannercontainer">
+        <div className="container contactmobilebaner bannercontainer">
           <div className="row">
             <div className="col-sm-8">
               <div
@@ -134,7 +134,7 @@ const Contactus = () => {
               </section>
             </div>
             <div className="col-sm-4 ">
-              <div data-aos="fade-left" data-aos-delay="300">
+              <div data-aos="fade-left" data-aos-delay="300" className="contactimgparent">
                 <img className="globebanerimg" src={globebannerimg}></img>
               </div>
             </div>

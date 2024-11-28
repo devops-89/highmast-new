@@ -1,5 +1,5 @@
 .corevaluessection .heading {
-  font-size: 80px;
+  /* font-size: 80px; */
   color: #fff;
   font-family: poppins;
   font-weight: 600;
@@ -35,7 +35,7 @@ color: #6CBBC8 !important;
   text-align: left;
 }
 .corevaluessection {
-  height: 100vh;
+  height: auto;
 }
 .swiper-slide-content img {
 width: 200px;
@@ -57,4 +57,20 @@ height: 200px;
 
 .valueparent {
   text-align: center;
+}
+
+@media (max-width:768px) {
+  .corevaluessection .swiper-slide-content h1 {
+    padding: 0px 0px;
+    font-size: 30px;
+    margin-top: 30px;
+
+  }
+  .swiper-slide-content img {
+    width: 100px;
+    height: 100px;
+  }
+  .valueparent2 {
+    padding: 0px !important;
+  }
 }

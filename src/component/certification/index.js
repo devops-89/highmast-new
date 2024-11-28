@@ -16,17 +16,13 @@ const Certification = () => {
   return (
     <div className="container allpadding pb-0">
       <div>
-        <Typography
-        className="headingcenter"
-          data-aos="fade-up"
-          sx={{ fontSize: "80px", color: "#fff" }}
-          component="p"
-        >
+        <h2 className="headingcenter" data-aos="fade-up">
+          {" "}
           DELIVERING QUALITY
-        </Typography>
+        </h2>
       </div>
       <div class="row align-items-center allpadding">
-        <div class="col-4">
+        <div class="col-sm-4">
           <div
             class="certicationscol"
             data-aos="fade-right"
@@ -52,7 +48,7 @@ const Certification = () => {
               <div className="certificationparent">
                 <img className="certificationimg" src={certificationimg2}></img>
               </div>
-              <Typography  className="certiondetail">
+              <Typography className="certiondetail">
                 ISO 14001 enhances our environmental responsibility, guiding
                 sustainable practices and reducing our ecological impact.
               </Typography>
@@ -60,13 +56,13 @@ const Certification = () => {
           </div>
         </div>
 
-        <div class="col-4">
+        <div class="col-sm-4">
           <div class="text-center">
             <img src={anchorimg} alt="Parallax Image" class="anchorimg"></img>
           </div>
         </div>
 
-        <div class="col-4">
+        <div class="col-sm-4">
           <div
             class="certicationscol"
             data-aos="fade-left"
@@ -76,7 +72,7 @@ const Certification = () => {
               <div className="certificationparent">
                 <img className="certificationimg" src={certificationimg3}></img>
               </div>
-              <Typography  className="certiondetail">
+              <Typography className="certiondetail">
                 Emphasis on the safety and health of our crew and clients in
                 terms of safe working conditions across all our operations.
               </Typography>
@@ -91,7 +87,7 @@ const Certification = () => {
               <div className="certificationparent">
                 <img className="certificationimg" src={certificationimg4}></img>
               </div>
-              <Typography  className="certiondetail">
+              <Typography className="certiondetail">
                 bizSAFE certification depicts our proactive approach to safety
                 at the workplace and regulatory compliance.
               </Typography>

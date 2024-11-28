@@ -13,8 +13,8 @@ const Service = () => {
   return (
     <div>
       <section
-        style={{ height: "100vh" }}
-        className="conatactbanner secOne2   "
+        
+        className="servicebanner secOne2   "
       >
         {/* Add this div for the overlay */}
         <div className="container bannercontainer">
@@ -33,10 +33,10 @@ const Service = () => {
                   className="text-border highmasttextbg"
                   data-aos="flip-left"
                 >
-                  in Sustainability
+                  in Sustainability Together
                 </span>{" "}
               </p>
-              <p className="rstoftext">Together</p>
+     
             </h1>
           </div>
         </div>
@@ -45,12 +45,12 @@ const Service = () => {
       <section className="container">
         <div className="row">
           <div
-            className="col-sm-3  "
+            className="col-sm-3  mb-4 "
             data-aos="fade-up"
             data-aos-duration="500"
             data-aos-delay="0"
           >
-            <div className="borderboxes box-inner">
+            <div className="borderboxes box-inner ">
               <div className="box-title">
                 <DirectionsBoatIcon />
                 <h3>
@@ -65,7 +65,7 @@ const Service = () => {
           </div>
 
           <div
-            className="col-sm-3 mb-3 "
+            className="col-sm-3 mb-4 "
             data-aos="fade-up"
             data-aos-duration="500"
             data-aos-delay="400"
@@ -83,7 +83,7 @@ const Service = () => {
           </div>
 
           <div
-            className="col-sm-3 "
+            className="col-sm-3 mb-4 "
             data-aos="fade-up"
             data-aos-duration="500"
             data-aos-delay="500"
@@ -103,7 +103,7 @@ const Service = () => {
             </div>
           </div>
           <div
-            className="col-sm-3 "
+            className="col-sm-3 mb-4 "
             data-aos="fade-up"
             data-aos-duration="500"
             data-aos-delay="300"

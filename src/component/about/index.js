@@ -28,12 +28,28 @@ const Aboutsection = () => {
     };
   }, []);
 
+  // // Define the minimum and maximum values for scaling and font size
+  // const minScale = 1; // minimum zoom level
+  // const maxScale = 5; // maximum zoom level
+
+  // const minFontSize = 100; // minimum font size in px
+  // const maxFontSize = 300; // maximum font size in px
+
+  // const scaleValue = Math.min(
+  //   maxScale,
+  //   Math.max(minScale, 1 - Math.cos(scrollY / 300))
+  // );
+  // const fontSizeValue = Math.min(
+  //   maxFontSize,
+  //   Math.max(minFontSize, 30 - Math.cos(scrollY / 400) * 20)
+  // );
+
   // Define the minimum and maximum values for scaling and font size
   const minScale = 1; // minimum zoom level
   const maxScale = 5; // maximum zoom level
 
-  const minFontSize = 100; // minimum font size in px
-  const maxFontSize = 300; // maximum font size in px
+  const minFontSize = 100; // minimum font size in rem
+  const maxFontSize = 300; // maximum font size in rem
 
   const scaleValue = Math.min(
     maxScale,
@@ -56,12 +72,21 @@ const Aboutsection = () => {
           <div className="row">
             <div className="col-sm-12 mx-auto">
               <div className="scroll-animation-containerabout" ref={sectionRef}>
-                <div
+                {/* <div
                   className="zoom-textAbout"
                   style={{
                     transform: `scale(${scaleValue}) translate(${
                       scrollY > 0 ? "0%" : "-50%"
                     }, -50%)`,
+                    fontSize: `${fontSizeValue}px`, // Using px for consistency
+                  }}
+                >
+                  Why High<span className="Mast-text">Mast</span>?
+                </div> */}
+                <div
+                  className="zoom-textAbout"
+                  style={{
+                    transform: `scale(${scaleValue})`,
                     fontSize: `${fontSizeValue}px`, // Using px for consistency
                   }}
                 >
@@ -123,7 +148,7 @@ const Aboutsection = () => {
                 </Typography>
               </div>
             </div>
-{/* 
+            {/* 
             <div className="row card24x27parentrow">
               <div
                 className="col-sm-5 mx-auto card24x27parent card24bg "
