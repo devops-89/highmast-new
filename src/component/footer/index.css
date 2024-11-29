@@ -52,17 +52,20 @@
     margin-right: 10px;
     border-radius: 50%;
 }
+.privacy-policya {
+    text-align: right;
+}
 
 /* .footer-linksparent {
     padding-left:75px !important ;
 } */
 @media (max-width:768px) {
     .footer ul a {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .footer-services a {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .contact-info {
@@ -70,5 +73,20 @@
     }
     .social-links {
         margin-bottom: 30px;
+    }
+    .footer a {
+        font-size: 13px;
+    }
+    .footercopyrightsection {
+        flex-direction: column-reverse;
+    }
+    .privacy-policya {
+        text-align: left;
+    }
+    .termsprivcayparent a {
+        line-height: 2.1rem;
+    }
+    .footer ul li {
+        line-height: 2.1rem;
     }
 }

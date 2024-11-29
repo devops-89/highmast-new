@@ -42,9 +42,9 @@ const Additinalservices = (props) => {
 
 
       <div>
-        <Typography  data-aos="fade-down" className="headingcenter" sx={{ fontSize: "80px", color: "#fff",marginBottom:"80px" }}>
+        <h2  data-aos="fade-down" className="subheading headingcenter" sx={{ color: "#fff", marginBottom:{xs:"60px",md:"80px",lg:"80px"} }}>
           {props.mainheading}
-        </Typography>
+        </h2>
       </div>
       <div className="scroll-animation-containerhighmast " ref={sectionRef}>
         <div className="circle-grid">
@@ -57,7 +57,7 @@ const Additinalservices = (props) => {
             data-aos-duration="300"
           >
             <img src={props.img1} alt="Circle Image" className="circle-image" />
-            <Typography sx={{ fontWeight: "600" }}>{props.text1}</Typography>
+            <Typography sx={{fontSize:{xs:"14px",md:"20px",lg:"20px"}, fontWeight: "600" }}>{props.text1}</Typography>
           </div>
           <div
             className="circle"
@@ -68,7 +68,7 @@ const Additinalservices = (props) => {
             data-aos-duration="300"
           >
             <img src={props.img2} alt="Circle Image" className="circle-image" />
-            <Typography sx={{ fontWeight: "600" }}>{props.text2}</Typography>
+            <Typography sx={{fontSize:{xs:"14px",md:"20px",lg:"20px"},fontWeight: "600" }}>{props.text2}</Typography>
           </div>
           <img
             src={Highmastbigimg}
@@ -88,7 +88,7 @@ const Additinalservices = (props) => {
             data-aos-duration="300"
           >
             <img src={props.img3} alt="Circle Image" className="circle-image" />
-            <Typography sx={{ fontWeight: "600" }}>{props.text3}</Typography>
+            <Typography sx={{fontSize:{xs:"14px",md:"20px",lg:"20px"}, fontWeight: "600" }}>{props.text3}</Typography>
           </div>
           <div
             className="circle"
@@ -99,7 +99,7 @@ const Additinalservices = (props) => {
             data-aos-duration="300"
           >
             <img src={props.img4} alt="Circle Image" className="circle-image" />
-            <Typography sx={{ fontWeight: "600" }}>{props.text4}</Typography>
+            <Typography sx={{fontSize:{xs:"14px",md:"20",lg:"20px"}, fontWeight: "600" }}>{props.text4}</Typography>
           </div>
         </div>
       </div>

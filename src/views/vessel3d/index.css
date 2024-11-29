@@ -1,14 +1,4 @@
 .vesselbanner{
     background-image: url(../../assets//img/banners/vessels3dbannerimg.jpg);
 
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
- 
-    width: 100%;
-    background-repeat: no-repeat;
-    display: grid;
-    place-items: center;
-
-
 }

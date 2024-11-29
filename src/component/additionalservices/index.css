@@ -6,7 +6,8 @@
   
   .circle-grid {
     display: grid;
-    grid-template-columns: 1fr auto 1fr; 
+    /* grid-template-columns: 1fr auto 1fr;  */
+    grid-template-columns: repeat(3, 1fr); /* Default 3 columns for desktop */
     grid-template-rows: 1fr 1fr; 
     gap: 20px;
     align-items: center;
@@ -45,4 +46,48 @@
     opacity: 0.5;
     z-index: 0;
   }
-  
+
+/* For Mobile Phones */
+@media (max-width: 768px) {
+  .circle-grid {
+    gap: 8%;
+  }
+
+  .zoom-imagehigmast {
+    height: 160px;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+    font-size: 12px;
+  }
+
+  .circle-image {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* For Small Mobile Screens */
+@media (max-width: 480px) {
+  .circle-grid {
+    gap: 8%;
+    margin-bottom: 45px;
+  }
+
+  .zoom-imagehigmast {
+    height: 160px;
+  }
+
+  .circle {
+    width: 70px;
+    height: 70px;
+    font-size: 10px;
+  }
+
+  .circle-image {
+    width: 30px;
+    height: 30px;
+  }
+}

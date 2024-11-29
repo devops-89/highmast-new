@@ -10,6 +10,7 @@
   will-change: transform;
   transition: background-position 0.3s ease-out;
 }
+
 .expertiseparallax-container .react-parallax-content {
   position: static !important;
 }
@@ -28,7 +29,7 @@
 .expertisecontent {
   position: relative;
   z-index: 2;
-
+text-align: center;
   color: white;
   padding: 20px;
 }
@@ -58,10 +59,61 @@
 .github-button:hover {
   background-color: #555;
 }
+
 .subheading {
   font-weight: 600;
-  font-size: 70px;
   color: #fff;
   font-family: poppins;
   margin-bottom: 80px;
+}
+
+/* Media Query for Tablets and Smaller Screens */
+@media (max-width: 1024px) {
+  .expertiseparallax-container {
+    height: 70vh;
+  }
+
+  .expertisecontent h2 {
+    font-size: 2rem;
+  }
+
+  .expertisecontent p {
+    font-size: 0.9rem;
+  }
+
+ 
+}
+
+/* Media Query for Mobile Phones */
+@media (max-width: 768px) {
+  .expertiseparallax-container {
+    height: 60vh;
+  }
+
+  .expertisecontent h2 {
+    font-size: 1.8rem;
+    margin: 10px;
+  }
+
+  .expertisecontent p {
+    font-size: 13px;
+    margin: 10px;
+  }
+
+
+}
+
+/* Media Query for Small Mobile Screens */
+@media (max-width: 480px) {
+  .expertiseparallax-container {
+    height: 30vh;
+  }
+
+  .expertisecontent h2 {
+    font-size: 20px;
+  }
+
+  .expertisecontent p {
+    font-size: 13px;
+  }
 }

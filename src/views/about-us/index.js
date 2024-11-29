@@ -9,6 +9,7 @@ import Contactseection from "../../component/contactsection";
 
 const About = () => {
  
+
   return (
     <div>
       <section className="aboutbanner secOne2 ">

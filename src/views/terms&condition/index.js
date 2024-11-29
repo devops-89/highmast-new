@@ -16,7 +16,6 @@ const TermsAndCondition = () => {
     <div>
       <div className="container-fluid px-0">
         <section
-          style={{ height: "100vh" }}
           className="termconditionbanner servicesbanner  secOne2 "
         >
           <div className="servicesbanneroverlay"></div>{" "}
@@ -32,17 +31,17 @@ const TermsAndCondition = () => {
         </section>
       </div>
       <div className="container allpadding termsconditions">
-        <Typography sx={{ color: "#fff", lineHeight: "2.2rem" }}>
+        <Typography sx={{ color: "#fff",fontSize:{xs:"13px", md:"1rem", lg:"1rem" }, lineHeight: "2.2rem" }}>
           These Terms and Conditions ("Terms") govern your use of the HighMast
           Marine Services Pte Ltd ("HighMast", "we", "us", or "our") website
           ("Website") and any services provided through the Website.
         </Typography>
-        <Typography sx={{ color: "#fff", lineHeight: "2.2rem" }}>
+        <Typography sx={{ color: "#fff", lineHeight: "2.2rem",fontSize:{xs:"13px", md:"1rem", lg:"1rem" } }}>
           By accessing or using the Website, you agree to be bound by these
           Terms. If you do not agree to these Terms, you must not use the
           Website.
         </Typography>
-        <Typography sx={{ color: "#fff", lineHeight: "2.2rem" }}>
+        <Typography sx={{ color: "#fff", lineHeight: "2.2rem",fontSize:{xs:"13px", md:"1rem", lg:"1rem" } }}>
           These Terms may be amended from time to time. Your continued use of
           the Website following any changes to these Terms will be deemed
           acceptance of those changes.
@@ -55,7 +54,7 @@ const TermsAndCondition = () => {
             <ul className="Termsconditionslist">
               {section.items.map((item, idx) => (
                 <li key={idx}>
-                  <Typography sx={{ color: "#fff", lineHeight: "2.2rem" }}>
+                  <Typography sx={{ color: "#fff", lineHeight: "2.2rem",fontSize:{xs:"13px", md:"1rem", lg:"1rem" } }}>
                     {item}
                   </Typography>
                 </li>

@@ -21,7 +21,7 @@ const Retrofit = () => {
     <div>
       <div className="container-fluid px-0">
         <section
-          style={{ height: "100vh" }}
+          
           className="retrobanner servicesbanner  secOne2 "
         >
           <div className="servicesbanneroverlay"></div>{" "}

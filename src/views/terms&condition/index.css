@@ -25,3 +25,8 @@
 
 
 }
+@media (max-width:768px) {
+    .termsconditions h4 {
+        font-size: 20px;
+    }
+}

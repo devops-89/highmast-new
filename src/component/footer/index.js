@@ -280,28 +280,23 @@ const Footer = () => {
         <Box
           sx={{
             color: "#fff",
-            padding: "20px 0",
+            padding:{xs:"0px", md:"20px", lg:"20px"},
           }}
         >
-          <Grid2 container justifyContent="space-between" alignItems="center">
-            <Grid2 item xs={12} md={4}>
+          <div className="container" >
+            <div className="row footercopyrightsection">
+              <div className="col-sm-8">
               <Typography
                 variant="body1"
-                align="center"
-                sx={{ fontSize: "13px" }}
+                sx={{ fontSize: "13px", textAlign:{xs:"left",md:"left",lg:"left" },marginTop:{xs:"3px" ,md:"0px",lg:"0px"} }}
               >
                 © 2024 HighMast Marine, All Rights Reserved
               </Typography>
-            </Grid2>
-            <Grid2 item xs={12} md={8}>
-              <Box
-                display="flex"
-                justifyContent="center"
-                gap={2}
-                flexWrap="wrap"
-                sx={{ mt: { xs: 2, md: 0 } }}
-              >
-                <Link
+              </div>
+              <div className="col-sm-4">
+                <div className="row termsprivcayparent">
+                  <div className="col-sm-6">
+                  <Link
                   to="/terms-and-conditions"
                   color="inherit"
                   underline="hover"
@@ -309,17 +304,24 @@ const Footer = () => {
                 >
                   Terms and Conditions
                 </Link>
-                <Link
+                  </div>
+                  <div className="col-sm-6 privacy-policya">
+                  <Link
                   to="/privacy-policy"
                   color="inherit"
                   underline="hover"
-                  sx={{ typography: "body1", fontSize: "15px" }}
+                  sx={{ typography: "body1", fontSize: "15px", }}
                 >
                   Privacy Policy
                 </Link>
-              </Box>
-            </Grid2>
-          </Grid2>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+         
+        
+          </div>
         </Box>
       </div>
     </div>

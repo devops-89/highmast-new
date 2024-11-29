@@ -8,7 +8,7 @@ const ServicesDescription = (props) => {
        <Typography
         data-aos="fade-up"
         data-aos-delay="200"
-       sx={{color:"#fff",fontSize:"40px",fontWeight:600,textAlign:"left"}}
+       sx={{color:"#fff",fontSize:{xs:"18px",md:"40px",lg:"40px"},fontWeight:600,textAlign:"left"}}
 
        >
        {props.servicesdescription}

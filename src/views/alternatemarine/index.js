@@ -18,7 +18,6 @@ const Amp = () => {
     <div>
       <div className="container-fluid px-0">
         <section
-          style={{ height: "100vh" }}
           className="ampbanner servicesbanner  secOne2 "
         >
           <div className="servicesbanneroverlay"></div>{" "}

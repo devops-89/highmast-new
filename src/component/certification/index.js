@@ -11,7 +11,14 @@ import certificationimg4 from "../../assets/img/elements/certificationimg4.png";
 
 const Certification = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    // AOS.init({ once: false });
+    // AOS.refresh();
+    AOS.init({
+      offset: 100,  // Adjust this to control the point at which animation starts
+      duration: 600,  // Control the speed of animation
+      once: false , // Run animation only once
+
+  });
   }, []);
   return (
     <div className="container allpadding pb-0">

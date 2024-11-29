@@ -1,16 +1,3 @@
 .projectsupervisionbanner {
     background-image: url(../../assets//img/banners/projectsupervisionbanner.jpg);
-
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    /* Keeps the background in place while scrolling */
-
-    /* Adjust the height as needed */
-    width: 100%;
-    background-repeat: no-repeat;
-    display: grid;
-    place-items: center;
-
-
 }

@@ -102,4 +102,8 @@
     /* Smaller text size */
     line-height: 1.2;
   }
+  .containerparent {
+    padding-bottom: 0; /* Ensure no padding at the bottom */
+    margin-bottom: 0; /* Ensure no margin at the bottom */
+  }
 }

@@ -1,14 +1,6 @@
 .scrubberbanner{
     background-image: url(../../assets//img/banners/scrubberbannerimg.jpg);
 
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
- 
-    width: 100%;
-    background-repeat: no-repeat;
-    display: grid;
-    place-items: center;
 
 
 }

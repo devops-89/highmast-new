@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.css";
 import Teamimg1 from "../../assets/img/elements/Teamimg1.jpeg";
 import Teamimg2 from "../../assets/img/elements/Team2.jpg";
 import "aos/dist/aos.css";
+import AOS from "aos";
 import { Typography } from "@mui/material";
 
 const Ourteam = () => {
+  useEffect(() => {
+    // AOS.init({ once: false });
+    // AOS.refresh();
+    AOS.init({
+      offset: 100, // Adjust this to control the point at which animation starts
+      duration: 600, // Control the speed of animation
+      once: false, // Run animation only once
+    });
+  }, []);
   return (
     <div className="container allpadding">
       <div data-aos="fade-right">
@@ -112,7 +122,6 @@ const Ourteam = () => {
             <Typography
               component="p"
               sx={{
-               
                 color: "#fff",
                 textAlign: "justify",
                 marginTop: "20px ",

@@ -18,7 +18,7 @@
 
     background-attachment: fixed;
     background-position: center;
-    width: 100%;
+    width: 80%;
     height: 400px;
     border-radius: 5px;
 
@@ -31,32 +31,26 @@
 
 }
 
-/* 
-@keyframes zoomInFullScreen {
-    0% {
-        transform: scale(1);
-        height: 400px; 
-        width: 80%; 
+@media (max-width:768px) {
+
+    .pointerimg {
+
+        background-attachment: fixed;
+        background-position: center;
+        width: 80%;
+        height: 300px;
+        border-radius: 5px;
     }
-    50% {
-        transform: scale(2);
-        height: 50vh; 
-        width: 50vw;
+
+    .pointerparent {
+        padding: 8px 8px;
     }
-    100% {
-        transform: scale(1);
-        height: 400px; 
-        width: 80%; 
+
+    .pointername {
+        color: #fff;
+        /* font-size: 12px; */
+
+
     }
+
 }
-
-
-.zoom-effect {
-    animation: zoomInFullScreen 5s ease-in-out forwards; 
-    z-index: 1; 
-}
-
-
-.pointerimg {
-    transition: all 0.5s ease; 
-} */

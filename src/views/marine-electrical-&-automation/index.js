@@ -24,7 +24,7 @@ const MarineElectricalandAutomation = () => {
     <div>
       <div className="container-fluid px-0">
         <section
-          style={{ height: "100vh" }}
+       
           className="marinebanner servicesbanner  secOne2 "
         >
           <div className="servicesbanneroverlay"></div>{" "}
