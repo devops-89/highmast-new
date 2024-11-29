@@ -280,7 +280,7 @@ const Footer = () => {
         <Box
           sx={{
             color: "#fff",
-            padding:{xs:"0px", md:"20px", lg:"20px"},
+            padding:{xs:"10px 0px ", md:"20px 0px", lg:"20px 0px"},
           }}
         >
           <div className="container" >
@@ -293,9 +293,9 @@ const Footer = () => {
                 © 2024 HighMast Marine, All Rights Reserved
               </Typography>
               </div>
-              <div className="col-sm-4">
+              <div className="col-sm-4 px-0">
                 <div className="row termsprivcayparent">
-                  <div className="col-sm-6">
+                  <div className="col-sm-6 ">
                   <Link
                   to="/terms-and-conditions"
                   color="inherit"

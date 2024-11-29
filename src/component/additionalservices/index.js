@@ -33,10 +33,21 @@ const Additinalservices = (props) => {
   );
 
   useEffect(() => {
-    AOS.init({ once: false });
-    AOS.refresh();
+    if (window.innerWidth > 768) {
+      AOS.init({
+        offset: 100,
+        duration: 600,
+        once: false,
+      
+        easing: "ease-in-sine",
+      });
+    } else {
+      AOS.init({
+        once: false,
+       
+      });
+    }
   }, []);
-
   return (
     <div className="container additionalservicesparent allpadding ">
 

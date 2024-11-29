@@ -8,7 +8,6 @@ import "./index.css";
 const ServicesPointers = (props) => {
   const imageRef = useRef(null);
   useEffect(() => {
-    AOS.init({ duration: 1000 });
     // Create an Intersection Observer
     const handleScroll = () => {
       const image = imageRef.current;
@@ -30,6 +29,24 @@ const ServicesPointers = (props) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+
+    
+  }, []);
+
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      AOS.init({
+        offset: 100,
+        duration: 600,
+        once: false,
+
+        easing: "ease-in-sine",
+      });
+    } else {
+      AOS.init({
+        once: true,
+      });
+    }
   }, []);
 
   return (
@@ -57,7 +74,7 @@ const ServicesPointers = (props) => {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
-           
+
                 borderRadius: "5px",
                 margin: "0px auto",
               }}
@@ -69,14 +86,68 @@ const ServicesPointers = (props) => {
             className="row pointerparent"
             data-aos="fade-down-left"
             data-aos-duration="500"
+            data-aos-delay="100"
+          >
+            <div className="col-sm-3">
+              <Typography
+                className="pointershead "
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+              >
+                {props.name1}
+              </Typography>
+            </div>
+            <div className="col-sm-9">
+              <Typography
+                className="pointername"
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+              >
+                {props.pointername1}
+              </Typography>
+            </div>
+          </div>
+          <div
+            className="row pointerparent"
+            data-aos="fade-down-left"
+            data-aos-duration="500"
             data-aos-delay="200"
           >
             <div className="col-sm-3">
-              <Typography className="pointershead " sx={{fontSize:{xs:"13px", md:"1rem", lg:"1rem"}}}>{props.name1}</Typography>
+              <Typography
+                className="pointershead"
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+              >
+                {props.name2}
+              </Typography>
             </div>
             <div className="col-sm-9">
-              <Typography className="pointername" sx={{fontSize:{xs:"13px", md:"1rem", lg:"1rem"}}}>
-                {props.pointername1}
+              <Typography
+                className="pointername"
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+              >
+                {props.pointername2}
+              </Typography>
+            </div>
+          </div>
+          <div
+            className="row pointerparent"
+            data-aos="fade-down-left"
+            data-aos-duration="500"
+            data-aos-delay="300"
+          >
+            <div className="col-sm-3">
+              <Typography
+                className="pointershead"
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+              >
+                {props.name3}
+              </Typography>
+            </div>
+            <div className="col-sm-9">
+              <Typography
+                className="pointername"
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+              >
+                {props.pointername3}
               </Typography>
             </div>
           </div>
@@ -87,54 +158,41 @@ const ServicesPointers = (props) => {
             data-aos-delay="400"
           >
             <div className="col-sm-3">
-              <Typography className="pointershead" sx={{fontSize:{xs:"13px", md:"1rem", lg:"1rem"}}}>{props.name2}</Typography>
-            </div>
-            <div className="col-sm-9">
-              <Typography className="pointername" sx={{fontSize:{xs:"13px", md:"1rem", lg:"1rem"}}}>
-                {props.pointername2}
+              <Typography
+                className="pointershead"
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+              >
+                {props.name4}
               </Typography>
             </div>
-          </div>
-          <div
-            className="row pointerparent"
-            data-aos="fade-down-left"
-            data-aos-duration="500"
-            data-aos-delay="600"
-          >
-            <div className="col-sm-3">
-              <Typography className="pointershead" sx={{fontSize:{xs:"13px", md:"1rem", lg:"1rem"}}}>{props.name3}</Typography>
-            </div>
             <div className="col-sm-9">
-              <Typography className="pointername" sx={{fontSize:{xs:"13px", md:"1rem", lg:"1rem"}}}>
-                {props.pointername3}
-              </Typography>
-            </div>
-          </div>
-          <div
-            className="row pointerparent"
-            data-aos="fade-down-left"
-            data-aos-duration="500"
-            data-aos-delay="800"
-          >
-            <div className="col-sm-3">
-              <Typography className="pointershead" sx={{fontSize:{xs:"13px", md:"1rem", lg:"1rem"}}}>{props.name4}</Typography>
-            </div>
-            <div className="col-sm-9">
-              <Typography className="pointername" sx={{fontSize:{xs:"13px", md:"1rem", lg:"1rem"}}}>
+              <Typography
+                className="pointername"
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+              >
                 {props.pointername4}
               </Typography>
             </div>
           </div>
-          <div className="row pointerparent"
-             data-aos="fade-down-left"
-             data-aos-duration="500"
-             data-aos-delay="1000"
+          <div
+            className="row pointerparent"
+            data-aos="fade-down-left"
+            data-aos-duration="500"
+            data-aos-delay="500"
           >
             <div className="col-sm-3">
-              <Typography className="pointershead" sx={{fontSize:{xs:"13px", md:"1rem", lg:"1rem"}}}>{props.name5}</Typography>
+              <Typography
+                className="pointershead"
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+              >
+                {props.name5}
+              </Typography>
             </div>
             <div className="col-sm-9">
-              <Typography className="pointername" sx={{fontSize:{xs:"13px", md:"1rem", lg:"1rem"}}}>
+              <Typography
+                className="pointername"
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+              >
                 {props.pointername5}
               </Typography>
             </div>

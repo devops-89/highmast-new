@@ -11,14 +11,20 @@ import certificationimg4 from "../../assets/img/elements/certificationimg4.png";
 
 const Certification = () => {
   useEffect(() => {
-    // AOS.init({ once: false });
-    // AOS.refresh();
-    AOS.init({
-      offset: 100,  // Adjust this to control the point at which animation starts
-      duration: 600,  // Control the speed of animation
-      once: false , // Run animation only once
-
-  });
+    if (window.innerWidth > 768) {
+      AOS.init({
+        offset: 100,
+        duration: 600,
+        once: false,
+      
+        easing: "ease-in-sine",
+      });
+    } else {
+      AOS.init({
+        once: false,
+       
+      });
+    }
   }, []);
   return (
     <div className="container allpadding pb-0">
@@ -39,7 +45,16 @@ const Certification = () => {
               <div className="certificationparent">
                 <img className="certificationimg" src={certificationimg1}></img>
               </div>
-              <Typography className="certiondetail">
+              <Typography
+                className="certiondetail"
+                sx={{
+                  fontSize: {
+                    xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
+                    sm: "1rem", // Slightly larger for tablets and small screens
+                    md: "1rem",
+                  },
+                }}
+              >
                 ISO 9001 instils quality awareness in all of our marina service
                 modules that then can drive operational efficiency and client
                 satisfaction.
@@ -55,7 +70,16 @@ const Certification = () => {
               <div className="certificationparent">
                 <img className="certificationimg" src={certificationimg2}></img>
               </div>
-              <Typography className="certiondetail">
+              <Typography
+                className="certiondetail"
+                sx={{
+                  fontSize: {
+                    xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
+                    sm: "1rem", // Slightly larger for tablets and small screens
+                    md: "1rem",
+                  },
+                }}
+              >
                 ISO 14001 enhances our environmental responsibility, guiding
                 sustainable practices and reducing our ecological impact.
               </Typography>
@@ -79,7 +103,16 @@ const Certification = () => {
               <div className="certificationparent">
                 <img className="certificationimg" src={certificationimg3}></img>
               </div>
-              <Typography className="certiondetail">
+              <Typography
+                className="certiondetail"
+                sx={{
+                  fontSize: {
+                    xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
+                    sm: "1rem", // Slightly larger for tablets and small screens
+                    md: "1rem",
+                  },
+                }}
+              >
                 Emphasis on the safety and health of our crew and clients in
                 terms of safe working conditions across all our operations.
               </Typography>
@@ -94,7 +127,16 @@ const Certification = () => {
               <div className="certificationparent">
                 <img className="certificationimg" src={certificationimg4}></img>
               </div>
-              <Typography className="certiondetail">
+              <Typography
+                className="certiondetail"
+                sx={{
+                  fontSize: {
+                    xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
+                    sm: "1rem", // Slightly larger for tablets and small screens
+                    md: "1rem",
+                  },
+                }}
+              >
                 bizSAFE certification depicts our proactive approach to safety
                 at the workplace and regulatory compliance.
               </Typography>

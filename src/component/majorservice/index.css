@@ -55,8 +55,18 @@
 
     .majorsimgerviceparent {
         text-align: center;
+        margin-top: 25px;
     }
     .majorheight {
         padding: 0px !important;
     }
+
+    .majorgpara {
+
+        color: #fff;
+        font-size: 13px;
+        text-align: justify;
+    
+    }
+    
 }

@@ -77,7 +77,7 @@ const Servicesscroll = () => {
           trigger: containerParentRef.current,
           pin: true,
           scrub: 2,
-          start: "top top",
+          start: "center center",
           end: "+=1000",
         },
       });
@@ -109,7 +109,7 @@ const Servicesscroll = () => {
         scrollTrigger: {
           trigger: containerParentRef.current,
           scrub: 10,
-          start: "top center",
+          start: "center center",
           end: `+=${containerWidth * 3.2}`, // Match the extended scroll range
         },
       });

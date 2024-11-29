@@ -15,15 +15,6 @@ function CoreValues() {
   const [value, setValue] = React.useState(0);
   const swiperRef = useRef(null);
 
-  useEffect(() => {
-    // AOS.init({ once: false });
-    // AOS.refresh();
-    AOS.init({
-      offset: 100,  // Adjust this to control the point at which animation starts
-      duration: 600,  // Control the speed of animation
-      once: false  // Run animation only once
-  });
-  }, []);
 
   // Sync Swiper with Tabs
   const handleTabChange = (event, newValue) => {
@@ -49,10 +40,25 @@ function CoreValues() {
       window.scrollBy({ top: 300, behavior: "smooth" });
     }, 500); // Delay for smoother transition
   };
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      AOS.init({
+        offset: 100,
+        duration: 600,
+        once: false,
+      
+        easing: "ease-in-sine",
+      });
+    } else {
+      AOS.init({
+        once: false,
+      });
+    }
+  }, []);
 
   return (
     <Box className="container corevaluessection">
-      <Box data-aos="fade-up-left">
+      <Box data-aos="fade-up-down">
         <h2 className="heading headingcenter">CORE VALUES</h2>
       </Box>
       <Box className="tabs-section my-5">
@@ -98,7 +104,15 @@ function CoreValues() {
                 <div className="col-sm-8 valueparent2" data-aos="fade-left">
                   <Box>
                     <Typography variant="h1">Mission</Typography>
-                    <Typography>
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
+                          sm: "1rem", // Slightly larger for tablets and small screens
+                          md: "1rem",
+                        },
+                      }}
+                    >
                       To become the leading company in our industry by
                       innovating and building long-lasting relationships with
                       our customers.
@@ -123,7 +137,15 @@ function CoreValues() {
                 <div className="col-sm-8 valueparent2">
                   <Box>
                     <Typography variant="h1">Vision</Typography>
-                    <Typography>
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
+                          sm: "1rem", // Slightly larger for tablets and small screens
+                          md: "1rem",
+                        },
+                      }}
+                    >
                       To provide exceptional products/services while
                       contributing to the well-being of our customers.
                     </Typography>
@@ -147,7 +169,15 @@ function CoreValues() {
                 <div className="col-sm-8 valueparent2">
                   <Box>
                     <Typography variant="h1">Responsibility</Typography>
-                    <Typography>
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
+                          sm: "1rem", // Slightly larger for tablets and small screens
+                          md: "1rem",
+                        },
+                      }}
+                    >
                       A strong commitment to social and environmental
                       responsibility.
                     </Typography>

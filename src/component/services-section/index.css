@@ -1,4 +1,3 @@
-
 .bannercontainer {
     padding-top: 160px;
     padding-bottom: 160px;
@@ -74,7 +73,7 @@
 .top-line {
     width: 0%;
     height: 1px;
-    background-color: var(--color-five-hex);
+    background-color: #fff;
     position: absolute;
     top: 0;
     left: 0;
@@ -83,7 +82,7 @@
 .bottom-line {
     width: 100%;
     height: 1px;
-    background-color: var(--color-five-hex);
+    background-color: #fff;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -199,15 +198,10 @@
 }
 
 @media (max-width: 768px) {
-    /* .secOne .row {
-        display: block;
-        position: relative;
-        flex-wrap: wrap;
-    } */
 
     .contersection {
         transform: scale(1) !important;
-        /* Further reduce scaling */
+
     }
 
     .text-border,
@@ -231,11 +225,11 @@
 
     .secOne {
         background-size: 100% 100%;
-        /* Cover full height and width */
+
         background-position: top center;
-        /* Adjust position */
+
         background-attachment: scroll;
-        /* Avoid issues on mobile */
+
         height: 80vh !important;
     }
 
@@ -251,9 +245,15 @@
     .scroll-animation-container {
         height: 20vh;
     }
+
     .bannercontainer {
         padding-top: 135px;
         padding-bottom: 45px;
     }
 
+    .secOne .row .col {
+        padding-left: 0px;
+        padding-right: 0px;
+
+    }
 }

@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import "./index.css";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 const Homepagebanner = () => {
   useEffect(() => {
@@ -91,7 +93,7 @@ const Homepagebanner = () => {
           </div>
           <div className="contersection">
             <div className="row">
-              <div className="col">
+              <div className="col" data-aos="zoom-in-up">
                 <div className="top-line"></div>
                 <h3 className="number">
                   <span>5</span>
@@ -101,7 +103,7 @@ const Homepagebanner = () => {
                 </h3>
                 <p className="desc">Successful Dry Dockings</p>
               </div>
-              <div className="col">
+              <div className="col" data-aos="zoom-in-up">
                 <div className="top-line"></div>
                 <h3 className="number">
                   <span>1</span>
@@ -111,7 +113,7 @@ const Homepagebanner = () => {
                 </h3>
                 <p className="desc">Emission-Free Green Energy Solutions</p>
               </div>
-              <div className="col">
+              <div className="col" data-aos="zoom-in-up">
                 <div className="top-line"></div>
                 <h3 className="number">
                   <span>2</span>
@@ -122,7 +124,7 @@ const Homepagebanner = () => {
               </div>
             </div>
             <div className="row">
-              <div className="col">
+              <div className="col" data-aos="zoom-in-up">
                 <div className="top-line"></div>
                 <h3 className="number">
                   <span>2</span>
@@ -132,7 +134,7 @@ const Homepagebanner = () => {
                 <p className="desc">Eco-Friendly Ship Designs</p>
                 <div className="bottom-line"></div>
               </div>
-              <div className="col">
+              <div className="col" data-aos="zoom-in-up">
                 <div className="top-line"></div>
                 <h3 className="number">
                   <span>1</span>
@@ -142,7 +144,7 @@ const Homepagebanner = () => {
                 <p className="desc">Managed vessels</p>
                 <div className="bottom-line"></div>
               </div>
-              <div className="col">
+              <div className="col" data-aos="zoom-in-up">
                 <div className="top-line"></div>
                 <h3 className="number">
                   <span>6</span>

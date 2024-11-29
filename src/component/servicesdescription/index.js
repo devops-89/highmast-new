@@ -3,6 +3,7 @@ import { color } from 'framer-motion'
 import React from 'react'
 
 const ServicesDescription = (props) => {
+  
   return (
     <div className='container allpadding pb-0'>
        <Typography

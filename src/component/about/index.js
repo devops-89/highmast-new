@@ -61,14 +61,21 @@ const Aboutsection = () => {
   );
 
   useEffect(() => {
-    // AOS.init({ once: false });
-    // AOS.refresh();
-    AOS.init({
-      offset: 100,  // Adjust this to control the point at which animation starts
-      duration: 600,  // Control the speed of animation
-      once: false  // Run animation only once
-  });
-  
+    if (window.innerWidth > 768) {
+      AOS.init({
+        offset: 100,
+        duration: 600,
+        once: false,
+      
+        easing: "ease-in-sine",
+      });
+    } else {
+      AOS.init({
+        once: true,
+        mirror:true,
+         // Disable repeated animation on small screens
+      });
+    }
   }, []);
 
   return (
@@ -90,6 +97,7 @@ const Aboutsection = () => {
                   Why High<span className="Mast-text">Mast</span>?
                 </div> */}
                 <div
+                data-aos="zoom-in-up"
                   className="zoom-textAbout"
                   style={{
                     transform: `scale(${scaleValue})`,

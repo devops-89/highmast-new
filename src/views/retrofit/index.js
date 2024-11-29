@@ -20,10 +20,7 @@ const Retrofit = () => {
   return (
     <div>
       <div className="container-fluid px-0">
-        <section
-          
-          className="retrobanner servicesbanner  secOne2 "
-        >
+        <section className="retrobanner servicesbanner  secOne2 ">
           <div className="servicesbanneroverlay"></div>{" "}
           <div className="container bannercontainer">
             <div className="section-title desktop">

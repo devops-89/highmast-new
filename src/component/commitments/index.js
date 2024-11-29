@@ -7,14 +7,14 @@ import "aos/dist/aos.css";
 
 const Commitsmentcomponent = () => {
   useEffect(() => {
-    AOS.init({ duration: 600 });
+    AOS.init({duration: 1200, });
   }, []);
 
   return (
     <div>
       <nav></nav>
       <main className="text-center grid-container ">
-        <div className="allsection section1"  data-aos="flip-left"  data-aos-delay="200">
+        <div className="allsection section1"  data-aos="flip-left"  data-aos-delay="100">
           <div className="content">
             <h2>FGSS – LNG/LEG</h2>
             <p>
@@ -23,7 +23,7 @@ const Commitsmentcomponent = () => {
             </p>
           </div>
         </div>
-        <div className="allsection section2"  data-aos="flip-right"  data-aos-delay="300">
+        <div className="allsection section2"  data-aos="flip-right"  data-aos-delay="200">
           <div className="content">
             <h2>LFSS – Methanol/LPS/Ammonia</h2>
             <p>
@@ -32,7 +32,7 @@ const Commitsmentcomponent = () => {
             </p>
           </div>
         </div>
-        <div className="allsection section3"  data-aos="flip-left"  data-aos-delay="400">
+        <div className="allsection section3"  data-aos="flip-left"  data-aos-delay="300">
           <div className="content">
             <h2>Cargo Handling – LNG/LPG/Ammonia/LCO2</h2>
             <p>
@@ -41,7 +41,7 @@ const Commitsmentcomponent = () => {
             </p>
           </div>
         </div>
-        <div className="allsection section4"  data-aos="flip-right"  data-aos-delay="500">
+        <div className="allsection section4"  data-aos="flip-right"  data-aos-delay="400">
           <div className="content">
             <h2>Cryogenic Piping &amp; Valves</h2>
             <p>

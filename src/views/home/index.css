@@ -155,5 +155,13 @@
     }
     
 }
-
+@media (max-width: 768px) {
+    
+   [data-aos="fade-left"] {
+      transform: translateX(0) !important; /* Make sure it's not off-screen */
+    }
+   [data-aos="fade-right"] {
+      transform: translateX(0) !important; /* Make sure it's not off-screen */
+    }
+}  
 

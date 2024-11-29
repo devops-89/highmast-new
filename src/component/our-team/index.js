@@ -8,13 +8,20 @@ import { Typography } from "@mui/material";
 
 const Ourteam = () => {
   useEffect(() => {
-    // AOS.init({ once: false });
-    // AOS.refresh();
-    AOS.init({
-      offset: 100, // Adjust this to control the point at which animation starts
-      duration: 600, // Control the speed of animation
-      once: false, // Run animation only once
-    });
+    if (window.innerWidth > 768) {
+      AOS.init({
+        offset: 100,
+        duration: 600,
+        once: false,
+      
+        easing: "ease-in-sine",
+      });
+    } else {
+      AOS.init({
+        once: false,
+         // Disable repeated animation on small screens
+      });
+    }
   }, []);
   return (
     <div className="container allpadding">
@@ -65,6 +72,11 @@ const Ourteam = () => {
                 color: "#fff",
                 textAlign: "justify",
                 marginTop: "20px ",
+                fontSize: {
+                  xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
+                  sm: "1rem", // Slightly larger for tablets and small screens
+                  md: "1rem",
+                },
               }}
             >
               Arbind Singh brings 20 years of experience in ship classification,
@@ -125,6 +137,11 @@ const Ourteam = () => {
                 color: "#fff",
                 textAlign: "justify",
                 marginTop: "20px ",
+                fontSize: {
+                  xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
+                  sm: "1rem", // Slightly larger for tablets and small screens
+                  md: "1rem",
+                },
               }}
             >
               Sourav Hore leads HighMast with 25 years of marine expertise,

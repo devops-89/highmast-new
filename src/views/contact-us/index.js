@@ -51,7 +51,20 @@ const Contactus = () => {
   ];
 
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Customize duration as needed
+    if (window.innerWidth > 768) {
+      AOS.init({
+        offset: 100,
+        duration: 600,
+        once: false,
+      
+        easing: "ease-in-sine",
+      });
+    } else {
+      AOS.init({
+        once: false,
+       
+      });
+    }
   }, []);
   return (
     <div>
