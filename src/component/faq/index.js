@@ -55,6 +55,7 @@ const Contactaddress = ({ contactaddressdata }) => {
               <motion.div
                 key={address.id}
                 data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                     data-aos-mirror="true"
                 data-aos-delay={index % 2 === 0 ? index * 100 : index * 200}
                 style={{ marginBottom: "16px" }}
               >

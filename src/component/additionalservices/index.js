@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import AOS from "aos";
+
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./index.css";
 import Highmastbigimg from "./../../assets/img/elements/highmastmarinebigimg2.png";
@@ -32,28 +32,13 @@ const Additinalservices = (props) => {
     Math.max(minScale, 1 - Math.cos(scrollY / 300))
   );
 
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-      AOS.init({
-        offset: 100,
-        duration: 600,
-        once: false,
-      
-        easing: "ease-in-sine",
-      });
-    } else {
-      AOS.init({
-        once: false,
-       
-      });
-    }
-  }, []);
+
   return (
     <div className="container additionalservicesparent allpadding ">
 
 
       <div>
-        <h2  data-aos="fade-down" className="subheading headingcenter" sx={{ color: "#fff", marginBottom:{xs:"60px",md:"80px",lg:"80px"} }}>
+        <h2  data-aos="fade-down"       data-aos-mirror="true"  className="subheading headingcenter" sx={{ color: "#fff", marginBottom:{xs:"60px",md:"80px",lg:"80px"} }}>
           {props.mainheading}
         </h2>
       </div>
@@ -62,10 +47,10 @@ const Additinalservices = (props) => {
           <div
             className="circle"
             data-aos="fade-right"
-            data-aos-offset="300"
             data-aos-easing="ease-in-sine"
             data-aos-delay="100"
-            data-aos-duration="300"
+            data-aos-mirror="true"
+
           >
             <img src={props.img1} alt="Circle Image" className="circle-image" />
             <Typography sx={{fontSize:{xs:"14px",md:"20px",lg:"20px"}, fontWeight: "600" }}>{props.text1}</Typography>
@@ -73,10 +58,9 @@ const Additinalservices = (props) => {
           <div
             className="circle"
             data-aos="fade-left"
-            data-aos-offset="300"
             data-aos-easing="ease-in-sine"
             data-aos-delay="100"
-            data-aos-duration="300"
+            data-aos-mirror="true"
           >
             <img src={props.img2} alt="Circle Image" className="circle-image" />
             <Typography sx={{fontSize:{xs:"14px",md:"20px",lg:"20px"},fontWeight: "600" }}>{props.text2}</Typography>
@@ -93,10 +77,9 @@ const Additinalservices = (props) => {
           <div
             className="circle"
             data-aos="fade-right"
-            data-aos-offset="300"
             data-aos-easing="ease-in-sine"
             data-aos-delay="100"
-            data-aos-duration="300"
+              data-aos-mirror="true"
           >
             <img src={props.img3} alt="Circle Image" className="circle-image" />
             <Typography sx={{fontSize:{xs:"14px",md:"20px",lg:"20px"}, fontWeight: "600" }}>{props.text3}</Typography>
@@ -104,10 +87,9 @@ const Additinalservices = (props) => {
           <div
             className="circle"
             data-aos="fade-left"
-            data-aos-offset="300"
             data-aos-easing="ease-in-sine"
             data-aos-delay="100"
-            data-aos-duration="300"
+             data-aos-mirror="true"
           >
             <img src={props.img4} alt="Circle Image" className="circle-image" />
             <Typography sx={{fontSize:{xs:"14px",md:"20",lg:"20px"}, fontWeight: "600" }}>{props.text4}</Typography>

@@ -3,8 +3,7 @@ import { Box, Typography, Tabs, Tab } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Mousewheel, Pagination } from "swiper/modules";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import "./index.css";
 
 import mission from "../../assets/img/elements/eye.png";
@@ -40,21 +39,7 @@ function CoreValues() {
       window.scrollBy({ top: 300, behavior: "smooth" });
     }, 500); // Delay for smoother transition
   };
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-      AOS.init({
-        offset: 100,
-        duration: 600,
-        once: false,
-      
-        easing: "ease-in-sine",
-      });
-    } else {
-      AOS.init({
-        once: false,
-      });
-    }
-  }, []);
+
 
   return (
     <Box className="container corevaluessection">
@@ -92,7 +77,7 @@ function CoreValues() {
           <SwiperSlide>
             <Box className="swiper-slide-content ">
               <div className="row">
-                <div className="col-sm-4 valueparent" data-aos="zoom-out-right">
+                <div className="col-sm-4 valueparent" data-aos-mirror="true">
                   <Box>
                     <img
                       src={mission}
@@ -101,7 +86,7 @@ function CoreValues() {
                     />
                   </Box>
                 </div>
-                <div className="col-sm-8 valueparent2" data-aos="fade-left">
+                <div className="col-sm-8 valueparent2" data-aos-mirror="true" data-aos="fade-left">
                   <Box>
                     <Typography variant="h1">Mission</Typography>
                     <Typography

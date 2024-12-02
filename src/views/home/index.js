@@ -14,7 +14,7 @@ import Contactseection from "../../component/contactsection";
 import AnoetherSection from "../../component/commitments";
 import Ourclients from "../../component/our-clients";
 import Commitsmentcomponent from "../../component/commitments";
-import Homepagebanner from "../../component/services-section";
+import Homepagebanner from "../../component/homepagebanner";
 
 const Home = () => {
   return (

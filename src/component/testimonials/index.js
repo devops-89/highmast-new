@@ -4,8 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Mousewheel, Pagination } from "swiper/modules";
 import "./index.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import testimonialimg1 from "../../assets/img/elements/Teamimg1.jpeg";
 import dwnquote from "../../assets/img/elements/dwnquote.png";
 import upquote from "../../assets/img/elements/upquote.png";
@@ -29,26 +28,10 @@ const Testimonials = (props) => {
       }
     }
   };
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-      AOS.init({
-        offset: 100,
-        duration: 600,
-        once: false,
-      
-        easing: "ease-in-sine",
-      });
-    } else {
-      AOS.init({
-        once: true,
-       
-      });
-    }
-  }, []);
 
   return (
     <div className="container testimonialssection allpadding">
-      <div data-aos="fade-down">
+      <div data-aos="fade-down" data-aos-mirror="true">
         <h2 className="subheading   headingcenter">Trusted by Many...</h2>
       </div>
       <div className="col-sm-10 mx-auto">

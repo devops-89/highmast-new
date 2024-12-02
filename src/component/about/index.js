@@ -60,23 +60,7 @@ const Aboutsection = () => {
     Math.max(minFontSize, 30 - Math.cos(scrollY / 400) * 20)
   );
 
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-      AOS.init({
-        offset: 100,
-        duration: 600,
-        once: false,
-      
-        easing: "ease-in-sine",
-      });
-    } else {
-      AOS.init({
-        once: true,
-        mirror:true,
-         // Disable repeated animation on small screens
-      });
-    }
-  }, []);
+
 
   return (
     <div>
@@ -85,19 +69,9 @@ const Aboutsection = () => {
           <div className="row">
             <div className="col-sm-12 mx-auto">
               <div className="scroll-animation-containerabout" ref={sectionRef}>
-                {/* <div
-                  className="zoom-textAbout"
-                  style={{
-                    transform: `scale(${scaleValue}) translate(${
-                      scrollY > 0 ? "0%" : "-50%"
-                    }, -50%)`,
-                    fontSize: `${fontSizeValue}px`, // Using px for consistency
-                  }}
-                >
-                  Why High<span className="Mast-text">Mast</span>?
-                </div> */}
+          
                 <div
-                data-aos="zoom-in-up"
+                  data-aos="zoom-in-up"
                   className="zoom-textAbout"
                   style={{
                     transform: `scale(${scaleValue})`,
@@ -127,8 +101,7 @@ const Aboutsection = () => {
               <div
                 className="aboutcontent"
                 data-aos="fade-left"
-                // data-aos-anchor="#example-anchor"
-                data-aos-offset="300"
+                data-aos-mirror="true"
                 data-aos-duration="300"
                 data-aos-delay="400"
               >

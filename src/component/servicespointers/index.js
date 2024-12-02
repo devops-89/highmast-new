@@ -1,9 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useRef } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import { Parallax } from "react-parallax";
 import "./index.css";
+
 
 const ServicesPointers = (props) => {
   const imageRef = useRef(null);
@@ -29,25 +29,8 @@ const ServicesPointers = (props) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-
-    
   }, []);
 
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-      AOS.init({
-        offset: 100,
-        duration: 600,
-        once: false,
-
-        easing: "ease-in-sine",
-      });
-    } else {
-      AOS.init({
-        once: true,
-      });
-    }
-  }, []);
 
   return (
     <div className="container allpadding">
@@ -55,20 +38,15 @@ const ServicesPointers = (props) => {
         <Typography sx={{ color: "red", fontWeight: "600" }}>
           {props.heading}
         </Typography>
-        {/* <Typography
-          sx={{ color: "#fff", fontSize: "70px" }}
-          data-aos="fade-right"
-        >
-          {props.subheading}
-        </Typography> */}
       </Box>
       <div className="row align-items-center mt-4">
         <div className="col-sm-5 text-center mb-5 ">
           <div>
             <div
-              // ref={imageRef} // Attach ref to target the image element
               className="pointerimg "
               data-aos="zoom-out-down"
+              data-aos-mirror="true"
+              data-aos-easing="ease-in-out"
               style={{
                 backgroundImage: `url(${props.img})`,
                 backgroundSize: "cover",
@@ -84,7 +62,8 @@ const ServicesPointers = (props) => {
         <div className="col-sm-7 ">
           <div
             className="row pointerparent"
-            data-aos="fade-down-left"
+            data-aos="fade-left"
+            data-aos-mirror="true"
             data-aos-duration="500"
             data-aos-delay="100"
           >
@@ -107,8 +86,9 @@ const ServicesPointers = (props) => {
           </div>
           <div
             className="row pointerparent"
-            data-aos="fade-down-left"
+            data-aos="fade-left"
             data-aos-duration="500"
+            data-aos-mirror="true"
             data-aos-delay="200"
           >
             <div className="col-sm-3">
@@ -130,9 +110,10 @@ const ServicesPointers = (props) => {
           </div>
           <div
             className="row pointerparent"
-            data-aos="fade-down-left"
+            data-aos="fade-left"
             data-aos-duration="500"
             data-aos-delay="300"
+            data-aos-mirror="true"
           >
             <div className="col-sm-3">
               <Typography
@@ -153,9 +134,10 @@ const ServicesPointers = (props) => {
           </div>
           <div
             className="row pointerparent"
-            data-aos="fade-down-left"
+            data-aos="fade-left"
             data-aos-duration="500"
             data-aos-delay="400"
+            data-aos-mirror="true"
           >
             <div className="col-sm-3">
               <Typography
@@ -176,9 +158,10 @@ const ServicesPointers = (props) => {
           </div>
           <div
             className="row pointerparent"
-            data-aos="fade-down-left"
+            data-aos="fade-left"
             data-aos-duration="500"
             data-aos-delay="500"
+            data-aos-mirror="true"
           >
             <div className="col-sm-3">
               <Typography

@@ -80,12 +80,9 @@ const Homepagebanner = () => {
                 &{" "}
               </p>
               <p className="rstoftext  contioceantext" >
-                {/* <span
-                  className="text-border "
-                  data-aos="flip-right"
-                > */}
+             
                   ContiOcean ENVIRONMENT
-                {/* </span> */}
+               
            
                 
               </p>
@@ -93,9 +90,9 @@ const Homepagebanner = () => {
           </div>
           <div className="contersection">
             <div className="row">
-              <div className="col" data-aos="zoom-in-up">
+              <div className="col" >
                 <div className="top-line"></div>
-                <h3 className="number">
+                <h3 className="number" data-aos="zoom-in-up">
                   <span>5</span>
                   <span>0</span>
               
@@ -103,9 +100,9 @@ const Homepagebanner = () => {
                 </h3>
                 <p className="desc">Successful Dry Dockings</p>
               </div>
-              <div className="col" data-aos="zoom-in-up">
+              <div className="col" >
                 <div className="top-line"></div>
-                <h3 className="number">
+                <h3 className="number" data-aos="zoom-in-up">
                   <span>1</span>
                   <span>0</span>
                   <span>0</span>
@@ -124,9 +121,9 @@ const Homepagebanner = () => {
               </div>
             </div>
             <div className="row">
-              <div className="col" data-aos="zoom-in-up">
+              <div className="col" >
                 <div className="top-line"></div>
-                <h3 className="number">
+                <h3 className="number" data-aos="zoom-in-up">
                   <span>2</span>
                   <span>0</span>
                   <span className="symbol">+</span>
@@ -134,9 +131,9 @@ const Homepagebanner = () => {
                 <p className="desc">Eco-Friendly Ship Designs</p>
                 <div className="bottom-line"></div>
               </div>
-              <div className="col" data-aos="zoom-in-up">
+              <div className="col" >
                 <div className="top-line"></div>
-                <h3 className="number">
+                <h3 className="number" data-aos="zoom-in-up">
                   <span>1</span>
                   <span>0</span>
                   <span className="symbol">+</span>
@@ -144,9 +141,9 @@ const Homepagebanner = () => {
                 <p className="desc">Managed vessels</p>
                 <div className="bottom-line"></div>
               </div>
-              <div className="col" data-aos="zoom-in-up">
+              <div className="col" >
                 <div className="top-line"></div>
-                <h3 className="number">
+                <h3 className="number" data-aos="zoom-in-up">
                   <span>6</span>
                   <span className="symbol">+</span>
                 </h3>

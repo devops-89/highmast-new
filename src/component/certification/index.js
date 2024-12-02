@@ -2,30 +2,14 @@ import { Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import anchorimg from "../../assets/img/elements/anchor.png";
 import "./index.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import certificationimg1 from "../../assets/img/elements/certificationimg1.png";
 import certificationimg2 from "../../assets/img/elements/certificationimg2.png";
 import certificationimg3 from "../../assets/img/elements/certificationimg3.png";
 import certificationimg4 from "../../assets/img/elements/certificationimg4.png";
 
 const Certification = () => {
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-      AOS.init({
-        offset: 100,
-        duration: 600,
-        once: false,
-      
-        easing: "ease-in-sine",
-      });
-    } else {
-      AOS.init({
-        once: false,
-       
-      });
-    }
-  }, []);
+ 
   return (
     <div className="container allpadding pb-0">
       <div>
@@ -39,6 +23,7 @@ const Certification = () => {
           <div
             class="certicationscol"
             data-aos="fade-right"
+            data-aos-mirror="true"
             data-aos-delay="200"
           >
             <div class="   ">
@@ -64,6 +49,7 @@ const Certification = () => {
           <div
             class="certicationscol"
             data-aos="fade-right"
+            data-aos-mirror="true"
             data-aos-delay="300"
           >
             <div class="   ">
@@ -97,6 +83,7 @@ const Certification = () => {
           <div
             class="certicationscol"
             data-aos="fade-left"
+            data-aos-mirror="true"
             data-aos-delay="400"
           >
             <div class="   ">
@@ -121,6 +108,7 @@ const Certification = () => {
           <div
             class="certicationscol"
             data-aos="fade-left"
+            data-aos-mirror="true"
             data-aos-delay="500"
           >
             <div class="   ">

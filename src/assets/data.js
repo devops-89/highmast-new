@@ -242,7 +242,7 @@ let Data = {
     },
     {
       title: "EFFECTIVE DATE",
-      items: [`This Privacy Policy is effective as of [insert date].`],
+      items: [`This Privacy Policy is effective as of 22nd Oct 2024.`],
     },
     {
       title: "LAST UPDATED",

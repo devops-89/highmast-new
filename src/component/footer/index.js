@@ -104,7 +104,9 @@ const Footer = () => {
                 <img className="footerlogo" src={footerlogo}></img>
               </Link>
             </div>
-            <div className="my-4">
+            <div className="my-4 highmastfooterdes" 
+
+            >
               <Typography
                 component="a"
                 sx={{
@@ -132,7 +134,7 @@ const Footer = () => {
           </div>
 
           {/* Second Column: Links */}
-          <div className="col-sm-2 footer-linksparent">
+          <div className="col-sm-2 footerlinkpadding footer-linksparent">
             <h5>Quick Links</h5>
             <ul className="footer-links">
               <li>
@@ -152,7 +154,7 @@ const Footer = () => {
           </div>
 
           {/* Third Column: Services */}
-          <div className="col-sm-4">
+          <div className="col-sm-4 footerlinkservicepadding ">
             <h5>Our Services</h5>
             <ul className="footer-services">
               <li>
@@ -288,14 +290,14 @@ const Footer = () => {
               <div className="col-sm-8">
               <Typography
                 variant="body1"
-                sx={{ fontSize: "13px", textAlign:{xs:"left",md:"left",lg:"left" },marginTop:{xs:"3px" ,md:"0px",lg:"0px"} }}
+                sx={{ fontSize: "14px", textAlign:{xs:"left",md:"left",lg:"left" },marginTop:{xs:"3px" ,md:"0px",lg:"0px"} }}
               >
                 © 2024 HighMast Marine, All Rights Reserved
               </Typography>
               </div>
               <div className="col-sm-4 px-0">
                 <div className="row termsprivcayparent">
-                  <div className="col-sm-6 ">
+                  <div className="col-sm-8 privacy-policya">
                   <Link
                   to="/terms-and-conditions"
                   color="inherit"
@@ -305,7 +307,7 @@ const Footer = () => {
                   Terms and Conditions
                 </Link>
                   </div>
-                  <div className="col-sm-6 privacy-policya">
+                  <div className="col-sm-4 privacy-policya">
                   <Link
                   to="/privacy-policy"
                   color="inherit"

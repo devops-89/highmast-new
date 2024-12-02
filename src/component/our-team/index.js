@@ -2,27 +2,11 @@ import React, { useEffect } from "react";
 import "./index.css";
 import Teamimg1 from "../../assets/img/elements/Teamimg1.jpeg";
 import Teamimg2 from "../../assets/img/elements/Team2.jpg";
-import "aos/dist/aos.css";
-import AOS from "aos";
+
 import { Typography } from "@mui/material";
 
 const Ourteam = () => {
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-      AOS.init({
-        offset: 100,
-        duration: 600,
-        once: false,
-      
-        easing: "ease-in-sine",
-      });
-    } else {
-      AOS.init({
-        once: false,
-         // Disable repeated animation on small screens
-      });
-    }
-  }, []);
+
   return (
     <div className="container allpadding">
       <div data-aos="fade-right">
@@ -33,8 +17,9 @@ const Ourteam = () => {
           <div
             className="col-sm-5"
             data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"
+            data-aos-mirror="true"
+     
+            data-aos-easing="ease-in-out"
           >
             <Typography
               sx={{

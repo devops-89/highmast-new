@@ -55,20 +55,3 @@
     
 
 }
-
-@media (max-width: 768px) {
-    /* Ensure no extra space is added on the sides */
-    .row {
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-    }
-  
-    /* Adjust animation direction for mobile view */
-    [data-aos="fade-left"] {
-      transform: translateX(0); /* Make sure it's not off-screen */
-    }
-  
-    [data-aos="fade-right"] {
-      transform: translateX(0); /* Make sure it's not off-screen */
-    }
-}

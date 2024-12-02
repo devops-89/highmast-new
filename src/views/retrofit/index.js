@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ServicesDescription from "../../component/servicesdescription";
 import ServicesPointers from "../../component/servicespointers";
 import "aos/dist/aos.css";
+import Aos from "aos"; // Ensure Aos is imported
 import "./index.css";
 import pointersimg from "../../assets/img/elements/retrofitpotrait.jpg";
 import Testimonials from "../../component/testimonials";
@@ -17,6 +18,12 @@ import retrofitparalaximg3 from "../../assets/img/elements/retrofitparalaximg3.j
 import Contactseection from "../../component/contactsection";
 
 const Retrofit = () => {
+  useEffect(() => {
+    Aos.init({
+      // delay: 500,
+      mirror: false,
+    });
+  }, []); // Add the dependency array to ensure it runs only once
   return (
     <div>
       <div className="container-fluid px-0">
@@ -24,7 +31,11 @@ const Retrofit = () => {
           <div className="servicesbanneroverlay"></div>{" "}
           <div className="container bannercontainer">
             <div className="section-title desktop">
-              <h1 data-aos="fade-up-right">
+              <h1
+                data-aos="fade-right"
+                data-aos-mirror="true"
+                data-aos-easing="ease-in-out"
+              >
                 <p className="rstoftext">
                   <span className=""> RETROFIT LED POWER </span>{" "}
                 </p>

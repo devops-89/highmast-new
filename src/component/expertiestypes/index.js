@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { Parallax } from "react-parallax";
 import "./index.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import "./index.css";
+
 
 const ExpertiesComponent = (props) => {
   useEffect(() => {
@@ -12,25 +10,11 @@ const ExpertiesComponent = (props) => {
       document.documentElement.style.scrollBehavior = "smooth";
     }
   }, []);
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-      AOS.init({
-        offset: 100,
-        duration: 600,
-        once: false,
-      
-        easing: "ease-in-sine",
-      });
-    } else {
-      AOS.init({
-        once: true,
-       
-      });
-    }
-  }, []);
+ 
+
   return (
     <div className="container-fluid px-0 ">
-      <div data-aos="fade-down">
+      <div data-aos="fade-down" data-aos-mirror="true">
         <h2 className="subheading headingcenter ">{props.mainheading}</h2>
       </div>
       {/* First Parallax Section */}
