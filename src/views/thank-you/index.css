@@ -19,6 +19,7 @@
     font-size: 24px;
     margin-top: 10px;
     color: #fff;
+    text-align: center;
 }
 
 .thank-you-content {
@@ -60,4 +61,10 @@
 
 .btn-explore:hover {
     background-color: #e68a00;
+}
+
+@media (max-width: 768px) {
+    .thank-you-details p  {
+        font-size: 14px;
+    }
 }

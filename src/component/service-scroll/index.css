@@ -76,8 +76,7 @@
   .img-container {
     display: flex;
     overflow: hidden;
-    width: 1500%;
-    /* Matches the number of images */
+    width: 2000%;
   }
 
   .scroll-img {
@@ -88,12 +87,14 @@
 
   .text {
     top: 90%;
+
     /* Adjust positioning */
     left: 50%;
     transform: translate(-50%, 0%);
     padding: 8px;
     height: auto;
     white-space: normal;
+    
 
   }
 
@@ -103,7 +104,25 @@
     line-height: 1.2;
   }
   .containerparent {
-    padding-bottom: 0; /* Ensure no padding at the bottom */
-    margin-bottom: 0; /* Ensure no margin at the bottom */
-  }
+    order: 0;
+    place-self: auto;
+    grid-area: auto;
+    z-index: auto;
+    float: none;
+    flex-shrink: 1;
+    display: block;
+    margin: 0px;
+    inset: 0px;
+    position: relative;
+    flex-basis: auto;
+    overflow: visible;
+    box-sizing: border-box;
+    width: 100%; /* Ensure it takes full width */
+    height: auto; /* Auto-adjust height based on content */
+    padding: 0 0 300px; /* Adjust bottom padding to ensure enough space */
+}
+.pin-spacer {
+  height: 2327px !important;
+}
+  
 }

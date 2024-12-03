@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./index.css";
-import Teamimg1 from "../../assets/img/elements/Teamimg1.jpeg";
+import Teamimg1 from "../../assets/img/elements/Team1.jpg";
 import Teamimg2 from "../../assets/img/elements/Team2.jpg";
 
 import { Typography } from "@mui/material";
@@ -71,14 +71,14 @@ const Ourteam = () => {
           </div>
           <div className="col-sm-7 teamimgparnt1">
             <div className="image-overlay">
-              <img data-aos="zoom-in-up" src={Teamimg2} alt="Team Member" />
+              <img data-aos="zoom-in-up" src={Teamimg1} alt="Team Member" />
             </div>
           </div>
         </div>
         <div className="row align-items-center ourrteamsection ourteamsection2nd">
           <div className="col-sm-7 text-left teamimgparnt2">
             <div className="image-overlay">
-              <img data-aos="zoom-in-up" src={Teamimg1}></img>
+              <img data-aos="zoom-in-up" src={Teamimg2}></img>
             </div>
           </div>
           <div

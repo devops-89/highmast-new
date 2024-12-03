@@ -89,7 +89,7 @@ const Homepagebanner = () => {
             </h1>
           </div>
           <div className="contersection">
-            <div className="row">
+            <div className="row mx-auto">
               <div className="col" >
                 <div className="top-line"></div>
                 <h3 className="number" data-aos="zoom-in-up">
@@ -100,7 +100,7 @@ const Homepagebanner = () => {
                 </h3>
                 <p className="desc">Successful Dry Dockings</p>
               </div>
-              <div className="col" >
+              <div className="col " >
                 <div className="top-line"></div>
                 <h3 className="number" data-aos="zoom-in-up">
                   <span>1</span>
@@ -120,7 +120,7 @@ const Homepagebanner = () => {
                 <p className="desc">Global Ports Served</p>
               </div>
             </div>
-            <div className="row">
+            <div className="row  mx-auto">
               <div className="col" >
                 <div className="top-line"></div>
                 <h3 className="number" data-aos="zoom-in-up">

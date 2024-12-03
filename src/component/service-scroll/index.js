@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -93,10 +92,11 @@ const Servicesscroll = () => {
         scrollTrigger: {
           trigger: containerParentRef.current,
           pin: true, // Lock the scroll
-          scrub: 2,
-          start: "center center",
+          scrub: 8,
+          start: "center center ",
           end: `+=${containerWidth * 3.2}`, // Extended scroll range
-        },
+          kill:true,
+       },
       });
 
       const texts = textRef.current.querySelectorAll("p");
@@ -104,18 +104,19 @@ const Servicesscroll = () => {
       gsap.to(texts, {
         backgroundPositionY: "0%",
         opacity: 1,
-        y: -800, // Adjusted for mobile
+        y: -1600, // Adjusted for mobile
         stagger: 0.05, // Slower stagger for mobile
         scrollTrigger: {
           trigger: containerParentRef.current,
-          scrub: 10,
+          scrub: 15,
           start: "center center",
           end: `+=${containerWidth * 3.2}`, // Match the extended scroll range
-        },
+},
       });
+      
     });
 
-    return () => {
+   return () => {
       mm.revert(); // Clean up
     };
   }, []);

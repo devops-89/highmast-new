@@ -13,10 +13,9 @@ const ThankYou = () => {
     <div>
       <div className="container-fluid px-0">
         <section
-          style={{ height: "100vh" }}
           className="thankyoubanner servicesbanner  secOne2 "
         >
-          <div className="servicesbanneroverlay"></div>{" "}
+          <div className="servicesbanneroverlay"></div>
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1>

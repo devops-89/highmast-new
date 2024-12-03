@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./index.css";
 
 import { Typography } from "@mui/material";
-import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
+
 
 
 const ScrollAnimation = () => {
@@ -37,21 +36,7 @@ const ScrollAnimation = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-      AOS.init({
-        offset: 100,
-        duration: 600,
-        once: false,
 
-        easing: "ease-in-sine",
-      });
-    } else {
-      AOS.init({
-        once: false,
-      });
-    }
-  }, []);
 
 
   // Define the minimum and maximum values for scaling and font size
