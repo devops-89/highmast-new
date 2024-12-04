@@ -64,43 +64,42 @@ const Homepagebanner = () => {
       >
         <div className="overlay"></div> {/* Add this div for the overlay */}
         <div className="container bannercontainer">
-          <div className="section-title desktop" data-aos="zoom-in-up">
+          <div className=" desktop" data-aos="zoom-in-up">
+          
             <h1>
-              <p className="rstoftext">
-                <span className="text-border greentext "> green</span> maritime{" "}
-              </p>
-              <p className="rstoftext">innovation by</p>
-              <p className="rstoftext">
+              <span className="rstoftext">
+                <span className="text-border greentext">green</span> maritime
+              </span>
+              <br />
+              <span className="rstoftext">innovation by</span>
+              <br />
+              <span className="rstoftext">
                 <span
                   className="text-border highmasttextbg"
-                  data-aos="flip-left"
                 >
                   High<span style={{ color: "#E32226" }}>Mast</span> marine
                 </span>{" "}
                 &{" "}
-              </p>
-              <p className="rstoftext  contioceantext" >
-             
-                  ContiOcean ENVIRONMENT
-               
-           
-                
-              </p>
+              </span>
+              <br />
+              <span className="rstoftext contioceantext">
+                ContiOcean ENVIRONMENT
+              </span>
             </h1>
           </div>
-          <div className="contersection">
+          <div className="contersection desktop-view">
             <div className="row mx-auto">
-              <div className="col" >
+              <div className="col">
                 <div className="top-line"></div>
                 <h3 className="number" data-aos="zoom-in-up">
                   <span>5</span>
                   <span>0</span>
-              
+
                   <span className="symbol">+</span>
                 </h3>
                 <p className="desc">Successful Dry Dockings</p>
               </div>
-              <div className="col " >
+              <div className="col ">
                 <div className="top-line"></div>
                 <h3 className="number" data-aos="zoom-in-up">
                   <span>1</span>
@@ -121,7 +120,7 @@ const Homepagebanner = () => {
               </div>
             </div>
             <div className="row  mx-auto">
-              <div className="col" >
+              <div className="col">
                 <div className="top-line"></div>
                 <h3 className="number" data-aos="zoom-in-up">
                   <span>2</span>
@@ -131,7 +130,7 @@ const Homepagebanner = () => {
                 <p className="desc">Eco-Friendly Ship Designs</p>
                 <div className="bottom-line"></div>
               </div>
-              <div className="col" >
+              <div className="col">
                 <div className="top-line"></div>
                 <h3 className="number" data-aos="zoom-in-up">
                   <span>1</span>
@@ -141,7 +140,7 @@ const Homepagebanner = () => {
                 <p className="desc">Managed vessels</p>
                 <div className="bottom-line"></div>
               </div>
-              <div className="col" >
+              <div className="col">
                 <div className="top-line"></div>
                 <h3 className="number" data-aos="zoom-in-up">
                   <span>6</span>
@@ -152,6 +151,74 @@ const Homepagebanner = () => {
               </div>
             </div>
           </div>
+          {/* mobile view */}
+          <div className="mobile-view">
+            <div className="row mx-auto">
+              <div className="col" >
+                <div className="top-line"></div>
+                <h3 className="number" data-aos="zoom-in-down" >
+                  <span>5</span>
+                  <span>0</span>
+
+                  <span className="symbol">+</span>
+                </h3>
+                <p className="desc">Successful Dry Dockings</p>
+              </div>
+              <div className="col" >
+                <div className="top-line"></div>
+                <h3 className="number" data-aos="zoom-in-down" >
+                  <span>1</span>
+                  <span>0</span>
+                  <span>0</span>
+                  <span className="symbol">%</span>
+                </h3>
+                <p className="desc">Emission-Free Green Energy Solutions</p>
+              </div>
+            </div>
+            <div className="row  mx-auto">
+              <div className="col" >
+                <div className="top-line"></div>
+                <h3 className="number" data-aos="zoom-in-down">
+                  <span>2</span>
+                  <span>0</span>
+                  <span className="symbol">%</span>
+                </h3>
+                <p className="desc">Global Ports Served</p>
+              </div>
+              <div className="col">
+                <div className="top-line"></div>
+                <h3 className="number" data-aos="zoom-in-down">
+                  <span>2</span>
+                  <span>0</span>
+                  <span className="symbol">+</span>
+                </h3>
+                <p className="desc">Eco-Friendly Ship Designs</p>
+                <div className="bottom-line"></div>
+              </div>
+            </div>
+            <div className="row mx-auto">
+              <div className="col" >
+                <div className="top-line"></div>
+                <h3 className="number" data-aos="zoom-in-down" >
+                  <span>1</span>
+                  <span>0</span>
+                  <span className="symbol">+</span>
+                </h3>
+                <p className="desc">Managed vessels</p>
+                <div className="bottom-line"></div>
+              </div>
+              <div className="col" >
+                <div className="top-line"></div>
+                <h3 className="number" data-aos="zoom-in-down">
+                  <span>6</span>
+                  <span className="symbol">+</span>
+                </h3>
+                <p className="desc">Shipping pools</p>
+                <div className="bottom-line"></div>
+              </div>
+            </div>
+          </div>
+          {/* end mobile view */}
         </div>
       </section>
     </div>

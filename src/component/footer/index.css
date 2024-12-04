@@ -72,6 +72,13 @@
     background-color: transparent;
     cursor: default;
   }
+  
+  .footer a.active {
+    color: red; /* Red color for active links */
+    font-weight: bold; /* Optional: make the active link bold */
+  }
+
+
 @media (max-width:768px) {
     .footer ul a {
         font-size: 13px;

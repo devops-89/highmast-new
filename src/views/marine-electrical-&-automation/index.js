@@ -23,20 +23,14 @@ const MarineElectricalandAutomation = () => {
   return (
     <div>
       <div className="container-fluid px-0">
-        <section
-       
-          className="marinebanner servicesbanner  secOne2 "
-        >
+        <section className="marinebanner servicesbanner  secOne2 ">
           <div className="servicesbanneroverlay"></div>{" "}
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1 data-aos="fade-up-right">
-                <p className="rstoftext">
-                  <span className=""> Marine Electrical </span>{" "}
-                </p>
-                <p className="rstoftext">
-                  <span className="">& Automation </span>{" "}
-                </p>
+                <span className="rstoftext">Marine Electrical</span>
+                <br />
+                <span className="rstoftext"> & Automation</span>
               </h1>
             </div>
           </div>

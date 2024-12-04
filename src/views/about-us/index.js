@@ -8,8 +8,6 @@ import Certification from "../../component/certification";
 import Contactseection from "../../component/contactsection";
 
 const About = () => {
- 
-
   return (
     <div>
       <section className="aboutbanner secOne2 ">
@@ -17,23 +15,21 @@ const About = () => {
         <div className="container bannercontainer">
           <div className="section-title desktop">
             <h1 data-aos="fade-down">
-              <p className="rstoftext">
-                <span className=""> Redefining </span> Marine{" "}
-              </p>
-              <p className="rstoftext">Operations with</p>
-              <p className="rstoftext">
+              <span className="rstoftext">Redefining Marine</span>
+              <br />
+              <span className="rstoftext">Operations with</span>
+              <br />
+              <span className="rstoftext">
                 <span
                   className="text-border highmasttextbg"
                   data-aos="flip-left"
                 >
                   20<span style={{ color: "#E32226" }}>+</span>
-                  <span> Years</span> of
-                </span>{" "}
-                Expertise
-              </p>
+                  <span> Years</span> of Expertise
+                </span>
+              </span>
             </h1>
           </div>
-
         </div>
       </section>
 
@@ -41,7 +37,7 @@ const About = () => {
       <Ourteam />
       <CoreValues />
       <Certification />
-      <Contactseection/>
+      <Contactseection />
     </div>
   );
 };

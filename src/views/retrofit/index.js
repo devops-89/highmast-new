@@ -36,12 +36,9 @@ const Retrofit = () => {
                 data-aos-mirror="true"
                 data-aos-easing="ease-in-out"
               >
-                <p className="rstoftext">
-                  <span className=""> RETROFIT LED POWER </span>{" "}
-                </p>
-                <p className="rstoftext">
-                  <span className=""> SAVING SOLUTIONS </span>{" "}
-                </p>
+                <span className="rstoftext">RETROFIT LED POWER</span>
+                <br />
+                <span className="rstoftext">SAVING SOLUTIONS</span>
               </h1>
             </div>
           </div>

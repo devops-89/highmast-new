@@ -68,6 +68,8 @@ const Navbar = () => {
     }
   }, []);
 
+  const enquiryLinks = [{ name: "ENQUIRY FORM", onClick: handleShow }];
+
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
   };
@@ -80,15 +82,19 @@ const Navbar = () => {
     <Box
       sx={{
         position: fixed ? "fixed" : "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
         width: "100%",
         zIndex: 999,
         height: 80,
         display: "flex",
         alignItems: "center",
         transition: "0.5s ease all",
+        padding: { xs: "0px 12px ", md: "0px 0px", lg: "0px 0px" },
       }}
     >
-      <Container maxWidth="lg">
+      <div className="container px-0">
         <Stack
           direction={"row"}
           alignItems={"center"}
@@ -155,7 +161,7 @@ const Navbar = () => {
               >
                 <Link to="/">
                   <img
-                      onClick={toggleDrawer(false)}
+                    onClick={toggleDrawer(false)}
                     className="highmastlogo"
                     src={highmastlogo}
                     width={150}
@@ -168,9 +174,11 @@ const Navbar = () => {
                   color="inherit"
                   aria-label="close"
                 >
-                  <CloseIcon sx={{
-                    color:"#fff"
-                  }} />
+                  <CloseIcon
+                    sx={{
+                      color: "#fff",
+                    }}
+                  />
                 </IconButton>
 
                 <Stack
@@ -180,9 +188,13 @@ const Navbar = () => {
                   sx={{ marginTop: 6 }}
                 >
                   {Data.navlinks.map((val, i) => (
-                    <Box key={i} sx={{width:"100%"}}>
+                    <Box key={i} sx={{ width: "100%" }}>
                       {/* Navigation Link and Dropdown Icon in Horizontal Line */}
-                      <Box display="flex" alignItems="center" justifyContent="space-between">
+                      <Box
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="space-between"
+                      >
                         {/* Link for Navigation */}
                         <Link
                           to={val.url}
@@ -198,7 +210,6 @@ const Navbar = () => {
                             textTransform={"uppercase"}
                             fontSize="14px"
                             color="#fff"
-                            
                           >
                             {val.name}
                           </Typography>
@@ -210,7 +221,7 @@ const Navbar = () => {
                             onClick={toggleMobileDropdown} // Toggle dropdown on icon click
                             sx={{ marginLeft: 1 }}
                           >
-                            <ArrowDropDownIcon sx={{color:"#fff"}}/>
+                            <ArrowDropDownIcon sx={{ color: "#fff" }} />
                           </IconButton>
                         )}
                       </Box>
@@ -236,6 +247,32 @@ const Navbar = () => {
                         </Stack>
                       )}
                     </Box>
+                  ))}
+
+                  {enquiryLinks.map((link, idx) => (
+                    <Link
+                      key={idx}
+                      style={{
+                        textDecoration: "none",
+                        color: "#fff",
+                        display: "block",
+                        padding: "5px 0",
+                      }}
+                      onClick={() => {
+                        setDrawerOpen(false); // Close the drawer first
+                        if (link.onClick) link.onClick(); // Call the onClick handler from the array
+                      }}
+                    >
+                      <Typography
+                        fontFamily="poppins"
+                        fontWeight={500}
+                        textTransform={"uppercase"}
+                        fontSize="14px"
+                        color="#fff"
+                      >
+                        {link.name}
+                      </Typography>
+                    </Link>
                   ))}
                 </Stack>
               </Box>
@@ -345,7 +382,7 @@ const Navbar = () => {
         </Stack>
 
         <ModalComponent show={show} handleClose={handleClose} />
-      </Container>
+      </div>
     </Box>
   );
 };

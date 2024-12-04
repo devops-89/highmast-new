@@ -22,20 +22,14 @@ const Scrubber = () => {
   return (
     <div>
       <div className="container-fluid px-0">
-        <section
-      
-          className="scrubberbanner servicesbanner  secOne2 "
-        >
+        <section className="scrubberbanner servicesbanner  secOne2 ">
           <div className="servicesbanneroverlay"></div>{" "}
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1 data-aos="fade-up-right">
-                <p className="rstoftext">
-                  <span className="">SCRUBBER AND </span>{" "}
-                </p>
-                <p className="rstoftext">
-                  <span className="">CCS COMMISIONING</span>{" "}
-                </p>
+                <span className="rstoftext">SCRUBBER AND</span>
+                <br />
+                <span className="rstoftext">CCS COMMISSIONING</span>
               </h1>
             </div>
           </div>

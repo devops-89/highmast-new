@@ -17,20 +17,14 @@ const Vessels3d = () => {
   return (
     <div>
       <div className="container-fluid px-0">
-        <section
-
-          className="vesselbanner servicesbanner  secOne2 "
-        >
+        <section className="vesselbanner servicesbanner  secOne2 ">
           <div className="servicesbanneroverlay"></div>{" "}
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1 data-aos="fade-up-right">
-                <p className="rstoftext">
-                  <span className="">Vessel 3D scanning </span>{" "}
-                </p>
-                <p className="rstoftext">
-                  <span className="">& Production design </span>{" "}
-                </p>
+                <span className="rstoftext">Vessel 3D scanning</span>
+                <br />
+                <span className="rstoftext"> & Production design</span>
               </h1>
             </div>
           </div>

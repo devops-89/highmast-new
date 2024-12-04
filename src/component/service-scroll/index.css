@@ -88,7 +88,7 @@
   .text {
     top: 90%;
 
-    /* Adjust positioning */
+  
     left: 50%;
     transform: translate(-50%, 0%);
     padding: 8px;
@@ -100,7 +100,7 @@
 
   .text>p {
     font-size: 30px;
-    /* Smaller text size */
+   
     line-height: 1.2;
   }
   .containerparent {
@@ -117,9 +117,9 @@
     flex-basis: auto;
     overflow: visible;
     box-sizing: border-box;
-    width: 100%; /* Ensure it takes full width */
-    height: auto; /* Auto-adjust height based on content */
-    padding: 0 0 300px; /* Adjust bottom padding to ensure enough space */
+    width: 100%; 
+    height: auto; 
+    padding: 0 0 300px; 
 }
 .pin-spacer {
   height: 2327px !important;

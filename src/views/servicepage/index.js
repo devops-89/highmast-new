@@ -12,10 +12,7 @@ const Service = () => {
   }, []);
   return (
     <div>
-      <section
-        
-        className="servicebanner secOne2   "
-      >
+      <section className="servicebanner secOne2   ">
         {/* Add this div for the overlay */}
         <div className="container bannercontainer">
           <div
@@ -23,21 +20,27 @@ const Service = () => {
             data-aos="fade-up"
             duration="200"
           >
-            <h1>
-              <p className="rstoftext">
-                <span className="">Comprehensive Services </span>
-              </p>
-              <p className="rstoftext">for Optimal Performance </p>
-              <p className="rstoftext">
-                <span
-                  className="text-border highmasttextbg"
-                  data-aos="flip-left"
-                >
-                  in Sustainability Together
-                </span>{" "}
-              </p>
      
-            </h1>
+            <div
+              className="section-title desktop"
+              data-aos="fade-up"
+              data-duration="200"
+            >
+              <h1>
+                <span className="rstoftext">Comprehensive Services</span>
+                <br />
+                <span className="rstoftext">for Optimal Performance</span>
+                <br />
+                <span className="rstoftext">
+                  <span
+                    className="text-border highmasttextbg"
+                    data-aos="flip-left"
+                  >
+                    in Sustainability Together
+                  </span>
+                </span>
+              </h1>
+            </div>
           </div>
         </div>
         {/* Boxes Section */}

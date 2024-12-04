@@ -20,12 +20,13 @@ const Contactus = () => {
       addressheading: "Head Office/Corporate Office",
       addressdetails: "Tong Eng Building, 101 Cecil Street, Unit 24-05",
       addresdetailspin: "Singapore 069533",
-      
+
       email: "service@highmastmarine.com",
       phoneno: "+65 90487544 +65 91870596",
 
       img: googlemapimg,
-      mapUrl: "https://www.google.com/maps?q=Tong+Eng+Building,+101+Cecil+Street,+Unit+24-05,+Singapore+069533&output=embed",
+      mapUrl:
+        "https://www.google.com/maps?q=Tong+Eng+Building,+101+Cecil+Street,+Unit+24-05,+Singapore+069533&output=embed",
     },
     {
       icon: <LocationOnIcon />,
@@ -42,19 +43,14 @@ const Contactus = () => {
       phoneno: "+971 529069489",
 
       img: googlemapimg,
-      mapUrl: "https://www.google.com/maps?q=Office+44,+1st+Floor,+Emirates+Tower,+Hamdan+Bin+Md+Street,+Al+Danah,+Abu+Dhabi+UAE&output=embed",
-
-      
+      mapUrl:
+        "https://www.google.com/maps?q=Office+44,+1st+Floor,+Emirates+Tower,+Hamdan+Bin+Md+Street,+Al+Danah,+Abu+Dhabi+UAE&output=embed",
     },
   ];
 
-
   return (
     <div>
-      <section
-     
-        className="conatactbanner   secOne2   "
-      >
+      <section className="conatactbanner   secOne2   ">
         <div className="conatactbanneroverlay"></div>{" "}
         {/* Add this div for the overlay */}
         <div className="container contactmobilebaner bannercontainer">
@@ -63,24 +59,26 @@ const Contactus = () => {
               <div
                 className="section-title desktop"
                 data-aos="fade-up"
-                duration="200"
+                data-duration="200"
               >
                 <h1>
-                  <p className="rstoftext">
-                    <span className="">Contact Us</span> Today
-                  </p>
-                  <p className="rstoftext">and Make Waves </p>
-                  <p className="rstoftext">
+                  <span className="rstoftext">Contact Us Today</span>
+                  <br />
+                  <span className="rstoftext">and Make Waves</span>
+                  <br />
+                  <span className="rstoftext">
                     <span
                       className="text-border highmasttextbg"
                       data-aos="flip-left"
                     >
                       in Sustainability
-                    </span>{" "}
-                  </p>
-                  <p className="rstoftext">Together</p>
+                    </span>
+                  </span>
+                  <br />
+                  <span className="rstoftext">Together</span>
                 </h1>
               </div>
+
               <section className="boxes">
                 <div className="box-row one">
                   <div
@@ -91,7 +89,9 @@ const Contactus = () => {
                   >
                     <div className="box-inner">
                       <div className="box-title">
-                        <h3>20<span style={{ color: "#E32226" }}>+</span></h3>
+                        <h3>
+                          20<span style={{ color: "#E32226" }}>+</span>
+                        </h3>
                       </div>
                       <div className="box-content">Years Experience</div>
                     </div>
@@ -120,7 +120,7 @@ const Contactus = () => {
                     <div className="box-inner">
                       <div className="box-title">
                         <h3>
-                        20<span style={{ color: "#E32226" }}>%</span>
+                          20<span style={{ color: "#E32226" }}>%</span>
                         </h3>
                       </div>
                       <div className="box-content">Ports Served</div>
@@ -130,7 +130,11 @@ const Contactus = () => {
               </section>
             </div>
             <div className="col-sm-4 ">
-              <div data-aos="fade-left" data-aos-delay="300" className="contactimgparent">
+              <div
+                data-aos="fade-left"
+                data-aos-delay="300"
+                className="contactimgparent"
+              >
                 <img className="globebanerimg" src={globebannerimg}></img>
               </div>
             </div>
@@ -139,8 +143,8 @@ const Contactus = () => {
         {/* Boxes Section */}
       </section>
       {/* <FAQSection faqData={faqData} /> */}
-      <Contactaddress  contactaddressdata={contactaddressdata}/>
-      <Contactseection/>
+      <Contactaddress contactaddressdata={contactaddressdata} />
+      <Contactseection />
     </div>
   );
 };

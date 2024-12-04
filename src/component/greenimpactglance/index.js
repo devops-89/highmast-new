@@ -3,8 +3,6 @@ import "./index.css";
 
 import { Typography } from "@mui/material";
 
-
-
 const ScrollAnimation = () => {
   const [scrollY, setScrollY] = useState(0);
   const [showHighmastText, setShowHighmastText] = useState(false);
@@ -36,35 +34,37 @@ const ScrollAnimation = () => {
     };
   }, []);
 
-
-
-
   // Define the minimum and maximum values for scaling and font size
   const minScale = 1; // minimum zoom level
-  const maxScale = 5;   // maximum zoom level
+  const maxScale = 5; // maximum zoom level
 
   const minFontSize = 450; // minimum font size in rem
   const maxFontSize = 250; // maximum font size in rem
 
-  const scaleValue = Math.min(maxScale, Math.max(minScale, 1 - Math.cos(scrollY / 300)));
-  const fontSizeValue = Math.min(maxFontSize, Math.max(minFontSize, 30 - Math.cos(scrollY /400) * 20));
+  const scaleValue = Math.min(
+    maxScale,
+    Math.max(minScale, 1 - Math.cos(scrollY / 300))
+  );
+  const fontSizeValue = Math.min(
+    maxFontSize,
+    Math.max(minFontSize, 30 - Math.cos(scrollY / 400) * 20)
+  );
 
   return (
     <>
-      <div className="container ">
+      <div className="container mobileviewcommitments  ">
         {showHighmastText && (
           <Typography
             data-aos="fade-down"
             sx={{
-              fontSize: {xs:"30px",md:"50px",lg:"50px"},
+              fontSize: { xs: "30px", md: "50px", lg: "50px" },
               textAlign: { xs: "center", md: "left" }, // Center text on mobile
               fontWeight: "600",
               color: "#fff",
               textTransform: "uppercase",
-           
             }}
           >
-            Hight<span style={{ color: "red" }}>Mast </span>MARINE
+            High<span style={{ color: "red" }}>Mast </span>MARINE
           </Typography>
         )}
       </div>
@@ -86,7 +86,7 @@ const ScrollAnimation = () => {
               <Typography
                 data-aos="fade-down"
                 sx={{
-                  fontSize: {xs:"30px", md:"50px",lg:"50px"},
+                  fontSize: { xs: "30px", md: "50px", lg: "50px" },
                   textAlign: { xs: "center", md: "right" },
                   fontWeight: "600",
                   color: "#fff",

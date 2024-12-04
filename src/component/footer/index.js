@@ -28,6 +28,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Bars } from "react-loader-spinner";
 const Footer = () => {
+  const location = useLocation(); // Get current location
+
+  const isActive = (path) => location.pathname === path; // Check if link is active
   const navigate = useNavigate();
 
   // Newsletter form state
@@ -104,9 +107,7 @@ const Footer = () => {
                 <img className="footerlogo" src={footerlogo}></img>
               </Link>
             </div>
-            <div className="my-4 highmastfooterdes" 
-
-            >
+            <div className="my-4 highmastfooterdes">
               <Typography
                 component="a"
                 sx={{
@@ -138,17 +139,28 @@ const Footer = () => {
             <h5>Quick Links</h5>
             <ul className="footer-links">
               <li>
-                <Link to="/">Home</Link>
+                <Link className={isActive("/") ? "active" : ""} to="/">
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to="/about-us">About Us</Link>
+                <Link className={isActive("/about-us") ? "active" : ""} to="/about-us">
+                  About Us
+                </Link>
               </li>
 
               <li>
-                <Link to="/services">Services</Link>
+                <Link className={isActive("/services") ? "active" : ""} to="/services">
+                  Services
+                </Link>
               </li>
               <li>
-                <Link to="/contact-us">Contact Us</Link>
+                <Link
+                  className={isActive("/contact-us") ? "active" : ""}
+                  to="/contact-us"
+                >
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
@@ -158,33 +170,51 @@ const Footer = () => {
             <h5>Our Services</h5>
             <ul className="footer-services">
               <li>
-                <Link to="/retrofit-led-power-saving-solutions">
+                <Link
+                  className={isActive("/retrofit-led-power-saving-solutions") ? "active" : ""}
+                  to="/retrofit-led-power-saving-solutions"
+                >
                   Retrofit Led Power Saving Solutions
                 </Link>
               </li>
 
               <li>
-                <Link to="/scrubber-and-ccs-commisioning">
+                <Link
+                  className={isActive("/scrubber-and-ccs-commisioning") ? "active" : ""}
+                  to="/scrubber-and-ccs-commisioning"
+                >
                   Scrubber & Ccs Commisioning
                 </Link>
               </li>
               <li>
-                <Link to="/amp-solutions-and-vdf-retrofit">
+                <Link
+                  className={isActive("/amp-solutions-and-vdf-retrofit") ? "active" : ""}
+                  to="/amp-solutions-and-vdf-retrofit"
+                >
                   AMP Solutions & VDF Retrofit
                 </Link>
               </li>
               <li>
-                <Link to="/project-supervision-shipbuilding-and-ship-repairs">
+                <Link
+                  className={isActive("/project-supervision-shipbuilding-and-ship-repairs") ? "active" : ""}
+                  to="/project-supervision-shipbuilding-and-ship-repairs"
+                >
                   Project Supervision Shipbuilding & Repairs
                 </Link>
               </li>
               <li>
-                <Link to="/vessel-3d-scanning-and-production-design">
+                <Link
+                  className={isActive("/vessel-3d-scanning-and-production-design") ? "active" : ""}
+                  to="/vessel-3d-scanning-and-production-design"
+                >
                   Vessel 3D scanning & Production design
                 </Link>
               </li>
               <li>
-                <Link to="/marine-electrical-&-automation">
+                <Link
+                  className={isActive("/marine-electrical-&-automation") ? "active" : ""}
+                  to="/marine-electrical-&-automation"
+                >
                   Marine Electrical & Automation
                 </Link>
               </li>
@@ -282,47 +312,48 @@ const Footer = () => {
         <Box
           sx={{
             color: "#fff",
-            padding:{xs:"10px 0px ", md:"20px 0px", lg:"20px 0px"},
+            padding: { xs: "10px 0px ", md: "20px 0px", lg: "20px 0px" },
           }}
         >
-          <div className="container" >
+          <div className="container">
             <div className="row footercopyrightsection">
-              <div className="col-sm-8">
-              <Typography
-                variant="body1"
-                sx={{ fontSize: "14px", textAlign:{xs:"left",md:"left",lg:"left" },marginTop:{xs:"3px" ,md:"0px",lg:"0px"} }}
-              >
-                © 2024 HighMast Marine, All Rights Reserved
-              </Typography>
+              <div className="col-sm-8 px-0">
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontSize: "14px",
+                    textAlign: { xs: "left", md: "left", lg: "left" },
+                    marginTop: { xs: "3px", md: "0px", lg: "0px" },
+                  }}
+                >
+                  © 2024 HighMast Marine, All Rights Reserved
+                </Typography>
               </div>
               <div className="col-sm-4 px-0">
                 <div className="row termsprivcayparent">
                   <div className="col-sm-8 privacy-policya">
-                  <Link
-                  to="/terms-and-conditions"
-                  color="inherit"
-                  underline="hover"
-                  sx={{ typography: "body1", fontSize: "15px" }}
-                >
-                  Terms and Conditions
-                </Link>
+                    <Link
+                      to="/terms-and-conditions"
+                      color="inherit"
+                      underline="hover"
+                      sx={{ typography: "body1", fontSize: "15px" }}
+                    >
+                      Terms and Conditions
+                    </Link>
                   </div>
                   <div className="col-sm-4 privacy-policya">
-                  <Link
-                  to="/privacy-policy"
-                  color="inherit"
-                  underline="hover"
-                  sx={{ typography: "body1", fontSize: "15px", }}
-                >
-                  Privacy Policy
-                </Link>
+                    <Link
+                      to="/privacy-policy"
+                      color="inherit"
+                      underline="hover"
+                      sx={{ typography: "body1", fontSize: "15px" }}
+                    >
+                      Privacy Policy
+                    </Link>
                   </div>
-
                 </div>
               </div>
             </div>
-         
-        
           </div>
         </Box>
       </div>

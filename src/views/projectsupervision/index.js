@@ -17,20 +17,14 @@ const Projectsupervision = () => {
   return (
     <div>
       <div className="container-fluid px-0">
-        <section
-       
-          className="projectsupervisionbanner servicesbanner  secOne2 "
-        >
+        <section className="projectsupervisionbanner servicesbanner  secOne2 ">
           <div className="servicesbanneroverlay"></div>{" "}
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1 data-aos="fade-up-right">
-                <p className="rstoftext">
-                  <span className="">Project Supervision </span>{" "}
-                </p>
-                <p className="rstoftext">
-                  <span className="">Shipbuilding & Repairs</span>{" "}
-                </p>
+                <span className="rstoftext">Project Supervision</span>
+                <br />
+                <span className="rstoftext">Shipbuilding & Repairs</span>
               </h1>
             </div>
           </div>

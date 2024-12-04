@@ -17,20 +17,14 @@ const Amp = () => {
   return (
     <div>
       <div className="container-fluid px-0">
-        <section
-          className="ampbanner servicesbanner  secOne2 "
-        >
+        <section className="ampbanner servicesbanner  secOne2 ">
           <div className="servicesbanneroverlay"></div>{" "}
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1 data-aos="fade-up-right">
-                <p className="rstoftext">
-                  <span className="">AMP SOLUTIONS </span>{" "}
-                </p>
-                <p className="rstoftext">
-                  <span className="">AND VDF  RETROFIT</span>{" "}
-                </p>
-          
+                <span className="rstoftext">AMP SOLUTIONS</span>
+                <br />
+                <span className="rstoftext">AND VDF RETROFIT</span>
               </h1>
             </div>
           </div>
@@ -65,7 +59,7 @@ const Amp = () => {
           description3="Reduces emissions of pollutants and greenhouse gases, contributing to cleaner air quality around ports or Cold Ironing"
         />
         <Testimonials
-          avtarimg={avtarimg} 
+          avtarimg={avtarimg}
           dwnquote={dwnquote}
           upquote={upquote}
           para="HighMast Marine’s expertise in engine overhauling was beyond impressive! The team’s professionalism, attention to detail, and timely delivery of services made our operations smoother than ever. Their guidance throughout the process, along with proactive troubleshooting, ensured the machinery was optimized perfectly. Truly a game-changer!"
@@ -76,7 +70,7 @@ const Amp = () => {
           name3="Anil G."
         />
       </div>
-      <Contactseection/>
+      <Contactseection />
     </div>
   );
 };

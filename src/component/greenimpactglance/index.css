@@ -68,3 +68,17 @@
     opacity: 0; 
     transition: opacity 0.5s ease;
 }
+
+@media (max-width:768px) {
+
+    .mobileviewcommitments {
+        margin-top: 65px;
+    }
+
+
+    .image-item.zoom {
+
+        transform: translate(-50%, -50%) scale(var(--scale, 1.05)); 
+    }
+    
+}

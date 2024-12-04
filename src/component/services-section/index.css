@@ -110,9 +110,10 @@
     color: #fff;
     text-align: left;
     font-size: 7.15vw;
-    line-height: 1;
+    line-height: 1 !important;
     margin-top: 0.1em;
     margin-bottom: 0;
+    font-family: poppins;
 }
 
 .contersection {
@@ -197,6 +198,16 @@
     z-index: 2;
 }
 
+.mobile-view {
+    display: none;
+}
+
+/* Show desktop view by default */
+.desktop-view {
+    display: block;
+}
+
+
 @media (max-width: 768px) {
 
     .contersection {
@@ -206,7 +217,7 @@
 
     .text-border,
     .rstoftext {
-        font-size: 7vw;
+        font-size: 2rem;
     }
 
     .secOne .row .col .desc {
@@ -214,9 +225,12 @@
 
     }
 
-    .secOne .row .col .number span {
+    /* .secOne .row .col .number span {
         font-size: 5.6vw;
 
+    } */
+    .secOne .row .col .number span {
+        font-size: 30px;
     }
 
     .number {
@@ -239,7 +253,7 @@
     }
 
     .zoom-text {
-        font-size: 80px !important;
+        font-size: 65px !important;
     }
 
     .scroll-animation-container {
@@ -247,7 +261,7 @@
     }
 
     .bannercontainer {
-        padding-top: 135px;
+        padding-top: 115px;
         padding-bottom: 45px;
     }
 
@@ -256,4 +270,23 @@
         padding-right: 0px;
 
     }
+
+    .mobile-view {
+        display: block;
+        margin-bottom: 50px;
+        /* Add desired space */
+        padding-bottom: 50px;
+        /* Optional, if padding is preferred */
+    }
+
+    .desktop-view {
+        display: none;
+    }
+
+    .secOne h1 {
+        line-height: 1.3 !important;
+    }
+
+ 
+
 }
