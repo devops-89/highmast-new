@@ -6,7 +6,6 @@ import shipImage1 from "../../assets/img/elements/retrofitservice.jpg";
 import shipImage2 from "../../assets/img/elements/serviceimg2.jpeg";
 import shipImage3 from "../../assets/img/elements/ampservice.jpg";
 import shipImage4 from "../../assets/img/elements/projectsupervisionservice.jpg";
-// import shipImage5 from "../../assets/img/elements/service5.jpg";
 import vesselsimg from "../../assets/img/elements/serviceimg5.jpg";
 
 import shipImage6 from "../../assets/img/elements/marineautomationservice.jpg";
@@ -60,6 +59,7 @@ const Servicesscroll = () => {
       gsap.to(texts, {
         backgroundPositionY: "0%",
         opacity: 1,
+        // y: -1600,
         y: -1600,
         stagger: 0.03,
         scrollTrigger: {
@@ -71,15 +71,19 @@ const Servicesscroll = () => {
       });
 
       gsap.to(imgContainerRef.current, {
+        // x: "-350vw",
         x: "-350vw",
+
         scrollTrigger: {
           trigger: containerParentRef.current,
           pin: true,
           scrub: 2,
           start: "center center",
           end: "+=1000",
+  
         },
       });
+
     });
 
     mm.add("(max-width: 768px)", () => {
@@ -95,8 +99,8 @@ const Servicesscroll = () => {
           scrub: 8,
           start: "center center ",
           end: `+=${containerWidth * 3.2}`, // Extended scroll range
-          kill:true,
-       },
+          kill: true,
+        },
       });
 
       const texts = textRef.current.querySelectorAll("p");
@@ -104,19 +108,18 @@ const Servicesscroll = () => {
       gsap.to(texts, {
         backgroundPositionY: "0%",
         opacity: 1,
-        y: -1600, // Adjusted for mobile
+        y: -1900, // Adjusted for mobile
         stagger: 0.05, // Slower stagger for mobile
         scrollTrigger: {
           trigger: containerParentRef.current,
-          scrub: 15,
+          scrub: 20,
           start: "center center",
           end: `+=${containerWidth * 3.2}`, // Match the extended scroll range
-},
+        },
       });
-      
     });
 
-   return () => {
+    return () => {
       mm.revert(); // Clean up
     };
   }, []);
