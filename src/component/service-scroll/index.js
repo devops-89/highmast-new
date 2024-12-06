@@ -60,7 +60,7 @@ const Servicesscroll = () => {
         backgroundPositionY: "0%",
         opacity: 1,
         // y: -1600,
-        y: -1600,
+        y: -2000,
         stagger: 0.03,
         scrollTrigger: {
           trigger: containerParentRef.current,

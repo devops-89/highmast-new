@@ -88,6 +88,8 @@ const ContactForm = () => {
     }
     if (!formData.message) {
       newErrors.message = "Message is required";
+    } else if (formData.message.length > 250) {
+      newErrors.message = "Message cannot exceed 250 characters";
     }
     return newErrors;
   };

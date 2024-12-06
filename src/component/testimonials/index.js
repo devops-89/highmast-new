@@ -17,14 +17,27 @@ const Testimonials = (props) => {
     if (swiperRef.current) {
       const swiper = swiperRef.current.swiper;
 
+      // // Scroll down if the Swiper is at the end
+      // if (swiper.isEnd) {
+      //   window.scrollBy({ top: 300, behavior: "smooth" });
+      // }
+
+      // // Scroll up if the Swiper is at the beginning
+      // if (swiper.isBeginning) {
+      //   window.scrollBy({ top: -300, behavior: "smooth" });
+      // }
       // Scroll down if the Swiper is at the end
       if (swiper.isEnd) {
-        window.scrollBy({ top: 300, behavior: "smooth" });
+        setTimeout(() => {
+          window.scrollBy({ top: 300, behavior: "smooth" });
+        }, 1000); // Delay for smoother transition when reaching the end
       }
 
       // Scroll up if the Swiper is at the beginning
       if (swiper.isBeginning) {
-        window.scrollBy({ top: -300, behavior: "smooth" });
+        setTimeout(() => {
+          window.scrollBy({ top: -300, behavior: "smooth" });
+        }, 1000); // Delay for smoother transition when reaching the beginning
       }
     }
   };
@@ -76,7 +89,12 @@ const Testimonials = (props) => {
                       color: "#e32226",
                       margin: "20px 0px",
                       fontWeight: "600",
-                      textAlign:{xs:"center",sm:"center",md:"left",lg:"left"}
+                      textAlign: {
+                        xs: "center",
+                        sm: "center",
+                        md: "left",
+                        lg: "left",
+                      },
                     }}
                   >
                     {props.name1}
@@ -113,7 +131,12 @@ const Testimonials = (props) => {
                       color: "#e32226",
                       margin: "20px 0px",
                       fontWeight: "600",
-                      textAlign:{xs:"center",sm:"center",md:"left",lg:"left"}
+                      textAlign: {
+                        xs: "center",
+                        sm: "center",
+                        md: "left",
+                        lg: "left",
+                      },
                     }}
                   >
                     {props.name2}
@@ -149,7 +172,12 @@ const Testimonials = (props) => {
                       color: "#e32226",
                       margin: "20px 0px",
                       fontWeight: "600",
-                      textAlign:{xs:"center",sm:"center",md:"left",lg:"left"}
+                      textAlign: {
+                        xs: "center",
+                        sm: "center",
+                        md: "left",
+                        lg: "left",
+                      },
                     }}
                   >
                     {props.name3}

@@ -71,14 +71,18 @@
 
 @media (max-width:768px) {
 
-    .mobileviewcommitments {
+     /* .mobileviewcommitments {
         margin-top: 65px;
-    }
+    }  */
 
 
-    .image-item.zoom {
+     .image-item.zoom {
 
         transform: translate(-50%, -50%) scale(var(--scale, 1.05)); 
-    }
+    } 
+    .zoom-text {
+        font-size: 50px;
+        transform: scale(1.2); /* Adjusted scale for mobile */
+      }
     
 }

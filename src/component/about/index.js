@@ -28,12 +28,11 @@ const Aboutsection = () => {
     };
   }, []);
 
-  // // Define the minimum and maximum values for scaling and font size
   // const minScale = 1; // minimum zoom level
   // const maxScale = 5; // maximum zoom level
 
-  // const minFontSize = 100; // minimum font size in px
-  // const maxFontSize = 300; // maximum font size in px
+  // const minFontSize = 100; // minimum font size in rem
+  // const maxFontSize = 300; // maximum font size in rem
 
   // const scaleValue = Math.min(
   //   maxScale,
@@ -43,24 +42,35 @@ const Aboutsection = () => {
   //   maxFontSize,
   //   Math.max(minFontSize, 30 - Math.cos(scrollY / 400) * 20)
   // );
+  const isMobile = window.innerWidth <= 768; // Mobile breakpoint
 
   // Define the minimum and maximum values for scaling and font size
   const minScale = 1; // minimum zoom level
   const maxScale = 5; // maximum zoom level
 
-  const minFontSize = 100; // minimum font size in rem
-  const maxFontSize = 300; // maximum font size in rem
+  // Define font size ranges for desktop and mobile
+  const minFontSizeDesktop = 100;
+  const maxFontSizeDesktop = 300;
 
+  const minFontSizeMobile = 70; // Fixed minimum for mobile
+  const maxFontSizeMobile = 50; // Fixed maximum for mobile
+
+  // Calculate scale value
   const scaleValue = Math.min(
     maxScale,
     Math.max(minScale, 1 - Math.cos(scrollY / 300))
   );
-  const fontSizeValue = Math.min(
-    maxFontSize,
-    Math.max(minFontSize, 30 - Math.cos(scrollY / 400) * 20)
-  );
 
-
+  // Adjust font size dynamically based on screen size
+  const fontSizeValue = isMobile
+    ? Math.min(
+        maxFontSizeMobile,
+        Math.max(minFontSizeMobile, 65) // Static value for mobile
+      )
+    : Math.min(
+        maxFontSizeDesktop,
+        Math.max(minFontSizeDesktop, 30 - Math.cos(scrollY / 400) * 20)
+      );
 
   return (
     <div>
@@ -69,7 +79,6 @@ const Aboutsection = () => {
           <div className="row">
             <div className="col-sm-12 mx-auto">
               <div className="scroll-animation-containerabout" ref={sectionRef}>
-          
                 <div
                   data-aos="zoom-in-up"
                   className="zoom-textAbout"

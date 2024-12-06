@@ -244,17 +244,17 @@
 
         background-attachment: scroll;
 
-        height: 80vh !important;
+        height: 100vh !important;
     }
 
-    .overlay {
-        height: 80vh !important;
+    .secOne .overlay {
+        height: 100vh !important;
 
     }
 
-    .zoom-text {
+    /* .zoom-text {
         font-size: 65px !important;
-    }
+    } */
 
     .scroll-animation-container {
         height: 20vh;

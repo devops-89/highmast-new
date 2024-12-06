@@ -3,9 +3,7 @@ import { Box, Typography, Tabs, Tab } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Mousewheel, Pagination } from "swiper/modules";
-
 import "./index.css";
-
 import mission from "../../assets/img/elements/eye.png";
 import vision from "../../assets/img/elements/mission.png";
 import Responsibility from "../../assets/img/elements/social.png";
@@ -13,7 +11,6 @@ import Responsibility from "../../assets/img/elements/social.png";
 function CoreValues() {
   const [value, setValue] = React.useState(0);
   const swiperRef = useRef(null);
-
 
   // Sync Swiper with Tabs
   const handleTabChange = (event, newValue) => {
@@ -29,7 +26,10 @@ function CoreValues() {
 
     // If the user scrolls backward to the first slide, scroll out of the section
     if (swiper.activeIndex === 0 && swiper.isBeginning) {
-      window.scrollBy({ top: -300, behavior: "smooth" });
+      // window.scrollBy({ top: -300, behavior: "smooth" });
+      setTimeout(() => {
+        window.scrollBy({ top: -300, behavior: "smooth" });
+      }, 1500); // Delay for smoother transition
     }
   };
 
@@ -37,9 +37,8 @@ function CoreValues() {
   const handleReachEnd = () => {
     setTimeout(() => {
       window.scrollBy({ top: 300, behavior: "smooth" });
-    }, 500); // Delay for smoother transition
+    }, 1500); // Delay for smoother transition
   };
-
 
   return (
     <Box className="container corevaluessection">
@@ -86,7 +85,11 @@ function CoreValues() {
                     />
                   </Box>
                 </div>
-                <div className="col-sm-8 valueparent2" data-aos-mirror="true" data-aos="fade-left">
+                <div
+                  className="col-sm-8 valueparent2"
+                  data-aos-mirror="true"
+                  data-aos="fade-left"
+                >
                   <Box>
                     <Typography variant="h1">Mission</Typography>
                     <Typography

@@ -44,16 +44,16 @@ const MarineElectricalandAutomation = () => {
         <ServicesPointers
           img={pointersimg}
           subheading="Support Services"
-          name1="Engine Types: "
-          name2="Supported Brands:"
-          name3="Specialized Engineers:"
-          name4="Additional Services: "
-          name5="Geographic Reach: "
-          pointername1=" Expertise in overhauling 2-stroke and 4-stroke engines, including ME & MC types and dual-fuel engines."
-          pointername2="MAN B&W, Wartsila, Mitsubishi, Hyundai, Doosan, STX, MTU, Yanmar, Cummins, Daihatsu, Caterpillar."
-          pointername3="Service engineers for Turbo Chargers and Governors."
-          pointername4="Multi-stage pumps, cargo pumps, and tank cleaning machines."
-          pointername5="Available at Singapore, Malaysia anchorage, and along the Indian coast."
+          name1="Fault Rectification: "
+          name2="Troubleshooting Assistance:"
+          name3="Sensor Malfunction Resolution:"
+          name4="Communication & Power Issues: "
+          name5="Mechanical Integrity: "
+          pointername1="Specialized in resolving electrical and mechanical faults in ship machinery to ensure seamless operations."
+          pointername2=" Expertise in investigating machinery failures and guiding resolution through advanced diagnostic techniques."
+          pointername3="Addressing issues caused by software glitches, bugs, or errors leading to unexpected behavior."
+          pointername4=" Resolving communication failures and power supply disruptions critical for system functionality."
+          pointername5="Addressing wear and tear in components to maintain machinery performance and reliability."
         />
         <Additinalservices
           mainheading="ADVANCE SOLUTIONS"

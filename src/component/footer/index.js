@@ -19,13 +19,15 @@ import {
   LocalPhone,
   LocationOn,
   MailOutline,
-  Twitter,
+
 } from "@mui/icons-material";
+import XIcon from '@mui/icons-material/X';
 import { Link } from "react-router-dom";
 import { Stack } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 import { Bars } from "react-loader-spinner";
 const Footer = () => {
   const location = useLocation(); // Get current location
@@ -126,7 +128,7 @@ const Footer = () => {
                 <Facebook />
               </a>
               <a href="https://twitter.com">
-                <Twitter />{" "}
+<XIcon/>             {" "}
               </a>
               <a href="https://linkedin.com">
                 <LinkedIn />
