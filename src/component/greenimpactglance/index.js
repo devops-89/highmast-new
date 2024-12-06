@@ -50,13 +50,17 @@ const ScrollAnimation = () => {
   //   Math.max(minFontSize, 30 - Math.cos(scrollY / 400) * 20)
   // );
   // Define the minimum and maximum values for scaling and font size
-  const minScale = 1; // minimum zoom level
-  const maxScale = 5; // maximum zoom level
+  // const minScale = 1; // minimum zoom level
+  // const maxScale = 5; // maximum zoom level
+  const minScale = 1;  // No scaling, normal size
+  const maxScale = 1;  // Maximum scale of 1.5x for mobile
+  const desktopscale = 1.5;
+  
 
   const minFontSizeDesktop = 450; // minimum font size for desktop in px
   const maxFontSizeDesktop = 250; // maximum font size for desktop in px
 
-  const minFontSizeMobile = 40; // minimum font size for mobile in px
+  const minFontSizeMobile = 70; // minimum font size for mobile in px
   const maxFontSizeMobile = 90; // maximum font size for mobile in px
 
   // Determine if the screen is mobile
@@ -66,7 +70,7 @@ const ScrollAnimation = () => {
   const fontSizeValue = isMobile
     ? Math.min(
         maxFontSizeMobile,
-        Math.max(minFontSizeMobile, 90 - Math.cos(scrollY / 400) * 4)
+        Math.max(minFontSizeMobile, 40 - Math.cos(scrollY / 400) * 100)
       )
     : Math.min(
         maxFontSizeDesktop,
@@ -75,7 +79,7 @@ const ScrollAnimation = () => {
 
   const scaleValue = isMobile
     ? Math.min(maxScale, Math.max(minScale, 1 - Math.cos(scrollY / 500)))
-    : Math.min(maxScale, Math.max(minScale, 1 - Math.cos(scrollY / 300)));
+    : Math.min(desktopscale, Math.max(minScale, 1 - Math.cos(scrollY / 300))); //desktop scaling//
 
   return (
     <>
