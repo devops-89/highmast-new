@@ -5,11 +5,19 @@ import AOS from "aos";
 import DirectionsBoatIcon from "@mui/icons-material/DirectionsBoat";
 import Servicesscroll from "../../component/service-scroll";
 import Majorservice from "../../component/majorservice";
+import { useLocation } from "react-router-dom";
+
 
 const Service = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Customize duration as needed
-  }, []);
+    AOS.init({
+      // delay: 500,
+      mirror: false,
+    });
+    AOS.refresh();
+  }, []); // Add the dependency array to ensure it runs only once
+
+
   return (
     <div>
       <section className="servicebanner secOne2   ">
@@ -20,7 +28,6 @@ const Service = () => {
             data-aos="fade-up"
             duration="200"
           >
-     
             <div
               className="section-title desktop"
               data-aos="fade-up"

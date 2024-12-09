@@ -50,6 +50,11 @@ const Servicesscroll = () => {
   };
 
   useEffect(() => {
+    // Add a small delay to ensure content loads first
+    setTimeout(() => {
+      window.scrollTo(0, 0); // Ensure the page starts at the top
+    }, 100); // Delay of 100ms (you can adjust this time if needed)
+
     const mm = gsap.matchMedia();
 
     // Desktop Animations
@@ -118,6 +123,7 @@ const Servicesscroll = () => {
         },
       });
     });
+
 
     return () => {
       mm.revert(); // Clean up

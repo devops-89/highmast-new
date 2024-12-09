@@ -26,49 +26,39 @@ const Router = () => {
       <Navbar />
       <ScrollToTop />
       <Routes>
-        <Route index path="/" element={<Home />}></Route>
-        <Route index path="/about-us" element={<About />}></Route>
-        <Route index path="/contact-us" element={<Contactus />}></Route>
-        <Route index path="/services" element={<Service />}></Route>
-        <Route index path="/thank-you" element={<ThankYou />}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about-us" element={<About />}></Route>
+        <Route path="/contact-us" element={<Contactus />}></Route>
+        <Route path="/services" element={<Service />}></Route>
+        <Route path="/thank-you" element={<ThankYou />}></Route>
 
         <Route
-          index
           path="/retrofit-led-power-saving-solutions"
           element={<Retrofit />}
         ></Route>
 
         <Route
-          index
           path="/scrubber-and-ccs-commisioning"
           element={<Scrubber />}
         ></Route>
+        <Route path="/amp-solutions-and-vdf-retrofit" element={<Amp />}></Route>
         <Route
-          index
-          path="/amp-solutions-and-vdf-retrofit"
-          element={<Amp />}
-        ></Route>
-        <Route
-          index
           path="/project-supervision-shipbuilding-and-ship-repairs"
           element={<Projectsupervision />}
         ></Route>
         <Route
-          index
           path="/vessel-3d-scanning-and-production-design"
           element={<Vessels3d />}
         ></Route>
-            <Route
-          index
+        <Route
           path="/marine-electrical-&-automation"
-          element={<MarineElectricalandAutomation/>}
+          element={<MarineElectricalandAutomation />}
         ></Route>
         <Route
-          index
           path="/terms-and-conditions"
-          element={<TermsAndCondition/>}
+          element={<TermsAndCondition />}
         ></Route>
-        <Route index path="/privacy-policy" element={<Privacypolicy />}></Route>
+        <Route path="/privacy-policy" element={<Privacypolicy />}></Route>
       </Routes>
       <Footer />
     </div>
