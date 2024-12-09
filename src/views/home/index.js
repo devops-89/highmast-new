@@ -5,7 +5,7 @@ import "./index.css";
 import "aos/dist/aos.css";
 
 import Aboutsection from "../../component/about";
-import FAQSection from "../../component/faq";
+import FAQSection from "../../component/contactlocation";
 
 import Servicesscroll from "../../component/service-scroll";
 

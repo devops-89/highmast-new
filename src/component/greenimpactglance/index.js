@@ -34,28 +34,9 @@ const ScrollAnimation = () => {
     };
   }, []);
 
-  // // Define the minimum and maximum values for scaling and font size
-  // const minScale = 1; // minimum zoom level
-  // const maxScale = 5; // maximum zoom level
-
-  // const minFontSize = 450; // minimum font size in rem
-  // const maxFontSize = 250; // maximum font size in rem
-
-  // const scaleValue = Math.min(
-  //   maxScale,
-  //   Math.max(minScale, 1 - Math.cos(scrollY / 300))
-  // );
-  // const fontSizeValue = Math.min(
-  //   maxFontSize,
-  //   Math.max(minFontSize, 30 - Math.cos(scrollY / 400) * 20)
-  // );
-  // Define the minimum and maximum values for scaling and font size
-  // const minScale = 1; // minimum zoom level
-  // const maxScale = 5; // maximum zoom level
-  const minScale = 1;  // No scaling, normal size
-  const maxScale = 1;  // Maximum scale of 1.5x for mobile
+  const minScale = 1; // No scaling, normal size
+  const maxScale = 1; // Maximum scale of 1.5x for mobile
   const desktopscale = 1.5;
-  
 
   const minFontSizeDesktop = 450; // minimum font size for desktop in px
   const maxFontSizeDesktop = 250; // maximum font size for desktop in px
@@ -125,7 +106,6 @@ const ScrollAnimation = () => {
                   fontWeight: "600",
                   color: "#fff",
                   textTransform: "uppercase",
-
                 }}
               >
                 Commitments

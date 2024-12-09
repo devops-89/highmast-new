@@ -4,7 +4,7 @@ import "./index.css";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import googlemapimg from "../../assets/img/elements/googlemapimg.png";
 import globebannerimg from "../../assets/img/elements/globeimg.png";
-import Contactaddress from "../../component/faq";
+import Contactaddress from "../../component/contactlocation";
 import Contactseection from "../../component/contactsection";
 
 const Contactus = () => {
