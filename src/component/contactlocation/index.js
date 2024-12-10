@@ -125,7 +125,10 @@ const Contactaddress = ({ contactaddressdata }) => {
                   </AccordionSummary>
                   <AccordionDetails sx={{ padding: 4 }}>
                     <div className="row">
-                      <div className="col-sm-6 mb-4 " style={{ textAlign: "left" }}>
+                      <div
+                        className="col-sm-6 mb-4 "
+                        style={{ textAlign: "left" }}
+                      >
                         <Typography sx={{ fontWeight: "600" }}>
                           {" "}
                           {address.addressheading}
@@ -155,7 +158,16 @@ const Contactaddress = ({ contactaddressdata }) => {
                               fontSize: { xs: "14px", md: "20px", lg: "20px" },
                             }}
                           >
-                            {address.phoneno}
+                            {/* {address.phoneno} */}
+                            <a
+                              href={`tel:${address.phoneno}`}
+                              style={{
+                                textDecoration: "none",
+                                color: "inherit",
+                              }}
+                            >
+                              {address.phoneno}
+                            </a>
                           </Typography>
                           <Typography sx={{ fontWeight: "600" }}>
                             Email:
@@ -166,7 +178,16 @@ const Contactaddress = ({ contactaddressdata }) => {
                             }}
                           >
                             {" "}
-                            {address.email}
+                            {/* {address.email} */}
+                            <a
+                              href={`mailto:${address.email}`}
+                              style={{
+                                textDecoration: "none",
+                                color: "inherit",
+                              }}
+                            >
+                              {address.email}
+                            </a>
                           </Typography>
                         </div>
                       </div>
