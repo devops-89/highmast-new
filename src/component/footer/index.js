@@ -130,7 +130,7 @@ const Footer = () => {
               <a href="https://twitter.com">
 <XIcon/>             {" "}
               </a>
-              <a href="https://linkedin.com">
+              <a href="https://www.linkedin.com/company/high-mast-marine-services/about/">
                 <LinkedIn />
               </a>
             </div>
