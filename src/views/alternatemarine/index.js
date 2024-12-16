@@ -35,16 +35,16 @@ const Amp = () => {
         <ServicesPointers
           img={pointersimg}
           subheading="Support Services"
-          name1="Carbon Sequestration: "
-          name2="CCS Process: "
-          name3="Enhanced Oil Recovery (EOR):"
-          name4="Carbon Utilization:"
-          name5="Onboard CO2 Utilization:"
-          pointername1="Expertise in storing CO2 in geological formations like oil reservoirs and aquifers."
-          pointername2="Securely trapping CO2 underground to prevent atmospheric release."
-          pointername3="Boosting oil production through CO2 injection in reservoirs."
-          pointername4="Converting CO2 into valuable products such as chemicals, fuels, and plastics."
-          pointername5="Using captured CO2 for onboard processes or enhanced oil recovery when applicable."
+          name1="LED:"
+          name2="SCRUBBER AND CCS: "
+          name3="AMP AND VDF: "
+          name4="VESSEL 3 D SCANNING:"
+          name5="PROJECT SUPERVISION:"
+          pointername1="Low heat Emmision and low operating costs contributing to GHG emmisions for the future"
+          pointername2="Controlling the Sulphur and Carbon emission from the vessels for the future to achieve the 2050 zero emission deadline"
+          pointername3="forthcoming  anti-pollution measure which we can install on ships / ports  "
+          pointername4="Entire designing by our naval architects till satisfactory commisioning"
+          pointername5="Retrofit and conversions projects at our JV yards in China / Turkey"
         />
         <ExpertiesComponent
           mainheading="Clean Port Powering"
