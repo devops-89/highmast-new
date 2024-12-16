@@ -70,7 +70,7 @@ const ServicesPointers = (props) => {
             <div className="col-sm-3">
               <Typography
                 className="pointershead "
-                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "15px" } }}
               >
                 {props.name1}
               </Typography>
@@ -78,7 +78,7 @@ const ServicesPointers = (props) => {
             <div className="col-sm-9">
               <Typography
                 className="pointername"
-                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "15px" } }}
               >
                 {props.pointername1}
               </Typography>
@@ -94,7 +94,7 @@ const ServicesPointers = (props) => {
             <div className="col-sm-3">
               <Typography
                 className="pointershead"
-                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "15px" } }}
               >
                 {props.name2}
               </Typography>
@@ -102,7 +102,7 @@ const ServicesPointers = (props) => {
             <div className="col-sm-9">
               <Typography
                 className="pointername"
-                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "15px" } }}
               >
                 {props.pointername2}
               </Typography>
@@ -118,7 +118,7 @@ const ServicesPointers = (props) => {
             <div className="col-sm-3">
               <Typography
                 className="pointershead"
-                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "1rem" } }}
+                sx={{ fontSize: { xs: "13px", md: "1rem", lg: "17px" } }}
               >
                 {props.name3}
               </Typography>
