@@ -12,7 +12,7 @@ const Commitsmentcomponent = () => {
       <main className="text-center grid-container ">
         <div className="allsection section1"  data-aos="flip-left" >
           <div className="content">
-            <h2>FGSS – LNG/LEG</h2>
+            <h2>FGSS – LNG/LEG </h2>
             <p>
               Fuel Gas Supply Systems are designed to power ships with Liquefied
               Natural Gas (LNG) and Ethylene Gas (LEG), reducing carbon emissions.
