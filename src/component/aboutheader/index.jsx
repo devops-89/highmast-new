@@ -11,10 +11,7 @@ const AboutHeader = () => {
       {/* Desktop View */}
       <div className="desktop-view main-container">
       {/* <img src="/about/staring.png" alt="staring"  className="steering_img" /> */}
-      <div className="absolute-section">
-              <h2>We Are</h2>
-              <h4>Available 24X7 For All Supports Needed For Our Customers.</h4>
-            </div>
+     
         <div className="content-container">
           {/* Left Section (Text Content) */}
           <div className="text-section">
@@ -47,7 +44,12 @@ const AboutHeader = () => {
                   compliance and offer a wide range of eco-friendly solutions,
                   always delivering as expected to our clients.
                 </p>
+                <div className="absolute-section">
+              <h2>We Are</h2>
+              <h4>Available 24X7 For All Supports Needed For Our Customers.</h4>
+            </div>
               </div>
+              
             </div>
            
 
