@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Margin } from "@mui/icons-material";
 
 const Contactaddress = ({ contactaddressdata }) => {
   const [scrollY, setScrollY] = useState(0);
@@ -21,8 +20,12 @@ const Contactaddress = ({ contactaddressdata }) => {
     };
 
     window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function with null check for `window`
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
 
@@ -34,7 +37,7 @@ const Contactaddress = ({ contactaddressdata }) => {
   };
 
   return (
-    <div className="container  contactmobilebaner allpadding">
+    <div className="container contactmobilebaner allpadding">
       <Box sx={{ width: "100%", padding: 0 }}>
         <Typography
           variant="h2"
@@ -42,7 +45,6 @@ const Contactaddress = ({ contactaddressdata }) => {
           gutterBottom
           sx={{
             marginBottom: 4,
-            fontFamily: "roboto",
             fontSize: { xs: "40px", md: "70px", lg: "70px" },
             color: "#fff",
             fontFamily: "poppins",
@@ -95,26 +97,17 @@ const Contactaddress = ({ contactaddressdata }) => {
                             fontFamily: "poppins",
                           }}
                         >
-                          <span
-                            className="contactlocationicon"
-                            // style={{
-                            //   marginRight: "40px",
-                            //   fontSize: "40px",
-                            //   fontWeight: "600",
-                            //   marginLeft: "40px",
-                            // }}
-                          >
+                          <span className="contactlocationicon">
                             {address.icon}
                           </span>
                           {address.countryname}
                         </Typography>
                       </div>
-                      <div className="col-6 text-left px-3  py-4 contactlocbg">
+                      <div className="col-6 text-left px-3 py-4 contactlocbg">
                         <Typography
                           sx={{
                             fontFamily: "poppins",
                             textAlign: "left",
-
                             fontSize: { xs: "15px", md: "20px", lg: "20px" },
                           }}
                         >
@@ -126,11 +119,10 @@ const Contactaddress = ({ contactaddressdata }) => {
                   <AccordionDetails sx={{ padding: 4 }}>
                     <div className="row">
                       <div
-                        className="col-sm-6 mb-4 "
+                        className="col-sm-6 mb-4"
                         style={{ textAlign: "left" }}
                       >
                         <Typography sx={{ fontWeight: "600" }}>
-                          {" "}
                           {address.addressheading}
                         </Typography>
                         <Typography
@@ -145,20 +137,15 @@ const Contactaddress = ({ contactaddressdata }) => {
                             fontSize: { xs: "14px", md: "20px", lg: "20px" },
                           }}
                         >
-                          {" "}
                           {address.addresdetailspin}
                         </Typography>
-
-                        <div class="mt-3">
-                          <Typography sx={{ fontWeight: "600" }}>
-                            Phone:
-                          </Typography>
+                        <div className="mt-3">
+                          <Typography sx={{ fontWeight: "600" }}>Phone:</Typography>
                           <Typography
                             sx={{
                               fontSize: { xs: "14px", md: "20px", lg: "20px" },
                             }}
                           >
-                            {/* {address.phoneno} */}
                             <a
                               href={`tel:${address.phoneno}`}
                               style={{
@@ -169,16 +156,12 @@ const Contactaddress = ({ contactaddressdata }) => {
                               {address.phoneno}
                             </a>
                           </Typography>
-                          <Typography sx={{ fontWeight: "600" }}>
-                            Email:
-                          </Typography>
+                          <Typography sx={{ fontWeight: "600" }}>Email:</Typography>
                           <Typography
                             sx={{
                               fontSize: { xs: "14px", md: "20px", lg: "20px" },
                             }}
                           >
-                            {" "}
-                            {/* {address.email} */}
                             <a
                               href={`mailto:${address.email}`}
                               style={{

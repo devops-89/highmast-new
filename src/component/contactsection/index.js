@@ -21,23 +21,25 @@ const Contactseection = () => {
   }, []);
 
   return (
-    <div>
+    <div className=" contact-section-container" >
       <Box
         sx={{
-          padding: { xs: "0px 12px ", md: "0px 0px", lg: "0px 0px" },
+          height:"100%",
+          padding: { xs: "0px px ", md: "0px 0px", lg: "0px 0px" },
         }}
       >
         <div
           className="container"
           style={{
-            border: fixed ? "1px solid #d7d7d7" : "1px solid #121a27",
-            paddingTop: "10px",
-            paddingBottom: "0px",
+            // border: fixed ? "1px solid #d7d7d7" : "1px solid #121a27",
+            
+            
+           
             paddingRight:{xs:"0px",md:"50px",lg:"50px"},
 
             marginTop: "1rem",
             borderRadius: "0.5rem",
-            backgroundColor: fixed ? "rgb(16 59 81 / 15%)" : "transparent",
+            // backgroundColor: fixed ? "rgb(16 59 81 / 15%)" : "transparent",
             backdropFilter: fixed ? "blur(5px)" : "none",
           }}
         >

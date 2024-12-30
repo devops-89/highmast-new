@@ -1,6 +1,6 @@
 .servicebanner {
 
-    background-color: #031C32;
+    background-color: #002C30;
     width: 100%;
     background-repeat: no-repeat;
   
@@ -27,15 +27,21 @@
   }
   .borderboxes .box-title h3 {
     font-family: poppins;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
   }
   .borderboxes svg {
     color:#6CBBC8 ;
     margin-bottom: 20px;
   }
+  .box-content{
+        font-size: 20px;
+  }
   @media (max-width:768px) {
     .borderboxes {
       height: 100%;
+    }
+    .box-content{
+      font-size: 14px;
     }
   }

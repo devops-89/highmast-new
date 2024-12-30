@@ -1,9 +1,13 @@
+.termsconditions{
+    background-color:#2A5962;;
+}
 .termsconditions h4 {
     font-size: 30px;
     color: #fff;
     font-family: poppins;
     font-weight: 600;
     margin:20px 0px ;
+   
 }
 .Termsconditionslist li {
     color: red;

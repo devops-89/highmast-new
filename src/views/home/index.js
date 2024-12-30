@@ -12,7 +12,7 @@ import Servicesscroll from "../../component/service-scroll";
 import ScrollAnimation from "../../component/greenimpactglance";
 import Contactseection from "../../component/contactsection";
 import AnoetherSection from "../../component/commitments";
-import Ourclients from "../../component/our-clients";
+// import Ourclients from "../../component/our-clients";
 import Commitsmentcomponent from "../../component/commitments";
 import Homepagebanner from "../../component/homebanner";
 
@@ -24,7 +24,7 @@ const Home = () => {
       <Commitsmentcomponent />
       <Servicesscroll />
 
-      <Ourclients />
+      {/* <Ourclients /> */}
       <Contactseection />
     </div>
   );

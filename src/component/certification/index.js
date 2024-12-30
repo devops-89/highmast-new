@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import React, { useEffect } from "react";
-import anchorimg from "../../assets/img/elements/anchor.png";
+import anchorimg from "../../assets/img/elements/anchor-desktop.png";
 import "./index.css";
 
 import certificationimg1 from "../../assets/img/elements/certificationimg1.png";
@@ -11,6 +11,7 @@ import certificationimg4 from "../../assets/img/elements/certificationimg4.png";
 const Certification = () => {
  
   return (
+    <div className="container-fluid" style={{backgroundColor:"#2A5962"}}>
     <div className="container allpadding pb-0">
       <div>
         <h2 className="headingcenter" data-aos="fade-up">
@@ -36,7 +37,7 @@ const Certification = () => {
                   fontSize: {
                     xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
                     sm: "1rem", // Slightly larger for tablets and small screens
-                    md: "1rem",
+                    md: "20px",
                   },
                 }}
               >
@@ -62,7 +63,7 @@ const Certification = () => {
                   fontSize: {
                     xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
                     sm: "1rem", // Slightly larger for tablets and small screens
-                    md: "1rem",
+                    md: "20px",
                   },
                 }}
               >
@@ -96,7 +97,7 @@ const Certification = () => {
                   fontSize: {
                     xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
                     sm: "1rem", // Slightly larger for tablets and small screens
-                    md: "1rem",
+                    md: "20px",
                   },
                 }}
               >
@@ -121,7 +122,7 @@ const Certification = () => {
                   fontSize: {
                     xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
                     sm: "1rem", // Slightly larger for tablets and small screens
-                    md: "1rem",
+                    md: "20px",
                   },
                 }}
               >
@@ -132,6 +133,7 @@ const Certification = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Retrofit = () => {
     });
   }, []); // Add the dependency array to ensure it runs only once
   return (
-    <div>
+    <div style={{backgroundColor:"#002C30"}}>
       <div className="container-fluid px-0">
         <section className="retrobanner servicesbanner  secOne2 ">
           <div className="servicesbanneroverlay"></div>{" "}

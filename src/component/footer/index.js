@@ -96,7 +96,7 @@ const Footer = () => {
     }
   };
   return (
-    <div className="footer ">
+    <div className="container-fluid footer " style={{paddingTop:"10px"}}>
       <div className="container">
         <hr style={{ color: "#fff" }}></hr>
 

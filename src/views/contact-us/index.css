@@ -13,7 +13,7 @@
 
 .conatactbanner {
 
-  background-color: #031C32;
+  background-color:  #2A5962;
   width: 100%;
   background-repeat: no-repeat;
 
@@ -64,7 +64,7 @@
 
 .box-content {
   margin-top: 10px;
-  font-size: 1em;
+  font-size: 10px;
   color: #fff;
 }
 
@@ -112,5 +112,9 @@
   } */
   .contactmobilebaner {
     padding-bottom: 0px;
+    padding-inline: 10px;
+  }
+  .box-content{
+    font-size: 10px;
   }
 }

@@ -19,7 +19,7 @@ const Service = () => {
 
 
   return (
-    <div>
+    <div style={{backgroundColor:"#002C30"}}>
       <section className="servicebanner secOne2   ">
         {/* Add this div for the overlay */}
         <div className="container bannercontainer">
@@ -51,8 +51,7 @@ const Service = () => {
           </div>
         </div>
         {/* Boxes Section */}
-      </section>
-      <section className="container">
+        <section className="container" style={{backgroundColor:"#002C30"}}>
         <div className="row">
           <div
             className="col-sm-3  mb-4 "
@@ -134,6 +133,8 @@ const Service = () => {
           </div>
         </div>
       </section>
+      </section>
+    
       <Servicesscroll />
       <Majorservice />
     </div>

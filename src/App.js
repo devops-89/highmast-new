@@ -8,15 +8,26 @@ import AOS from "aos";
 function App() {
   useEffect(() => {
     AOS.init({
-      // delay: 500,
-      mirror: false,
+      mirror: false, // Set mirror to false for better control over animations
     });
-    AOS.refresh(); // Ensures animations apply to all elements
-  }, []); // Add the dependency array to ensure it runs only once
+    AOS.refresh(); // Refresh to ensure animations apply to all elements
+  }, []); // Dependency array to run only once on mount
 
   return (
     <div className="App">
+      {/* Video Section */}
+      <div className="video-container">
+        <video autoPlay loop muted className="video">
+          <source src="/header/header.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      {/* Main Application Routes */}
       <Router />
+
+      {/* Example Modal Component (if required) */}
+      <Modal />
     </div>
   );
 }

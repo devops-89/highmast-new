@@ -1,12 +1,30 @@
 
+.scrollable-container{
+    /* background-color: #031C32; */
+    height:80vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    background-color:  #2A5962 !important;
+  
+}
 .scroll-animation-container {
     position: relative;
-    height: 60vh;
+    height: 40vh;
    
+   
+  }
+
+  .commitsmenttext{
+   
+    width: 85%;
+    margin:auto;
   }
   
   .zoom-text {
     position: absolute;
+
     left: 0%;
     right: 0%;
     transform: translate(-50%, -50%);
@@ -75,6 +93,19 @@
         margin-top: 65px;
     }  */
 
+    .scrollable-container{
+        /* background-color: #031C32; */
+        height:40vh;
+      
+        background-color:  #2A5962 !important;
+      
+    }
+    .scroll-animation-container {
+        position: relative;
+        height: 15vh;
+       
+       
+      }
 
      .image-item.zoom {
 

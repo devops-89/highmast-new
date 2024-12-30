@@ -1,9 +1,23 @@
+.core-value-container{
+  background-color: #002C30;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.corevaluessection{
+ 
+ padding-block: 10px;
+ 
+}
 .corevaluessection .heading {
   /* font-size: 80px; */
   color: #fff;
   font-family: poppins;
   font-weight: 600;
 }
+
+
 
 .corevaluessection .tabs-section {
   margin-top: 20px;

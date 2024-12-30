@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import "./index.css";
 import shipImage1 from "../../assets/img/elements/retrofitservice.jpg";
 import shipImage2 from "../../assets/img/elements/serviceimg2.jpeg";
 import shipImage3 from "../../assets/img/elements/ampservice.jpg";
 import shipImage4 from "../../assets/img/elements/projectsupervisionservice.jpg";
 import vesselsimg from "../../assets/img/elements/serviceimg5.jpg";
-
 import shipImage6 from "../../assets/img/elements/marineautomationservice.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -27,15 +27,13 @@ const Servicesscroll = () => {
   ];
   const textItems = [
     "Retrofit Led Power <br/> Saving Solutions",
-
     "Scrubber & Ccs Commisioning ",
     "Alternate Marine Power <br/> AMP Solutions",
     "Project Supervision Shipbuilding & <br/> Repairs",
-
     "Vessel 3D scanning <br/> & Production design",
     "Marine Electrical <br/> & Automation",
   ];
-  // Define the corresponding URLs for redirection
+
   const redirectUrls = [
     "/retrofit-led-power-saving-solutions",
     "/scrubber-and-ccs-commisioning",
@@ -46,49 +44,49 @@ const Servicesscroll = () => {
   ];
 
   const handleRedirect = (url) => {
-    window.location.href = url; // Redirect to the specified URL
+    window.location.href = url;
   };
 
   useEffect(() => {
-    // Add a small delay to ensure content loads first
-    setTimeout(() => {
-      window.scrollTo(0, 0); // Ensure the page starts at the top
-    }, 100); // Delay of 100ms (you can adjust this time if needed)
-
     const mm = gsap.matchMedia();
 
-    // Desktop Animations
     mm.add("(min-width: 769px)", () => {
       const texts = textRef.current.querySelectorAll("p");
+      const images = imgContainerRef.current.querySelectorAll(".image-wrapper");
 
-      gsap.to(texts, {
-        backgroundPositionY: "0%",
-        opacity: 1,
-        // y: -1600,
-        y: -2000,
-        stagger: 0.03,
+      gsap.timeline({
         scrollTrigger: {
           trigger: containerParentRef.current,
-          scrub: 18,
-          start: "top center",
-          end: "bottom top",
-        },
-      });
-
-      gsap.to(imgContainerRef.current, {
-        // x: "-350vw",
-        x: "-350vw",
-
-        scrollTrigger: {
-          trigger: containerParentRef.current,
+          scroller: "body",
           pin: true,
-          scrub: 2,
-          start: "center center",
-          end: "+=1000",
-  
+          scrub: 0.5,
+          start: "top 0%",
+          end: "bottom -800%",
         },
-      });
-
+      })
+        .to(
+          texts,
+          {
+            backgroundPositionY: "0%",
+            opacity: 1,
+            y: -2000,
+            duration: 10,
+            stagger: 1.5,
+            ease: "power1.out",
+          },
+          "start"
+        )
+        .to(
+          images,
+          {
+            delay: 0.5,
+            x: "-350vw",
+            duration: 10,
+            stagger: 1.5,
+            ease: "power1.out",
+          },
+          "start"
+        );
     });
 
     mm.add("(max-width: 768px)", () => {
@@ -126,12 +124,12 @@ const Servicesscroll = () => {
 
 
     return () => {
-      mm.revert(); // Clean up
+      mm.revert();
     };
   }, []);
 
   return (
-    <div className="containerparent allpadding" ref={containerParentRef}>
+    <div className="container-fluid containerparent allpadding" ref={containerParentRef}>
       <div className="img-container" ref={imgContainerRef}>
         {images.map((src, index) => (
           <div className="row" key={index}>
@@ -148,17 +146,18 @@ const Servicesscroll = () => {
         ))}
       </div>
 
-      <div className="text container " ref={textRef}>
+      <div className="text container" ref={textRef}>
         {textItems.map((text, index) => (
           <p
             key={index}
             dangerouslySetInnerHTML={{ __html: text }}
-            onClick={() => handleRedirect(redirectUrls[index])} // Add click handler
-            style={{ cursor: "pointer" }} // Change cursor to pointer to indicate clickable
+            onClick={() => handleRedirect(redirectUrls[index])}
+            style={{ cursor: "pointer" }}
           />
-          // <p key={index} dangerouslySetInnerHTML={{ __html: text }} />
         ))}
       </div>
+      {/* End fix element to prevent space */}
+      <div className="scroll-trigger-end-fix"></div>
     </div>
   );
 };
