@@ -3,12 +3,18 @@ import "./index.css"; // Import the CSS file
 import { GrUserPolice } from "react-icons/gr";
 import { TfiMoney } from "react-icons/tfi";
 
+
 const AboutHeader = () => {
   return (
     <div  style={{ backgroundColor: "white",overflow:"hidden" }}>
-      <div className="container-fluid">
+      <div className="container-fluid parent-container">
       {/* Desktop View */}
       <div className="desktop-view main-container">
+      {/* <img src="/about/staring.png" alt="staring"  className="steering_img" /> */}
+      <div className="absolute-section">
+              <h2>We Are</h2>
+              <h4>Available 24X7 For All Supports Needed For Our Customers.</h4>
+            </div>
         <div className="content-container">
           {/* Left Section (Text Content) */}
           <div className="text-section">
@@ -28,6 +34,7 @@ const AboutHeader = () => {
                   projects for more than 20 vessels in shipyards across Japan,
                   Korea, and China.
                 </p>
+                <img src="/about/staring.png" alt="staring"   className="steering_img" />
               </div>
 
               <div style={{ height: "250px",width:"0px", border: "2px solid black" }}></div>
@@ -42,24 +49,27 @@ const AboutHeader = () => {
                 </p>
               </div>
             </div>
+           
 
             {/* staring section */}
 
             {/* absolute section  */}
-            <div className="absolute-section">
-              <h2>We Are</h2>
-              <h4>Available 24X7 For All Supports Needed For Our Customers.</h4>
-            </div>
+           
           </div>
 
 
 
           {/* Right Section (Image with Hover Effect) */}
           <div className="image-section">
-            <div className="about-image-wrapper"></div>
+          
+          <img src="/about.webp"  alt="image" className="about-image"  />
+
+        
+        
+       
           </div>
         </div>
-        <img src="/about/staring.png" alt="staring"  className="steering_img" />
+      
       </div>
       </div>
 
