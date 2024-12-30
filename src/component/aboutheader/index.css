@@ -8,7 +8,7 @@
 }
 
 .main-container {
-  height: 110vh;
+  /* height: 110vh; */
   padding-block: 10vh;
   width: 100%;
   position: relative;
@@ -26,6 +26,7 @@
   margin: auto;
   gap: 30px;
   height: 100%;
+ 
 }
 
 .text-section h1 {
@@ -38,7 +39,7 @@
 }
 
 .text-content {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -56,20 +57,18 @@
 }
 
 .image-section {
-  width: 38%;
-  height: 90%;
-  position: relative;
+  width: 40%;
+
+ 
+ 
   z-index: 5;
+  overflow: hidden;
 }
 
-.about-image-wrapper {
+.about-image{
   width: 100%;
-  height: 100%;
-  background-image: url("../../../public/about.jpg");
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  margin-block: 20px;
+  max-height:800px;
+  display: block;
   border-radius: 8px;
 }
 
@@ -88,8 +87,8 @@
 }
 
 .steering_img{
-    position: absolute;
-   bottom: 0px;
+ 
+  
    width: 400px;
    animation: rotate_steering 8s linear infinite;
 }
