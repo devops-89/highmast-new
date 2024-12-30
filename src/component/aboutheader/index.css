@@ -17,7 +17,7 @@
 
 /* Content Layout */
 .content-container {
-  overflow: hidden;
+  
   display: flex;
   position: relative;
   justify-content: center;
@@ -78,17 +78,17 @@
   padding: 20px;
   height: 150px;
   border-radius: 10px;
-  position: absolute;
-  top: 400px;
-  left: 45%;
-  transform: translateX(-50%);
+  
+  transform: translate(-28px,85px);
+  
   z-index: 20;
   background-color: #f6f7fb;
 }
 
 .steering_img{
  
-  
+  margin-top: 100px;
+  margin-left: -100px;
    width: 400px;
    animation: rotate_steering 8s linear infinite;
 }
