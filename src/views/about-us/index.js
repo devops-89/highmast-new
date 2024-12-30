@@ -6,12 +6,13 @@ import CoreValues from "../../component/core-values";
 import Ourteam from "../../component/our-team";
 import Certification from "../../component/certification";
 import Contactseection from "../../component/contactsection";
+import AboutHeader from "../../component/aboutheader";
 
 const About = () => {
   return (
     <div>
       <section className="aboutbanner secOne2 ">
-        <div className="aboutbanneroverlay"></div>{" "}
+        {/* <div className="aboutbanneroverlay"></div>{" "} */}
         <div className="container bannercontainer">
           <div className="section-title desktop">
             <h1 data-aos="fade-down">
@@ -32,10 +33,11 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      <Aboutsection />
+      <AboutHeader />
       <Ourteam />
-      <CoreValues />
+      <Aboutsection />
+     <CoreValues />
+     
       <Certification />
       <Contactseection />
     </div>

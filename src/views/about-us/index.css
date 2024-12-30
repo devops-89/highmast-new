@@ -1,14 +1,12 @@
 .aboutbanner {
-    background-image: url(../../assets//img/banners/homebanerbg.gif);
-
-    background-size: cover;
-    background-position: center center;
+  
     background-attachment: fixed;
     height: 100vh;
     width: 100%;
-    background-repeat: no-repeat;
+   
     display: grid;
     place-items: center;
+    overflow: hidden;
 
 
 }
@@ -42,7 +40,7 @@
     .aboutbanner {
         display: block;
         background-attachment: scroll;
-        height: 40vh !important;
+        height: 50vh !important;
     }
 
     .aboutbanneroverlay {

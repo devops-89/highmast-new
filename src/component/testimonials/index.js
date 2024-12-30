@@ -73,7 +73,7 @@ const Testimonials = (props) => {
                 <div className="testimonialscontent">
                   <Typography
                     className="testimonialsp"
-                    sx={{ fontSize: { xs: "12px", md: "1rem", lg: "1rem" } }}
+                    sx={{ fontSize: { xs: "12px", md: "18px", lg: "20px" } }}
                   >
                     <img
                       className="testimonialquote"
@@ -115,7 +115,7 @@ const Testimonials = (props) => {
                 <div className="testimonialscontent">
                   <Typography
                     className="testimonialsp"
-                    sx={{ fontSize: { xs: "12px", md: "1rem", lg: "1rem" } }}
+                    sx={{ fontSize: { xs: "12px", md: "18px", lg: "20px" } }}
                   >
                     <img
                       className="testimonialquote"
@@ -156,7 +156,7 @@ const Testimonials = (props) => {
                 <div className="testimonialscontent">
                   <Typography
                     className="testimonialsp"
-                    sx={{ fontSize: { xs: "12px", md: "1rem", lg: "1rem" } }}
+                    sx={{ fontSize: { xs: "12px", md: "18px", lg: "20px" } }}
                   >
                     <img
                       className="testimonialquote"

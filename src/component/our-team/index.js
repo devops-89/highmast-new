@@ -8,6 +8,7 @@ import { Typography } from "@mui/material";
 const Ourteam = () => {
 
   return (
+    <div className="container-fluid team-main-container">
     <div className="container allpadding">
       <div data-aos="fade-right">
         <h2 className="Ourteamheading headingcenter ">OUR TEAM</h2>
@@ -60,7 +61,7 @@ const Ourteam = () => {
                 fontSize: {
                   xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
                   sm: "1rem", // Slightly larger for tablets and small screens
-                  md: "1rem",
+                  md: "22px",
                 },
               }}
             >
@@ -125,7 +126,7 @@ const Ourteam = () => {
                 fontSize: {
                   xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
                   sm: "1rem", // Slightly larger for tablets and small screens
-                  md: "1rem",
+                  md: "22px",
                 },
               }}
             >
@@ -137,6 +138,7 @@ const Ourteam = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

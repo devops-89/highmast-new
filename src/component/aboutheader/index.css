@@ -1,0 +1,205 @@
+/* Mobile and Desktop Views */
+.mobile-view {
+  display: none;
+}
+
+.desktop-view {
+  display: block;
+}
+
+.main-container {
+  height: 110vh;
+  padding-block: 10vh;
+  width: 100%;
+  position: relative;
+ 
+}
+
+/* Content Layout */
+.content-container {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+  width: 87%;
+  margin: auto;
+  gap: 30px;
+  height: 100%;
+}
+
+.text-section h1 {
+  font-size: 80px;
+}
+
+.text-section {
+  flex: 1;
+  width: 60%;
+}
+
+.text-content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text-content p {
+  text-align: justify;
+}
+
+.icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.image-section {
+  width: 38%;
+  height: 90%;
+  position: relative;
+  z-index: 5;
+}
+
+.about-image-wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../public/about.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  margin-block: 20px;
+  border-radius: 8px;
+}
+
+/* Absolute Section - Positioned at the Top of the Image */
+.absolute-section {
+  width: 500px;
+  padding: 20px;
+  height: 150px;
+  border-radius: 10px;
+  position: absolute;
+  top: 400px;
+  left: 45%;
+  transform: translateX(-50%);
+  z-index: 20;
+  background-color: #f6f7fb;
+}
+
+.steering_img{
+    position: absolute;
+   bottom: 0px;
+   width: 400px;
+   animation: rotate_steering 8s linear infinite;
+}
+
+@keyframes rotate_steering {
+
+  from{
+    transform: rotate(0);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+  
+}
+
+
+
+/* Mobile View - Responsive Styles */
+@media (max-width: 768px) {
+ /* Mobile View - Responsive Styles */
+@media (max-width: 768px) {
+  .desktop-view {
+    display: none; /* Hide desktop view on mobile */
+  }
+
+  .mobile-view {
+    display: inline-block; /* Show mobile view on mobile */
+   
+    width: 100%;
+    height: 100%;
+    margin-block: 0px;
+    margin-inline: 0px;
+  }
+
+  /* Mobile content layout */
+  .main-container {
+    display: none;
+  }
+
+  .mobile-container {
+    height: 82vh; /* Adjust height for mobile to fill the screen */
+    background-image: url("../../../public/about.jpg");
+    background-position: center;
+    background-size: cover; /* Ensure image fully covers the container */
+    object-fit: cover;
+    padding: 0;
+    position: relative; /* Make the container position relative to add overlay */
+  }
+
+  /* Create the overlay */
+  .mobile-container::before {
+    content: ""; /* Required for pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensure overlay is on top of the image */
+  }
+
+  .mobile-container .text-section{
+    
+   margin-top: 30px;
+   margin-left: 10px;
+    height:90%;
+    width: 94%;
+  }
+
+  /* Optional: Adjust text and image size */
+  .mobile-container .text-section h1 {
+    font-size: 36px; /* Adjust header size for mobile */
+    z-index: 2; /* Ensure text is above overlay */
+    position: relative;
+    color: white;
+  }
+
+  .text-section hr{
+    color: white;
+    border: 0;
+    opacity: 1;
+    border-top:4px solid white;
+    margin-inline: 10px;
+  }
+
+  .text-content p {
+    font-size: 14px; /* Adjust paragraph font size for mobile */
+    z-index: 2; /* Ensure text is above overlay */
+    position: relative;
+    color: white;
+  }
+
+  /* Optional: Modify the text section for better readability on mobile */
+  .text-content {
+    width: 100%;
+    padding-right: 10px;
+    z-index: 2; /* Ensure content is above the overlay */
+    position: relative;
+  }
+
+  .mobile_steering_img{
+    position: absolute;
+    bottom: 0px;
+   left: 10px;
+    width: 200px;
+    animation: rotate_steering 8s linear infinite;
+  }
+}
+
+}
+
+

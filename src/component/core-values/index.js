@@ -41,11 +41,12 @@ function CoreValues() {
   };
 
   return (
+    <div className="container-fluid core-value-container " >
     <Box className="container corevaluessection">
-      <Box data-aos="fade-up-down">
+      {/* <Box data-aos="fade-up-down">
         <h2 className="heading headingcenter">CORE VALUES</h2>
-      </Box>
-      <Box className="tabs-section my-5">
+      </Box> */}
+      <Box className="tabs-section my-10">
         <Tabs
           value={value}
           onChange={handleTabChange}
@@ -53,9 +54,9 @@ function CoreValues() {
           indicatorColor="primary"
           textColor="primary"
         >
-          <Tab className="tab" label="Mission" />
-          <Tab className="tab" label="Vision" />
-          <Tab className="tab" label="Responsibility" />
+          <Tab className="tab" sx={{ fontSize: { sm: '16px', md: '30px' } }} label="Mission" />
+          <Tab className="tab" sx={{ fontSize: { sm: '16px', md: '30px' } }} label="Vision" />
+          <Tab className="tab" sx={{ fontSize: { sm: '16px', md: '30px' } }} label="Responsibility" />
         </Tabs>
       </Box>
       <Box className="swiper-section mt-5">
@@ -97,7 +98,7 @@ function CoreValues() {
                         fontSize: {
                           xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
                           sm: "1rem", // Slightly larger for tablets and small screens
-                          md: "1rem",
+                          md: "22px",
                         },
                       }}
                     >
@@ -130,7 +131,7 @@ function CoreValues() {
                         fontSize: {
                           xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
                           sm: "1rem", // Slightly larger for tablets and small screens
-                          md: "1rem",
+                          md: "22px",
                         },
                       }}
                     >
@@ -162,7 +163,7 @@ function CoreValues() {
                         fontSize: {
                           xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
                           sm: "1rem", // Slightly larger for tablets and small screens
-                          md: "1rem",
+                          md: "22px",
                         },
                       }}
                     >
@@ -177,6 +178,7 @@ function CoreValues() {
         </Swiper>
       </Box>
     </Box>
+    </div>
   );
 }
 

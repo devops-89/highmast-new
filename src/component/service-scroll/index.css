@@ -1,8 +1,10 @@
 .containerparent {
   position: relative;
 
-  height: auto;
+  height: 110vh;
   overflow: hidden;
+  background-color: #002C30;
+  border-bottom: 2px solid #002C30;
 }
 
 .img-container {
@@ -11,7 +13,8 @@
   width: 100%;
   position: relative;
 
-  height: auto;
+ 
+
 
 }
 
@@ -22,7 +25,7 @@
   height: 400px;
   will-change: transform;
 
-  margin-left: 200px;
+  margin-left: 240px;
 
   border-radius: 5px;
 
@@ -147,3 +150,4 @@
 
 
 }
+

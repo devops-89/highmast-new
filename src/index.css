@@ -1,44 +1,92 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
 body {
- 
-  background-color: #031C32 !important;
+  background-color: #4C8C91 !important;
   margin: 0;
   padding: 0;
   overflow: auto;
   overflow-x: hidden;
-
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
+/* Video Container */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Video styles */
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the background */
+  min-height: 100%; /* Prevents video from shrinking */
+}
+
+/* Content Section */
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Font styles for headings and paragraphs */
+h1 {
   font-family: roboto;
+  font-size: 3rem;
+  margin: 20px 0;
 }
-
-
 
 p {
   font-family: poppins;
-  font-size: 1rem;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-size: 1.2rem;
 }
 
 @font-face {
   font-family: poppins;
   src: url(./assets/fonts/popins/Poppins-Regular.ttf);
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .video {
+    object-fit: cover; /* Ensures the video is scaled properly on smaller screens */
+    height: 100%;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem; /* Smaller font size on mobile */
+  }
+
+  p {
+    font-size: 1rem; /* Adjust paragraph size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .video {
+    object-fit: cover; /* Make sure the video is still properly scaled */
+    height: 100%;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  p {
+    font-size: 0.9rem; /* Adjust paragraph size for smaller screens */
+  }
 }

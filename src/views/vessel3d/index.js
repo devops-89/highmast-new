@@ -15,7 +15,7 @@ import Contactseection from "../../component/contactsection";
 
 const Vessels3d = () => {
   return (
-    <div>
+    <div style={{backgroundColor:"#002C30"}}>
       <div className="container-fluid px-0">
         <section className="vesselbanner servicesbanner  secOne2 ">
           <div className="servicesbanneroverlay"></div>{" "}

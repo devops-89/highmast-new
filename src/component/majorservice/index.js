@@ -15,6 +15,7 @@ const Majorservice = () => {
   }, []);
   return (
     <ParallaxProvider>
+      <div className="container-fluid" style={{backgroundColor:"#2A5962"}}>
       <div className="container allpadding">
         <div className="row align-items-center">
           <div className="col-sm-4 text-left ">
@@ -100,6 +101,7 @@ const Majorservice = () => {
             </Parallax>
           </div>
         </div>
+      </div>
       </div>
     </ParallaxProvider>
   );

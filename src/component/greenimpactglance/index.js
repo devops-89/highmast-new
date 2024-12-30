@@ -17,15 +17,17 @@ const ScrollAnimation = () => {
 
       if (scrollPosition > 200) {
         setShowHighmastText(true);
-      } else {
-        setShowHighmastText(false);
-      }
-
-      if (scrollPosition > 400) {
         setShowCommitmentText(true);
       } else {
+        setShowHighmastText(false);
         setShowCommitmentText(false);
       }
+
+      // if (scrollPosition > 100) {
+      
+      // } else {
+       
+      // }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -39,7 +41,7 @@ const ScrollAnimation = () => {
   const desktopscale = 1.5;
 
   const minFontSizeDesktop = 450; // minimum font size for desktop in px
-  const maxFontSizeDesktop = 250; // maximum font size for desktop in px
+  const maxFontSizeDesktop = 200; // maximum font size for desktop in px
 
   const minFontSizeMobile = 70; // minimum font size for mobile in px
   const maxFontSizeMobile = 90; // maximum font size for mobile in px
@@ -63,13 +65,13 @@ const ScrollAnimation = () => {
     : Math.min(desktopscale, Math.max(minScale, 1 - Math.cos(scrollY / 300))); //desktop scaling//
 
   return (
-    <>
+    <div className="scrollable-container">
       <div className="container mobileviewcommitments  ">
         {showHighmastText && (
           <Typography
             data-aos="fade-down"
             sx={{
-              fontSize: { xs: "30px", md: "50px", lg: "50px" },
+              fontSize: { xs: "30px", md: "50px", lg: "40px" },
               textAlign: { xs: "center", md: "left" }, // Center text on mobile
               fontWeight: "600",
               color: "#fff",
@@ -80,23 +82,25 @@ const ScrollAnimation = () => {
           </Typography>
         )}
       </div>
-      <div className="container-fluid">
+      <div className="container-fluid desktop-container">
         <div className="scroll-animation-container" ref={sectionRef}>
           <div
             className="zoom-text"
             style={{
+              fontSize:"20px",
               transform: `scale(${scaleValue})`,
               fontSize: `${fontSizeValue}px`,
               textAlign: "center",
               maxWidth: "90%",
               margin: "0 auto", // Using px for consistency
+             
             }}
           >
             Green
           </div>
         </div>
         <div>
-          <div className="container">
+          <div className="commitsmenttext">
             {showCommitmentText && (
               <Typography
                 data-aos="fade-down"
@@ -114,7 +118,7 @@ const ScrollAnimation = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

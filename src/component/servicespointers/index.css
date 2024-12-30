@@ -32,7 +32,10 @@
 }
 
 @media (max-width:768px) {
-
+   
+    .row>*{
+        padding-inline: 20px!important;
+    }
     .pointerimg {
 
         background-attachment: fixed;
