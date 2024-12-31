@@ -48,8 +48,55 @@ const Servicesscroll = () => {
   };
 
   useEffect(() => {
+
+    window.scrollTo(0, 0);
+
     const mm = gsap.matchMedia();
 
+    // mm.add(
+    //   "(min-width: 1920px)", 
+    //   () => {
+    //     const texts = textRef.current.querySelectorAll("p");
+    //     const images = imgContainerRef.current.querySelectorAll(".image-wrapper");
+  
+    //     gsap.timeline({
+    //       scrollTrigger: {
+    //         trigger: containerParentRef.current,
+    //         scroller: "body",
+    //         pin: true,
+    //         scrub: 0.5,
+    //         start: "top 50%",
+            
+    //       },
+    //     })
+    //       .to(
+    //         texts,
+    //         {
+            
+    //           backgroundPositionY: "0%",
+    //           opacity: 1,
+    //           y: -2000,
+    //           duration: 9,
+    //           stagger: 1.5,
+    //           ease: "power1.out",
+    //         },
+    //         "start"
+    //       )
+    //       .to(
+    //         images,
+    //         {
+    //           delay: 2,
+    //           x: "-400vw",
+    //           duration: 10,
+    //           stagger: 1.5,
+    //           ease: "power1.out",
+    //         },
+    //         "start"
+    //       );
+    //   });
+  
+
+   
     mm.add("(min-width: 769px)", () => {
       const texts = textRef.current.querySelectorAll("p");
       const images = imgContainerRef.current.querySelectorAll(".image-wrapper");
@@ -124,7 +171,9 @@ const Servicesscroll = () => {
 
 
     return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       mm.revert();
+    
     };
   }, []);
 

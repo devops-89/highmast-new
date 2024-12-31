@@ -16,9 +16,14 @@ import AnoetherSection from "../../component/commitments";
 import Commitsmentcomponent from "../../component/commitments";
 import Homepagebanner from "../../component/homebanner";
 
+
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
+     
       <Homepagebanner />
       <ScrollAnimation />
       <Commitsmentcomponent />

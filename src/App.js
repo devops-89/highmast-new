@@ -5,6 +5,7 @@ import Modal from "./component/dialog";
 import "aos/dist/aos.css"; // Ensure AOS styles are imported
 import AOS from "aos";
 
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <div className="App">
+     
       {/* Video Section */}
       <div className="video-container">
         <video autoPlay loop muted className="video">

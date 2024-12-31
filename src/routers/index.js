@@ -10,6 +10,7 @@ import MarineElectricalandAutomation from "../views/marine-electrical-&-automati
 import MarineandOffshore from "../views/alternatemarine";
 
 import ScrollToTop from "../component/scrolltop";
+
 import ThankYou from "../views/thank-you";
 import Service from "../views/servicepage";
 import Retrofit from "../views/retrofit";
@@ -25,6 +26,7 @@ const Router = () => {
     <div>
       <Navbar />
       <ScrollToTop />
+     
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about-us" element={<About />}></Route>
