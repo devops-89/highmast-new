@@ -65,7 +65,9 @@ const ScrollAnimation = () => {
     : Math.min(desktopscale, Math.max(minScale, 1 - Math.cos(scrollY / 300))); //desktop scaling//
 
   return (
-    <div className="scrollable-container">
+
+    <div style={{backgroundColor:" #2A5962"}} >
+    {/* <div className="scrollable-container">
       <div className="container mobileviewcommitments  ">
         {showHighmastText && (
           <Typography
@@ -99,7 +101,10 @@ const ScrollAnimation = () => {
             Green
           </div>
         </div>
-        <div>
+      </div>
+
+
+      <div>
           <div className="commitsmenttext">
             {showCommitmentText && (
               <Typography
@@ -117,8 +122,66 @@ const ScrollAnimation = () => {
             )}
           </div>
         </div>
-      </div>
     </div>
+
+ */}
+
+
+{/* Test   */}
+
+<div className="main_div">
+  <div className="div_1">
+  {showHighmastText && (
+          <Typography
+            data-aos="fade-down"
+            sx={{
+              fontSize: { xs: "30px", md: "50px", lg: "40px" },
+              textAlign: { xs: "center", md: "left" }, // Center text on mobile
+              fontWeight: "600",
+              color: "#fff",
+              textTransform: "uppercase",
+            }}
+          >
+            High<span style={{ color: "red" }}>Mast </span>MARINE
+          </Typography>
+        )}
+  </div>
+  <div className="div_2" ref={sectionRef} >
+  <div
+            className="zoom-text"
+            style={{
+              fontSize:"20px",
+              transform: `scale(${scaleValue})`,
+              fontSize: `${fontSizeValue}px`,
+              textAlign: "center",
+              maxWidth: "90%",
+              margin: "0 auto", // Using px for consistency
+             
+            }}
+          >
+            Green
+          </div>
+  </div>
+  <div className="div_3">
+  {showCommitmentText && (
+              <Typography
+                data-aos="fade-down"
+                sx={{
+                  fontSize: { xs: "30px", md: "50px", lg: "50px" },
+                  textAlign: { xs: "center", md: "right" },
+                  fontWeight: "600",
+                  color: "#fff",
+                  textTransform: "uppercase",
+                }}
+              >
+                Commitments
+              </Typography>
+            )}
+  </div>
+</div>
+
+
+</div>
   );
 };
 
