@@ -7,7 +7,7 @@
   display: block;
 }
 
-.main-container {
+.about-main-container {
   /* height: 110vh; */
   padding-block: 10vh;
   width: 100%;
@@ -125,7 +125,7 @@
   }
 
   /* Mobile content layout */
-  .main-container {
+  .about-main-container {
     display: none;
   }
 

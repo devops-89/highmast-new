@@ -9,7 +9,7 @@ const AboutHeader = () => {
     <div  style={{ backgroundColor: "white",overflow:"hidden" }}>
       <div className="container-fluid parent-container">
       {/* Desktop View */}
-      <div className="desktop-view main-container">
+      <div className="desktop-view about-main-container">
       {/* <img src="/about/staring.png" alt="staring"  className="steering_img" /> */}
      
         <div className="content-container">
