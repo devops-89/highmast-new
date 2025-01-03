@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Box, Typography, Tabs, Tab } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Mousewheel, Pagination } from "swiper/modules";
+import { Mousewheel} from "swiper/modules";
 import "./index.css";
 import mission from "../../assets/img/elements/eye.png";
 import vision from "../../assets/img/elements/mission.png";
@@ -70,8 +70,8 @@ function CoreValues() {
           initialSlide={0}
           direction={"horizontal"}
           mousewheel={true}
-          pagination={{ clickable: true }}
-          modules={[Mousewheel, Pagination]}
+         
+          modules={[Mousewheel]}
           className="mySwiper"
         >
           <SwiperSlide>

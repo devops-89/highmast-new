@@ -328,7 +328,7 @@ const Footer = () => {
                     marginTop: { xs: "3px", md: "0px", lg: "0px" },
                   }}
                 >
-                  © 2024 HighMast Marine, All Rights Reserved
+                  © 2025 HighMast Marine, All Rights Reserved
                 </Typography>
               </div>
               <div className="col-sm-4 px-0">
