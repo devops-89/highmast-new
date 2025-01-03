@@ -13,7 +13,7 @@ const ServicesDescription = (props) => {
         data-aos-mirror="true"
         sx={{
           color: "#fff",
-          fontSize: { xs: "18px", md: "40px", lg: "40px" },
+          fontSize: { xs: "18px", md: "50px", lg: "50px" },
           fontWeight: 600,
           textAlign: "left",
         }}

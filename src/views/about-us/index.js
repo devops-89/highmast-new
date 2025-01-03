@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import "aos/dist/aos.css";
 import Aboutsection from "../../component/about";
 import "./index.css";
@@ -7,8 +7,19 @@ import Ourteam from "../../component/our-team";
 import Certification from "../../component/certification";
 import Contactseection from "../../component/contactsection";
 import AboutHeader from "../../component/aboutheader";
+import SmallTextAnimation from "../../component/animations/SmallTextAnimation/SmallTextAnimation";
 
 const About = () => {
+
+  const [font,setFont]=useState(calculateFontSize());
+
+  function calculateFontSize() {
+    const width = window.innerWidth;
+    if (width > 1200) return "70px";
+    if (width > 767) return "70px";
+    return "2rem";
+  }
+
   return (
     <div>
       <section className="aboutbanner secOne2 ">
@@ -16,7 +27,7 @@ const About = () => {
         <div className="container bannercontainer">
           <div className="section-title desktop">
             <h1 data-aos="fade-down">
-              <span className="rstoftext">Redefining Marine</span>
+              <span className="rstoftext"><SmallTextAnimation text="Redefining" textColor="red" fontSize={font} /> <SmallTextAnimation text="Marine" textColor="red" fontSize={font} /> </span>
               <br />
               <span className="rstoftext">Operations with</span>
               <br />

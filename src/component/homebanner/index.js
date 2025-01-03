@@ -1,121 +1,127 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SmallTextAnimation from "../../component/animations/SmallTextAnimation/SmallTextAnimation";
 import "./index.css";
 import "aos/dist/aos.css";
 
 const Homepagebanner = () => {
+  const [fontSize, setFontSize] = useState(calculateFontSize());
+
   useEffect(() => {
-    
+    const handleResize = () => {
+      setFontSize(calculateFontSize());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    
     gsap.to("body, html", {
       scrollBehavior: "smooth",
     });
 
-   
-   // Animate topline width and opacity
-   gsap.utils.toArray(".top-line").forEach((topline) => {
-    gsap.fromTo(
-      topline,
-      {
-        width: "0%", // initial state: width is 0
-        opacity: 0,  // initial state: hidden
+    gsap.utils.toArray(".top-line").forEach((topline) => {
+      gsap.fromTo(
+        topline,
+        { width: "0%", opacity: 0 },
+        {
+          width: "100%",
+          opacity: 1,
+          duration: 1.5,
+          ease: "power1.out",
+          scrollTrigger: {
+            trigger: topline,
+            start: "top 80%",
+            end: "top 50%",
+            scrub: 2,
+          },
+        }
+      );
+    });
+
+    gsap.to(".contersection", {
+      scrollTrigger: {
+        trigger: ".contersection",
+        start: "top 70%",
+        end: "top 60%",
+        scrub: 1,
       },
+      y: 0,
+      opacity: 1,
+      ease: "power1.out",
+      duration: 1.5,
+    });
+
+    gsap.fromTo(
+      ".contersection .desc",
+      { opacity: 0, y: 50 },
       {
-        width: "100%", // final state: width is full
-        opacity: 1,    // final state: fully visible
-        duration: 1.5, // duration of animation
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
         ease: "power1.out",
         scrollTrigger: {
-          trigger: topline,
-          start: "top 80%", // Start when the top of the element reaches 90% of the viewport
-          end: "top 50%",   // End when the top reaches 30% of the viewport
-          scrub: 2,         // Smooth scrolling
-         
+          trigger: ".contersection",
+          start: "top 55%",
+          end: "top 50%",
+          scrub: true,
         },
       }
     );
-  });
 
-    
-    // Animate .contersection with scroll
-  gsap.to(".contersection", {
-    scrollTrigger: {
-      trigger: ".contersection",
-      start: "top 70%",  // Start animation when the element's top reaches 40% of the viewport
-      end: "top 60%",    // End when the element's top reaches 30% of the viewport
-      scrub: 1,
-      
-    },
-    y: 0,               // Move the element to its original position
-    opacity: 1,         // Fade the element in
-    ease: "power1.out", // Easing function for smooth animation
-    duration: 1.5,      // Optional: smooth duration
-  });
-
-  // Animate text reveal inside .contersection
-  gsap.fromTo(
-    ".contersection .desc", // Target the text element inside .contersection
-    {
-      opacity: 0,           // Start with text hidden
-      y: 50,                // Start with text 50px below its normal position
-    },
-    {
-      opacity: 1,           // Fade in the text
-      y: 0,                 // Move the text to its original position
-      duration: 1.5,        // Optional: smooth duration for text animation
-      ease: "power1.out",   // Easing for smooth animation
-      scrollTrigger: {
-        trigger: ".contersection",
-        start: "top 55%",   // Start the animation when the element's top reaches 40% of the viewport
-        end: "top 50%",     // End when the top reaches 30%
-        scrub: true,        // Synchronize with the scroll position
-      },
-    }
-  );
     return () => {
-      
       ScrollTrigger.getAll().forEach((instance) => instance.kill());
     };
   }, []);
-  
+
+  function calculateFontSize() {
+    const width = window.innerWidth;
+    if (width > 1200) return "70px";
+    if (width > 767) return "70px";
+    return "2rem";
+  }
 
   return (
     <div>
-      <section
-        
-        className="secOne secOne2 "
-      >
-         
-        <div className="overlay" >
-       
-          </div> 
+      <section className="secOne secOne2">
+        <div className="overlay"></div>
         <div className="container bannercontainer">
           <div className="desktop" data-aos="zoom-in-up">
-       
             <h1>
               <span className="rstoftext">
-                <span className="text-border greentext">green</span> maritime
+                <span className="greentext">
+                  <SmallTextAnimation text="GREEN" textColor="green" fontSize={fontSize} />
+                </span>{" "}
+                maritime
               </span>
               <br />
               <span className="rstoftext">innovation by</span>
               <br />
               <span className="rstoftext">
-                <span className="text-border highmasttextbg">
-                  High<span style={{ color: "#E32226" }}>Mast</span> marine
+                <span className="highmasttextbg">
+                  High{" "}
+                  <span>
+                    <SmallTextAnimation text="MAST" textColor="red" fontSize={fontSize} />
+                  </span>{" "}
+                  marine
                 </span>{" "}
                 &{" "}
               </span>
               <br />
-              <span className="rstoftext contioceantext">
-                ContiOcean ENVIRONMENT GLOBAL
-              </span>
+              <span className="rstoftext contioceantext">ContiOcean ENVIRONMENT GLOBAL</span>
             </h1>
             <div className="top-line"></div>
           </div>
-            
+
+          {/* contersection */}
+
           <div className="contersection desktop-view " >
             <div className="row mx-auto">
              
@@ -131,28 +137,8 @@ const Homepagebanner = () => {
               </div>
           
             </div>
-           
-          </div>
-          {/* Add mobile-view content as required */}
-            {/* mobile view */}
-            <div className="mobile-view">
-            <div className="row mx-auto">
-              
-              <div className="col" >
-                {/* <div className="top-line"></div> */}
-                <h3 className="number" data-aos="zoom-in-down" >
-                  <span>1</span>
-                  <span>0</span>
-                  <span>0</span>
-                  <span className="symbol">%</span>
-                </h3>
-                <p className="desc">Emission-Free Green Energy Solutions</p>
-              </div>
             </div>
-          
-         
-          </div>
-          {/* end mobile view */}
+          {/* Mobile and additional content */}
         </div>
       </section>
     </div>

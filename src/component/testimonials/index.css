@@ -57,7 +57,29 @@
     border-radius: 50%;
     
 } */
- @media (max-width:768px) {
+
+@media(min-width:992px) and (max-width:1199px){
+    .testimonialssection {
+        height: 50vh;
+        /* Or another fixed height value */
+        overflow: hidden;
+    
+    
+    
+    }
+}
+
+@media (min-width:768px) and (max-width:991px){
+    .testimonialssection {
+        height: 50vh;
+        /* Or another fixed height value */
+        overflow: hidden;
+    
+    
+    
+    }
+}
+ @media (max-width:767px) {
     .testimonialssection {
         height: auto;
     }

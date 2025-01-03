@@ -65,7 +65,16 @@ background-color: #002C30;
   margin-bottom: 3rem;
 }
 
-@media (max-width:768px) {
+@media (min-width:768px) and (max-width:991px){
+  .ourrteamsection img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  
+  }
+}
+
+@media (max-width:767px) {
 
   .ourrteamsection img {
     width: 200px;

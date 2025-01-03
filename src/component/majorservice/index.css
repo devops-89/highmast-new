@@ -46,7 +46,57 @@
 /* .majorscrollable-content::-webkit-scrollbar {
     display: none; 
   } */
-@media (max-width:768px) {
+
+  @media (min-width:992px) and (max-width:1199px){
+    .majorimgservice {
+        width: 70%;
+        height: 260px;
+        border-radius: 5px;
+        margin-bottom: 45px;
+    }
+
+    .majorsimgerviceparent {
+        text-align: center;
+        margin-top: 25px;
+    }
+    .majorheight {
+        padding: 0px !important;
+    }
+
+    .majorgpara {
+
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+    
+    }
+  }
+
+  @media (min-width:768px) and (max-width:991px){
+    .majorimgservice {
+        width: 80%;
+        height: 260px;
+        border-radius: 5px;
+        margin-bottom: 45px;
+    }
+
+    .majorsimgerviceparent {
+        text-align: center;
+        margin-top: 25px;
+    }
+    .majorheight {
+        padding: 0px !important;
+    }
+
+    .majorgpara {
+
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+    
+    }
+  }
+@media (max-width:767px) {
     .majorimgservice {
         width: 240px;
         height: 260px;

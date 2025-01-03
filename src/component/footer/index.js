@@ -102,7 +102,7 @@ const Footer = () => {
 
         <div className="row allpadding">
           {/* First Column: Logo and Contact Information */}
-          <div className="col-sm-3">
+          <div className="col-sm-6 col-lg-3 common-padding">
             <div className="footer-logo">
               <Link to="/">
                 {" "}
@@ -137,7 +137,7 @@ const Footer = () => {
           </div>
 
           {/* Second Column: Links */}
-          <div className="col-sm-2 footerlinkpadding footer-linksparent">
+          <div className="col-sm-6 col-lg-3 footerlinkpadding footer-linksparent common-padding">
             <h5>Quick Links</h5>
             <ul className="footer-links">
               <li>
@@ -168,7 +168,7 @@ const Footer = () => {
           </div>
 
           {/* Third Column: Services */}
-          <div className="col-sm-4 footerlinkservicepadding ">
+          <div className="col-sm-6 col-lg-3 footerlinkservicepadding common-padding">
             <h5>Our Services</h5>
             <ul className="footer-services">
               <li>
@@ -224,7 +224,7 @@ const Footer = () => {
           </div>
 
           {/* Fourth Column: Address, Social Links, and Newsletter */}
-          <div className="col-sm-3">
+          <div className="col-sm-6 col-lg-3 common-padding">
             <h5>Contact Us</h5>
 
             <div className="contact-info">

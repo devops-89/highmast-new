@@ -16,7 +16,18 @@
     margin-left: 40px;
 }
 
-@media (max-width:768px) {
+@media (min-width:768px) and (max-width:1199px){
+    .contactmobilebaner{
+         padding-bottom: 50px!important;
+    }
+    .contactlocationicon {
+        margin-right: 0px;
+
+        margin-left: 0px;
+    }
+}
+
+@media (max-width:767px) {
     .contactlocationicon {
         margin-right: 0px;
 

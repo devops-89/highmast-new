@@ -48,7 +48,7 @@
 
 .aboutcontent {
   background-color: rgb(16 59 81 / 15%);
-  padding: 50px 50px;
+  padding: 20px 12px;
   border-radius: 5px;
   border: 1px solid #579caa;
 
@@ -72,8 +72,127 @@
   border-radius: 5px;
 }
 
+@media (min-width:992px) and (max-width:1199px){
+  .scroll-animation-containerabout {
+    position: relative;
+    height: 391px;
+    overflow: hidden;
+  
+  }
 
-@media (max-width:768px) {
+  .alltextparent p {
+    text-align: left;
+    color: #fff;
+    
+    font-family: poppins;
+    margin-bottom: 0px;
+    font-size: 16px;
+  }
+
+  
+.aboutcontent {
+  background-color: rgb(16 59 81 / 15%);
+  padding: 50px 10px;
+  border-radius: 5px;
+  border: 1px solid #579caa;
+
+}
+
+
+.abouthighmastimg {
+  height: 450px;
+  width: 280px;
+  margin-top: auto;
+  border-radius: 5px;
+}
+
+.zoom-textAbout {
+  position: absolute;
+ 
+  right: 0%;
+  left: 0%;
+
+  
+  transform: translate(-50%, -50%);
+
+  font-weight: bold;
+  z-index: 2;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-clip: text;
+
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+
+  -webkit-font-smoothing: antialiased;
+}
+}
+
+
+
+@media (min-width:768px) and (max-width:991px){
+  .scroll-animation-containerabout {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+  
+  }
+
+  .alltextparent p {
+    text-align: left;
+    color: #fff;
+    
+    font-family: poppins;
+    margin-bottom: 0px;
+    font-size: 13px;
+  }
+
+  
+.aboutcontent {
+  background-color: rgb(16 59 81 / 15%);
+  padding: 50px 10px;
+  border-radius: 5px;
+  border: 1px solid #579caa;
+
+}
+
+
+.abouthighmastimg {
+  height: 400px;
+  width: 200px;
+  margin-top: auto;
+  border-radius: 5px;
+}
+
+.zoom-textAbout {
+  position: absolute;
+ 
+  right: 0%;
+  left: 0%;
+
+  
+  transform: translate(-50%, -50%);
+
+  font-weight: bold;
+  z-index: 2;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-clip: text;
+
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+
+  -webkit-font-smoothing: antialiased;
+}
+}
+
+@media (max-width:767px) {
 
   .alltextparent p {
 

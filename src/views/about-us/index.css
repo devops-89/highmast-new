@@ -18,8 +18,8 @@
     color: #fff;
     text-align: left;
 
-    margin-top: 0.1em;
-    margin-bottom: 50px;
+    /* margin-top: 0.1em;
+    margin-bottom: 50px; */
 }
 
 .aboutbanneroverlay {
@@ -36,11 +36,88 @@
 
 }
 
-@media (max-width:768px) {
+@media(min-width:992px) and (max-width:1199px){
+    .aboutbanner {
+  
+        background-attachment: fixed;
+        height: 70vh;
+        width: 100%;
+       
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    
+    
+    }
+    
+    .aboutbanner h1 {
+        color: #fff;
+        text-align: left;
+        font-size: 80px;
+        
+    }
+
+    .aboutbanneroverlay {
+        position: absolute;
+    
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 70vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Adjust the color and opacity as needed */
+        z-index: 1;
+    
+    }
+
+    .section-title h1 {
+        font-family: poppins;
+       
+    }
+}
+
+@media (min-width:768px) and (max-width:991px){
+    .aboutbanner {
+  
+        background-attachment: fixed;
+        height: 60vh;
+        width: 100%;
+       
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    
+    
+    }
+
+    .aboutbanner h1 {
+        color: #fff;
+        text-align: left;
+       
+      
+    }
+
+    .aboutbanneroverlay {
+        position: absolute;
+    
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 60vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Adjust the color and opacity as needed */
+        z-index: 1;
+    
+    }
+}
+
+@media (max-width:767px) {
     .aboutbanner {
         display: block;
         background-attachment: scroll;
-        height: 50vh !important;
+        height: 60vh !important;
     }
 
     .aboutbanneroverlay {

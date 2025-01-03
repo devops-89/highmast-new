@@ -18,7 +18,7 @@ const Majorservice = () => {
       <div className="container-fluid" style={{backgroundColor:"#2A5962"}}>
       <div className="container allpadding">
         <div className="row align-items-center">
-          <div className="col-sm-4 text-left ">
+          <div className="col-sm-4 col-md-12 col-lg-4 text-left ">
             <div className="majorsimgerviceparent">
               {/* Static image or content */}
               <img
@@ -29,13 +29,13 @@ const Majorservice = () => {
               />
             </div>
           </div>
-          <div className="col-sm-8 majorscrollable-content">
+          <div className="col-sm-8 col-md-12 col-lg-8  majorscrollable-content">
             {/* Parallax effect on the content */}
             <Parallax>
               <div>
                 {/* Your scrollable content */}
                 <div className="row">
-                  <div className="col-sm-6 py-5 majortopbottom">
+                  <div className="col-sm-6 col-md-6 md:py-2 py-5 majortopbottom">
                     <div className="majorright majorheight ">
                       <div className="certificationparent" data-aos="fade-down">
                         <img
@@ -50,7 +50,7 @@ const Majorservice = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="col-sm-6 py-5 majortopbottom">
+                  <div className="col-sm-6 col-md-6 md:py-2 py-5 majortopbottom">
                     <div className=" majorheight">
                       <div className="certificationparent" data-aos="fade-down">
                         <img

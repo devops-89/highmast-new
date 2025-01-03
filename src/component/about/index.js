@@ -23,7 +23,6 @@ const Aboutsection = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup scroll listener safely
     return () => {
       if (typeof window !== "undefined") {
         window.removeEventListener("scroll", handleScroll);
@@ -32,15 +31,13 @@ const Aboutsection = () => {
   }, []);
 
   useEffect(() => {
-    // Initialize AOS for animations
     AOS.init();
     return () => {
-      AOS.refreshHard(); // Cleanup AOS if needed
+      AOS.refreshHard();
     };
   }, []);
 
   useEffect(() => {
-    // GSAP animation context
     const gsapContext = gsap.context(() => {
       if (sectionRef.current) {
         gsap.fromTo(
@@ -51,41 +48,45 @@ const Aboutsection = () => {
       }
     }, sectionRef);
 
-    // Cleanup GSAP animations
     return () => {
       gsapContext.revert();
     };
   }, []);
 
-  const isMobile = window.innerWidth <= 768; // Mobile breakpoint
+  // Determine screen size
+  const screenWidth = window.innerWidth;
 
-  // Define the minimum and maximum values for scaling and font size
-  const minScale = 1; // minimum zoom level
-  const maxScale = 5; // maximum zoom level
+  // Define font size ranges for different screen sizes
+  const fontSizes = {
+    mobile: { min: 70, max: 100 }, // 0px - 768px
+    tablet: { min: 80, max: 100 }, // 768px - 1024px
+    large: { min: 100, max: 150 }, // 1024px - 1440px
+    desktop: { min: 150, max: 300 }, // > 1440px
+  };
 
-  // Define font size ranges for desktop and mobile
-  const minFontSizeDesktop = 100;
-  const maxFontSizeDesktop = 300;
-
-  const minFontSizeMobile = 70; // Fixed minimum for mobile
-  const maxFontSizeMobile = 50; // Fixed maximum for mobile
-
-  // Calculate scale value
-  const scaleValue = Math.min(
-    maxScale,
-    Math.max(minScale, 1 - Math.cos(scrollY / 300))
-  );
-
-  // Adjust font size dynamically based on screen size
-  const fontSizeValue = isMobile
-    ? Math.min(
-        maxFontSizeMobile,
-        Math.max(minFontSizeMobile, 65) // Static value for mobile
-      )
-    : Math.min(
-        maxFontSizeDesktop,
-        Math.max(minFontSizeDesktop, 30 - Math.cos(scrollY / 400) * 20)
-      );
+  // Adjust font size based on screen size
+  let fontSizeValue;
+  if (screenWidth <= 768) {
+    fontSizeValue = Math.min(
+      fontSizes.mobile.max,
+      Math.max(fontSizes.mobile.min, 65)
+    );
+  } else if (screenWidth > 768 && screenWidth <= 1024) {
+    fontSizeValue = Math.min(
+      fontSizes.tablet.max,
+      Math.max(fontSizes.tablet.min, 85 - Math.cos(scrollY / 300) * 10)
+    );
+  } else if (screenWidth > 1024 && screenWidth <= 1440) {
+    fontSizeValue = Math.min(
+      fontSizes.large.max,
+      Math.max(fontSizes.large.min, 120 - Math.cos(scrollY / 300) * 20)
+    );
+  } else {
+    fontSizeValue = Math.min(
+      fontSizes.desktop.max,
+      Math.max(fontSizes.desktop.min, 150 - Math.cos(scrollY / 400) * 30)
+    );
+  }
 
   return (
     <div>
@@ -99,8 +100,8 @@ const Aboutsection = () => {
                     data-aos="zoom-in-up"
                     className="zoom-textAbout"
                     style={{
-                      transform: `scale(${scaleValue})`,
-                      fontSize: `${fontSizeValue}px`, // Using px for consistency
+                      transform: `scale(1)`, // Scaling can remain dynamic if required
+                      fontSize: `${fontSizeValue}px`,
                     }}
                   >
                     Why High<span className="Mast-text">Mast</span>?
@@ -113,7 +114,7 @@ const Aboutsection = () => {
         <div style={{ marginBlock: "40px" }}>
           <div className="container Aboutparent">
             <div className="row align-items-center">
-              <div className="col-sm-4 aboutusleftimgparent text-center">
+              <div className="col-sm-4 col-md-4 aboutusleftimgparent text-center">
                 <div className="aboutusimg">
                   <img
                     className="abouthighmastimg"
@@ -121,10 +122,10 @@ const Aboutsection = () => {
                     data-aos="zoom-in-down"
                     data-aos-duration="500"
                     data-aos-delay="200"
-                  ></img>
+                  />
                 </div>
               </div>
-              <div className="col-sm-8 alltextparent">
+              <div className="col-sm-8 col-md-8 alltextparent">
                 <div
                   className="aboutcontent"
                   data-aos="fade-left"
@@ -141,7 +142,7 @@ const Aboutsection = () => {
                     Singapore, we deliver world-class marine solutions focused on
                     efficiency, quality, and environmental responsibility.
                   </Typography>
-                  <br></br>
+                  <br />
                   <Typography component="p" className="para">
                     In partnership with ContiOcean Environment Global, China, we
                     bring cutting-edge sustainable technologies to the maritime
@@ -151,7 +152,7 @@ const Aboutsection = () => {
                     helping shipowners navigate the complexities of a changing
                     world.
                   </Typography>
-                  <br></br>
+                  <br />
                   <Typography component="p" className="para">
                     With over 50 successful dry dockings and a 100% commitment to
                     emission-free energy, HighMast combines expertise with

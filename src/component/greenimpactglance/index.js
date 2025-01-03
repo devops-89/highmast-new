@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import "./index.css";
 
 import { Typography } from "@mui/material";
+import GreenText from "../animations/GreenText/GreenText";
+
 
 const ScrollAnimation = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -36,6 +38,7 @@ const ScrollAnimation = () => {
     };
   }, []);
 
+
   const minScale = 1; // No scaling, normal size
   const maxScale = 1; // Maximum scale of 1.5x for mobile
   const desktopscale = 1.5;
@@ -66,7 +69,8 @@ const ScrollAnimation = () => {
 
   return (
 
-    <div style={{backgroundColor:" #2A5962"}} >
+    <div style={{backgroundColor:"#d7d7d7"}} >
+     
     {/* <div className="scrollable-container">
       <div className="container mobileviewcommitments  ">
         {showHighmastText && (
@@ -138,7 +142,7 @@ const ScrollAnimation = () => {
               fontSize: { xs: "30px", md: "50px", lg: "40px" },
               textAlign: { xs: "center", md: "left" }, // Center text on mobile
               fontWeight: "600",
-              color: "#fff",
+              color: "#002C30",
               textTransform: "uppercase",
             }}
           >
@@ -146,8 +150,8 @@ const ScrollAnimation = () => {
           </Typography>
         )}
   </div>
-  <div className="div_2" ref={sectionRef} >
-  <div
+  <div className="div_2 " ref={sectionRef} >
+  {/* <div
             className="zoom-text"
             style={{
               fontSize:"20px",
@@ -160,7 +164,8 @@ const ScrollAnimation = () => {
             }}
           >
             Green
-          </div>
+          </div> */}
+          <GreenText/>
   </div>
   <div className="div_3">
   {showCommitmentText && (
@@ -170,7 +175,7 @@ const ScrollAnimation = () => {
                   fontSize: { xs: "30px", md: "50px", lg: "50px" },
                   textAlign: { xs: "center", md: "right" },
                   fontWeight: "600",
-                  color: "#fff",
+                  color: "#002C30",
                   textTransform: "uppercase",
                 }}
               >

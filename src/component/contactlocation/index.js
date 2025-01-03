@@ -38,7 +38,7 @@ const Contactaddress = ({ contactaddressdata }) => {
 
   return (
     <div className="container contactmobilebaner allpadding">
-      <Box sx={{ width: "100%", padding: 0 }}>
+      <Box sx={{ width: "100%"}}>
         <Typography
           variant="h2"
           align="left"
