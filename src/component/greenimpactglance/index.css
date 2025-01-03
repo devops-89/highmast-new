@@ -26,7 +26,7 @@
 
 /* test  */
 .main-container{
-    background-color:  #2A5962 !important;
+    background-color:  #d7d7d7;
 }
 
 .main_div{
@@ -46,7 +46,7 @@
 }
 
 .div_2{
-    text-align: center;
+    /* text-align: center;
     font-weight: bold;
     font-size:180px;
     z-index: 2;
@@ -58,8 +58,15 @@
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
    
-    -webkit-font-smoothing: antialiased;
-
+    -webkit-font-smoothing: antialiased; */
+    margin: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+   
+    /* background-color: #d7d7d7; */
+    background-color: transparent;
+    position: relative;
 }
 
 

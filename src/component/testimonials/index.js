@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import { Mousewheel, Pagination } from "swiper/modules";
+
+import { Mousewheel } from "swiper/modules";
 import "./index.css";
 
 import testimonialimg1 from "../../assets/img/elements/Teamimg1.jpeg";
@@ -54,10 +54,8 @@ const Testimonials = (props) => {
           spaceBetween={30}
           speed={1000}
           mousewheel={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Mousewheel, Pagination]}
+         
+          modules={[Mousewheel]}
           className="testimonialswiper"
           onSlideChange={handleEnd}
           ref={swiperRef}

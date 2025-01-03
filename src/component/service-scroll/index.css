@@ -1,153 +1,151 @@
-.containerparent {
+/* Container Fluid */
+.service-scroll-container {
   position: relative;
-
-  height: 110vh;
-  overflow: hidden;
-  background-color: #002C30;
-  border-bottom: 2px solid #002C30;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
 }
 
-.img-container {
-  display: flex;
-  justify-content: start;
-  width: 100%;
-  position: relative;
-
- 
-
-
-}
-
-
-.scroll-img {
-
-  width: 700px;
-  height: 400px;
-  will-change: transform;
-
-  margin-left: 240px;
-
-  border-radius: 5px;
-
-}
-
-
-.text {
+/* Overlay */
+.service-scroll-container .overlay {
   position: absolute;
-  top: 100%;
-
-  left: 50%;
-  right: 0%;
-  transform: translate(-50%, 0%);
-  color: white;
-  text-align: left;
-  opacity: 1;
-  height: auto;
-  white-space: normal;
-
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align to the bottom */
+  align-items: flex-start;
+  overflow: hidden;
 }
 
-.text>p {
+/* Default State for Animated Text */
+.animated-text {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 1s ease-out; /* Smooth transition */
+  
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 20px; 
+
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, transparent 20%);
   background-size: 10% 210%;
   background-position-y: 100%;
   color: transparent;
   padding: 0;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 2px white;
   background-clip: text;
   -webkit-background-clip: text;
-  /* margin-bottom: 60px; */
+  
   line-height: 1.2;
   font-size: 80px;
   position: relative;
   text-align: left;
   will-change: background-position;
-  /* height: 100px; */
-}
-
-.image-wrapper img {
-
-  filter: brightness(50%); /* Adjust darkness (0% is black, 100% is original) */
-  transition: filter 0.3s ease; /* Smooth transition on hover */
 }
 
 
+/* Active State for Animation */
+.animated-text.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-/* Media Query for Mobile Screens */
-@media (max-width: 768px) {
-/* 
-  .img-container {
+/* Scroll Buttons */
+.animated-text .scroll-button {
+  border-radius: 4px;
+  border: 2px solid #09AFF4;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #09AFF4;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  margin-right: 20px;
+  transition: all 0.1s ease-in;
+  font-weight: bold;
+}
+
+/* Hover Effect for Scroll Buttons */
+.animated-text .scroll-button:hover {
+  color: #09AFF4;
+  background-color: transparent;
+}
+
+@media (max-width:768px){
+  .service-scroll-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
     display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align to the bottom */
+    align-items: flex-start;
     overflow: hidden;
-    width: 2000%;
   }
-
-  .scroll-img {
-    width: 100vw;
-    height: 300px;
-  }
-
-
-  .text {
-    top: 90%;
-
   
-    left: 50%;
-    transform: translate(-50%, 0%);
-    padding: 8px;
-    height: auto;
-    white-space: normal;
+  /* Default State for Animated Text */
+  .animated-text {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1s ease-out; /* Smooth transition */
     
-
-  }
-
-  .text>p {
-    font-size: 30px;
-   
-    line-height: 1.2;
-  }
-  .containerparent {
-    order: 0;
-    place-self: auto;
-    grid-area: auto;
-    z-index: auto;
-    float: none;
-    flex-shrink: 1;
-    display: block;
-    margin: 0px;
-    inset: 0px;
-    position: relative;
-    flex-basis: auto;
-    overflow: visible;
-    box-sizing: border-box;
-    width: 100%; 
-    height: auto; 
-    padding: 0 0 300px; 
-}
-.pin-spacer {
-  height: 2327px !important;
-} */
-
-.text>p {
-  font-size: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 20px; 
   
-}
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, transparent 20%);
+    background-size: 10% 210%;
+    background-position-y: 100%;
+    color: transparent;
+    padding: 0;
+    -webkit-text-stroke: 2px white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+    line-height: 1.2;
+    font-size: 40px;
+    position: relative;
+    text-align: left;
+    will-change: background-position;
+  }
+  
+  
+  /* Active State for Animation */
+  .animated-text.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Scroll Buttons */
+  .animated-text .scroll-button {
+    border-radius: 4px;
+    border: 2px solid #09AFF4;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #09AFF4;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    margin-right: 20px;
+    transition: all 0.1s ease-in;
+    font-weight: bold;
+  }
+  
+  /* Hover Effect for Scroll Buttons */
+  .animated-text .scroll-button:hover {
+    color: #09AFF4;
+    background-color: transparent;
+  }
 
-.img-container {
-  display: flex;
-  /* overflow: hidden; */
-  /* width: 2000%; */
-  width: 700vw; /* Total width for 6 images */
 }
-
-.scroll-img {
-  width: 100vw;
-  /* height: 300px; */
-}
-.scroll-img { 
-  margin-left: 150px;
-}
-
-
-}
-

@@ -92,8 +92,31 @@
   place-items: center;
 }
 
+@media (min-width:992px) and (max-width:1199px){
+  .servicesbanner {
+    display: grid;
+    place-content:center;
+    background-attachment: scroll;
+    height: 60vh;
+  }
+  .servicesbanneroverlay {
+    height: 60vh;
+  }
+}
 
-@media (max-width:768px) {
+@media (min-width:768px) and (max-width:991px){
+  .servicesbanner {
+    display: grid;
+    place-content: flex-start;
+    background-attachment: scroll;
+    height: 60vh;
+  }
+  .servicesbanneroverlay {
+    height: 60vh;
+  }
+}
+
+@media (max-width:767px) {
   .servicesbanner {
     display: grid;
     place-content: flex-start;

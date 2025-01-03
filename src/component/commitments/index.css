@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding: 1rem 1rem 100px 1rem;
+  padding: 27px 1rem 27px 1rem;
   max-width: 1200px;
   margin: 0 auto;
   align-items: center;
@@ -49,6 +49,29 @@
 /* Section hover effect */
 .allsection:hover {
   transform: scale(1.05);
+}
+
+
+
+@media (min-width:780px) and (max-width:1023px){
+/* Section styles for each of the sections */
+.allsection {
+  height: 300px;
+  width:360px;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2); /* Make background transparent */
+  background-image: none; /* Remove background image */
+}
+
+
+
 }
 
 /* Mobile-specific styles */
@@ -126,12 +149,12 @@ code {
 
 .section1 {
   background-image: url('../../assets/img/elements/lng.jpg');
-  margin-bottom: 20px;
+ 
 }
 
 .section2 {
   background-image: url('../../assets/img/elements/serviceimg2.jpg');
-  margin-top: 25%;
+ 
 }
 
 .section3 {
@@ -140,7 +163,7 @@ code {
 
 .section4 {
   background-image: url('../../assets/img/elements/serviceimg4.jpg');
-  margin-top: 30%;
+
 }
 
 /* Fade-in and scale transition when section is in view */

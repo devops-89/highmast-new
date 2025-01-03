@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import "./index.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -6,9 +6,13 @@ import DirectionsBoatIcon from "@mui/icons-material/DirectionsBoat";
 import Servicesscroll from "../../component/service-scroll";
 import Majorservice from "../../component/majorservice";
 import { useLocation } from "react-router-dom";
+import SmallTextAnimation from "../../component/animations/SmallTextAnimation/SmallTextAnimation";
 
 
 const Service = () => {
+
+  const [font,setFont]=useState(calculateFontSize());
+
   useEffect(() => {
     AOS.init({
       // delay: 500,
@@ -17,6 +21,12 @@ const Service = () => {
     AOS.refresh();
   }, []); // Add the dependency array to ensure it runs only once
 
+  function calculateFontSize() {
+    const width = window.innerWidth;
+    if (width > 1200) return "70px";
+    if (width > 767) return "70px";
+    return "2rem";
+  }
 
   return (
     <div style={{backgroundColor:"#002C30"}}>
@@ -34,7 +44,7 @@ const Service = () => {
               data-duration="200"
             >
               <h1>
-                <span className="rstoftext">Comprehensive Services</span>
+                <span className="rstoftext"><SmallTextAnimation  text="Comprehensive" fontSize={font} textColor="red" /> <SmallTextAnimation  text="Services" fontSize={font} textColor="red" /></span>
                 <br />
                 <span className="rstoftext">for Optimal Performance</span>
                 <br />

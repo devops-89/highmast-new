@@ -78,6 +78,21 @@
     font-weight: bold; /* Optional: make the active link bold */
   }
 
+@media (min-width:769px) and (max-width:900px){
+
+    .common-padding{
+        padding:30px important;
+
+    }
+    
+.footerlinkpadding {
+    padding-left: 0px !important;
+}
+
+.footerlinkservicepadding {
+    padding-left:0px  !important;
+}
+}
 
 @media (max-width:768px) {
     .footer ul a {
