@@ -58,7 +58,7 @@ const Aboutsection = () => {
 
   // Define font size ranges for different screen sizes
   const fontSizes = {
-    mobile: { min: 70, max: 100 }, // 0px - 768px
+    mobile: { min: 40, max: 100 }, // 0px - 768px
     tablet: { min: 80, max: 100 }, // 768px - 1024px
     large: { min: 100, max: 150 }, // 1024px - 1440px
     desktop: { min: 150, max: 300 }, // > 1440px
@@ -67,10 +67,7 @@ const Aboutsection = () => {
   // Adjust font size based on screen size
   let fontSizeValue;
   if (screenWidth <= 768) {
-    fontSizeValue = Math.min(
-      fontSizes.mobile.max,
-      Math.max(fontSizes.mobile.min, 65)
-    );
+    fontSizeValue = 60;
   } else if (screenWidth > 768 && screenWidth <= 1024) {
     fontSizeValue = Math.min(
       fontSizes.tablet.max,

@@ -6,6 +6,8 @@ import DirectionsBoatIcon from "@mui/icons-material/DirectionsBoat";
 import Servicesscroll from "../../component/service-scroll";
 import Majorservice from "../../component/majorservice";
 import { useLocation } from "react-router-dom";
+
+
 import SmallTextAnimation from "../../component/animations/SmallTextAnimation/SmallTextAnimation";
 
 
@@ -21,6 +23,11 @@ const Service = () => {
     AOS.refresh();
   }, []); // Add the dependency array to ensure it runs only once
 
+
+  
+  
+  
+
   function calculateFontSize() {
     const width = window.innerWidth;
     if (width > 1200) return "70px";
@@ -30,7 +37,7 @@ const Service = () => {
 
   return (
     <div style={{backgroundColor:"#002C30"}}>
-      <section className="servicebanner secOne2   ">
+      <section  className="servicebanner secOne2   ">
         {/* Add this div for the overlay */}
         <div className="container bannercontainer">
           <div
@@ -61,7 +68,7 @@ const Service = () => {
           </div>
         </div>
         {/* Boxes Section */}
-        <section className="container" style={{backgroundColor:"#002C30"}}>
+        <section className="container" style={{backgroundColor:"transparent"}}>
         <div className="row">
           <div
             className="col-sm-3  mb-4 "

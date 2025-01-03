@@ -63,7 +63,7 @@ const Contactus = () => {
 
   return (
     <div>
-      <section id="vanta" className="conatactbanner   secOne2   ">
+      <section  className="conatactbanner   secOne2   ">
         <div className="conatactbanneroverlay"></div>{" "}
         {/* Add this div for the overlay */}
         <div className="container contactmobilebaner bannercontainer">
