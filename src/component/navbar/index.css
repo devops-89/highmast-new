@@ -1,3 +1,9 @@
+@media(min-width:1600px){
+    .nav-container{
+        min-width: 1920px;
+    }
+}
+
 .css-1k8y6wp{
     background-color:#002C30!important;
 }

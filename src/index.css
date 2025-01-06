@@ -1,3 +1,13 @@
+@media (min-width:1600px){
+  div#root {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+ 
+}
+
+
+
 body {
   background-color: #4C8C91 !important;
   margin: 0;
@@ -7,6 +17,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+    
 }
 
 /* Video Container */
