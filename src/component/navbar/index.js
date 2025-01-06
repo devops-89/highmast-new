@@ -94,7 +94,7 @@ const Navbar = () => {
         padding: { xs: "0px 12px ", md: "0px 0px", lg: "0px 0px" },
       }}
     >
-      <div className="container px-0">
+      <div className="container px-0 nav-container">
         <Stack
           direction={"row"}
           alignItems={"center"}
@@ -110,7 +110,7 @@ const Navbar = () => {
               height: 70,
               mt: 3,
               borderRadius: 2,
-              backgroundColor: fixed ? "rgb(16 59 81 / 15%)" : "transparent",
+              backgroundColor: fixed ? "rgb(16 59 81 / 50%)" : "rgb(16 59 81 / 50%)",
               backdropFilter: fixed && "blur(5px)",
               alignItems: "center",
               paddingLeft: { xs: "0px", md: "20px", lg: "20px" },
@@ -368,7 +368,7 @@ const Navbar = () => {
               height: 70,
               marginLeft: "5px",
               marginTop: "25px",
-              backgroundColor: fixed ? "rgba(16, 59, 81, 0.15)" : "transparent",
+              backgroundColor: fixed ? "rgba(16, 59, 81, 50%)" : "rgba(16, 59, 81, 50%)",
               backdropFilter: fixed && "blur(5px)",
             }}
             onClick={handleShow}
