@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { Box, Typography, Tabs, Tab } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Mousewheel} from "swiper/modules";
+import { Mousewheel, Autoplay } from "swiper/modules"; // Import the Autoplay module
 import "./index.css";
 import mission from "../../assets/img/elements/eye.png";
 import vision from "../../assets/img/elements/mission.png";
@@ -25,161 +25,139 @@ function CoreValues() {
     setValue(swiper.activeIndex);
 
     // If the user scrolls backward to the first slide, scroll out of the section
-    if (swiper.activeIndex === 0 && swiper.isBeginning) {
-      // window.scrollBy({ top: -300, behavior: "smooth" });
-      setTimeout(() => {
-        window.scrollBy({ top: -300, behavior: "smooth" });
-      }, 1500); // Delay for smoother transition
-    }
+    // if (swiper.activeIndex === 0 && swiper.isBeginning) {
+    //   setTimeout(() => {
+    //     window.scrollBy({ top: -300, behavior: "smooth" });
+    //   }, 1500); // Delay for smoother transition
+    // }
   };
 
   // Scroll away from Swiper after reaching the last slide
-  const handleReachEnd = () => {
-    setTimeout(() => {
-      window.scrollBy({ top: 300, behavior: "smooth" });
-    }, 1500); // Delay for smoother transition
-  };
+  // const handleReachEnd = () => {
+  //   setTimeout(() => {
+  //     window.scrollBy({ top: 300, behavior: "smooth" });
+  //   }, 1500); // Delay for smoother transition
+  // };
 
   return (
-    <div className="container-fluid core-value-container " >
-    <Box className="container corevaluessection">
-      {/* <Box data-aos="fade-up-down">
-        <h2 className="heading headingcenter">CORE VALUES</h2>
-      </Box> */}
-      <Box className="tabs-section my-10">
-        <Tabs
-          value={value}
-          onChange={handleTabChange}
-          aria-label="Core Values Tabs"
-          indicatorColor="primary"
-          textColor="primary"
-        >
-          <Tab className="tab" sx={{ fontSize: { sm: '16px', md: '30px' } }} label="Mission" />
-          <Tab className="tab" sx={{ fontSize: { sm: '16px', md: '30px' } }} label="Vision" />
-          <Tab className="tab" sx={{ fontSize: { sm: '16px', md: '30px' } }} label="Responsibility" />
-        </Tabs>
+    <div className="container-fluid core-value-container">
+      <Box className="container corevaluessection">
+        <Box className="tabs-section my-10">
+          <Tabs
+            value={value}
+            onChange={handleTabChange}
+            aria-label="Core Values Tabs"
+            indicatorColor="primary"
+            textColor="primary"
+          >
+            <Tab className="tab" sx={{ fontSize: { sm: "16px", md: "30px" } }} label="Mission" />
+            <Tab className="tab" sx={{ fontSize: { sm: "16px", md: "30px" } }} label="Vision" />
+            <Tab className="tab" sx={{ fontSize: { sm: "16px", md: "30px" } }} label="Responsibility" />
+          </Tabs>
+        </Box>
+        <Box className="swiper-section mt-5">
+          <Swiper
+            ref={swiperRef}
+            speed={1200}
+            onSlideChange={handleSlideChange}
+            // onReachEnd={handleReachEnd}
+            spaceBetween={30}
+            slidesPerView={1}
+            initialSlide={0}
+            direction={"horizontal"}
+            mousewheel={true}
+            autoplay={{ delay: 3000, disableOnInteraction: false }} // Enable autoplay
+            modules={[Mousewheel, Autoplay]} // Include Autoplay module
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <Box className="swiper-slide-content">
+                <div className="row">
+                  <div className="col-sm-4 valueparent" data-aos-mirror="true">
+                    <Box>
+                      <img src={mission} alt="Mission" style={{ borderRadius: "8px", margin: "auto" }} />
+                    </Box>
+                  </div>
+                  <div className="col-sm-8 valueparent2" data-aos-mirror="true" data-aos="fade-left">
+                    <Box>
+                      <Typography variant="h1">Mission</Typography>
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xs: "13px",
+                            sm: "1rem",
+                            md: "22px",
+                          },
+                        }}
+                      >
+                        To become the leading company in our industry by innovating and building long-lasting relationships
+                        with our customers.
+                      </Typography>
+                    </Box>
+                  </div>
+                </div>
+              </Box>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box className="swiper-slide-content">
+                <div className="row">
+                  <div className="col-sm-4 valueparent">
+                    <Box>
+                      <img src={vision} alt="Vision" style={{ borderRadius: "8px" }} />
+                    </Box>
+                  </div>
+                  <div className="col-sm-8 valueparent2">
+                    <Box>
+                      <Typography variant="h1">Vision</Typography>
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xs: "13px",
+                            sm: "1rem",
+                            md: "22px",
+                          },
+                        }}
+                      >
+                        To provide exceptional products/services while contributing to the well-being of our customers.
+                      </Typography>
+                    </Box>
+                  </div>
+                </div>
+              </Box>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Box className="swiper-slide-content">
+                <div className="row">
+                  <div className="col-sm-4 valueparent">
+                    <Box>
+                      <img src={Responsibility} alt="Responsibility" style={{ borderRadius: "8px" }} />
+                    </Box>
+                  </div>
+                  <div className="col-sm-8 valueparent2">
+                    <Box>
+                      <Typography variant="h1">Responsibility</Typography>
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xs: "13px",
+                            sm: "1rem",
+                            md: "22px",
+                          },
+                        }}
+                      >
+                        A strong commitment to social and environmental responsibility.
+                      </Typography>
+                    </Box>
+                  </div>
+                </div>
+              </Box>
+            </SwiperSlide>
+          </Swiper>
+        </Box>
       </Box>
-      <Box className="swiper-section mt-5">
-        <Swiper
-          ref={swiperRef}
-          speed={1200}
-          onSlideChange={handleSlideChange}
-          onReachEnd={handleReachEnd}
-          spaceBetween={30}
-          slidesPerView={1}
-          initialSlide={0}
-          direction={"horizontal"}
-          mousewheel={true}
-         
-          modules={[Mousewheel]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <Box className="swiper-slide-content ">
-              <div className="row">
-                <div className="col-sm-4 valueparent" data-aos-mirror="true">
-                  <Box>
-                    <img
-                      src={mission}
-                      alt="Mission"
-                      style={{ borderRadius: "8px", margin: "auto" }}
-                    />
-                  </Box>
-                </div>
-                <div
-                  className="col-sm-8 valueparent2"
-                  data-aos-mirror="true"
-                  data-aos="fade-left"
-                >
-                  <Box>
-                    <Typography variant="h1">Mission</Typography>
-                    <Typography
-                      sx={{
-                        fontSize: {
-                          xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
-                          sm: "1rem", // Slightly larger for tablets and small screens
-                          md: "22px",
-                        },
-                      }}
-                    >
-                      To become the leading company in our industry by
-                      innovating and building long-lasting relationships with
-                      our customers.
-                    </Typography>
-                  </Box>
-                </div>
-              </div>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box className="swiper-slide-content">
-              <div className="row">
-                <div className="col-sm-4 valueparent">
-                  <Box>
-                    <img
-                      src={vision}
-                      alt="Vision"
-                      style={{ borderRadius: "8px" }}
-                    />
-                  </Box>
-                </div>
-                <div className="col-sm-8 valueparent2">
-                  <Box>
-                    <Typography variant="h1">Vision</Typography>
-                    <Typography
-                      sx={{
-                        fontSize: {
-                          xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
-                          sm: "1rem", // Slightly larger for tablets and small screens
-                          md: "22px",
-                        },
-                      }}
-                    >
-                      To provide exceptional products/services while
-                      contributing to the well-being of our customers.
-                    </Typography>
-                  </Box>
-                </div>
-              </div>
-            </Box>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box className="swiper-slide-content">
-              <div className="row">
-                <div className="col-sm-4 valueparent">
-                  <Box>
-                    <img
-                      src={Responsibility}
-                      alt="Responsibility"
-                      style={{ borderRadius: "8px" }}
-                    />
-                  </Box>
-                </div>
-                <div className="col-sm-8 valueparent2">
-                  <Box>
-                    <Typography variant="h1">Responsibility</Typography>
-                    <Typography
-                      sx={{
-                        fontSize: {
-                          xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
-                          sm: "1rem", // Slightly larger for tablets and small screens
-                          md: "22px",
-                        },
-                      }}
-                    >
-                      A strong commitment to social and environmental
-                      responsibility.
-                    </Typography>
-                  </Box>
-                </div>
-              </div>
-            </Box>
-          </SwiperSlide>
-        </Swiper>
-      </Box>
-    </Box>
     </div>
   );
 }
 
 export default CoreValues;
+

@@ -104,7 +104,7 @@ const Navbar = () => {
             width: "100%",
           }}
         >
-          <Stack
+          <Stack 
             sx={{
               border: fixed ? "1px solid #d7d7d7" : "1px solid #121a27",
               height: 70,

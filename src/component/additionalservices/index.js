@@ -72,6 +72,7 @@ const Additinalservices = (props) => {
             style={{
               transform: `scale(${scaleValue})`,
               transition: "transform 0.3s ease",
+              filter:`invert(1)`
             }}
           />
           <div

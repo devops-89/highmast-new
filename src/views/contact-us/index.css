@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 110vh;
+  
 
   z-index: 1;
 
@@ -33,7 +33,7 @@
 .boxes {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .box-row {
@@ -84,7 +84,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 70vh;
+   
   
     z-index: 1;
   
