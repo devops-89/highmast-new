@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
-import { EffectFade, Autoplay } from "swiper/modules";
+import { EffectFade, Mousewheel } from "swiper/modules";
 import "./index.css";
 import GreenText from "../animations/GreenText/GreenText";
 
@@ -15,6 +15,9 @@ import vesselsimg from "../../assets/img/elements/serviceimg5.jpg";
 import shipImage6 from "../../assets/img/elements/marineautomationservice.jpg";
 
 const Servicesscroll = () => {
+
+  const swiperRef=useRef();
+
   const images = [
     shipImage1,
     shipImage2,
@@ -23,6 +26,26 @@ const Servicesscroll = () => {
     vesselsimg,
     shipImage6,
   ];
+
+  // Handle slide change and scroll away from Swiper when reaching the first slide
+  const handleSlideChange = (swiper) => {
+    
+    setActiveSlide(swiper.realIndex);
+
+    // If the user scrolls backward to the first slide, scroll out of the section
+    if (swiper.activeIndex === 0 && swiper.isBeginning) {
+      setTimeout(() => {
+        window.scrollBy({ top: -300, behavior: "smooth" });
+      }, 1500); // Delay for smoother transition
+    }
+  };
+
+  // Scroll away from Swiper after reaching the last slide
+  const handleReachEnd = () => {
+    setTimeout(() => {
+      window.scrollBy({ top: 300, behavior: "smooth" });
+    }, 1500); // Delay for smoother transition
+  };
 
   const textItems = [
     "Retrofit Led Power <br/> Saving Solutions",
@@ -36,19 +59,21 @@ const Servicesscroll = () => {
   // State for tracking the active slide index
   const [activeSlide, setActiveSlide] = useState(0);
 
-  // Handle slide change event from Swiper
-  const handleSlideChange = (swiper) => {
-    setActiveSlide(swiper.realIndex); // Get the real index of the active slide
-  };
-
   return (
     <div>
       <Swiper
-        modules={[EffectFade, Autoplay]}
+        ref={swiperRef}
+        style={{ margin: "auto" }}
+        speed={1200}
+        onSlideChange={handleSlideChange}
+        onReachEnd={handleReachEnd}
+        slidesPerView={1}
+        initialSlide={0}
+        mousewheel={true}
+        modules={[EffectFade, Mousewheel]}
         effect="fade"
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        loop={true}
-        onSlideChange={handleSlideChange} // Listen for slide changes
+     
+       
         className="mySwiper"
       >
         {images.map((image, index) => (
@@ -64,8 +89,6 @@ const Servicesscroll = () => {
                   }`}
                   dangerouslySetInnerHTML={{ __html: textItems[index] }}
                 />
-               
-               
               </div>
             </div>
           </SwiperSlide>

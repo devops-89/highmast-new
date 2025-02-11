@@ -66,8 +66,8 @@
 }
 
 .abouthighmastimg {
- height: 660px;
- width: 325px;
+ height: 530px;
+ width: 400px;
  margin-top: auto;
  border-radius: 5px;
 }
@@ -201,6 +201,7 @@
  }
  .abouthighmastimg {
    height: 385px;
+   width:300px ;
  }
  .aboutcontent {
    padding: 15px;

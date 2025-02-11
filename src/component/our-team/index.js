@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import "./index.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Teamimg1 from "../../assets/img/elements/Team1.jpg";
 import Teamimg2 from "../../assets/img/elements/Team2.jpg";
 
@@ -7,20 +9,30 @@ import { Typography } from "@mui/material";
 
 const Ourteam = () => {
 
+  useEffect(()=>{
+    AOS.init({
+      duration: 1000, 
+      mirror: true, 
+      anchorPlacement: "top-bottom", 
+    })
+  })
+
   return (
     <div className="container-fluid team-main-container">
     <div className="container allpadding">
-      <div data-aos="fade-right">
+      <div data-aos="fade-right"  data-aos-offset="50">
         <h2 className="Ourteamheading headingcenter ">OUR TEAM</h2>
       </div>
       <div className="container allpadding pb-0">
         <div className="row align-items-center pb-5   ourrteamsection ourteamsectionist ">
           <div
             className="col-sm-5"
-            data-aos="fade-right"
-            data-aos-mirror="true"
+            data-aos="fade-left"
+            data-aos-delay="500"
+             data-aos-offset="100"
+           
      
-            data-aos-easing="ease-in-out"
+          
           >
             <Typography
               sx={{
@@ -72,7 +84,7 @@ const Ourteam = () => {
           </div>
           <div className="col-sm-7 teamimgparnt1">
             <div className="image-overlay">
-              <img data-aos="zoom-in-up" src={Teamimg1} alt="Team Member" />
+              <img data-aos="zoom-in-up"   src={Teamimg1} alt="Team Member" />
             </div>
           </div>
         </div>
@@ -85,8 +97,8 @@ const Ourteam = () => {
           <div
             className="col-sm-5"
             data-aos="fade-left"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"
+           data-aos-delay="500"
+            data-aos-offset="100"
           >
             <Typography
               sx={{

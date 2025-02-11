@@ -38,7 +38,7 @@
   
   }
   
-  .image-overlay::before {
+  /* .image-overlay::before {
     content: "";
     position: absolute;
     top: 0;
@@ -51,7 +51,7 @@
     background-position: right;
   
     z-index: 1;
-  }
+  } */
   
   .image-overlay img {
     display: block;

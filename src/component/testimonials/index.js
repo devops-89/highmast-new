@@ -13,21 +13,22 @@ const Testimonials = (props) => {
     if (swiperRef.current) {
       const swiper = swiperRef.current.swiper;
 
-      // if (swiper.isEnd) {
-      //   setTimeout(() => {
-      //     window.scrollBy({ top: 300, behavior: "smooth" });
-      //   }, 1000);
-      // }
+      if (swiper.isEnd) {
+        setTimeout(() => {
+          window.scrollBy({ top: 300, behavior: "smooth" });
+        }, 1000);
+      }
 
-      // if (swiper.isBeginning) {
-      //   setTimeout(() => {
-      //     window.scrollBy({ top: -300, behavior: "smooth" });
-      //   }, 1000);
-      // }
+      if (swiper.isBeginning) {
+        setTimeout(() => {
+          window.scrollBy({ top: -300, behavior: "smooth" });
+        }, 1000);
+      }
     }
   };
 
   return (
+    <div style={{backgroundColor:"#002C30"}}>
     <div className="container testimonialssection allpadding">
       <div data-aos="fade-down" data-aos-mirror="true">
         <h2 className="subheading headingcenter">Trusted by Many...</h2>
@@ -39,8 +40,8 @@ const Testimonials = (props) => {
           spaceBetween={30}
           speed={1000}
           mousewheel={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }} // Enable autoplay
-          modules={[Mousewheel, Autoplay]} // Include Autoplay module
+          // autoplay={{ delay: 3000, disableOnInteraction: false }} // Enable autoplay
+          modules={[Mousewheel]} // Include Autoplay module
           className="testimonialswiper"
           onSlideChange={handleEnd}
           ref={swiperRef}
@@ -148,6 +149,7 @@ const Testimonials = (props) => {
           </SwiperSlide>
         </Swiper>
       </div>
+    </div>
     </div>
   );
 };

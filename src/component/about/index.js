@@ -155,8 +155,7 @@ const Aboutsection = () => {
                     emission-free energy, HighMast combines expertise with
                     eco-friendly innovation. Certified to ISO 9001, ISO 14001, and
                     ISO 45001 standards, we deliver unparalleled quality and
-                    safety assurance, offering 24/7 support across 50+ global
-                    ports to keep vessels running smoothly and sustainably.
+                    safety assurance, offering 24/7 support across running smoothly and sustainably.
                   </Typography>
                 </div>
               </div>

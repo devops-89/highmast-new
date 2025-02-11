@@ -124,7 +124,7 @@ const Contactus = () => {
                     </div>
                   </div>
 
-                  <div
+                  {/* <div
                     className="box three"
                     data-aos="fade-up"
                     data-aos-duration="500"
@@ -138,7 +138,7 @@ const Contactus = () => {
                       </div>
                       <div className="box-content">Ports Served</div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </section>
             </div>

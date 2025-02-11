@@ -81,12 +81,12 @@ const Retrofit = () => {
         avtarimg={avtarimg}
         dwnquote={dwnquote}
         upquote={upquote}
-        para="HighMast Marine’s expertise in engine overhauling was beyond impressive! The team’s professionalism, attention to detail, and timely delivery of services made our operations smoother than ever. Their guidance throughout the process, along with proactive troubleshooting, ensured the machinery was optimized perfectly. Truly a game-changer!"
-        para2="We were struggling with our ship's electrical systems, but HighMast Marine’s team jumped in with unmatched knowledge. They diagnosed issues quickly, provided clear solutions, and were always available for support. Their timely, thorough repairs and efficiency made a world of difference!"
-        para3="HighMast Marine’s work on our scrubber and CCS commissioning was flawless. Their team guided us through the entire process with unmatched expertise and clarity. They didn’t just fix the issue, they provided a comprehensive solution with ongoing support. We couldn’t have asked for better."
-        name1="R. Deshmukh"
-        name2="Vinod S. "
-        name3="Anil G."
+        para="Highmast marine ESD installation team was very proffesional @ the shipyard. The PVC retrofit was done to our satisfaction and time given."
+        para2="We had a shut down in our dual fuel system , the problem was resolved with proper knowledge of the system , with required spares avalibility and stipulated time given in the discharge port."
+        para3="HighMast Marine’s work on our scrubber and CCS commissioning was flawless. Their team guided us through the entire process with unmatched expertise and clarity."
+        name1="R. Deshmukh - Sr Tech Supt"
+        name2="Vinod S. - Fleet Mgr"
+        name3="Anil G. - Fleet Mgr"
       />
 
       {/* <div className="row ">

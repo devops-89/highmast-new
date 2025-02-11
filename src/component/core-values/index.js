@@ -25,19 +25,19 @@ function CoreValues() {
     setValue(swiper.activeIndex);
 
     // If the user scrolls backward to the first slide, scroll out of the section
-    // if (swiper.activeIndex === 0 && swiper.isBeginning) {
-    //   setTimeout(() => {
-    //     window.scrollBy({ top: -300, behavior: "smooth" });
-    //   }, 1500); // Delay for smoother transition
-    // }
+    if (swiper.activeIndex === 0 && swiper.isBeginning) {
+      setTimeout(() => {
+        window.scrollBy({ top: -300, behavior: "smooth" });
+      }, 1500); // Delay for smoother transition
+    }
   };
 
   // Scroll away from Swiper after reaching the last slide
-  // const handleReachEnd = () => {
-  //   setTimeout(() => {
-  //     window.scrollBy({ top: 300, behavior: "smooth" });
-  //   }, 1500); // Delay for smoother transition
-  // };
+  const handleReachEnd = () => {
+    setTimeout(() => {
+      window.scrollBy({ top: 300, behavior: "smooth" });
+    }, 1500); // Delay for smoother transition
+  };
 
   return (
     <div className="container-fluid core-value-container">
@@ -60,13 +60,13 @@ function CoreValues() {
             ref={swiperRef}
             speed={1200}
             onSlideChange={handleSlideChange}
-            // onReachEnd={handleReachEnd}
+            onReachEnd={handleReachEnd}
             spaceBetween={30}
             slidesPerView={1}
             initialSlide={0}
             direction={"horizontal"}
             mousewheel={true}
-            autoplay={{ delay: 3000, disableOnInteraction: false }} // Enable autoplay
+            
             modules={[Mousewheel, Autoplay]} // Include Autoplay module
             className="mySwiper"
           >
@@ -160,4 +160,3 @@ function CoreValues() {
 }
 
 export default CoreValues;
-

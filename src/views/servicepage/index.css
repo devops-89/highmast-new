@@ -1,6 +1,6 @@
 .servicebanner {
 
-    background-color: #002C30;
+    background:url("https://videocdn.cdnpk.net/videos/82490b78-0df5-47fb-a0d4-e72479389738/horizontal/previews/watermarked/small.mp4");
     width: 100%;
     background-repeat: no-repeat;
   
@@ -16,12 +16,12 @@
     margin-bottom: 0;
   }
   .borderboxes {
-    background: #5e8c9326;
+    background: #002C30;
     padding: 30px;
     border-radius: 10px;
     height: 300px;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(47, 126, 133, 0.8);
     transition: transform 0.3s ease;
     border: 1px solid #6CBBC8;
   }

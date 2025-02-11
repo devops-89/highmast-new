@@ -76,7 +76,9 @@ const Certification = () => {
 
         <div class="col-sm-4">
           <div class="text-center">
-            <img src={anchorimg} alt="Parallax Image" class="anchorimg"></img>
+            <img data-aos="flip-right"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" src={anchorimg} alt="Parallax Image" class="anchorimg"></img>
           </div>
         </div>
 
@@ -113,8 +115,8 @@ const Certification = () => {
             data-aos-delay="500"
           >
             <div class="   ">
-              <div className="certificationparent">
-                <img className="certificationimg" src={certificationimg4}></img>
+              <div className="certificationparent" >
+                <img className="certificationimg"  src={certificationimg4}></img>
               </div>
               <Typography
                 className="certiondetail"
