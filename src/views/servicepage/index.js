@@ -39,7 +39,7 @@ const Service = () => {
     <div>
        <div className="video-container">
         <video autoPlay loop muted className="video">
-          <source src="https://cdn.pixabay.com/video/2022/05/05/116105-706674457_tiny.mp4" type="video/mp4" />
+          <source src="/header/header2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
