@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { Parallax } from "react-parallax";
+import "aos/dist/aos.css";
+import AOS from "aos"; 
 import "./index.css";
 
 
@@ -11,6 +13,14 @@ const ExpertiesComponent = (props) => {
     }
   }, []);
  
+
+  useEffect(()=>{
+  AOS.init({
+    duration: 1000, 
+    mirror: true, 
+    anchorPlacement: "top-bottom", 
+  })
+  },[]);
 
   return (
     <div className="container-fluid px-0 ">
@@ -25,8 +35,8 @@ const ExpertiesComponent = (props) => {
       >
         <div className="expertiseoverlay"></div>
         <div className="expertisecontent container">
-          <h2>{props.heading1}</h2>
-          <p>{props.description1}</p>
+          <h2 data-aos="flip-left">{props.heading1}</h2>
+          <p data-aos="flip-right">{props.description1}</p>
         </div>
       </Parallax>
 
@@ -38,8 +48,8 @@ const ExpertiesComponent = (props) => {
       >
         <div className="expertiseoverlay"></div>
         <div className="expertisecontent container">
-          <h2>{props.heading2}</h2>
-          <p>{props.description2}</p>
+          <h2 data-aos="fade-left">{props.heading2}</h2>
+          <p data-aos="fade-right">{props.description2}</p>
         </div>
       </Parallax>
       {!props.excludeThirdParallax && (
@@ -50,8 +60,8 @@ const ExpertiesComponent = (props) => {
         >
           <div className="expertiseoverlay"></div>
           <div className="expertisecontent container">
-            <h2>{props.heading3}</h2>
-            <p>{props.description3}</p>
+            <h2 data-aos="fade-right">{props.heading3}</h2>
+            <p data-aos="fade-left">{props.description3}</p>
           </div>
         </Parallax>
       )}

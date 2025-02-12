@@ -37,7 +37,7 @@ const About = () => {
     <div>
        <div className="video-container">
         <video autoPlay loop muted className="video">
-          <source src="/header/header.mp4" type="video/mp4" />
+          <source src="/header/header3.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

@@ -19,7 +19,7 @@ const TermsAndCondition = () => {
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1 data-aos="fade-up-right">
-                <p className="rstoftext">
+                <p className="rstoftext" style={{marginTop:"22px"}}>
                   <span>TERMS & CONDITIONS</span>
                 </p>
               </h1>

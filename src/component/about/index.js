@@ -1,15 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Typography } from "@mui/material";
-import gsap from "gsap";
+import { Typography, Container, Stack} from "@mui/material";
+// import gsap from "gsap";
 import AOS from "aos";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import img24x7 from "../../assets/img/elements/24-hours.png";
 import datawaveimg from "../../assets/img/elements/data-wave.png";
 import abouthighmastimg from "../../assets/img/elements/abouthighmastimg.jpg";
+import Grid2 from '@mui/material/Grid2';
+
 
 import "./index.css";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const Aboutsection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -30,28 +32,31 @@ const Aboutsection = () => {
     };
   }, []);
 
-  useEffect(() => {
-    AOS.init();
-    return () => {
-      AOS.refreshHard();
-    };
-  }, []);
+  
+   useEffect(()=>{
+       AOS.init({
+         duration: 1000, 
+         mirror: true, 
+         anchorPlacement: "top-bottom", 
+       })
+     },[]);
+    
 
-  useEffect(() => {
-    const gsapContext = gsap.context(() => {
-      if (sectionRef.current) {
-        gsap.fromTo(
-          sectionRef.current,
-          { opacity: 0 },
-          { opacity: 1, duration: 1 }
-        );
-      }
-    }, sectionRef);
+  // useEffect(() => {
+  //   const gsapContext = gsap.context(() => {
+  //     if (sectionRef.current) {
+  //       gsap.fromTo(
+  //         sectionRef.current,
+  //         { opacity: 0 },
+  //         { opacity: 1, duration: 1 }
+  //       );
+  //     }
+  //   }, sectionRef);
 
-    return () => {
-      gsapContext.revert();
-    };
-  }, []);
+  //   return () => {
+  //     gsapContext.revert();
+  //   };
+  // }, []);
 
   // Determine screen size
   const screenWidth = window.innerWidth;
@@ -86,52 +91,33 @@ const Aboutsection = () => {
   }
 
   return (
-    <div>
-      <div className="container-fluid px-0 aboutussectionbg">
-        <div>
-          <div className="container allpadding">
-            <div className="row">
-              <div className="col-sm-12 mx-auto">
-                <div className="scroll-animation-containerabout" ref={sectionRef}>
-                  <div
-                    data-aos="zoom-in-up"
-                    className="zoom-textAbout"
-                    style={{
-                      transform: `scale(1)`, // Scaling can remain dynamic if required
-                      fontSize: `${fontSizeValue}px`,
-                    }}
-                  >
-                    Why High<span className="Mast-text">Mast</span>?
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style={{ marginBlock: "40px" }}>
-          <div className="container Aboutparent">
-            <div className="row align-items-center">
-              <div className="col-sm-4 col-md-4 aboutusleftimgparent text-center">
-                <div className="aboutusimg">
-                  <img
-                    className="abouthighmastimg"
+    <div  className="container-fluid " style={{backgroundColor:  "#4C8C91",paddingBottom:"20px"}}>
+     
+        <Stack data-aos="flip-left" sx={{justifyContent:"center",alignItems:"center"}}>
+        <Typography sx={{fontSize:{xs:"40px",md:"120px"}, py:{xs:1,md:2}, fontWeight: 'bold', color: 'white' }} >
+  Why High<span style={{ color: 'red' }}>Mast?</span>
+</Typography>
+        </Stack>
+   
+         {/* start */}
+         <Container>
+        <Grid2 container rowGap={2} columnGap={4} sx={{my:10,}}>
+          <Grid2 size={{md:12,lg:4}} >
+            <Stack sx={{justifyContent:"center",alignItems:"center"}}>
+          <img
+                    
+                    style={{width:"100%",height:"100%",overflow:"hidden",borderRadius:"4px"}}
                     src={abouthighmastimg}
                     data-aos="zoom-in-down"
                     data-aos-duration="500"
                     data-aos-delay="200"
                   />
-                </div>
-              </div>
-              <div className="col-sm-8 col-md-8 alltextparent">
-                <div
-                  className="aboutcontent"
-                  data-aos="fade-left"
-                  data-aos-mirror="true"
-                  data-aos-duration="300"
-                  data-aos-delay="400"
-                >
-                  <Typography component="p"></Typography>
-                  <Typography component="p" className="para">
+                  </Stack>
+          </Grid2>
+          <Grid2 size={{md:12,lg:7}} >
+            <Stack spacing={1} sx={{p:2,border:"2px solid white",borderRadius:2}}>
+          <Typography component="p" className="para" sx={{fontSize:{sm:"",md:"",lg:"18px"},color:"white"}}  data-aos="fade-left"
+                  data-aos-mirror="true">
                     At HighMast Marine Services Pte Ltd, sustainability drives
                     everything we do. Founded in 2023 by a team with over 20 years
                     of ship management expertise, we are redefining maritime
@@ -140,7 +126,8 @@ const Aboutsection = () => {
                     efficiency, quality, and environmental responsibility.
                   </Typography>
                   <br />
-                  <Typography component="p" className="para">
+                  <Typography component="p" className="para" sx={{fontSize:{sm:"",md:"",lg:"18px"},color:"white"}}  data-aos="fade-left"
+                  data-aos-mirror="true">
                     In partnership with ContiOcean Environment Global, China, we
                     bring cutting-edge sustainable technologies to the maritime
                     industry. Our advanced systems, including Exhaust Gas Cleaning
@@ -150,19 +137,21 @@ const Aboutsection = () => {
                     world.
                   </Typography>
                   <br />
-                  <Typography component="p" className="para">
+                  <Typography component="p" className="para" sx={{fontSize:{sm:"",md:"",lg:"18px"},color:"white"}}  data-aos="fade-left"
+                  data-aos-mirror="true">
                     With over 50 successful dry dockings and a 100% commitment to
                     emission-free energy, HighMast combines expertise with
                     eco-friendly innovation. Certified to ISO 9001, ISO 14001, and
                     ISO 45001 standards, we deliver unparalleled quality and
                     safety assurance, offering 24/7 support across running smoothly and sustainably.
                   </Typography>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                  </Stack>
+          </Grid2>
+            
+        </Grid2>
+        </Container>
+        {/* end */}
+      
     </div>
   );
 };

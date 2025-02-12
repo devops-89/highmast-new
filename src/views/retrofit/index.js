@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import ServicesDescription from "../../component/servicesdescription";
 import ServicesPointers from "../../component/servicespointers";
 import "aos/dist/aos.css";
-import Aos from "aos"; // Ensure Aos is imported
+import AOS from "aos"; // Ensure Aos is imported
 import "./index.css";
 import pointersimg from "../../assets/img/elements/retrofitpotrait.jpg";
 import Testimonials from "../../component/testimonials";
@@ -19,9 +19,10 @@ import Contactseection from "../../component/contactsection";
 
 const Retrofit = () => {
   useEffect(() => {
-    Aos.init({
-      // delay: 500,
-      mirror: false,
+    AOS.init({
+      duration: 1000, 
+      mirror: true, 
+      anchorPlacement: "top-bottom", 
     });
   }, []); // Add the dependency array to ensure it runs only once
   return (

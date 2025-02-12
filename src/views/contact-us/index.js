@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
 
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -9,10 +9,7 @@ import Contactseection from "../../component/contactsection";
 import SmallTextAnimation from "../../component/animations/SmallTextAnimation/SmallTextAnimation";
 
 const Contactus = () => {
-
- 
-
-  const [font,setFont]=useState(calculateFontSize);
+  const [font, setFont] = useState(calculateFontSize);
 
   const contactaddressdata = [
     {
@@ -63,7 +60,7 @@ const Contactus = () => {
 
   return (
     <div>
-      <section  className="conatactbanner   secOne2   ">
+      <section className="conatactbanner   secOne2   ">
         <div className="conatactbanneroverlay"></div>{" "}
         {/* Add this div for the overlay */}
         <div className="container contactmobilebaner bannercontainer">
@@ -75,7 +72,19 @@ const Contactus = () => {
                 data-duration="200"
               >
                 <h1>
-                  <span className="rstoftext"><SmallTextAnimation text="Contact" fontSize={font} textColor="red" /> <SmallTextAnimation text="Us" fontSize={font} textColor="red" /> Today</span>
+                  <span className="rstoftext">
+                    <SmallTextAnimation
+                      text="Contact"
+                      fontSize={font}
+                      textColor="red"
+                    />{" "}
+                    <SmallTextAnimation
+                      text="Us"
+                      fontSize={font}
+                      textColor="red"
+                    />{" "}
+                    Today
+                  </span>
                   <br />
                   <span className="rstoftext">and Make Waves</span>
                   <br />
@@ -148,7 +157,10 @@ const Contactus = () => {
                 data-aos-delay="300"
                 className="contactimgparent"
               >
-                <img className="globebanerimg" src={globebannerimg}></img>
+                <img className="globebanerimg" src="/header/first.svg"></img>
+                {/* svg start */}
+                 
+                {/* svg end */}
               </div>
             </div>
           </div>

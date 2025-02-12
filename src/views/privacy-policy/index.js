@@ -19,7 +19,7 @@ const Privacypolicy = () => {
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1 data-aos="fade-up-right">
-                <p className="rstoftext">
+                <p className="rstoftext" style={{marginTop:"35px"}}>
                   <span className="">PRIVACY POLICY</span>
                 </p>
               </h1>

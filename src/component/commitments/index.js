@@ -1,6 +1,7 @@
 import React,{useState,useRef} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Mousewheel,Autoplay } from "swiper/modules"; // Use Mousewheel instead of Autoplay
+// import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 import "swiper/css";
 import "swiper/css/navigation";
 import "./index.css";
@@ -10,44 +11,49 @@ import image3 from "../../assets/img/elements/cargo-handling.jpg";
 import image4 from "../../assets/img/elements/serviceimg4.jpg";
 
 const Commitsmentcomponent = () => {
-  const [value, setValue] = React.useState(0);
-    const swiperRef = useRef(null);
+  // const [value, setValue] = React.useState(0);
+  //   const swiperRef = useRef(null);
 
     // Handle slide change and scroll away from Swiper when reaching the first slide
-    const handleSlideChange = (swiper) => {
-      setValue(swiper.activeIndex);
+    // const handleSlideChange = (swiper) => {
+    //   setValue(swiper.activeIndex);
   
-      // If the user scrolls backward to the first slide, scroll out of the section
-      if (swiper.activeIndex === 0 && swiper.isBeginning) {
-        setTimeout(() => {
-          window.scrollBy({ top: -300, behavior: "smooth" });
-        }, 1500); // Delay for smoother transition
-      }
-    };
+    //   // If the user scrolls backward to the first slide, scroll out of the section
+    //   if (swiper.activeIndex === 0 && swiper.isBeginning) {
+    //     setTimeout(() => {
+    //       window.scrollBy({ top: -300, behavior: "smooth" });
+    //     }, 1500); // Delay for smoother transition
+    //   }
+    // };
   
     // Scroll away from Swiper after reaching the last slide
-    const handleReachEnd = () => {
-      setTimeout(() => {
-        window.scrollBy({ top: 300, behavior: "smooth" });
-      }, 1500); // Delay for smoother transition
-    };
+    // const handleReachEnd = () => {
+    //   setTimeout(() => {
+    //     window.scrollBy({ top: 300, behavior: "smooth" });
+    //   }, 1500); // Delay for smoother transition
+    // };
   
   return (
     <div className="container-fluid commitments-container">
       <div className="container commitments-subcontainer">
         <Swiper
-         ref={swiperRef}
+        //  ref={swiperRef}
           style={{ margin: "auto" }}
           speed={1200}
-            onSlideChange={handleSlideChange}
-            onReachEnd={handleReachEnd}
+            
             spaceBetween={30}
             slidesPerView={1}
             initialSlide={0}
             direction={"horizontal"}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter:true
+            }}
             mousewheel={true}
-            
-            modules={[ Autoplay,Mousewheel]}
+            navigation={true}
+            loop={true}
+            modules={[ Autoplay,Mousewheel,Navigation]}
         >
           <SwiperSlide>
             <div className="slides">

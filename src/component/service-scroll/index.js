@@ -1,10 +1,9 @@
-import React, { useState,useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/effect-fade";
-import { EffectFade, Mousewheel } from "swiper/modules";
+import "swiper/css/effect-coverflow";
+import { Autoplay, EffectCoverflow, Mousewheel } from "swiper/modules";
 import "./index.css";
-import GreenText from "../animations/GreenText/GreenText";
 
 // Assuming images are imported like this:
 import shipImage1 from "../../assets/img/elements/retrofitservice.jpg";
@@ -15,8 +14,7 @@ import vesselsimg from "../../assets/img/elements/serviceimg5.jpg";
 import shipImage6 from "../../assets/img/elements/marineautomationservice.jpg";
 
 const Servicesscroll = () => {
-
-  const swiperRef=useRef();
+  const swiperRef = useRef();
 
   const images = [
     shipImage1,
@@ -27,9 +25,20 @@ const Servicesscroll = () => {
     shipImage6,
   ];
 
+  const textItems = [
+    "Retrofit Led Power <br/> Saving Solutions",
+    "Scrubber & Ccs Commissioning",
+    "Alternate Marine Power <br/> AMP Solutions",
+    "Project Supervision Shipbuilding & <br/> Repairs",
+    "Vessel 3D scanning <br/> & Production design",
+    "Marine Electrical <br/> & Automation",
+  ];
+
+  // State for tracking the active slide index
+  const [activeSlide, setActiveSlide] = useState(0);
+
   // Handle slide change and scroll away from Swiper when reaching the first slide
   const handleSlideChange = (swiper) => {
-    
     setActiveSlide(swiper.realIndex);
 
     // If the user scrolls backward to the first slide, scroll out of the section
@@ -47,44 +56,43 @@ const Servicesscroll = () => {
     }, 1500); // Delay for smoother transition
   };
 
-  const textItems = [
-    "Retrofit Led Power <br/> Saving Solutions",
-    "Scrubber & Ccs Commisioning ",
-    "Alternate Marine Power <br/> AMP Solutions",
-    "Project Supervision Shipbuilding & <br/> Repairs",
-    "Vessel 3D scanning <br/> & Production design",
-    "Marine Electrical <br/> & Automation",
-  ];
-
-  // State for tracking the active slide index
-  const [activeSlide, setActiveSlide] = useState(0);
-
   return (
     <div>
       <Swiper
+        effect="coverflow"
         ref={swiperRef}
-        style={{ margin: "auto" }}
+        style={{ margin: "auto",backgroundColor:"gray" }}
         speed={1200}
         onSlideChange={handleSlideChange}
         onReachEnd={handleReachEnd}
         slidesPerView={1}
         initialSlide={0}
         mousewheel={true}
-        modules={[EffectFade, Mousewheel]}
-        effect="fade"
-     
-       
+        modules={[EffectCoverflow, Mousewheel,Autoplay]}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+         
+        // }}
+        loop={true}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
         className="mySwiper"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <div
-              className="container-fluid service-scroll-container"
+              className=" service-scroll-container"
               style={{ backgroundImage: `url(${image})` }}
             >
               <div className="overlay">
                 <div
-                  className={`animated-text container  ${
+                  className={`animated-text container ${
                     activeSlide === index ? "animate" : ""
                   }`}
                   dangerouslySetInnerHTML={{ __html: textItems[index] }}
