@@ -50,7 +50,7 @@ const Commitsmentcomponent = () => {
               disableOnInteraction: false,
               pauseOnMouseEnter:true
             }}
-            mousewheel={true}
+            mousewheel={false}
             navigation={true}
             loop={true}
             modules={[ Autoplay,Mousewheel,Navigation]}
