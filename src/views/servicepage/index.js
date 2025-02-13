@@ -37,13 +37,16 @@ const Service = () => {
 
   return (
     <div>
+      
        <div className="video-container">
         <video autoPlay loop muted className="video">
           <source src="/header/header2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
-      <section  className="servicebanner secOne2   ">
+
+
+      <section  className="servicebanner secOne2">
         {/* Add this div for the overlay */}
         <div className="container bannercontainer">
           <div
@@ -73,6 +76,7 @@ const Service = () => {
             </div>
           </div>
         </div>
+        
         {/* Boxes Section */}
         <section className="container" style={{backgroundColor:"transparent"}}>
         <div className="row">

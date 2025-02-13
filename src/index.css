@@ -5,7 +5,9 @@
   }
  
 }
-
+html{
+  scroll-behavior: smooth;
+}
 
 
 body {
@@ -20,28 +22,6 @@ body {
     
 }
 
-/* Video Container */
-.video-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  z-index: -1;
-}
-
-/* Video styles */
-.video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the video covers the background */
-  min-height: 100%; /* Prevents video from shrinking */
-}
 
 /* Content Section */
 .content {

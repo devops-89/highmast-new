@@ -157,7 +157,7 @@ const Contactus = () => {
                 data-aos-delay="300"
                 className="contactimgparent"
               >
-                <img className="globebanerimg" src={globebannerimg}></img>
+                <img className="globebanerimg" src="/header/animated_globe.gif"></img>
                 {/* svg start */}
                  
                 {/* svg end */}

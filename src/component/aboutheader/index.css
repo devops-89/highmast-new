@@ -305,7 +305,7 @@
   }
 
   .mobile-container {
-    height: 82vh; /* Adjust height for mobile to fill the screen */
+  
     background-image: url("../../../public/about.jpg");
     background-position: center;
     background-size: cover; /* Ensure image fully covers the container */

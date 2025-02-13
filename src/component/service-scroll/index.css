@@ -78,6 +78,12 @@
 }
 
 @media (max-width:768px){
+  .service-scroll-container {
+    position: relative;
+    height: 51vh;
+    background-size: cover;
+    background-position: center;
+  }
   .service-scroll-container .overlay {
     position: absolute;
     top: 0;

@@ -79,17 +79,17 @@ const Scrubber = () => {
           description3="Captured carbon dioxide can be used as a feedstock for various industrial processes, such as enhanced oil recovery (EOR)"
         />
 
-        <Testimonials
-          avtarimg={avtarimg}
-          dwnquote={dwnquote}
-          upquote={upquote}
-          para=" Our experience with HighMast Marine during our EEXI retrofit project was incredible! From the initial consultation to project completion, their team’s technical guidance was spot on. They handled everything with professionalism, making sure we adhered to regulations while optimizing our operations for fuel savings."
-          para2=" When it comes to ship repairs, HighMast Marine is hands down the best! Their prompt and professional service saved us so much downtime. Their engineers are knowledgeable and extremely efficient. Every repair was handled with precision, making it an absolute pleasure working with them."
-          para3="The LED power-saving retrofit by HighMast Marine transformed our energy consumption. Their team didn’t just install LED lights—they explained the benefits and ensured we saw a dramatic reduction in our operational costs. Excellent service, excellent results!"
-          name1="S. Gaur"
-          name2="Mohammad Ali"
-          name3="R. Kumar"
-        />
+<Testimonials
+        avtarimg={avtarimg}
+        dwnquote={dwnquote}
+        upquote={upquote}
+        para="Highmast marine ESD installation team was very proffesional @ the shipyard. The PVC retrofit was done to our satisfaction and time given."
+        para2="We had a shut down in our dual fuel system , the problem was resolved with proper knowledge of the system , with required spares avalibility and stipulated time given in the discharge port."
+        para3="HighMast Marine’s work on our scrubber and CCS commissioning was flawless. Their team guided us through the entire process with unmatched expertise and clarity."
+        name1="R. Deshmukh - Sr Tech Supt"
+        name2="Vinod S. - Fleet Mgr"
+        name3="Anil G. - Fleet Mgr"
+      />
       </div>
       <Contactseection />
     </div>

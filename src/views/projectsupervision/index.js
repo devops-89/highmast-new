@@ -60,17 +60,17 @@ const Projectsupervision = () => {
           description3="Completion of all work on time and within budget"
         />
 
-        <Testimonials
-          avtarimg={avtarimg}
-          dwnquote={dwnquote}
-          upquote={upquote}
-          para=" HighMast Marine’s knowledge of hydraulic systems is second to none. Their team overhauled our system efficiently, ensuring everything worked perfectly. They even helped with complex troubleshooting and offered solid, practical advice. Truly a top-notch service provider!"
-          para2="From CO2 capture to managing emissions, HighMast Marine helped us navigate new regulations with ease. Their guidance was clear, and their expertise in CCS and emission management was invaluable. With their support, we’ve made our operations greener and more compliant than ever before."
-          para3="Our experience with HighMast Marine during our EEXI retrofit project was incredible! From the initial consultation to project completion, their team’s technical guidance was spot on. They handled everything with professionalism, making sure we adhered to regulations while optimizing our operations for fuel savings."
-          name1="K. Reddy"
-          name2="Manish Parekh"
-          name3="S. Gaur"
-        />
+<Testimonials
+        avtarimg={avtarimg}
+        dwnquote={dwnquote}
+        upquote={upquote}
+        para="Highmast marine ESD installation team was very proffesional @ the shipyard. The PVC retrofit was done to our satisfaction and time given."
+        para2="We had a shut down in our dual fuel system , the problem was resolved with proper knowledge of the system , with required spares avalibility and stipulated time given in the discharge port."
+        para3="HighMast Marine’s work on our scrubber and CCS commissioning was flawless. Their team guided us through the entire process with unmatched expertise and clarity."
+        name1="R. Deshmukh - Sr Tech Supt"
+        name2="Vinod S. - Fleet Mgr"
+        name3="Anil G. - Fleet Mgr"
+      />
       </div>
       <Contactseection />
     </div>

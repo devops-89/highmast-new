@@ -58,32 +58,27 @@ const Servicesscroll = () => {
 
   return (
     <div>
-      <Swiper
-        effect="coverflow"
-        ref={swiperRef}
-        style={{ margin: "auto",backgroundColor:"gray" }}
-        speed={1200}
-        onSlideChange={handleSlideChange}
-        onReachEnd={handleReachEnd}
-        slidesPerView={1}
-        initialSlide={0}
-        mousewheel={true}
-        modules={[EffectCoverflow, Mousewheel,Autoplay]}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-         
-        // }}
-        loop={true}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        className="mySwiper"
-      >
+   <Swiper
+  effect="coverflow"
+  ref={swiperRef}
+  style={{ margin: "auto", backgroundColor: "gray" }}
+  speed={1200}
+  onSlideChange={handleSlideChange}
+  onReachEnd={handleReachEnd}
+  slidesPerView={1}
+  initialSlide={0}
+  mousewheel={true}
+  modules={[EffectCoverflow, Mousewheel, Autoplay]}
+  loop={true}
+  coverflowEffect={{
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  }}
+  className="mySwiper"
+>
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <div

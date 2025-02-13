@@ -1,5 +1,5 @@
 @media(min-width:768px){
-  
+ 
 
 
 .swiper-button-next:hover,
@@ -88,6 +88,9 @@
 }
 
 @media (max-width:767px) {
+  .commitments-subcontainer .swiper{
+    margin-block:0px !important;
+}
 
   .swiper-button-next,.swiper-button-prev{
     color: white!important;
@@ -96,13 +99,15 @@
 
   .commitments-container {
     background-color: #002C30;
-    height: 80vh;
+    height: 53vh;
+    
   }
   /* Subcontainer for commitments */
 .commitments-subcontainer {
   display: flex;
+  
   justify-content: center;
-  align-items: center;
+  align-items:start;
   width: 100%;
   height: 100%;
   border-radius: 8px;
@@ -113,20 +118,19 @@
 
   
 .commitments-subcontainer .slides {
-  height: 70vh!important;
+  display: grid;
+  grid-template-columns: 1fr; 
+  justify-items: center; 
+  align-items: end; 
+  height: 70vh !important;
   background-color: transparent;
-  display: flex;
-  flex-direction: column;
- justify-content: flex-end;
-  align-items: center;
-
- 
- 
+  row-gap: 25px;
+  
 }
 
 .commitments-subcontainer .text-content {
 
-  height: 40%;
+ 
   width: 100%;
   color: white;
   display: flex;
@@ -141,7 +145,7 @@
 /* Image content inside commitments subcontainer */
 .commitments-subcontainer .image-content {
   width: 100%;
-  height: 60%;
+  height: 40%;
   border-radius: 8px;
   position: relative;
   overflow: hidden; /* Ensure the overlay doesn't go outside the container */
@@ -164,6 +168,17 @@
   width: 100%;
   height: 100%;
   
+}
+.commitments-subcontainer .slides {
+  height: 52vh!important;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+  align-items: center;
+
+ 
+ 
 }
 
   
