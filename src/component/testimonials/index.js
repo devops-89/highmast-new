@@ -37,7 +37,7 @@ const Testimonials = (props) => {
     <div style={{ backgroundColor: "#002C30" }}>
       <div className="container testimonialssection allpadding">
         <div data-aos="fade-down" data-aos-mirror="true">
-          <h2 className="subheading headingcenter">Trusted by Many...</h2>
+          <h2 className="headingcenter">Trusted by Many...</h2>
         </div>
         <div className="col-sm-10 mx-auto">
           <Swiper

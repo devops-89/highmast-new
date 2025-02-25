@@ -82,6 +82,11 @@
     }
 }
  @media (max-width:767px) {
+    .headingcenter{
+        font-weight: 600;
+        color:#fff;
+        font-family: poppins;
+    }
     .testimonialssection {
         height: auto;
     }

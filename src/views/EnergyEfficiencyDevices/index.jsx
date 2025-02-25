@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "./custom.css";
 import ServicesDescription from "../../component/servicesdescription";
 import ServicesPointers from "../../component/servicespointers";
 import pointersimg from "../../assets/img/elements/powersupervisionpotrait.jpg";
@@ -12,19 +12,22 @@ import powersupparalaximg1 from "../../assets/img/elements/powersupparalaximg1.j
 import powersupparalaximg2 from "../../assets/img/elements/powersupparalaximg2.jpg";
 import powersupparalaximg3 from "../../assets/img/elements/powersupparalaximg3.jpg";
 import Contactseection from "../../component/contactsection";
+import boostvesselpropulsion from "../../assets/img/energy-efficiency-devices/boost-vessel-propulsion.webp";
+import dynamictrimmingtechnology from "../../assets/img/energy-efficiency-devices/dynamic-trimming-technology.webp";
+import integratedcontrolsystem from "../../assets/img/energy-efficiency-devices/integrated-control-system.webp";
 
 const EnergyEfficiencyDevices = () => {
   return (
     <div style={{backgroundColor:"#002C30"}}>
       <div className="container-fluid px-0">
-        <section className="projectsupervisionbanner servicesbanner  secOne2 ">
+        <section className="energuefficiencybanner servicesbanner  secOne2 ">
           <div className="servicesbanneroverlay"></div>{" "}
           <div className="container bannercontainer">
             <div className="section-title desktop">
               <h1 data-aos="fade-up-right">
-                <span className="rstoftext">Project Supervision</span>
+                <span className="rstoftext">Energy Efficiency And Energy</span>
                 <br />
-                <span className="rstoftext">Shipbuilding & Repairs</span>
+                <span className="rstoftext">Saving Devices</span>
               </h1>
             </div>
           </div>
@@ -49,16 +52,15 @@ const EnergyEfficiencyDevices = () => {
         />
         <ExpertiesComponent
           mainheading="Ship Repair Management"
-          img1={powersupparalaximg1}
-          img2={powersupparalaximg2}
-          img3={powersupparalaximg3}
-          heading1="Global Conversion Projects"
-          description1="Conversion projects and designs from our office in Norway/ China."
-          heading2="Comprehensive Project Management"
-          description2="Planning, Initiation, Execution, Monitoring, and Closing of a Project by Our Engineers.
-"
-          heading3="On-Time, On-Budget Execution"
-          description3="Completion of all work on time and within budget"
+          img1={boostvesselpropulsion}
+          img2={dynamictrimmingtechnology}
+          img3={integratedcontrolsystem}
+          heading1="Boost Vessel Propulsion"
+          description1="Boost vessel propulsion efficiency with advanced pre-shrouded vanes technology now."
+          heading2="Dynamic Trimming Technology"
+          description2="Reduce propeller load and fuel consumption using dynamic trimming technology."
+          heading3="Integrated Control System"
+          description3="Integrated control system synchronizes devices, optimizing overall vessel performance effortlessly."
         />
 
 <Testimonials
