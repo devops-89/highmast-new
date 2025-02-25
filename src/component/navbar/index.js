@@ -51,6 +51,10 @@ const Navbar = () => {
         name: "Marine electrical & Automation",
         url: "/marine-electrical-&-automation",
       },
+      {
+        name: "Energy Saving & Efficiency Devices",
+        url: "/energy-efficiency-devices",
+      },
     ],
   };
 

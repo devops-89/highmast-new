@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Box, Typography, Tabs, Tab } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Mousewheel, Autoplay } from "swiper/modules"; // Import the Autoplay module
+import { Navigation } from "swiper/modules"; // Import the Autoplay module
 import "./index.css";
 import mission from "../../assets/img/elements/eye.png";
 import vision from "../../assets/img/elements/mission.png";
@@ -33,11 +33,11 @@ function CoreValues() {
   };
 
   // Scroll away from Swiper after reaching the last slide
-  const handleReachEnd = () => {
-    setTimeout(() => {
-      window.scrollBy({ top: 300, behavior: "smooth" });
-    }, 1500); // Delay for smoother transition
-  };
+  // const handleReachEnd = () => {
+  //   setTimeout(() => {
+  //     window.scrollBy({ top: 300, behavior: "smooth" });
+  //   }, 1500); // Delay for smoother transition
+  // };
 
   return (
     <div className="container-fluid core-value-container">
@@ -50,24 +50,38 @@ function CoreValues() {
             indicatorColor="primary"
             textColor="primary"
           >
-            <Tab className="tab" sx={{ fontSize: { sm: "16px", md: "30px" } }} label="Mission" />
-            <Tab className="tab" sx={{ fontSize: { sm: "16px", md: "30px" } }} label="Vision" />
-            <Tab className="tab" sx={{ fontSize: { sm: "16px", md: "30px" } }} label="Responsibility" />
+            <Tab
+              className="tab"
+              sx={{ fontSize: { sm: "16px", md: "30px" } }}
+              label="Mission"
+            />
+            <Tab
+              className="tab"
+              sx={{ fontSize: { sm: "16px", md: "30px" } }}
+              label="Vision"
+            />
+            <Tab
+              className="tab"
+              sx={{ fontSize: { sm: "16px", md: "30px" } }}
+              label="Responsibility"
+            />
           </Tabs>
         </Box>
         <Box className="swiper-section mt-5">
           <Swiper
             ref={swiperRef}
-            speed={1200}
+            speed={1000}
             onSlideChange={handleSlideChange}
-            onReachEnd={handleReachEnd}
-            spaceBetween={30}
+            direction="horizontal"
             slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
             initialSlide={0}
-            direction={"horizontal"}
-            mousewheel={true}
-            
-            modules={[Mousewheel, Autoplay]} // Include Autoplay module
+            modules={[Navigation]} // Include Autoplay module
             className="mySwiper"
           >
             <SwiperSlide>
@@ -75,10 +89,18 @@ function CoreValues() {
                 <div className="row">
                   <div className="col-sm-4 valueparent" data-aos-mirror="true">
                     <Box>
-                      <img src={mission} alt="Mission" style={{ borderRadius: "8px", margin: "auto" }} />
+                      <img
+                        src={mission}
+                        alt="Mission"
+                        style={{ borderRadius: "8px", margin: "auto" }}
+                      />
                     </Box>
                   </div>
-                  <div className="col-sm-8 valueparent2" data-aos-mirror="true" data-aos="fade-left">
+                  <div
+                    className="col-sm-8 valueparent2"
+                    data-aos-mirror="true"
+                    data-aos="fade-left"
+                  >
                     <Box>
                       <Typography variant="h1">Mission</Typography>
                       <Typography
@@ -90,8 +112,9 @@ function CoreValues() {
                           },
                         }}
                       >
-                        To become the leading company in our industry by innovating and building long-lasting relationships
-                        with our customers.
+                        To become the leading company in our industry by
+                        innovating and building long-lasting relationships with
+                        our customers.
                       </Typography>
                     </Box>
                   </div>
@@ -103,7 +126,11 @@ function CoreValues() {
                 <div className="row">
                   <div className="col-sm-4 valueparent">
                     <Box>
-                      <img src={vision} alt="Vision" style={{ borderRadius: "8px" }} />
+                      <img
+                        src={vision}
+                        alt="Vision"
+                        style={{ borderRadius: "8px" }}
+                      />
                     </Box>
                   </div>
                   <div className="col-sm-8 valueparent2">
@@ -118,7 +145,8 @@ function CoreValues() {
                           },
                         }}
                       >
-                        To provide exceptional products/services while contributing to the well-being of our customers.
+                        To provide exceptional products/services while
+                        contributing to the well-being of our customers.
                       </Typography>
                     </Box>
                   </div>
@@ -130,7 +158,11 @@ function CoreValues() {
                 <div className="row">
                   <div className="col-sm-4 valueparent">
                     <Box>
-                      <img src={Responsibility} alt="Responsibility" style={{ borderRadius: "8px" }} />
+                      <img
+                        src={Responsibility}
+                        alt="Responsibility"
+                        style={{ borderRadius: "8px" }}
+                      />
                     </Box>
                   </div>
                   <div className="col-sm-8 valueparent2">
@@ -145,14 +177,19 @@ function CoreValues() {
                           },
                         }}
                       >
-                        A strong commitment to social and environmental responsibility.
+                        A strong commitment to social and environmental
+                        responsibility.
                       </Typography>
                     </Box>
                   </div>
                 </div>
               </Box>
             </SwiperSlide>
+             {/* Navigation Buttons */}
+          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
           </Swiper>
+         
         </Box>
       </Box>
     </div>

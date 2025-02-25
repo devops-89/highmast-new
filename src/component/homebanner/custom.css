@@ -1,0 +1,39 @@
+/* Custom AOS width animation */
+[data-aos="width-animation"] {
+    width: 0%;
+    opacity: 0;
+    transition-property: width, opacity;
+  }
+  
+  [data-aos="width-animation"].aos-animate {
+    width: 100%;
+    opacity: 1;
+  }
+  
+  /* Existing styles */
+  .top-line {
+    height: 2px;
+    background: white;
+    margin-top: 20px;
+    transition-timing-function: ease-out;
+  }
+  
+  .contersection {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .contersection.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .desc {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  
+  .desc.aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+  }

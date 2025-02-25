@@ -5,7 +5,6 @@ import "swiper/css/effect-coverflow";
 import { Autoplay, EffectCoverflow, Mousewheel } from "swiper/modules";
 import "./index.css";
 
-// Assuming images are imported like this:
 import shipImage1 from "../../assets/img/elements/retrofitservice.jpg";
 import shipImage2 from "../../assets/img/elements/serviceimg2.jpeg";
 import shipImage3 from "../../assets/img/elements/ampservice.jpg";
@@ -34,63 +33,75 @@ const Servicesscroll = () => {
     "Marine Electrical <br/> & Automation",
   ];
 
-  // State for tracking the active slide index
   const [activeSlide, setActiveSlide] = useState(0);
 
-  // Handle slide change and scroll away from Swiper when reaching the first slide
   const handleSlideChange = (swiper) => {
     setActiveSlide(swiper.realIndex);
-
-    // If the user scrolls backward to the first slide, scroll out of the section
     if (swiper.activeIndex === 0 && swiper.isBeginning) {
       setTimeout(() => {
         window.scrollBy({ top: -300, behavior: "smooth" });
-      }, 1500); // Delay for smoother transition
+      }, 1500);
     }
   };
 
-  // Scroll away from Swiper after reaching the last slide
-  const handleReachEnd = () => {
-    setTimeout(() => {
-      window.scrollBy({ top: 300, behavior: "smooth" });
-    }, 1500); // Delay for smoother transition
+  // const handleReachEnd = () => {
+  //   setTimeout(() => {
+  //     window.scrollBy({ top: 300, behavior: "smooth" });
+  //   }, 1500);
+  // };
+
+  const enableMousewheel = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.params.mousewheel.enabled = true;
+      swiperRef.current.swiper.mousewheel.enable();
+    }
+  };
+
+  const disableMousewheel = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.params.mousewheel.enabled = false;
+      swiperRef.current.swiper.mousewheel.disable();
+    }
   };
 
   return (
     <div>
-   <Swiper
-  effect="coverflow"
-  ref={swiperRef}
-  style={{ margin: "auto", backgroundColor: "gray" }}
-  speed={1200}
-  onSlideChange={handleSlideChange}
-  onReachEnd={handleReachEnd}
-  slidesPerView={1}
-  initialSlide={0}
-  mousewheel={true}
-  modules={[EffectCoverflow, Mousewheel, Autoplay]}
-  loop={true}
-  coverflowEffect={{
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  }}
-  className="mySwiper"
->
+      <Swiper
+        effect="coverflow"
+        ref={swiperRef}
+        style={{ margin: "auto", backgroundColor: "gray" }}
+        speed={1200}
+        onSlideChange={handleSlideChange}
+       
+        slidesPerView={1}
+        initialSlide={0}
+        modules={[EffectCoverflow, Mousewheel, Autoplay]}
+        loop={true}
+        mousewheel={{ enabled: false }} // Initially disabled
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        className="mySwiper"
+      >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <div
-              className=" service-scroll-container"
+              className="service-scroll-container"
               style={{ backgroundImage: `url(${image})` }}
             >
               <div className="overlay">
                 <div
+               
                   className={`animated-text container ${
-                    activeSlide === index ? "animate" : ""
+                    activeSlide === index ? "animate mySwiper" : ""
                   }`}
                   dangerouslySetInnerHTML={{ __html: textItems[index] }}
+                  onMouseEnter={enableMousewheel}
+                  onMouseLeave={disableMousewheel}
                 />
               </div>
             </div>

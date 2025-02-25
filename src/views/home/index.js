@@ -2,12 +2,13 @@ import { Box, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 
 import "./index.css";
-import "aos/dist/aos.css";
+
 
 import Aboutsection from "../../component/about";
 import FAQSection from "../../component/contactlocation";
 
 import Servicesscroll from "../../component/service-scroll";
+
 
 import ScrollAnimation from "../../component/greenimpactglance";
 import Contactseection from "../../component/contactsection";
@@ -21,7 +22,11 @@ const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+   
+  
   return (
+   
     <div>
        <div className="video-container">
         <video autoPlay loop muted className="video">
@@ -30,13 +35,15 @@ const Home = () => {
         </video>
       </div>
       <Homepagebanner />
-      <ScrollAnimation />
+  
+      
       <Commitsmentcomponent />
+      <ScrollAnimation />
       <Servicesscroll />
-
       {/* <Ourclients /> */}
       <Contactseection />
     </div>
+ 
   );
 };
 

@@ -45,11 +45,11 @@ const Commitsmentcomponent = () => {
             slidesPerView={1}
             initialSlide={0}
             direction={"horizontal"}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-              pauseOnMouseEnter:true
-            }}
+            // autoplay={{
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            //   pauseOnMouseEnter:true
+            // }}
             mousewheel={false}
             navigation={true}
             loop={true}
@@ -61,7 +61,7 @@ const Commitsmentcomponent = () => {
                 <img src={image1} alt="image1" />
               </div>
               <div className="text-content">
-                <h2>FGSS – LNG/LEG</h2>
+                <h3>FGSS – LNG/LEG</h3>
                 <p>
                   Fuel Gas Supply Systems are designed to power ships with Liquefied
                   Natural Gas (LNG) and Ethylene Gas (LEG), reducing carbon emissions.
@@ -75,7 +75,7 @@ const Commitsmentcomponent = () => {
                 <img src={image2} alt="image2" />
               </div>
               <div className="text-content">
-                <h2>LFSS – Methanol/LPS/Ammonia</h2>
+                <h3>LFSS – Methanol/LPS/Ammonia</h3>
                 <p>
                   Low-flashpoint fuel systems support cleaner fuels like Methanol,
                   Ammonia, and Liquid Petroleum Gas (LPG) for a greener voyage.
@@ -89,7 +89,7 @@ const Commitsmentcomponent = () => {
                 <img src={image3} alt="image3" />
               </div>
               <div className="text-content">
-                <h2>Cargo Handling – LNG/LPG/Ammonia/LCO2</h2>
+                <h3>Cargo Handling – LNG/LPG/Ammonia/LCO2</h3>
                 <p>
                   Eco-efficient cargo handling systems designed for safe transport of
                   green fuels and gases.
@@ -103,7 +103,7 @@ const Commitsmentcomponent = () => {
                 <img src={image4} alt="image3" />
               </div>
               <div className="text-content">
-                <h2>Cryogenic Piping &amp; Valves</h2>
+                <h3>Cryogenic Piping &amp; Valves</h3>
                 <p>
                   Advanced cryogenic systems that support the sustainable handling of
                   ultra-low-temperature fuels, optimizing energy use.

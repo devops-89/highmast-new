@@ -3,12 +3,16 @@ import "./index.css";
 
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import googlemapimg from "../../assets/img/elements/googlemapimg.png";
-import globebannerimg from "../../assets/img/elements/globeimg.png";
 import Contactaddress from "../../component/contactlocation";
 import Contactseection from "../../component/contactsection";
 import SmallTextAnimation from "../../component/animations/SmallTextAnimation/SmallTextAnimation";
 
+
 const Contactus = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [font, setFont] = useState(calculateFontSize);
 
   const contactaddressdata = [
@@ -59,6 +63,7 @@ const Contactus = () => {
   }
 
   return (
+
     <div>
       <section className="conatactbanner   secOne2   ">
         <div className="conatactbanneroverlay"></div>{" "}
@@ -157,9 +162,12 @@ const Contactus = () => {
                 data-aos-delay="300"
                 className="contactimgparent"
               >
-                <img className="globebanerimg" src="/header/animated_globe.gif"></img>
+                <img
+                  className="globebanerimg"
+                  src="/header/animated_globe.gif"
+                ></img>
                 {/* svg start */}
-                 
+
                 {/* svg end */}
               </div>
             </div>
@@ -171,6 +179,7 @@ const Contactus = () => {
       <Contactaddress contactaddressdata={contactaddressdata} />
       <Contactseection />
     </div>
+  
   );
 };
 

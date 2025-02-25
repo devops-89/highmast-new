@@ -1,3 +1,14 @@
+
+/* 
+.slides{
+  display: grid;
+  grid-template-columns: 55% 45%!important;
+}
+
+ */
+
+
+
 @media(min-width:768px){
  
 
@@ -9,6 +20,7 @@
 
 .swiper-button-next,.swiper-button-prev{
   color: white!important;
+  margin-inline:-10px;
 }
 /* Commitments container styling */
 .commitments-container {
@@ -40,7 +52,7 @@
   /* height: 500px !important; */
   background-color: transparent;
   display: grid;
-  grid-template-columns: 40% auto;
+  grid-template-columns: 55% 45%!important;
   align-items: center;
   padding: 20px;
   gap: 20px;
@@ -54,16 +66,20 @@
   padding-right: 20px;
   color: white;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-start;
+  
  
 
 }
 
-.text-content h2 {
-  font-size: 47px;
+.text-content h3 {
+  font-size: 40px;
   font-weight: 700;
-  margin-bottom: 10px;
+  text-wrap: pretty;
+ 
+  
 }
 
 .text-content p {
@@ -77,7 +93,7 @@
   position: relative;
   overflow: hidden; /* Ensure the overlay doesn't go outside the container */
   border: 2px solid white;
-  height: 300px;
+  height: 400px;
 }
 
 .commitments-subcontainer .image-content img{
@@ -152,11 +168,12 @@
   order: 2;
 }
 
-.commitments-subcontainer .text-content h2 {
+.commitments-subcontainer .text-content h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 10px;
   text-align: center;
+ 
 }
 
 .commitments-subcontainer .text-content p {

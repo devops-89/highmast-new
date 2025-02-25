@@ -8,6 +8,7 @@ import Contactus from "../views/contact-us";
 import EngineOverhauling from "../views/retrofit";
 import MarineElectricalandAutomation from "../views/marine-electrical-&-automation";
 import MarineandOffshore from "../views/alternatemarine";
+import EnergyEfficiencyDevices from "../views/EnergyEfficiencyDevices";
 
 import ScrollToTop from "../component/scrolltop";
 
@@ -20,13 +21,17 @@ import Projectsupervision from "../views/projectsupervision";
 import Vessels3d from "../views/vessel3d";
 import Privacypolicy from "../views/privacy-policy";
 import TermsAndCondition from "../views/terms&condition";
+import LenisProvider from "../component/LenisProvider";
+
 
 
 const Router = () => {
   return (
     <div>
+     <LenisProvider>
+     
       <Navbar />
-      <ScrollToTop /> {/* This component will handle scrolling to top */}
+      {/* <ScrollToTop /> This component will handle scrolling to top */}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -40,10 +45,13 @@ const Router = () => {
         <Route path="/project-supervision-shipbuilding-and-ship-repairs" element={<Projectsupervision />} />
         <Route path="/vessel-3d-scanning-and-production-design" element={<Vessels3d />} />
         <Route path="/marine-electrical-&-automation" element={<MarineElectricalandAutomation />} />
+        <Route path="/energy-efficiency-devices" element={<EnergyEfficiencyDevices/>}  />
         <Route path="/terms-and-conditions" element={<TermsAndCondition />} />
         <Route path="/privacy-policy" element={<Privacypolicy />} />
       </Routes>
       <Footer />
+      </LenisProvider>
+   
     </div>
   );
 };

@@ -77,9 +77,7 @@ const Ourteam = () => {
                 },
               }}
             >
-              Arbind Singh brings 20 years of experience in ship classification,
-              management, and repair. His hands-on approach fosters a
-              collaborative culture, ensuring progress across all projects.
+             Arbind Singh’s extensive 32 years of maritime experience makes him a highly valuable asset in the fields of ship management, new building projects, and major repairs and retrofits. His hands-on approach, combined with his entrepreneurial skills, fosters a collaborative environment that ensures projects are completed efficiently, on time, and within budget. This skillset allows him to navigate the complexities of maritime operations with a keen focus on cost-effective solutions while maintaining high standards of quality and safety. His leadership style and expertise in driving results contribute significantly to successful outcomes in the maritime industry.
             </Typography>
           </div>
           <div className="col-sm-7 teamimgparnt1">

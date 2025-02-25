@@ -14,16 +14,31 @@ import SmallTextAnimation from "../../component/animations/SmallTextAnimation/Sm
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-  useEffect(()=>{
-    AOS.init({
-      duration: 1000, 
-      mirror: true, 
-      anchorPlacement: "top-bottom", 
-    })
-  })
 
+  // useEffect(()=>{
+  //   AOS.init({
+  //     duration: 1000, 
+  //     mirror: true, 
+  //     anchorPlacement: "top-bottom", 
+  //   })
+  // })
+
+   useEffect(() => {
+    AOS.refresh();
+      AOS.init({
+        // delay: 500,
+        mirror: false,
+      });
+    
+    }, []);
+
+  
   const [font,setFont]=useState(calculateFontSize());
 
   function calculateFontSize() {
@@ -34,6 +49,7 @@ const About = () => {
   }
 
   return (
+    
     <div>
        <div className="video-container">
         <video autoPlay loop muted className="video">
@@ -84,6 +100,7 @@ const About = () => {
       <Certification />
       <Contactseection />
     </div>
+   
   );
 };
 

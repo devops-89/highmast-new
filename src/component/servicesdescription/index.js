@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 
-import { color } from "framer-motion";
+
 import React, { useEffect } from "react";
 
 const ServicesDescription = (props) => {
