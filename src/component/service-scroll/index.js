@@ -4,13 +4,14 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { Autoplay, EffectCoverflow, Mousewheel } from "swiper/modules";
 import "./index.css";
-
+import { Link } from "react-router-dom";
 import shipImage1 from "../../assets/img/elements/retrofitservice.jpg";
 import shipImage2 from "../../assets/img/elements/serviceimg2.jpeg";
 import shipImage3 from "../../assets/img/elements/ampservice.jpg";
 import shipImage4 from "../../assets/img/elements/projectsupervisionservice.jpg";
 import vesselsimg from "../../assets/img/elements/serviceimg5.jpg";
 import shipImage6 from "../../assets/img/elements/marineautomationservice.jpg";
+import shipImage7 from "../../assets/img/energy-efficiency-devices/energy-saving-main-image.webp";
 
 const Servicesscroll = () => {
   const swiperRef = useRef();
@@ -22,17 +23,28 @@ const Servicesscroll = () => {
     shipImage4,
     vesselsimg,
     shipImage6,
+    shipImage7,
   ];
 
   const textItems = [
     "Retrofit Led Power <br/> Saving Solutions",
     "Scrubber & Ccs Commissioning",
     "Alternate Marine Power <br/> AMP Solutions",
-    "Project Supervision Shipbuilding & <br/> Repairs",
+    "Project Supervision Shipbuilding & Repairs",
     "Vessel 3D scanning <br/> & Production design",
     "Marine Electrical <br/> & Automation",
+    "Energy Saving <br/>& Efficiency Devices",
   ];
 
+  const linkItems=[
+    "/retrofit-led-power-saving-solutions",
+    "/scrubber-and-ccs-commisioning",
+    "/amp-solutions-and-vdf-retrofit",
+    "/project-supervision-shipbuilding-and-ship-repairs",
+    "/vessel-3d-scanning-and-production-design",
+    "/marine-electrical-&-automation",
+    "/energy-efficiency-devices"
+  ]
   const [activeSlide, setActiveSlide] = useState(0);
 
   const handleSlideChange = (swiper) => {
@@ -72,7 +84,6 @@ const Servicesscroll = () => {
         style={{ margin: "auto", backgroundColor: "gray" }}
         speed={1200}
         onSlideChange={handleSlideChange}
-       
         slidesPerView={1}
         initialSlide={0}
         modules={[EffectCoverflow, Mousewheel, Autoplay]}
@@ -94,19 +105,21 @@ const Servicesscroll = () => {
               style={{ backgroundImage: `url(${image})` }}
             >
               <div className="overlay">
-                <div
-               
-                  className={`animated-text container ${
-                    activeSlide === index ? "animate mySwiper" : ""
-                  }`}
-                  dangerouslySetInnerHTML={{ __html: textItems[index] }}
-                  onMouseEnter={enableMousewheel}
-                  onMouseLeave={disableMousewheel}
-                />
+                <Link to={linkItems[index]} style={{textDecoration:"none",marginLeft:"30px"}}>
+                  <div
+                    className={`animated-text container ${
+                      activeSlide === index ? "animate mySwiper" : ""
+                    }`}
+                    dangerouslySetInnerHTML={{ __html: textItems[index]}}
+                    onMouseEnter={enableMousewheel}
+                    onMouseLeave={disableMousewheel}
+                  />
+                </Link>
               </div>
             </div>
           </SwiperSlide>
         ))}
+
       </Swiper>
     </div>
   );
