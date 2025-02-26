@@ -77,8 +77,9 @@ const Servicesscroll = () => {
   };
 
   return (
-    <div>
+    <div >
       <Swiper
+      
         effect="coverflow"
         ref={swiperRef}
         style={{ margin: "auto", backgroundColor: "gray" }}
@@ -88,7 +89,7 @@ const Servicesscroll = () => {
         initialSlide={0}
         modules={[EffectCoverflow, Mousewheel, Autoplay]}
         loop={true}
-        mousewheel={{ enabled: false }} // Initially disabled
+        mousewheel={{  enabled: false }} 
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -96,6 +97,7 @@ const Servicesscroll = () => {
           modifier: 1,
           slideShadows: true,
         }}
+        onWheel={(e) => e.preventDefault()}
         className="mySwiper"
       >
         {images.map((image, index) => (
@@ -104,7 +106,7 @@ const Servicesscroll = () => {
               className="service-scroll-container"
               style={{ backgroundImage: `url(${image})` }}
             >
-              <div className="overlay">
+              <div className="overlay" data-lenis-prevent>
                 <Link to={linkItems[index]} style={{textDecoration:"none",marginLeft:"30px"}}>
                   <div
                     className={`animated-text container ${
