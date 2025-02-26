@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Teamimg1 from "../../assets/img/elements/Team1.jpg";
 import Teamimg2 from "../../assets/img/elements/Team2.jpg";
+import Teaming3 from "../../assets/img/elements/Team3.jpg";
 
 import { Typography } from "@mui/material";
 
@@ -81,15 +82,15 @@ const Ourteam = () => {
             </Typography>
           </div>
           <div className="col-sm-7 teamimgparnt1">
-            <div className="image-overlay">
-              <img data-aos="zoom-in-up"   src={Teamimg1} alt="Team Member" />
+            <div className="image-overlay" style={{backgroundColor:"white",borderRadius:"50%",overflow:"hidden"}}>
+              <img data-aos="zoom-in-up" style={{objectFit:"contain"}}   src={Teamimg1} alt="Team Member" />
             </div>
           </div>
         </div>
-        <div className="row align-items-center ourrteamsection ourteamsection2nd">
+        <div className="row align-items-center pb-5 ourrteamsection ourteamsection2nd">
           <div className="col-sm-7 text-left teamimgparnt2">
-            <div className="image-overlay">
-              <img data-aos="zoom-in-up" src={Teamimg2}></img>
+            <div className="image-overlay" style={{backgroundColor:"white",borderRadius:"50%",overflow:"hidden"}}>
+              <img data-aos="zoom-in-up" style={{objectFit:"contain"}} src={Teamimg2}></img>
             </div>
           </div>
           <div
@@ -145,6 +146,68 @@ const Ourteam = () => {
               focus on sustainable growth drives operations from Singapore,
               London, and India.
             </Typography>
+          </div>
+        </div>
+        <div className="row align-items-center pb-5   ourrteamsection ourteamsectionist ">
+          <div
+            className="col-sm-5"
+            data-aos="fade-left"
+            data-aos-delay="500"
+             data-aos-offset="100"
+           
+     
+          
+          >
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "25px", // Small font size for mobile devices (extra-small breakpoint)
+                  sm: "25px", // Slightly larger for tablets and small screens
+                  md: "50px",
+                  // Default size for medium and larger screens
+                },
+                textAlign: { xs: "center", lg: "left" },
+                color: "#fff",
+                textTransform: "uppercase",
+              }}
+              component="p"
+            >
+              Rasna Vijayvargiya
+            </Typography>
+            <Typography
+              component="p"
+              sx={{
+                color: "red",
+                fontSize: {
+                  xs: "20px", // Small font size for mobile devices (extra-small breakpoint)
+                  sm: "20px", // Slightly larger for tablets and small screens
+                  md: "22px",
+                },
+                textAlign: { xs: "center", lg: "left" },
+              }}
+            >
+              Director & Founder
+            </Typography>
+            <Typography
+              component="p"
+              sx={{
+                color: "#fff",
+                textAlign: "justify",
+                marginTop: "20px ",
+                fontSize: {
+                  xs: "13px", // Small font size for mobile devices (extra-small breakpoint)
+                  sm: "1rem", // Slightly larger for tablets and small screens
+                  md: "22px",
+                },
+              }}
+            >
+             Rasna Vijayvargiya brings a wealth of Financial expertise and strategic Vision to the organization. With over 9 years of financial Experience across Globe and an MBA Finance from Icfai Hyderabad. Rasna has excelled in strategic Financial management, business development, and client relationship management. Her expertise and leadership drive the company’s growth and success, ensuring excellence in every financial and strategic endeavor.
+            </Typography>
+          </div>
+          <div className="col-sm-7 teamimgparnt1">
+            <div className="image-overlay" style={{backgroundColor:"white",borderRadius:"50%",overflow:"hidden"}}>
+              <img data-aos="zoom-in-up" style={{objectFit:"contain"}}  src={Teaming3} alt="Team Member" />
+            </div>
           </div>
         </div>
       </div>
