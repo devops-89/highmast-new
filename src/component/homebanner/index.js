@@ -5,6 +5,8 @@ import AOS from "aos";
 import "./index.css";
 import "./custom.css";
 import "aos/dist/aos.css";
+import SplitText from "../splittext/SplitText.js";
+import BlurText from "../blurtext/BlurText.js";
 
 const Homepagebanner = () => {
   const [fontSize, setFontSize] = useState(calculateFontSize());
@@ -12,9 +14,9 @@ const Homepagebanner = () => {
   useEffect(() => {
     AOS.init({
       duration: 1500,
-      easing: 'ease-out',
+      easing: "ease-out",
       once: false,
-      mirror: true
+      mirror: true,
     });
 
     const handleResize = () => {
@@ -43,28 +45,65 @@ const Homepagebanner = () => {
             <h1>
               <span className="rstoftext">
                 <span className="greentext">
-                  <SmallTextAnimation text="GREEN" textColor="green" fontSize={fontSize} />
-                </span>{" "}
-                maritime
+                 
+                  <SplitText
+                    text="GREEN MARITIME"
+                    className="text-style"
+                    delay={150}
+                    animationFrom={{
+                      opacity: 0,
+                      transform: "translate3d(0,50px,0)",
+                    }}
+                    animationTo={{
+                      opacity: 1,
+                      transform: "translate3d(0,0,0)",
+                    }}
+                    easing="easeOutCubic"
+                    threshold={0.2}
+                    rootMargin="-50px"
+                    fontSize={fontSize}
+                   
+                  />
+                </span>
               </span>
               <br />
               <span className="rstoftext">innovation by</span>
               <br />
               <span className="rstoftext">
-                <span className="highmasttextbg">
-                  High{" "}
-                  <span>
-                    <SmallTextAnimation text="MAST" textColor="red" fontSize={fontSize} />
-                  </span>{" "}
-                  marine
-                </span>{" "}
-                &{" "}
+              
+
+                <SplitText
+                  text="HIGH MAST MARINE"
+                  className="text-style"
+                  delay={150}
+                  animationFrom={{
+                    opacity: 0,
+                    transform: "translate3d(0,50px,0)",
+                  }}
+                  animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+                  easing="easeOutCubic"
+                  threshold={0.2}
+                  rootMargin="-50px"
+                  fontSize={fontSize}
+                 
+                />
               </span>
               <br />
-              <span className="rstoftext contioceantext">ContiOcean ENVIRONMENT GLOBAL</span>
+            
+             
+              <BlurText
+  text="ContiOcean ENVIRONMENT GLOBAL"
+  delay={80}
+  animateBy="letters"
+  direction="top"
+
+  className="text-2xl mb-8"
+  fontSize={fontSize}
+/>
+          
             </h1>
-            <div 
-              className="top-line" 
+            <div
+              className="top-line"
               data-aos="width-animation"
               data-aos-offset="200"
               data-aos-easing="ease-out"
@@ -72,7 +111,7 @@ const Homepagebanner = () => {
           </div>
 
           {/* contersection */}
-          <div 
+          <div
             className="contersection desktop-view"
             data-aos="fade-up"
             data-aos-offset="300"
@@ -86,7 +125,7 @@ const Homepagebanner = () => {
                   <span>0</span>
                   <span className="symbol">%</span>
                 </h2>
-                <h2 
+                <h2
                   className="desc"
                   data-aos="fade-up"
                   data-aos-offset="200"
