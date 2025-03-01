@@ -35,10 +35,10 @@ const Home = () => {
         </video>
       </div>
       <Homepagebanner />
-  
+      <ScrollAnimation />
       
       <Commitsmentcomponent />
-      <ScrollAnimation />
+     
       <Servicesscroll />
       {/* <Ourclients /> */}
       <Contactseection />

@@ -33,7 +33,7 @@ const Service = () => {
   }
 
   return (
-    <LenisProvider>
+ 
       <div>
         <div className="video-container">
           <video autoPlay loop muted className="video">
@@ -174,10 +174,11 @@ const Service = () => {
           </section>
         </section>
 
-        <Servicesscroll />
+       
         <Majorservice />
+        <Servicesscroll />
       </div>
-    </LenisProvider>
+   
   );
 };
 

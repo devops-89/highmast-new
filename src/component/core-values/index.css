@@ -6,6 +6,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.swiper-section .swiper-button-prev, .swiper-section .swiper-button-next{
+  margin-inline: 20px;
+}
+
+
 .corevaluessection{
  
  padding-block: 10px;
@@ -96,11 +102,31 @@ height: 200px;
 
 
 @media (max-width:767px) {
+ 
+  .valueparent2{
+   
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
+  .valueparent2 .para{
+    text-align: center!important;
+   
+  }
   .corevaluessection .swiper-slide-content h1 {
     padding: 0px 0px;
     font-size: 30px;
     margin-top: 30px;
 
+  }
+
+  .swiper-section .swiper-button-prev::after{
+    margin-right: 15px;
+  }
+
+  .swiper-section .swiper-button-next::after{
+    margin-left: 15px;
   }
   .swiper-slide-content img {
     width: 100px;

@@ -22,6 +22,7 @@ import Vessels3d from "../views/vessel3d";
 import Privacypolicy from "../views/privacy-policy";
 import TermsAndCondition from "../views/terms&condition";
 import LenisProvider from "../component/LenisProvider";
+import Lenis from "lenis";
 
 
 

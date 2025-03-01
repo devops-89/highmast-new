@@ -49,11 +49,11 @@ const Servicesscroll = () => {
 
   const handleSlideChange = (swiper) => {
     setActiveSlide(swiper.realIndex);
-    if (swiper.activeIndex === 0 && swiper.isBeginning) {
-      setTimeout(() => {
-        window.scrollBy({ top: -300, behavior: "smooth" });
-      }, 1500);
-    }
+    // if (swiper.activeIndex === 0 && swiper.isBeginning) {
+    //   setTimeout(() => {
+    //     window.scrollBy({ top: -300, behavior: "smooth" });
+    //   }, 1500);
+    // }
   };
 
   // const handleReachEnd = () => {
@@ -77,7 +77,7 @@ const Servicesscroll = () => {
   };
 
   return (
-    <div >
+    <div>
       <Swiper
       
         effect="coverflow"
@@ -87,7 +87,7 @@ const Servicesscroll = () => {
         onSlideChange={handleSlideChange}
         slidesPerView={1}
         initialSlide={0}
-        modules={[EffectCoverflow, Mousewheel, Autoplay]}
+        modules={[EffectCoverflow, Mousewheel]}
         loop={true}
         mousewheel={{  enabled: false }} 
         coverflowEffect={{
@@ -106,9 +106,9 @@ const Servicesscroll = () => {
               className="service-scroll-container"
               style={{ backgroundImage: `url(${image})` }}
             >
-              <div className="overlay" data-lenis-prevent>
+              <div className="overlay" >
                 <Link to={linkItems[index]} style={{textDecoration:"none",marginLeft:"30px"}}>
-                  <div
+                  <div data-lenis-prevent
                     className={`animated-text container ${
                       activeSlide === index ? "animate mySwiper" : ""
                     }`}

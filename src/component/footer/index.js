@@ -19,9 +19,8 @@ import {
   LocalPhone,
   LocationOn,
   MailOutline,
-
 } from "@mui/icons-material";
-import XIcon from '@mui/icons-material/X';
+import XIcon from "@mui/icons-material/X";
 import { Link } from "react-router-dom";
 import { Stack } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router";
@@ -96,7 +95,7 @@ const Footer = () => {
     }
   };
   return (
-    <div className="container-fluid footer " style={{paddingTop:"10px"}}>
+    <div className="container-fluid footer " style={{ paddingTop: "10px" }}>
       <div className="container">
         <hr style={{ color: "#fff" }}></hr>
 
@@ -146,13 +145,19 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link className={isActive("/about-us") ? "active" : ""} to="/about-us">
+                <Link
+                  className={isActive("/about-us") ? "active" : ""}
+                  to="/about-us"
+                >
                   About Us
                 </Link>
               </li>
 
               <li>
-                <Link className={isActive("/services") ? "active" : ""} to="/services">
+                <Link
+                  className={isActive("/services") ? "active" : ""}
+                  to="/services"
+                >
                   Services
                 </Link>
               </li>
@@ -173,7 +178,11 @@ const Footer = () => {
             <ul className="footer-services">
               <li>
                 <Link
-                  className={isActive("/retrofit-led-power-saving-solutions") ? "active" : ""}
+                  className={
+                    isActive("/retrofit-led-power-saving-solutions")
+                      ? "active"
+                      : ""
+                  }
                   to="/retrofit-led-power-saving-solutions"
                 >
                   Retrofit Led Power Saving Solutions
@@ -182,7 +191,9 @@ const Footer = () => {
 
               <li>
                 <Link
-                  className={isActive("/scrubber-and-ccs-commisioning") ? "active" : ""}
+                  className={
+                    isActive("/scrubber-and-ccs-commisioning") ? "active" : ""
+                  }
                   to="/scrubber-and-ccs-commisioning"
                 >
                   Scrubber & Ccs Commisioning
@@ -190,7 +201,9 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className={isActive("/amp-solutions-and-vdf-retrofit") ? "active" : ""}
+                  className={
+                    isActive("/amp-solutions-and-vdf-retrofit") ? "active" : ""
+                  }
                   to="/amp-solutions-and-vdf-retrofit"
                 >
                   AMP Solutions & VDF Retrofit
@@ -198,7 +211,13 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className={isActive("/project-supervision-shipbuilding-and-ship-repairs") ? "active" : ""}
+                  className={
+                    isActive(
+                      "/project-supervision-shipbuilding-and-ship-repairs"
+                    )
+                      ? "active"
+                      : ""
+                  }
                   to="/project-supervision-shipbuilding-and-ship-repairs"
                 >
                   Project Supervision Shipbuilding & Repairs
@@ -206,7 +225,11 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className={isActive("/vessel-3d-scanning-and-production-design") ? "active" : ""}
+                  className={
+                    isActive("/vessel-3d-scanning-and-production-design")
+                      ? "active"
+                      : ""
+                  }
                   to="/vessel-3d-scanning-and-production-design"
                 >
                   Vessel 3D scanning & Production design
@@ -214,7 +237,9 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className={isActive("/marine-electrical-&-automation") ? "active" : ""}
+                  className={
+                    isActive("/marine-electrical-&-automation") ? "active" : ""
+                  }
                   to="/marine-electrical-&-automation"
                 >
                   Marine Electrical & Automation
@@ -230,9 +255,15 @@ const Footer = () => {
             <div className="contact-info">
               <ul>
                 <li style={{ color: "#fff" }}>
-                  <LocationOn sx={{ fontSize: "20px", marginRight: "5px" }} />{" "}
+                  <a
+                    href="https://www.google.com/maps?q=Tong+Eng+Building,+101+Cecil+Street,+Unit+24-05,+Singapore+069553"
+                    target="_blank"
+                  >
+                    <LocationOn sx={{ fontSize: "20px", marginRight: "5px" }} />{" "}
                   Tong Eng Building, 101 Cecil Street, Unit 24-05 Singapore
                   069553
+                  </a>
+                 
                 </li>
                 <li>
                   <a href="mailto:service@highmastmarine.com">

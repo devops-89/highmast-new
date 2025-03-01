@@ -32,7 +32,7 @@ const Navbar = () => {
       },
 
       {
-        name: "Scrubber & Ccs Commisioning",
+        name: "Scrubber & Ccs Commissioning",
         url: "/scrubber-and-ccs-commisioning",
       },
       {

@@ -101,22 +101,25 @@ function CoreValues() {
                     data-aos-mirror="true"
                     data-aos="fade-left"
                   >
-                    <Box>
+                   
                       <Typography variant="h1">Mission</Typography>
                       <Typography
+                    
                         sx={{
                           fontSize: {
-                            xs: "13px",
+                            xs: "16px",
                             sm: "1rem",
                             md: "22px",
                           },
                         }}
+                         className="para"
+                       
                       >
                         To become the leading company in our industry by
                         innovating and building long-lasting relationships with
                         our customers.
                       </Typography>
-                    </Box>
+                  
                   </div>
                 </div>
               </Box>
@@ -134,21 +137,24 @@ function CoreValues() {
                     </Box>
                   </div>
                   <div className="col-sm-8 valueparent2">
-                    <Box>
+                   
                       <Typography variant="h1">Vision</Typography>
                       <Typography
+                     
                         sx={{
                           fontSize: {
-                            xs: "13px",
+                            xs: "16px",
                             sm: "1rem",
                             md: "22px",
                           },
                         }}
+                        className="para"
+                     
                       >
                         To provide exceptional products/services while
                         contributing to the well-being of our customers.
                       </Typography>
-                    </Box>
+                    
                   </div>
                 </div>
               </Box>
@@ -166,29 +172,31 @@ function CoreValues() {
                     </Box>
                   </div>
                   <div className="col-sm-8 valueparent2">
-                    <Box>
+                    
                       <Typography variant="h1">Responsibility</Typography>
-                      <Typography
-                        sx={{
+                     
+                       <Typography className="para"  sx={{
                           fontSize: {
-                            xs: "13px",
+                            xs: "16px",
                             sm: "1rem",
                             md: "22px",
                           },
-                        }}
-                      >
-                        A strong commitment to social and environmental
-                        responsibility.
+                        
+                        }}>
+                      A strong commitment to social and environmental responsibility.
                       </Typography>
-                    </Box>
+                       
+                     
+                   
                   </div>
                 </div>
               </Box>
             </SwiperSlide>
              {/* Navigation Buttons */}
+         
+          </Swiper>
           <div className="swiper-button-prev"></div>
           <div className="swiper-button-next"></div>
-          </Swiper>
          
         </Box>
       </Box>

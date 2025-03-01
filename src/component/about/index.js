@@ -2,16 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { Typography, Container, Stack} from "@mui/material";
 // import gsap from "gsap";
 import AOS from "aos";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import img24x7 from "../../assets/img/elements/24-hours.png";
-import datawaveimg from "../../assets/img/elements/data-wave.png";
+
 import abouthighmastimg from "../../assets/img/elements/abouthighmastimg.jpg";
 import Grid2 from '@mui/material/Grid2';
 
 
 import "./index.css";
 
-// gsap.registerPlugin(ScrollTrigger);
+
 
 const Aboutsection = () => {
   const [scrollY, setScrollY] = useState(0);

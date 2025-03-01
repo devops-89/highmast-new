@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ReactLenis } from "lenis/react";
+
 import SmallTextAnimation from "../../component/animations/SmallTextAnimation/SmallTextAnimation";
 import AOS from "aos";
 import "./index.css";
@@ -37,7 +37,7 @@ const Homepagebanner = () => {
   }
 
   return (
-    <ReactLenis root options={{ smooth: true }}>
+   
       <section className="secOne secOne2">
         <div className="overlay"></div>
         <div className="container bannercontainer">
@@ -138,7 +138,7 @@ const Homepagebanner = () => {
           </div>
         </div>
       </section>
-    </ReactLenis>
+    
   );
 };
 

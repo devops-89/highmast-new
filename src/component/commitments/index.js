@@ -1,4 +1,4 @@
-import React,{useState,useRef} from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Mousewheel,Autoplay } from "swiper/modules"; // Use Mousewheel instead of Autoplay
 // import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
@@ -9,6 +9,7 @@ import image1 from "../../assets/img/elements/lng.jpg";
 import image2 from "../../assets/img/elements/serviceimg2.jpeg";
 import image3 from "../../assets/img/elements/cargo-handling.jpg";
 import image4 from "../../assets/img/elements/serviceimg4.jpg";
+import ReactLenis from "lenis/react";
 
 const Commitsmentcomponent = () => {
   // const [value, setValue] = React.useState(0);
@@ -34,6 +35,7 @@ const Commitsmentcomponent = () => {
     // };
   
   return (
+    
     <div className="container-fluid commitments-container">
       <div className="container commitments-subcontainer">
         <Swiper
@@ -114,6 +116,7 @@ const Commitsmentcomponent = () => {
         </Swiper>
       </div>
     </div>
+   
   );
 };
 

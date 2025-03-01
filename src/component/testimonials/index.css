@@ -89,6 +89,9 @@
     }
     .testimonialssection {
         height: auto;
+     
+        padding-inline: 5px;
+      
     }
     .testimonialimg {
         width: 60px;
@@ -105,4 +108,16 @@
     .testimonialsp {
         text-align: justify;
     }
+    .testimonialscontent{
+      
+        margin-inline: 20px;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 25px !important;
+     
+
+    }
+  
  }

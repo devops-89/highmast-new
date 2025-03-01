@@ -1,6 +1,6 @@
 import React, { useRef,useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Lenis from "lenis";
+
 import "swiper/css";
 import "swiper/css/navigation"; // Import navigation styles
 import { Navigation } from "swiper/modules"; // Import Navigation module
@@ -11,27 +11,7 @@ import { Typography } from "@mui/material";
 const Testimonials = (props) => {
   const swiperRef = useRef();
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      smooth: true,
-      lerp: 0.1,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // Re-enable scroll after Swiper initializes
-    setTimeout(() => {
-      lenis.start();
-    }, 1000);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+ 
 
   return (
     <div style={{ backgroundColor: "#002C30" }}>
