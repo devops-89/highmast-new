@@ -75,15 +75,15 @@
 }
 
 .text-content h3 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
-  text-wrap: pretty;
+  overflow-wrap: anywhere;
  
   
 }
 
 .text-content p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 /* Image content inside commitments subcontainer */
