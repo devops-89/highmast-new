@@ -117,11 +117,12 @@
     .aboutbanner {
         display: block;
         background-attachment: scroll;
-        height: 60vh !important;
+        /* height: 50vh !important; */
+        height: auto;
     }
 
     .aboutbanneroverlay {
-        height: 60vh;
+        height: auto;
 
     }
 }

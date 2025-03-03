@@ -306,25 +306,16 @@
 
   .mobile-container {
   
-    background-image: url("../../../public/about.jpg");
+    /* background-image: url("../../../public/about.jpg"); */
     background-position: center;
     background-size: cover; /* Ensure image fully covers the container */
     object-fit: cover;
     padding: 0;
     position: relative; /* Make the container position relative to add overlay */
+    background-color: white;
   }
 
-  /* Create the overlay */
-  .mobile-container::before {
-    content: ""; /* Required for pseudo-element */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 1; /* Ensure overlay is on top of the image */
-  }
+ 
 
   .mobile-container .text-section{
     
@@ -339,11 +330,11 @@
     font-size: 36px; /* Adjust header size for mobile */
     z-index: 2; /* Ensure text is above overlay */
     position: relative;
-    color: white;
+   
   }
 
   .text-section hr{
-    color: white;
+ 
     border: 0;
     opacity: 1;
     border-top:4px solid white;
@@ -354,7 +345,7 @@
     font-size: 14px; /* Adjust paragraph font size for mobile */
     z-index: 2; /* Ensure text is above overlay */
     position: relative;
-    color: white;
+    
   }
 
   /* Optional: Modify the text section for better readability on mobile */

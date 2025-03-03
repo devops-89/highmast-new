@@ -27,7 +27,7 @@ const LenisProvider = ({ children }) => {
   }, [location.pathname]);
 
   return isMobile ? (
-    <>{children}</> // Render children normally without Lenis
+    <>{children}</> 
   ) : (
     <ReactLenis root options={{autoRaf:true}}>{children}</ReactLenis>
   );

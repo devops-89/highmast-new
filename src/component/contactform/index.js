@@ -26,24 +26,21 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prev) => ({ ...prev, [name]: value }));
 
-    // Clear the specific field error as the user types
     if (errors[name]) {
-      setErrors({ ...errors, [name]: "" });
+      setErrors((prev) => ({ ...prev, [name]: "" }));
     }
   };
 
   const handlePhoneChange = (value) => {
-    setFormData({ ...formData, phone: value });
+    setFormData((prev) => ({ ...prev, phone: value }));
     const phoneWithoutCountryCode = value.replace(/\D/g, "");
     const newErrors = { ...errors };
+
     if (!phoneWithoutCountryCode) {
       newErrors.phone = "Phone number is required";
-    } else if (
-      phoneWithoutCountryCode.length < 10 ||
-      phoneWithoutCountryCode.length > 15
-    ) {
+    } else if (phoneWithoutCountryCode.length < 10 || phoneWithoutCountryCode.length > 15) {
       newErrors.phone = "Phone number must be between 10 and 15 digits";
     } else {
       newErrors.phone = "";
@@ -53,44 +50,43 @@ const ContactForm = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!formData.firstName) {
+
+    if (!formData.firstName.trim()) {
       newErrors.firstName = "First name is required";
-    } else if (
-      formData.firstName.length < 2 ||
-      formData.firstName.length > 50
-    ) {
+    } else if (formData.firstName.length < 2 || formData.firstName.length > 50) {
       newErrors.firstName = "First name must be between 2 and 50 characters";
     }
-    if (!formData.lastName) {
+
+    if (!formData.lastName.trim()) {
       newErrors.lastName = "Last name is required";
     } else if (formData.lastName.length < 2 || formData.lastName.length > 50) {
       newErrors.lastName = "Last name must be between 2 and 50 characters";
     }
-    const emailRegex = /\S+@\S+\.\S+/;
-    if (!formData.email) {
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email =
-        "Invalid email format. Please provide a valid email address.";
+      newErrors.email = "Invalid email format";
     }
+
     const phoneWithoutCountryCode = formData.phone.replace(/\D/g, "");
     if (!phoneWithoutCountryCode) {
       newErrors.phone = "Phone number is required";
-    } else if (
-      phoneWithoutCountryCode.length < 10 ||
-      phoneWithoutCountryCode.length > 15
-    ) {
-      newErrors.phone =
-        "Phone number must be between 10 and 15 digits (excluding country code)";
+    } else if (phoneWithoutCountryCode.length < 10 || phoneWithoutCountryCode.length > 15) {
+      newErrors.phone = "Phone number must be between 10 and 15 digits";
     }
-    if (!formData.subject) {
+
+    if (!formData.subject.trim()) {
       newErrors.subject = "Subject is required";
     }
-    if (!formData.message) {
+
+    if (!formData.message.trim()) {
       newErrors.message = "Message is required";
     } else if (formData.message.length > 250) {
       newErrors.message = "Message cannot exceed 250 characters";
     }
+
     return newErrors;
   };
 
@@ -98,6 +94,7 @@ const ContactForm = () => {
     e.preventDefault();
     const formErrors = validateForm();
     setErrors(formErrors);
+
     if (Object.keys(formErrors).length === 0) {
       setLoading(true);
       const url = "https://api.web3forms.com/submit";
@@ -130,7 +127,7 @@ const ContactForm = () => {
             toast.error("Failed to submit the form. Please try again later.");
           }
         })
-        .catch((error) => {
+        .catch(() => {
           setLoading(false);
           toast.error("Failed to submit the form. Please try again later.");
         });
@@ -140,7 +137,7 @@ const ContactForm = () => {
   return (
     <Box
       sx={{
-        width: { lg: "100%", xs: "100%" },
+        width: "100%",
         height: "100%",
         overflowY: "auto",
       }}
@@ -148,59 +145,29 @@ const ContactForm = () => {
       <Divider sx={{ borderColor: "#000", borderStyle: "dashed" }} />
       <form onSubmit={handleSubmit}>
         <Grid container mt={1} columnSpacing={2}>
-          <Grid item lg={6} xs={12}>
-            <InputLabel sx={{ fontWeight: 550, fontSize: 15 }}>
-              First Name*
-            </InputLabel>
-            <TextField
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              error={!!errors.firstName}
-              sx={{ mt: 1 }}
-              fullWidth
-            />
-            {errors.firstName && (
-              <span style={{ color: "red" }}>{errors.firstName}</span>
-            )}
-          </Grid>
-          <Grid item lg={6} xs={12}>
-            <InputLabel sx={{ fontWeight: 550, fontSize: 15 }}>
-              Last Name*
-            </InputLabel>
-            <TextField
-              name="lastName"
-              sx={{ mt: 1 }}
-              fullWidth
-              value={formData.lastName}
-              onChange={handleChange}
-              error={!!errors.lastName}
-            />
-            {errors.lastName && (
-              <span style={{ color: "red" }}>{errors.lastName}</span>
-            )}
-          </Grid>
+          {[
+            { label: "First Name*", name: "firstName" },
+            { label: "Last Name*", name: "lastName" },
+            { label: "Email*", name: "email", type: "email" },
+            { label: "Subject*", name: "subject" },
+          ].map(({ label, name, type = "text" }) => (
+            <Grid item lg={6} xs={12} key={name} mt={1}>
+              <InputLabel sx={{ fontWeight: 550, fontSize: 15 }}>{label}</InputLabel>
+              <TextField
+                name={name}
+                type={type}
+                value={formData[name]}
+                onChange={handleChange}
+                error={!!errors[name]}
+                helperText={errors[name] || ""}
+                sx={{ mt: 1 }}
+                fullWidth
+              />
+            </Grid>
+          ))}
+
           <Grid item lg={12} xs={12} mt={1}>
-            <InputLabel sx={{ fontWeight: 550, fontSize: 15 }}>
-              Email*
-            </InputLabel>
-            <TextField
-              name="email"
-              type="email"
-              sx={{ mt: 1 }}
-              fullWidth
-              value={formData.email}
-              onChange={handleChange}
-              error={!!errors.email}
-            />
-            {errors.email && (
-              <span style={{ color: "red" }}>{errors.email}</span>
-            )}
-          </Grid>
-          <Grid item lg={12} xs={12} mt={1}>
-            <InputLabel sx={{ fontWeight: 550, fontSize: 15 }}>
-              Phone Number*
-            </InputLabel>
+            <InputLabel sx={{ fontWeight: 550, fontSize: 15 }}>Phone Number*</InputLabel>
             <MuiTelInput
               fullWidth
               defaultCountry="IN"
@@ -208,46 +175,28 @@ const ContactForm = () => {
               value={formData.phone}
               onChange={handlePhoneChange}
               error={!!errors.phone}
+              helperText={errors.phone || ""}
             />
-            {errors.phone && (
-              <span style={{ color: "red" }}>{errors.phone}</span>
-            )}
           </Grid>
+
           <Grid item lg={12} xs={12} mt={1}>
-            <InputLabel sx={{ fontWeight: 550, fontSize: 15 }}>
-              Subject*
-            </InputLabel>
-            <TextField
-              name="subject"
-              sx={{ mt: 1 }}
-              fullWidth
-              value={formData.subject}
-              onChange={handleChange}
-              error={!!errors.subject}
-            />
-            {errors.subject && (
-              <span style={{ color: "red" }}>{errors.subject}</span>
-            )}
-          </Grid>
-          <Grid item lg={12} xs={12} mt={1}>
-            <InputLabel sx={{ fontWeight: 550, fontSize: 15 }}>
-              Message*
-            </InputLabel>
+            <InputLabel sx={{ fontWeight: 550, fontSize: 15 }}>Message*</InputLabel>
             <TextareaAutosize
               name="message"
               style={{
                 resize: "none",
                 width: "100%",
                 height: "100px",
+                borderColor: errors.message ? "red" : "#ccc",
+                padding: "8px",
+                borderRadius: "4px",
               }}
-              fullWidth
               value={formData.message}
               onChange={handleChange}
             />
-            {errors.message && (
-              <span style={{ color: "red" }}>{errors.message}</span>
-            )}
+            {errors.message && <span style={{ color: "red" }}>{errors.message}</span>}
           </Grid>
+
           <Grid item lg={12} mt={1} xs={12}>
             <div className="buttonparnt">
               <button
@@ -262,14 +211,7 @@ const ContactForm = () => {
                     width="100"
                     color="#031C32"
                     ariaLabel="loading"
-                    wrapperStyle={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "100%",
-                      height: "100%",
-                    }}
-                    wrapperClass
+                    wrapperStyle={{ display: "flex", justifyContent: "center" }}
                   />
                 ) : (
                   "Submit"

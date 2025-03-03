@@ -92,10 +92,14 @@ const AboutHeader = () => {
       {/* Mobile View */}
       <div className="container-fluid mobile-view mobile-container">
          <div className="text-section">
-         <h1>ABOUT US</h1>
+         <h1 data-aos="flip-right"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">ABOUT US</h1>
          {/* Add mobile-specific content here */}
-         <div className="text-content" style={{borderBottom:"2px solid white", marginBottom:"20px"}}>
-               <GrUserPolice style={{color:"white",fontSize:"30px",marginTop:"10px",marginBottom:"15px"}} />
+         <div className="text-content"data-aos="flip-right"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" style={{borderBottom:"2px solid white", marginBottom:"20px"}}>
+              
                 <p>
                   <b>
                     High<span style={{ color: "red" }}>Mast</span> Marine
@@ -109,8 +113,10 @@ const AboutHeader = () => {
                 </p>
               </div>
              
-              <div className="text-content">
-              <TfiMoney style={{color:"white",fontSize:"30px",marginTop:"10px",marginBottom:"12px"}}  />
+              <div className="text-content" data-aos="flip-right"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+            
                 <p>
                   <b>We are a highly cost sensitive,</b> and time-focussed and
                   result-driven team, fully equipped to meet mandatory green
