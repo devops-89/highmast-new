@@ -12,7 +12,6 @@ import ampparalaximg1 from "../../assets/img/elements/ampparalaximg1.jpg";
 import ampparalaximg2 from "../../assets/img/elements/ampparalaximg2.jpg";
 import ampparalaximg3 from "../../assets/img/elements/ampparalaximg3.jpg";
 import Contactseection from "../../component/contactsection";
-
 const Amp = () => {
   return (
     <div  style={{backgroundColor:"#002C30"}}>

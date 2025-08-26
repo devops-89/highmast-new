@@ -9,9 +9,7 @@ import EngineOverhauling from "../views/retrofit";
 import MarineElectricalandAutomation from "../views/marine-electrical-&-automation";
 import MarineandOffshore from "../views/alternatemarine";
 import EnergyEfficiencyDevices from "../views/EnergyEfficiencyDevices";
-
 import ScrollToTop from "../component/scrolltop";
-
 import ThankYou from "../views/thank-you";
 import Service from "../views/servicepage";
 import Retrofit from "../views/retrofit";
@@ -23,9 +21,7 @@ import Privacypolicy from "../views/privacy-policy";
 import TermsAndCondition from "../views/terms&condition";
 import LenisProvider from "../component/LenisProvider";
 import Lenis from "lenis";
-
-
-
+import Inspection from "../views/inspectionandaudits";
 const Router = () => {
   return (
     <div>
@@ -49,6 +45,7 @@ const Router = () => {
         <Route path="/energy-efficiency-devices" element={<EnergyEfficiencyDevices/>}  />
         <Route path="/terms-and-conditions" element={<TermsAndCondition />} />
         <Route path="/privacy-policy" element={<Privacypolicy />} />
+        <Route path="/inspection-and-audits" element={<Inspection/>}/>
       </Routes>
       <Footer />
       </LenisProvider>

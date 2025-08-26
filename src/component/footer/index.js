@@ -238,6 +238,16 @@ const Footer = () => {
               <li>
                 <Link
                   className={
+                    isActive("/inspection-and-audits") ? "active" : ""
+                  }
+                  to="/inspection-and-audits"
+                >
+                  Inspection and Audits
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={
                     isActive("/marine-electrical-&-automation") ? "active" : ""
                   }
                   to="/marine-electrical-&-automation"

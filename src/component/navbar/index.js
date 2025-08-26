@@ -55,6 +55,10 @@ const Navbar = () => {
         name: "Energy Saving & Efficiency Devices",
         url: "/energy-efficiency-devices",
       },
+      {
+        name: "Inspection and Audits",
+        url: "/inspection-and-audits",
+      },
     ],
   };
 
