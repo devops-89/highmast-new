@@ -36,7 +36,6 @@ const Home = () => {
       </div>
       <Homepagebanner />
       <ScrollAnimation />
-      
       <Commitsmentcomponent />
      
       <Servicesscroll />

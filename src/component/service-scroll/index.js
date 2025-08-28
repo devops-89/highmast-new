@@ -12,7 +12,7 @@ import shipImage4 from "../../assets/img/elements/projectsupervisionservice.jpg"
 import vesselsimg from "../../assets/img/elements/serviceimg5.jpg";
 import shipImage6 from "../../assets/img/elements/marineautomationservice.jpg";
 import shipImage7 from "../../assets/img/energy-efficiency-devices/energy-saving-main-image.webp";
-
+import shipimage8 from  "../../assets/img/inspection-and-audit/shipimage-8.jpg";
 const Servicesscroll = () => {
   const swiperRef = useRef();
 
@@ -24,6 +24,7 @@ const Servicesscroll = () => {
     vesselsimg,
     shipImage6,
     shipImage7,
+    shipimage8,
   ];
 
   const textItems = [
@@ -34,6 +35,7 @@ const Servicesscroll = () => {
     "Vessel 3D scanning <br/> & Production design",
     "Marine Electrical <br/> & Automation",
     "Energy Saving <br/>& Efficiency Devices",
+    "Inspection and Audits", 
   ];
 
   const linkItems=[
@@ -43,7 +45,8 @@ const Servicesscroll = () => {
     "/project-supervision-shipbuilding-and-ship-repairs",
     "/vessel-3d-scanning-and-production-design",
     "/marine-electrical-&-automation",
-    "/energy-efficiency-devices"
+    "/energy-efficiency-devices",
+    "/inspection-and-audits",
   ]
   const [activeSlide, setActiveSlide] = useState(0);
 

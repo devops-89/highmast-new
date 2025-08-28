@@ -203,7 +203,7 @@ const Navbar = () => {
                         alignItems="center"
                         justifyContent="space-between"
                       >
-                        {/* Link for Navigation */}
+                       
                         <Link
                           to={val.url}
                           style={{ textDecoration: "none" }}
