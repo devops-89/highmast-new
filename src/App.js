@@ -1,11 +1,9 @@
 import Router from "./routers";
-
-import { useEffect } from "react"; // Ensure useEffect is imported
+import { useEffect } from "react"; 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Modal from "./component/dialog";
-import "aos/dist/aos.css"; // Ensure AOS styles are imported
+import "aos/dist/aos.css"; 
 import AOS from "aos";
-
 function App() {
   useEffect(() => {
     AOS.init({
@@ -13,9 +11,6 @@ function App() {
     });
     AOS.refresh(); 
   }, []); 
-
-  
- 
   return (
  
       <div className="App">

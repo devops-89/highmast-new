@@ -52,7 +52,6 @@ const ServicesPointers = (props) => {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
-
                 borderRadius: "5px",
                 margin: "0px auto",
               }}

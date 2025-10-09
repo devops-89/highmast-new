@@ -36,7 +36,9 @@ const Servicesscroll = () => {
     "Marine Electrical <br/> & Automation",
     "Energy Saving <br/>& Efficiency Devices",
     "Inspection and Audits", 
+    "Future-Ready Communication For The Maritime Industry",
   ];
+
 
   const linkItems=[
     "/retrofit-led-power-saving-solutions",
@@ -47,6 +49,7 @@ const Servicesscroll = () => {
     "/marine-electrical-&-automation",
     "/energy-efficiency-devices",
     "/inspection-and-audits",
+    "/future-communication",
   ]
   const [activeSlide, setActiveSlide] = useState(0);
 

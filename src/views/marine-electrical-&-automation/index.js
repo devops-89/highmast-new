@@ -13,7 +13,6 @@ import avtarimg from "../../assets/img/elements/user.png";
 import dwnquote from "../../assets/img/elements/dwnquote.png";
 import upquote from "../../assets/img/elements/upquote.png";
 import ExpertiesComponent from "../../component/expertiestypes";
-
 import testingrepair from "../../assets/img/elements/testing&repair.jpg";
 import marineparalaximg1 from "../../assets/img/elements/marineparalaximg1.jpg";
 import marineparalaximg2 from "../../assets/img/elements/marineparalaximg2.jpg";

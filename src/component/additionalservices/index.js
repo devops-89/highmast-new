@@ -38,7 +38,7 @@ const Additinalservices = (props) => {
 
 
       <div>
-        <h2  data-aos="fade-down"       data-aos-mirror="true"  className="subheading headingcenter" sx={{ color: "#fff", marginBottom:{xs:"60px",md:"80px",lg:"80px"} }}>
+        <h2  data-aos="fade-down" data-aos-mirror="true"  className="subheading headingcenter" sx={{ color: "#fff", marginBottom:{xs:"60px",md:"80px",lg:"80px"} }}>
           {props.mainheading}
         </h2>
       </div>

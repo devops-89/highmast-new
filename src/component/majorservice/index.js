@@ -8,7 +8,6 @@ import certificationimg1 from "../../assets/img/elements/certificationimg1.png";
 import certificationimg2 from "../../assets/img/elements/certificationimg2.png";
 import certificationimg3 from "../../assets/img/elements/certificationimg3.png";
 import certificationimg4 from "../../assets/img/elements/certificationimg4.png";
-
 const Majorservice = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });

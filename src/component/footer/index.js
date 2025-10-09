@@ -255,6 +255,16 @@ const Footer = () => {
                   Marine Electrical & Automation
                 </Link>
               </li>
+              <li>
+                <Link
+                  className={
+                    isActive("/future-communication") ? "active" : ""
+                  }
+                  to="/future-communication"
+                >
+                Future-Ready Communication For The Maritime Industry
+                </Link>
+              </li>
             </ul>
           </div>
 

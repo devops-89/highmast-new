@@ -1,12 +1,9 @@
 import React,{useEffect} from "react";
-import "./index.css"; // Import the CSS file
+import "./index.css"; 
 import { GrUserPolice } from "react-icons/gr";
 import { TfiMoney } from "react-icons/tfi";
 import AOS from "aos";
-
-
 const AboutHeader = () => {
-
   useEffect(()=>{
     AOS.init({
       duration: 1000, 
@@ -65,8 +62,7 @@ const AboutHeader = () => {
               </div>
               
             </div>
-           
-
+  
             {/* staring section */}
 
             {/* absolute section  */}
@@ -74,15 +70,11 @@ const AboutHeader = () => {
           </div>
 
 
-
           {/* Right Section (Image with Hover Effect) */}
           <div className="image-section" >
           
           <img data-aos="fade-left" src="https://media.istockphoto.com/id/1287624948/photo/container-ship-sailing-in-sea.jpg?s=612x612&w=0&k=20&c=jmv0k_rko5R4R8wOVEnxUjt4CQkEDn-tLz5_-__SgLM="  alt="image" className="about-image"  />
 
-        
-        
-       
           </div>
         </div>
       
