@@ -13,6 +13,7 @@ import vesselsimg from "../../assets/img/elements/serviceimg5.jpg";
 import shipImage6 from "../../assets/img/elements/marineautomationservice.jpg";
 import shipImage7 from "../../assets/img/energy-efficiency-devices/energy-saving-main-image.webp";
 import shipimage8 from  "../../assets/img/inspection-and-audit/shipimage-8.jpg";
+import shipimage9 from "../../assets/img/elements/future3.png";
 const Servicesscroll = () => {
   const swiperRef = useRef();
 
@@ -25,6 +26,7 @@ const Servicesscroll = () => {
     shipImage6,
     shipImage7,
     shipimage8,
+    shipimage9,
   ];
 
   const textItems = [

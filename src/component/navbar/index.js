@@ -59,11 +59,7 @@ const Navbar = () => {
         name: "Inspection and Audits",
         url: "/inspection-and-audits",
       },
-      // {
-      //   name: "Future-Ready Communication for the Maritime Industry",
-      //   url:"/future-ready-communication"
-        
-      // }
+     
       {
         name: "Future-Ready Communication for the Maritime Industry",
         url:"/future-communication"
