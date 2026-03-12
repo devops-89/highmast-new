@@ -23,7 +23,9 @@ const Navbar = () => {
       { name: "Home", url: "/" },
       { name: "About Us", url: "/about-us" },
       { name: "Services", url: "/services", dropdown: true },
-      { name: "Contact", url: "/contact-us" },
+      {name:"Exclusive Partner", url:"/exclusive-partner"},
+      { name: "Contact", url: "/contact-us" }
+      
     ],
     servicesDropdown: [
       {

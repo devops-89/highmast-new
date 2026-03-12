@@ -1,0 +1,309 @@
+    .partners-section{
+    background:#071f2f;
+    padding:60px 8%;
+    color:white;
+    font-family:Arial;
+    padding-top:150px;
+    }
+
+/* Heading */
+
+.heading h2{
+  font-size:65px;
+  letter-spacing:1px;
+}
+
+.heading h2 span{
+  color:#ff3c3c;
+}
+
+.heading h1{
+  font-size:65px;
+  margin-top:5px;
+}
+
+.heading p{
+  max-width:800px;
+  margin-top:10px;
+  color:#c8d6e5;
+  font-size: 19px;
+}
+
+/* Partner Rows */
+
+.partner-row{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  margin-top:105px;
+}
+
+.partner-row.reverse{
+  flex-direction:row-reverse;
+}
+.partner-card{
+  background:#0b2a3d;
+  padding:30px;
+  border-radius:12px;
+  width:635px;  
+   min-height: 520px;
+}
+
+.partner-card h3{
+  font-size:65px;
+  margin-bottom:25px;
+}
+.partner-card h3::after{
+  content: "";
+  display: block;
+  width:60px;       /* line length */
+  height:3px;       /* line thickness */
+  background:#ff3c3c;
+  margin-top:2px;
+  border-radius:2px;
+}
+
+.partner-card p{
+  max-width:530px;
+  color:#b7c7d6;
+  font-size:15px;
+  line-height:1.6;
+}
+
+.partner-card ul{
+  margin-top:18px;
+  padding-left:20px;
+}
+
+.partner-card li{
+  font-size:14px;
+  margin-bottom:5px;
+}
+
+.partner-card .btn{
+  margin-top:15px;
+  background:#ff3c3c;
+  border:none;
+  padding:10px 18px;
+  border-radius:20px;
+  color:white;
+  cursor:pointer;
+}
+
+:hover .partner-card .btn{
+    background-color: #ff3c3c;
+}
+.partner-image{
+  flex:1;
+  display:flex;
+  justify-content:flex-end;
+}
+
+.partner-image.left{
+  flex:1;
+  display:flex;
+  justify-content:flex-start;
+}
+
+.partner-image img{
+  width:570px;
+  height:380px;     /* height control */
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0px 10px 25px rgba(0,0,0,0.6);
+}
+
+/* Resources */
+
+.resources{
+  margin-top:80px;
+  text-align:center;
+}
+
+.resources p{
+    font-weight: 600;
+    font-size: 60px;
+}
+.resources span{
+  color:#ff3c3c;
+}
+
+.resource-cards{
+  display:flex;
+  justify-content:center;
+  gap:35px;
+  margin-top:40px;
+}
+
+.resource-card{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+  background:#0b2a3d;
+  padding:20px;
+  border-radius:18px;
+  width:400px;
+   min-height:300px;
+   
+}
+
+.icon{
+  width:80px;
+  height:80px;
+  background: rgba(255, 60, 60, 0.15);
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:22px;
+  color:#ff3c3c; 
+  margin:0 auto 12px auto;
+}
+
+.resource-card h4{
+  margin-bottom:5px;
+}
+
+.resource-card p{
+  color:#b7c7d6;
+  font-size:13px;
+}
+
+.resource-card button{
+  margin-top:10px;
+  padding:8px 16px;
+  border-radius:20px;
+  border:1px solid #aaa;
+  background:transparent;
+  color:white;
+  cursor:pointer;
+}
+
+/*tablet responsive*/
+@media (max-width:1024px){
+
+    .partners-section{
+  padding:60px 6%;
+  padding-top:120px;
+}
+
+.partner-row{
+  flex-direction:column;
+  gap:40px;
+}
+
+.partner-row.reverse{
+  flex-direction:column;
+}
+
+.partner-card{
+  width:100%;
+  min-height:auto;
+}
+
+.partner-image{
+  justify-content:center;
+}
+
+.partner-image img{
+  width:100%;
+  max-width:500px;
+  height:auto;
+}
+
+.heading h2,
+.heading h1{
+  font-size:45px;
+}
+
+.resources p{
+  font-size:45px;
+}
+
+.resource-cards{
+  flex-wrap:wrap;
+}
+
+.resource-card{
+  width:300px;
+}
+
+}
+
+/*mobile responsive*/
+@media (max-width:768px){
+.partners-section{
+  padding:40px 5%;
+  padding-top:120px;
+}
+.heading h2,
+.heading h1{
+  font-size:35px;
+}
+
+.heading p{
+  font-size:16px;
+}
+
+.partner-card h3{
+  font-size:35px;
+}
+
+.partner-card{
+  padding:25px;
+}
+
+.partner-image img{
+  max-width:100%;
+}
+
+.resources p{
+  font-size:35px;
+}
+
+.resource-cards{
+  flex-direction:column;
+  align-items:center;
+}
+
+.resource-card{
+  width:100%;
+  max-width:350px;
+}
+
+}
+
+/*small mobile*/
+@media (max-width:480px){
+
+
+    .partners-section{
+  padding:30px 4%;
+  padding-top:120px;
+}
+.heading h2,
+.heading h1{
+  font-size:28px;
+}
+
+.partner-card h3{
+  font-size:28px;
+}
+
+.partner-card p{
+  font-size:14px;
+}
+
+.resources p{
+  font-size:28px;
+}
+
+.icon{
+  width:60px;
+  height:60px;
+}
+
+}
