@@ -12,23 +12,8 @@ import "./index.css";
 
 
 const Aboutsection = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setScrollY(scrollPosition);
-    };
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      if (typeof window !== "undefined") {
-        window.removeEventListener("scroll", handleScroll);
-      }
-    };
-  }, []);
 
   
    useEffect(()=>{
@@ -56,37 +41,7 @@ const Aboutsection = () => {
   //   };
   // }, []);
 
-  // Determine screen size
-  const screenWidth = window.innerWidth;
 
-  // Define font size ranges for different screen sizes
-  const fontSizes = {
-    mobile: { min: 40, max: 100 }, // 0px - 768px
-    tablet: { min: 80, max: 100 }, // 768px - 1024px
-    large: { min: 100, max: 150 }, // 1024px - 1440px
-    desktop: { min: 150, max: 300 }, // > 1440px
-  };
-
-  // Adjust font size based on screen size
-  let fontSizeValue;
-  if (screenWidth <= 768) {
-    fontSizeValue = 60;
-  } else if (screenWidth > 768 && screenWidth <= 1024) {
-    fontSizeValue = Math.min(
-      fontSizes.tablet.max,
-      Math.max(fontSizes.tablet.min, 85 - Math.cos(scrollY / 300) * 10)
-    );
-  } else if (screenWidth > 1024 && screenWidth <= 1440) {
-    fontSizeValue = Math.min(
-      fontSizes.large.max,
-      Math.max(fontSizes.large.min, 120 - Math.cos(scrollY / 300) * 20)
-    );
-  } else {
-    fontSizeValue = Math.min(
-      fontSizes.desktop.max,
-      Math.max(fontSizes.desktop.min, 150 - Math.cos(scrollY / 400) * 30)
-    );
-  }
 
   return (
     <div  className="container-fluid " style={{backgroundColor:  "#4C8C91",paddingBottom:"20px"}}>
@@ -103,6 +58,7 @@ const Aboutsection = () => {
           <Grid2 size={{md:12,lg:4}} >
             <Stack sx={{justifyContent:"center",alignItems:"center"}}>
           <img
+            alt="About HighMast"
                     
                     style={{width:"100%",height:"100%",overflow:"hidden",borderRadius:"4px"}}
                     src={abouthighmastimg}

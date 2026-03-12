@@ -176,7 +176,7 @@ let Data = {
         "Request restriction of the processing of your personal data",
         "Port your personal data to another service provider",
       ],
-      tittle2:
+      tittle3:
         " To exercise your rights, please contact us at [insert contact email and address]",
     },
     {
