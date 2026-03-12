@@ -169,6 +169,14 @@ const Footer = () => {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <Link
+                  className={isActive("/exclusive-partner") ? "active" : ""}
+                  to="/exclusive-partner"
+                >
+                  Exclusive Partner
+                </Link>
+              </li>
             </ul>
           </div>
 

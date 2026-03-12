@@ -23,7 +23,8 @@ import LenisProvider from "../component/LenisProvider";
 import Lenis from "lenis";
 import Inspection from "../views/inspectionandaudits";
 //import Future from "../views/future-ready-communication";
-import  Future from "../views/future-communication";
+import Future from "../views/future-communication";
+import ExclusivePartner from "../views/exclusive-partner";
 const Router = () => {
   return (
     <div>
@@ -50,6 +51,7 @@ const Router = () => {
         <Route path="/inspection-and-audits" element={<Inspection/>}/>
         {/* <Route path="/future-ready-communication" element={<Future/>}/> */}
         <Route path="/future-communication" element={<Future/>}/>
+        <Route path="/exclusive-partner" element={<ExclusivePartner />} />
       </Routes>
       <Footer />
       </LenisProvider>
