@@ -9,8 +9,6 @@ import Testimonials from "../../component/testimonials";
 import avtarimg from "../../assets/img/elements/user.png";
 import dwnquote from "../../assets/img/elements/dwnquote.png";
 import upquote from "../../assets/img/elements/upquote.png";
-import img24x7 from "../../assets/img/elements/24-hours.png";
-import datawaveimg from "../../assets/img/elements/data-wave.png";
 import ExpertiesComponent from "../../component/expertiestypes";
 import retrofitparalaximg1 from "../../assets/img/elements/retrofitparalaximg1.jpg";
 import retrofitparalaximg2 from "../../assets/img/elements/retrofitparalaximg2.jpg";

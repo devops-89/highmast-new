@@ -1,15 +1,13 @@
 import React from "react";
 import Navbar from "../component/navbar";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "../views/home";
 import Footer from "../component/footer";
 import About from "../views/about-us";
 import Contactus from "../views/contact-us";
-import EngineOverhauling from "../views/retrofit";
 import MarineElectricalandAutomation from "../views/marine-electrical-&-automation";
-import MarineandOffshore from "../views/alternatemarine";
 import EnergyEfficiencyDevices from "../views/EnergyEfficiencyDevices";
-import ScrollToTop from "../component/scrolltop";
+
 import ThankYou from "../views/thank-you";
 import Service from "../views/servicepage";
 import Retrofit from "../views/retrofit";
@@ -20,7 +18,7 @@ import Vessels3d from "../views/vessel3d";
 import Privacypolicy from "../views/privacy-policy";
 import TermsAndCondition from "../views/terms&condition";
 import LenisProvider from "../component/LenisProvider";
-import Lenis from "lenis";
+
 import Inspection from "../views/inspectionandaudits";
 //import Future from "../views/future-ready-communication";
 import  Future from "../views/future-communication";

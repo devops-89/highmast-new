@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useRef } from "react";
 
-import { Parallax } from "react-parallax";
+
 import "./index.css";
 
 

@@ -119,6 +119,7 @@ const Ourteam = () => {
                   data-aos="zoom-in-up"
                   style={{ objectFit: "contain" }}
                   src={Teamimg2}
+                  alt="Team Member"
                 ></img>
               </div>
             </div>
