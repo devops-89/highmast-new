@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import { Autoplay, EffectCoverflow, Mousewheel } from "swiper/modules";
+import { EffectCoverflow, Mousewheel } from "swiper/modules";
 import "./index.css";
 import { Link } from "react-router-dom";
 import shipImage1 from "../../assets/img/elements/retrofitservice.jpg";

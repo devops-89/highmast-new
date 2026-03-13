@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 
 
-import React, { useEffect } from "react";
+import React from "react";
 
 const ServicesDescription = (props) => {
 

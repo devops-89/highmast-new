@@ -5,8 +5,6 @@ import AOS from "aos";
 import DirectionsBoatIcon from "@mui/icons-material/DirectionsBoat";
 import Servicesscroll from "../../component/service-scroll";
 import Majorservice from "../../component/majorservice";
-import LenisProvider from "../../component/LenisProvider";
-import { useLocation } from "react-router-dom";
 
 import SmallTextAnimation from "../../component/animations/SmallTextAnimation/SmallTextAnimation";
 
@@ -15,7 +13,7 @@ const Service = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [font, setFont] = useState(calculateFontSize());
+  const [font] = useState(calculateFontSize());
 
   useEffect(() => {
     AOS.refresh();

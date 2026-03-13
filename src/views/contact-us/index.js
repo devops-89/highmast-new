@@ -13,7 +13,7 @@ const Contactus = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [font, setFont] = useState(calculateFontSize);
+  const [font] = useState(calculateFontSize);
 
   const contactaddressdata = [
     {
@@ -165,6 +165,7 @@ const Contactus = () => {
                 <img
                   className="globebanerimg"
                   src="/header/animated_globe.gif"
+                  alt="Animated Globe"
                 ></img>
                 {/* svg start */}
 

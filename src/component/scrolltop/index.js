@@ -17,7 +17,7 @@ function ScrollToTop() {
     }
 
     AOS.refresh();
-  }, [pathname]); // Removed `lenis` from dependencies to avoid unnecessary re-renders
+  }, [pathname, lenis]); // Added `lenis` back to dependencies
 
   return null;
 }

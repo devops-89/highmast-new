@@ -39,7 +39,7 @@ const About = () => {
     }, []);
 
   
-  const [font,setFont]=useState(calculateFontSize());
+  const [font] = useState(calculateFontSize());
 
   function calculateFontSize() {
     const width = window.innerWidth;
