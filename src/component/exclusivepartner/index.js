@@ -50,21 +50,20 @@ export default function ExclusivePartner() {
                 <div className="partner-card">
                     <h3>Link Instruments</h3>
                     <p>
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
+                       Link Instruments is a leading manufacturer of ultrasonic
+                        measurement and gas detection solutions for industrial and 
+                        marine environments. With decades of engineering expertise,
+                         the company delivers reliable instruments designed to enhance
+                          safety, accuracy, and operational efficiency across multiple
+                           industries.
 
                     </p>
 
                     <ul>
-                        <li>Ultrasonic Measurement</li>
-                        <li>Gas Leak Detection Solutions</li>
+                        <li>Ultrasonic Level Comparator</li>
+                        {/* <li>Gas Leak Detection Solutions</li>
                         <li>Marine & Industrial Applications</li>
-                        <li>Precision Engineering</li>
+                        <li>Precision Engineering</li> */}
                     </ul>
 
                   <a href="https://linkinst.com/" className="btn">Visit Website</a>
@@ -83,21 +82,20 @@ export default function ExclusivePartner() {
                 <div className="partner-card">
                     <h3>SM Designworks</h3>
                     <p>
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
+                        SM Designworks is a specialized engineering and marine service
+                         company providing retrofit solutions, ship repair, 
+                         and technical support for vessels. The company focuses
+                          on delivering efficient engineering, fabrication, and 
+                          installation services to improve vessel 
+                        performance and meet international maritime standards.
 
                     </p>
 
                     <ul>
-                        <li>Marine Engineering Solutions</li>
-                        <li>3D Scanning & Technical Survey</li>
-                        <li>Ship Repair & Installation</li>
-                        <li>Equipment Integration</li>
+                        <li>Marine Engineering & Retrofit Solutions</li>
+                        <li>3D Scanning and Technical Survey</li>
+                        <li>Ship Repair & Installation Services</li>
+                        <li>Fabrication and Equipment Integration</li>
                     </ul>
 
                  <a href="https://eur03.safelinks.protection.outlook.com/?url=http%3A%2F%2Fwww.smdesign.co.kr%2F&data=04%7C01%7Cmarcin.czapla%40blommaritime.com%7Ca7046ec6e8d74fa67a5408d8f4e00b31%7C221691ccdebe47469c64016e3ca827ab%7C1%7C1%7C637528590412439197%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0&sdata=ua82qWngmxzzjiLYQnjcgJ5CFZIDnONvmRB2ZhRbRpw%3D&reserved=0" className="btn">Visit Website</a>
