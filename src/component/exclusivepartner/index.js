@@ -4,7 +4,7 @@ import { PictureAsPdf } from '@mui/icons-material';
 
 export default function ExclusivePartner() {
 
-    const resourcesData = [
+    const smdResources = [
         {
             title: "Purifier Catalog",
             size: "PDF Document - 1.3 MB",
@@ -22,12 +22,31 @@ export default function ExclusivePartner() {
         }
     ];
 
+    const oceanOrderResources = [
+        {
+            title: "Smart Maritime Procurement Platform",
+            size: "PDF Document - 2.1 MB",
+            file: "/exclusivepartner/1.OceanOrder_ Smart Maritime Procurement Platform - Customer.pdf"
+        }
+    ];
+
     const handleDownload = (file) => {
      const link=document.createElement("a")
      link.href=file
      link.download=file
      link.click()
     }
+
+    const ResourceCard = ({ item }) => (
+        <div className="resource-card mini">
+            <div className="icon mini"><PictureAsPdf sx={{fontSize:{md:"20px",xs:"16px"}}}/></div>
+            <div className="resource-info">
+                <h5>{item.title}</h5>
+                <p>{item.size}</p>
+            </div>
+            <button onClick={() => handleDownload(item.file)}>Download</button>
+        </div>
+    );
 
     return (
         <div className="partners-section">
@@ -44,20 +63,13 @@ export default function ExclusivePartner() {
                 </p>
             </div>
 
-            {/* Card Row 1 */}
+            {/* Card Row 1: Link Instruments */}
             <div className="partner-row">
 
                 <div className="partner-card">
                     <h3>Link Instruments</h3>
                     <p>
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-
+                        Link Instruments is a leading manufacturer of ultrasonic measurement systems and gas leak detection solutions. Their precision engineering ensures safety and efficiency in marine and industrial applications worldwide.
                     </p>
 
                     <ul>
@@ -71,26 +83,18 @@ export default function ExclusivePartner() {
                 </div>
 
                 <div className="partner-image">
-                    <img src="/exclusivepartner/linkist.png" alt="ship" />
+                    <img src="/exclusivepartner/linkist.png" alt="Link Instruments" />
                 </div>
 
             </div>
 
-            {/* Card Row 2 */}
-
+            {/* Card Row 2: SM Designworks */}
             <div className="partner-row reverse">
 
                 <div className="partner-card">
                     <h3>SM Designworks</h3>
                     <p>
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-                        Link Instruments is a leading manufacturer of ultrasonic
-
+                        SM Designworks provides specialized marine engineering solutions, focusing on 3D scanning, technical surveys, and equipment integration. Their expertise ensures seamless Installations and repairs for complex vessel projects.
                     </p>
 
                     <ul>
@@ -100,34 +104,54 @@ export default function ExclusivePartner() {
                         <li>Equipment Integration</li>
                     </ul>
 
-                 <a href="https://eur03.safelinks.protection.outlook.com/?url=http%3A%2F%2Fwww.smdesign.co.kr%2F&data=04%7C01%7Cmarcin.czapla%40blommaritime.com%7Ca7046ec6e8d74fa67a5408d8f4e00b31%7C221691ccdebe47469c64016e3ca827ab%7C1%7C1%7C637528590412439197%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0&sdata=ua82qWngmxzzjiLYQnjcgJ5CFZIDnONvmRB2ZhRbRpw%3D&reserved=0" className="btn">Visit Website</a>
+                    <div className="partner-resources">
+                        <h4>Technical Resources</h4>
+                        <div className="mini-resource-grid">
+                            {smdResources.map((item, index) => (
+                                <ResourceCard key={index} item={item} />
+                            ))}
+                        </div>
+                    </div>
+
+                    <a href="http://www.smdesign.co.kr/" className="btn">Visit Website</a>
                 </div>
 
                 <div className="partner-image left">
-                    <img src="/exclusivepartner/sm-design.png" alt="ship" />
+                    <img src="/exclusivepartner/sm-design.png" alt="SM Designworks" />
                 </div>
 
             </div>
 
-            {/* Technical Resources */}
+            {/* Card Row 3: OceanOrder */}
+            <div className="partner-row">
 
-            <div className="resources">
+                <div className="partner-card">
+                    <h3>OceanOrder</h3>
+                    <p>
+                        OceanOrder is an AI-powered marine procurement platform designed to simplify and optimize the sourcing of ship spares, stores, and services. It streamlines the entire procurement lifecycle—from requisition to delivery—using intelligent automation, real-time pricing insights, and transparent vendor comparisons.
+                    </p>
 
-                <p>
-                    TECHNICAL <span>RESOURCES</span>
-                </p>
+                    <ul>
+                        <li>AI-Powered Marine Procurement Platform</li>
+                        <li>Smart RFQ, Vendor Comparison & Cost Optimization</li>
+                        <li>End-to-End Order, Invoice & Logistics Management</li>
+                        <li>Real-Time Pricing Insights & Transparent Workflows</li>
+                    </ul>
 
-                <div className="resource-cards">
-
-                    {resourcesData.map((item, index) => (
-                        <div className="resource-card" key={index}>
-                            <div className="icon"><PictureAsPdf sx={{fontSize:{md:"35px",xs:"27px"}}}/></div>
-                            <h5>{item.title}</h5>
-                            <p>{item.size}</p>
-                            <button onClick={() => handleDownload(item.file)}>Download</button>
+                    <div className="partner-resources">
+                        <h4>OceanOrder Resources</h4>
+                        <div className="mini-resource-grid">
+                            {oceanOrderResources.map((item, index) => (
+                                <ResourceCard key={index} item={item} />
+                            ))}
                         </div>
-                    ))}
+                    </div>
 
+                    <a href="#" className="btn">Visit Website</a>
+                </div>
+
+                <div className="partner-image">
+                    <img src="/exclusivepartner/ocean_order.png" alt="OceanOrder" />
                 </div>
 
             </div>
