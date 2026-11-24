@@ -105,7 +105,7 @@ const Ourteam = () => {
               </div>
             </div>
           </div>
-          <div className="row align-items-center pb-5 ourrteamsection ourteamsection2nd">
+          {/* <div className="row align-items-center pb-5 ourrteamsection ourteamsection2nd">
             <div className="col-sm-7 text-left teamimgparnt2">
               <div
                 className="image-overlay"
@@ -183,10 +183,28 @@ const Ourteam = () => {
                 Ammonia conversion technology.
               </Typography>
             </div>
-          </div>
-          <div className="row align-items-center pb-5   ourrteamsection ourteamsectionist ">
+          </div> */}
+          <div className="row align-items-center pb-5   ourrteamsection ourteamsection2nd ">
+            <div className="col-sm-5 text-left teamimgparnt2">
+              <div
+                className="image-overlay"
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "50%",
+                  overflow: "hidden",
+                }}
+              >
+                <img
+                  data-aos="zoom-in-up"
+                  style={{ objectFit: "contain" }}
+                  src={Teaming3}
+                  alt="Team Member"
+                />
+              </div>
+            </div>
+
             <div
-              className="col-sm-5"
+              className="col-sm-7"
               data-aos="fade-left"
               data-aos-delay="500"
               data-aos-offset="100"
@@ -242,23 +260,6 @@ const Ourteam = () => {
                 expertise and leadership drive the company’s growth and success,
                 ensuring excellence in every financial and strategic endeavor.
               </Typography>
-            </div>
-            <div className="col-sm-7 teamimgparnt1">
-              <div
-                className="image-overlay"
-                style={{
-                  backgroundColor: "white",
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                }}
-              >
-                <img
-                  data-aos="zoom-in-up"
-                  style={{ objectFit: "contain" }}
-                  src={Teaming3}
-                  alt="Team Member"
-                />
-              </div>
             </div>
           </div>
         </div>
