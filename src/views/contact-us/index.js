@@ -7,7 +7,6 @@ import Contactaddress from "../../component/contactlocation";
 import Contactseection from "../../component/contactsection";
 import SmallTextAnimation from "../../component/animations/SmallTextAnimation/SmallTextAnimation";
 
-
 const Contactus = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,7 +28,7 @@ const Contactus = () => {
       addresdetailspin: "Singapore 069533",
 
       email: "service@highmastmarine.com",
-      phoneno: "+65 90487544 +65 91870596",
+      phoneno: "+65 96684117",
 
       img: googlemapimg,
       mapUrl:
@@ -58,14 +57,29 @@ const Contactus = () => {
       countryname: "DUBAI",
       addressright1: "HIGHMAST MARINE SERVICES L.L.C-FZ",
       addressheading: "HIGHMAST MARINE SERVICES L.L.C-FZ",
-      addressdetails: "Meydan Free Zone, Meydan City Corporation, Al Meydan Road,",
+      addressdetails:
+        "Meydan Free Zone, Meydan City Corporation, Al Meydan Road,",
       addresdetailspin: "Nad Al Sheba, Dubai, 9305, United Arab Emirates",
       email: "service_uae@highmastmarine.com",
+      phoneno: "+65 96684117",
 
       img: googlemapimg,
       mapUrl:
         "https://www.google.com/maps?q=Meydan+Free+Zone,+Meydan+City+Corporation,+Al+Meydan+Road,+Nad+Al+Sheba,+Dubai,+9305,+United+Arab+Emirates&output=embed",
     },
+    // {
+    //   icon: <LocationOnIcon />,
+    //   countryname: "DUBAI",
+    //   addressright1: "MEYDAN FREE ZONE",
+    //   addressheading: "Meydan Free Zone",
+    //   addressdetails: "Meydan City Corporation, Al Meydan Road,",
+    //   addresdetailspin: "Nad Al Sheba, Dubai, 9305, United Arab Emirates",
+    //   email: "service_uae@highmastmarine.com",
+
+    //   img: googlemapimg,
+    //   mapUrl:
+    //     "https://www.google.com/maps?q=Meydan+Free+Zone,+Meydan+City+Corporation,+Al+Meydan+Road,+Nad+Al+Sheba,+Dubai,+9305,+United+Arab+Emirates&output=embed",
+    // },
   ];
 
   function calculateFontSize() {
@@ -76,7 +90,6 @@ const Contactus = () => {
   }
 
   return (
-
     <div>
       <section className="conatactbanner   secOne2   ">
         <div className="conatactbanneroverlay"></div>{" "}
@@ -193,7 +206,6 @@ const Contactus = () => {
       <Contactaddress contactaddressdata={contactaddressdata} />
       <Contactseection />
     </div>
-  
   );
 };
 

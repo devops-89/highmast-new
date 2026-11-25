@@ -288,7 +288,7 @@ const Footer = () => {
                 <li>
                   <a href="tel:+6596684117">
                     <LocalPhone sx={{ fontSize: "20px", marginRight: "5px" }} />{" "}
-                    +65 90487544, +65 91870596
+                    +65 96684117
                   </a>
                 </li>
               </ul>
