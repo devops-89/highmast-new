@@ -35,23 +35,36 @@ const Contactus = () => {
       mapUrl:
         "https://www.google.com/maps?q=Tong+Eng+Building,+101+Cecil+Street,+Unit+24-05,+Singapore+069533&output=embed",
     },
+    // {
+    //   icon: <LocationOnIcon />,
+    //   countryname: "DUBAI",
+    //   answer:
+    //     "You bet! We supply spare parts, including valves, pumps, and specialized green tech, which keeps your fleet afloat. Besides, we supply anything from spare parts to advanced equipment like FGSS and cryogenic piping.",
+
+    //   addressright1: "DUBAI OFFICE",
+    //   addressright2: "6th Floor, Zig Zag Building 70 Victoria St, London, SW1E",
+    //   addressheading: "Dubai Corporate Office",
+    //   addressdetails: "Office 44, 1st Floor, Emirates Tower",
+    //   addresdetailspin: "Hamdan Bin Md Street, Al Danah, Abu Dhabi UAE",
+    //   email: "service@highmastmarine.com",
+    //   phoneno: "+971 529069489",
+
+    //   img: googlemapimg,
+    //   mapUrl:
+    //     "https://www.google.com/maps?q=Office+44,+1st+Floor,+Emirates+Tower,+Hamdan+Bin+Md+Street,+Al+Danah,+Abu+Dhabi+UAE&output=embed",
+    // },
     {
       icon: <LocationOnIcon />,
       countryname: "DUBAI",
-      answer:
-        "You bet! We supply spare parts, including valves, pumps, and specialized green tech, which keeps your fleet afloat. Besides, we supply anything from spare parts to advanced equipment like FGSS and cryogenic piping.",
-
-      addressright1: "DUBAI OFFICE",
-      addressright2: "6th Floor, Zig Zag Building 70 Victoria St, London, SW1E",
-      addressheading: "Dubai Corporate Office",
-      addressdetails: "Office 44, 1st Floor, Emirates Tower",
-      addresdetailspin: "Hamdan Bin Md Street, Al Danah, Abu Dhabi UAE",
-      email: "service@highmastmarine.com",
-      phoneno: "+971 529069489",
+      addressright1: "HIGHMAST MARINE SERVICES L.L.C-FZ",
+      addressheading: "HIGHMAST MARINE SERVICES L.L.C-FZ",
+      addressdetails: "Meydan Free Zone, Meydan City Corporation, Al Meydan Road,",
+      addresdetailspin: "Nad Al Sheba, Dubai, 9305, United Arab Emirates",
+      email: "service_uae@highmastmarine.com",
 
       img: googlemapimg,
       mapUrl:
-        "https://www.google.com/maps?q=Office+44,+1st+Floor,+Emirates+Tower,+Hamdan+Bin+Md+Street,+Al+Danah,+Abu+Dhabi+UAE&output=embed",
+        "https://www.google.com/maps?q=Meydan+Free+Zone,+Meydan+City+Corporation,+Al+Meydan+Road,+Nad+Al+Sheba,+Dubai,+9305,+United+Arab+Emirates&output=embed",
     },
   ];
 

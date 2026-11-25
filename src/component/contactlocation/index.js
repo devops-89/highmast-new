@@ -56,7 +56,7 @@ const Contactaddress = ({ contactaddressdata }) => {
           {contactaddressdata.length > 0 ? (
             contactaddressdata.map((address, index) => (
               <motion.div
-                key={address.id}
+                key={address.id ?? index}
                 data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                 data-aos-mirror="true"
                 data-aos-delay={index % 2 === 0 ? index * 100 : index * 200}
@@ -140,38 +140,46 @@ const Contactaddress = ({ contactaddressdata }) => {
                           {address.addresdetailspin}
                         </Typography>
                         <div className="mt-3">
-                          <Typography sx={{ fontWeight: "600" }}>Phone:</Typography>
-                          <Typography
-                            sx={{
-                              fontSize: { xs: "14px", md: "20px", lg: "20px" },
-                            }}
-                          >
-                            <a
-                              href={`tel:${address.phoneno}`}
-                              style={{
-                                textDecoration: "none",
-                                color: "inherit",
-                              }}
-                            >
-                              {address.phoneno}
-                            </a>
-                          </Typography>
-                          <Typography sx={{ fontWeight: "600" }}>Email:</Typography>
-                          <Typography
-                            sx={{
-                              fontSize: { xs: "14px", md: "20px", lg: "20px" },
-                            }}
-                          >
-                            <a
-                              href={`mailto:${address.email}`}
-                              style={{
-                                textDecoration: "none",
-                                color: "inherit",
-                              }}
-                            >
-                              {address.email}
-                            </a>
-                          </Typography>
+                          {address.phoneno && (
+                            <>
+                              <Typography sx={{ fontWeight: "600" }}>Phone:</Typography>
+                              <Typography
+                                sx={{
+                                  fontSize: { xs: "14px", md: "20px", lg: "20px" },
+                                }}
+                              >
+                                <a
+                                  href={`tel:${address.phoneno}`}
+                                  style={{
+                                    textDecoration: "none",
+                                    color: "inherit",
+                                  }}
+                                >
+                                  {address.phoneno}
+                                </a>
+                              </Typography>
+                            </>
+                          )}
+                          {address.email && (
+                            <>
+                              <Typography sx={{ fontWeight: "600" }}>Email:</Typography>
+                              <Typography
+                                sx={{
+                                  fontSize: { xs: "14px", md: "20px", lg: "20px" },
+                                }}
+                              >
+                                <a
+                                  href={`mailto:${address.email}`}
+                                  style={{
+                                    textDecoration: "none",
+                                    color: "inherit",
+                                  }}
+                                >
+                                  {address.email}
+                                </a>
+                              </Typography>
+                            </>
+                          )}
                         </div>
                       </div>
                       <div className="col-sm-6">
